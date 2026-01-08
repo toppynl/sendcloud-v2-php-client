@@ -1,0 +1,11 @@
+# # ScPublicV2OrdersPutUpdateAnIntegration400ResponseError
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**code** | **int** | HTTP response status code | [default to 400]
+**request** | **string** | Endpoint which returned the response |
+**message** | **string** | Human readable error message |
+
+[[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

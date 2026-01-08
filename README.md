@@ -1,0 +1,380 @@
+# toppy/sendcloud-client
+
+Complete Sendcloud API v2 specification - merged from official Stoplight documentation bundles
+
+For more information, please visit [https://www.sendcloud.dev](https://www.sendcloud.dev).
+
+## Installation & Usage
+
+### Requirements
+
+PHP 7.2 and later.
+
+### Composer
+
+To install the bindings via [Composer](https://getcomposer.org/), add the following to `composer.json`:
+
+```json
+{
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/GIT_USER_ID/GIT_REPO_ID.git"
+    }
+  ],
+  "require": {
+    "GIT_USER_ID/GIT_REPO_ID": "*@dev"
+  }
+}
+```
+
+Then run `composer install`
+
+Your project is free to choose the http client of your choice
+Please require packages that will provide http client functionality:
+https://packagist.org/providers/psr/http-client-implementation
+https://packagist.org/providers/php-http/async-client-implementation
+https://packagist.org/providers/psr/http-factory-implementation
+
+As an example:
+
+```
+composer require guzzlehttp/guzzle php-http/guzzle7-adapter http-interop/http-factory-guzzle
+```
+
+### Manual Installation
+
+Download the files and include `autoload.php`:
+
+```php
+<?php
+require_once('/path/to/toppy/sendcloud-client/vendor/autoload.php');
+```
+
+## Getting Started
+
+Please follow the [installation procedure](#installation--usage) and then run the following:
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+
+// Configure HTTP basic authorization: HTTPBasicAuth
+$config = Toppy\Sendcloud\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+
+
+$apiInstance = new Toppy\Sendcloud\Api\AirWaybillAWBApi(
+    // If you want use custom http client, pass your client which implements `Psr\Http\Client\ClientInterface`.
+    // This is optional, `Psr18ClientDiscovery` will be used to find http client. For instance `GuzzleHttp\Client` implements that interface
+    new GuzzleHttp\Client(),
+    $config
+);
+$awbCopies = new \Toppy\Sendcloud\Model\AwbCopies(); // \Toppy\Sendcloud\Model\AwbCopies
+
+try {
+    $result = $apiInstance->scPublicV2ScpPostFinalizeBox($awbCopies);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling AirWaybillAWBApi->scPublicV2ScpPostFinalizeBox: ', $e->getMessage(), PHP_EOL;
+}
+
+```
+
+## API Endpoints
+
+All URIs are relative to *https://account.sendcloud.com*
+
+Class | Method | HTTP request | Description
+------------ | ------------- | ------------- | -------------
+*AirWaybillAWBApi* | [**scPublicV2ScpPostFinalizeBox**](docs/Api/AirWaybillAWBApi.md#scpublicv2scppostfinalizebox) | **POST** /box/finalize | Finalizing a box
+*BrandsApi* | [**scPublicV2BrandsGetAllUserBrands**](docs/Api/BrandsApi.md#scpublicv2brandsgetalluserbrands) | **GET** /brands | Retrieve a list of brands
+*BrandsApi* | [**scPublicV2BrandsGetUserBrandById**](docs/Api/BrandsApi.md#scpublicv2brandsgetuserbrandbyid) | **GET** /brands/{id} | Retrieve a brand
+*ContractsApi* | [**scPublicV2ScpGetAllContracts**](docs/Api/ContractsApi.md#scpublicv2scpgetallcontracts) | **GET** /contracts | Retrieve a list of contracts
+*ContractsApi* | [**scPublicV2ScpGetSpecificContract**](docs/Api/ContractsApi.md#scpublicv2scpgetspecificcontract) | **GET** /contracts/{id} | Retrieve a contract
+*CustomsDocumentsDownloadApi* | [**scPublicV2ScpGetCustomsDocumentMultipleNormalPrinter**](docs/Api/CustomsDocumentsDownloadApi.md#scpublicv2scpgetcustomsdocumentmultiplenormalprinter) | **GET** /customs_declaration/normal_printer | Retrieve multiple customs declaration PDF
+*CustomsDocumentsDownloadApi* | [**scPublicV2ScpGetCustomsDocumentNormalPrinter**](docs/Api/CustomsDocumentsDownloadApi.md#scpublicv2scpgetcustomsdocumentnormalprinter) | **GET** /customs_declaration/normal_printer/{parcel_id} | Retrieve a customs declaration PDF
+*IntegrationsApi* | [**scPublicV2OrdersDeleteDeleteAnIntegration**](docs/Api/IntegrationsApi.md#scpublicv2ordersdeletedeleteanintegration) | **DELETE** /integrations/{id} | Delete an integration
+*IntegrationsApi* | [**scPublicV2OrdersGetRetrieveAListOfIntegrations**](docs/Api/IntegrationsApi.md#scpublicv2ordersgetretrievealistofintegrations) | **GET** /integrations | Retrieve a list of integrations
+*IntegrationsApi* | [**scPublicV2OrdersGetRetrieveAnIntegration**](docs/Api/IntegrationsApi.md#scpublicv2ordersgetretrieveanintegration) | **GET** /integrations/{id} | Retrieve an integration
+*IntegrationsApi* | [**scPublicV2OrdersGetRetrieveIntegrationLogs**](docs/Api/IntegrationsApi.md#scpublicv2ordersgetretrieveintegrationlogs) | **GET** /integrations/{id}/logs | Retrieve integration exceptions logs
+*IntegrationsApi* | [**scPublicV2OrdersGetRetrieveIntegrationsLogs**](docs/Api/IntegrationsApi.md#scpublicv2ordersgetretrieveintegrationslogs) | **GET** /integrations/logs | Retrieve all integration exceptions logs
+*IntegrationsApi* | [**scPublicV2OrdersPatchPartialUpdateAnIntegration**](docs/Api/IntegrationsApi.md#scpublicv2orderspatchpartialupdateanintegration) | **PATCH** /integrations/{id} | Update an integration
+*IntegrationsApi* | [**scPublicV2OrdersPostCreateIntegrationLogs**](docs/Api/IntegrationsApi.md#scpublicv2orderspostcreateintegrationlogs) | **POST** /integrations/{id}/logs | Create integration exceptions logs
+*IntegrationsApi* | [**scPublicV2OrdersPutUpdateAnIntegration**](docs/Api/IntegrationsApi.md#scpublicv2ordersputupdateanintegration) | **PUT** /integrations/{id} | Update an integration
+*InvoicesApi* | [**scPublicV2ScpGetAllUserInvoices**](docs/Api/InvoicesApi.md#scpublicv2scpgetalluserinvoices) | **GET** /user/invoices | Retrieve all invoices that have been issued to your account
+*InvoicesApi* | [**scPublicV2ScpGetInvoiceById**](docs/Api/InvoicesApi.md#scpublicv2scpgetinvoicebyid) | **GET** /user/invoices/{id} | Retrieve a specific invoice
+*LabelDownloadApi* | [**scPublicV2ScpGetLabelDocumentLabelPrinter**](docs/Api/LabelDownloadApi.md#scpublicv2scpgetlabeldocumentlabelprinter) | **GET** /labels/label_printer/{parcel_id} | Retrieve a PDF label for a specific label printer
+*LabelDownloadApi* | [**scPublicV2ScpGetLabelDocumentMultipleLabelPrinter**](docs/Api/LabelDownloadApi.md#scpublicv2scpgetlabeldocumentmultiplelabelprinter) | **GET** /labels/label_printer | Retrieve a PDF label for a label printer
+*LabelDownloadApi* | [**scPublicV2ScpGetLabelDocumentMultipleNormalPrinter**](docs/Api/LabelDownloadApi.md#scpublicv2scpgetlabeldocumentmultiplenormalprinter) | **GET** /labels/normal_printer | Retrieve multiple PDF labels
+*LabelDownloadApi* | [**scPublicV2ScpGetLabelDocumentNormalPrinter**](docs/Api/LabelDownloadApi.md#scpublicv2scpgetlabeldocumentnormalprinter) | **GET** /labels/normal_printer/{parcel_id} | Retrieve a PDF label
+*LabelsApi* | [**scPublicV2ScpGetLabelByParcelId**](docs/Api/LabelsApi.md#scpublicv2scpgetlabelbyparcelid) | **GET** /labels/{parcel_id} | Retrieve a Label
+*LabelsApi* | [**scPublicV2ScpPostLabelByParcelIds**](docs/Api/LabelsApi.md#scpublicv2scppostlabelbyparcelids) | **POST** /labels | Bulk PDF label printing
+*OAuth2Api* | [**oauth2TokenExchange**](docs/Api/OAuth2Api.md#oauth2tokenexchange) | **POST** /oauth2/token | The OAuth 2.0 Token Endpoint
+*ParcelDocumentsApi* | [**scPublicV2ScpGetRetrieveParcelDocuments**](docs/Api/ParcelDocumentsApi.md#scpublicv2scpgetretrieveparceldocuments) | **GET** /parcels/{id}/documents/{type} | Retrieve Parcel Documents
+*ParcelStatusesApi* | [**scPublicV2ScpGetRetrieveAllParcelStatuses**](docs/Api/ParcelStatusesApi.md#scpublicv2scpgetretrieveallparcelstatuses) | **GET** /parcels/statuses | Retrieve a list of parcel statuses
+*ParcelsApi* | [**scPublicV2ScpGetAllParcels**](docs/Api/ParcelsApi.md#scpublicv2scpgetallparcels) | **GET** /parcels | Retrieve parcels
+*ParcelsApi* | [**scPublicV2ScpGetParcelById**](docs/Api/ParcelsApi.md#scpublicv2scpgetparcelbyid) | **GET** /parcels/{id} | Retrieve a parcel
+*ParcelsApi* | [**scPublicV2ScpGetReturnPortalUrl**](docs/Api/ParcelsApi.md#scpublicv2scpgetreturnportalurl) | **GET** /parcels/{id}/return_portal_url | Retrieve a return portal URL
+*ParcelsApi* | [**scPublicV2ScpPostCancelSpecific**](docs/Api/ParcelsApi.md#scpublicv2scppostcancelspecific) | **POST** /parcels/{id}/cancel | Cancel a parcel
+*ParcelsApi* | [**scPublicV2ScpPostCreateParcel**](docs/Api/ParcelsApi.md#scpublicv2scppostcreateparcel) | **POST** /parcels | Create a parcel or parcels
+*ParcelsApi* | [**scPublicV2ScpPutUpdateAParcel**](docs/Api/ParcelsApi.md#scpublicv2scpputupdateaparcel) | **PUT** /parcels | Update a parcel
+*PickupsApi* | [**scPublicV2ScpGetAllPickups**](docs/Api/PickupsApi.md#scpublicv2scpgetallpickups) | **GET** /pickups | Retrieve a list of pickups
+*PickupsApi* | [**scPublicV2ScpGetPickup**](docs/Api/PickupsApi.md#scpublicv2scpgetpickup) | **GET** /pickups/{id} | Retrieve a pickup
+*PickupsApi* | [**scPublicV2ScpPostPickup**](docs/Api/PickupsApi.md#scpublicv2scppostpickup) | **POST** /pickups | Create a pickup
+*ReturnsApi* | [**scPublicV2ScpGetAllReturns**](docs/Api/ReturnsApi.md#scpublicv2scpgetallreturns) | **GET** /returns | Retrieve a list of returns
+*ReturnsApi* | [**scPublicV2ScpGetReturnById**](docs/Api/ReturnsApi.md#scpublicv2scpgetreturnbyid) | **GET** /returns/{id} | Retrieve a return
+*SenderAddressApi* | [**scPublicV2AddressesGetAllSenderAddresses**](docs/Api/SenderAddressApi.md#scpublicv2addressesgetallsenderaddresses) | **GET** /user/addresses/sender | Retrieve a list of sender addresses
+*SenderAddressApi* | [**scPublicV2AddressesGetSenderAddressById**](docs/Api/SenderAddressApi.md#scpublicv2addressesgetsenderaddressbyid) | **GET** /user/addresses/sender/{id} | Retrieve a sender address
+*ServicePointsApi* | [**scPublicV2ServicepointsGetCarriers**](docs/Api/ServicePointsApi.md#scpublicv2servicepointsgetcarriers) | **GET** /carriers | Retrieve a list of service point carriers
+*ServicePointsApi* | [**scPublicV2ServicepointsGetCheckAvailability**](docs/Api/ServicePointsApi.md#scpublicv2servicepointsgetcheckavailability) | **GET** /service-points/{service_point_id}/check-availability | Retrieve availability of a service point
+*ServicePointsApi* | [**scPublicV2ServicepointsGetServicePointById**](docs/Api/ServicePointsApi.md#scpublicv2servicepointsgetservicepointbyid) | **GET** /service-points/{service_point_id} | Retrieve a service point
+*ServicePointsApi* | [**scPublicV2ServicepointsGetServicePoints**](docs/Api/ServicePointsApi.md#scpublicv2servicepointsgetservicepoints) | **GET** /service-points | Retrieve a list of service points
+*ShipmentsApi* | [**scPublicV2OrdersGetRetrieveAListOfShipments**](docs/Api/ShipmentsApi.md#scpublicv2ordersgetretrievealistofshipments) | **GET** /integrations/{id}/shipments | Retrieve a list of shipments
+*ShipmentsApi* | [**scPublicV2OrdersPostCreateAListOfShipments**](docs/Api/ShipmentsApi.md#scpublicv2orderspostcreatealistofshipments) | **POST** /integrations/{id}/shipments | Create or update a list of shipments
+*ShipmentsApi* | [**scPublicV2OrdersPostDeleteAShipment**](docs/Api/ShipmentsApi.md#scpublicv2orderspostdeleteashipment) | **POST** /integrations/{id}/shipments/delete | Delete a shipment
+*ShippingMethodsApi* | [**scPublicV2ScpGetAllShippingMethods**](docs/Api/ShippingMethodsApi.md#scpublicv2scpgetallshippingmethods) | **GET** /shipping_methods | Retrieve a list of shipping methods
+*ShippingMethodsApi* | [**scPublicV2ScpGetShippingMethodById**](docs/Api/ShippingMethodsApi.md#scpublicv2scpgetshippingmethodbyid) | **GET** /shipping_methods/{id} | Retrieve a shipping method
+*ShippingProductsApi* | [**scPublicV2ScpGetRetrieveAllShippingFunctionalities**](docs/Api/ShippingProductsApi.md#scpublicv2scpgetretrieveallshippingfunctionalities) | **GET** /shipping-functionalities | Retrieve a list of shipping functionalities
+*ShippingProductsApi* | [**scPublicV2ScpGetRetrieveAllShippingProducts**](docs/Api/ShippingProductsApi.md#scpublicv2scpgetretrieveallshippingproducts) | **GET** /shipping-products | Retrieve a list of shipping products
+*TrackingApi* | [**scPublicV2TrackingGetDetailedTrackingInformation**](docs/Api/TrackingApi.md#scpublicv2trackinggetdetailedtrackinginformation) | **GET** /tracking/{tracking_number} | Retrieve tracking information of a parcel
+*UsersApi* | [**scPublicV2ScpGetCurrentUserData**](docs/Api/UsersApi.md#scpublicv2scpgetcurrentuserdata) | **GET** /user | Retrieve the current user data
+
+## Models
+
+- [Address](docs/Model/Address.md)
+- [AddressDivided](docs/Model/AddressDivided.md)
+- [AvailableShippingFunctionalities](docs/Model/AvailableShippingFunctionalities.md)
+- [AwbCopies](docs/Model/AwbCopies.md)
+- [BatchOfParcelsCreatedResponse](docs/Model/BatchOfParcelsCreatedResponse.md)
+- [Brand](docs/Model/Brand.md)
+- [BrandCustomizationSettings](docs/Model/BrandCustomizationSettings.md)
+- [BrandCustomizationSettingsFooter](docs/Model/BrandCustomizationSettingsFooter.md)
+- [BrandCustomizationSettingsFooterSocialMedia](docs/Model/BrandCustomizationSettingsFooterSocialMedia.md)
+- [BrandCustomizationSettingsHeader](docs/Model/BrandCustomizationSettingsHeader.md)
+- [BrandFeatures](docs/Model/BrandFeatures.md)
+- [BrandPrintLogo](docs/Model/BrandPrintLogo.md)
+- [BrandScreenLogo](docs/Model/BrandScreenLogo.md)
+- [CancelParcelStatus](docs/Model/CancelParcelStatus.md)
+- [Carrier](docs/Model/Carrier.md)
+- [CarrierErrors](docs/Model/CarrierErrors.md)
+- [CheckoutPayload](docs/Model/CheckoutPayload.md)
+- [CheckoutPayloadDeliveryMethodData](docs/Model/CheckoutPayloadDeliveryMethodData.md)
+- [Contract](docs/Model/Contract.md)
+- [ContractCarrier](docs/Model/ContractCarrier.md)
+- [CorreosExpressPickup](docs/Model/CorreosExpressPickup.md)
+- [CorreosExpressPickupCreate](docs/Model/CorreosExpressPickupCreate.md)
+- [CorreosPickup](docs/Model/CorreosPickup.md)
+- [CorreosPickupCreate](docs/Model/CorreosPickupCreate.md)
+- [CostsObject](docs/Model/CostsObject.md)
+- [Country](docs/Model/Country.md)
+- [CountryCodes](docs/Model/CountryCodes.md)
+- [CreateABatchOfParcels](docs/Model/CreateABatchOfParcels.md)
+- [CreateASingleParcel](docs/Model/CreateASingleParcel.md)
+- [CreateParcelError](docs/Model/CreateParcelError.md)
+- [CreateParcelErrorError](docs/Model/CreateParcelErrorError.md)
+- [CustomsDocumentsAssociatedWithTheLabel](docs/Model/CustomsDocumentsAssociatedWithTheLabel.md)
+- [CustomsInformation](docs/Model/CustomsInformation.md)
+- [DHLExpressPickup](docs/Model/DHLExpressPickup.md)
+- [DHLExpressPickupCreate](docs/Model/DHLExpressPickupCreate.md)
+- [DHLParcelIberiaPickup](docs/Model/DHLParcelIberiaPickup.md)
+- [DHLParcelIberiaPickupCreate](docs/Model/DHLParcelIberiaPickupCreate.md)
+- [DHLPickup](docs/Model/DHLPickup.md)
+- [DHLPickupCreate](docs/Model/DHLPickupCreate.md)
+- [DPDPickup](docs/Model/DPDPickup.md)
+- [DPDPickupCreate](docs/Model/DPDPickupCreate.md)
+- [DangerousGoods](docs/Model/DangerousGoods.md)
+- [DetailedTrackingBlob](docs/Model/DetailedTrackingBlob.md)
+- [DetailedTrackingBlobStatus](docs/Model/DetailedTrackingBlobStatus.md)
+- [Documents](docs/Model/Documents.md)
+- [Error](docs/Model/Error.md)
+- [ErrorError](docs/Model/ErrorError.md)
+- [ErrorOAuth2](docs/Model/ErrorOAuth2.md)
+- [FailedToCreateParcelsResponse](docs/Model/FailedToCreateParcelsResponse.md)
+- [FailedToCreateParcelsResponseFailedParcelsInner](docs/Model/FailedToCreateParcelsResponseFailedParcelsInner.md)
+- [FedExPickup](docs/Model/FedExPickup.md)
+- [FedExPickupCreate](docs/Model/FedExPickupCreate.md)
+- [IncomingParcelCustomsInformation](docs/Model/IncomingParcelCustomsInformation.md)
+- [IncomingParcelCustomsInformationImporterOfRecord](docs/Model/IncomingParcelCustomsInformationImporterOfRecord.md)
+- [Integration](docs/Model/Integration.md)
+- [IntegrationLog](docs/Model/IntegrationLog.md)
+- [IntegrationUpdate](docs/Model/IntegrationUpdate.md)
+- [IntegrationWebhook](docs/Model/IntegrationWebhook.md)
+- [IntegrationWebhookIntegration](docs/Model/IntegrationWebhookIntegration.md)
+- [Invoice](docs/Model/Invoice.md)
+- [InvoiceDetail](docs/Model/InvoiceDetail.md)
+- [InvoiceDetailItemsInner](docs/Model/InvoiceDetailItemsInner.md)
+- [InvoicesError](docs/Model/InvoicesError.md)
+- [Label](docs/Model/Label.md)
+- [LabelMultipleResponse](docs/Model/LabelMultipleResponse.md)
+- [LabelObject](docs/Model/LabelObject.md)
+- [LabelObject1](docs/Model/LabelObject1.md)
+- [LabelSingleResponse](docs/Model/LabelSingleResponse.md)
+- [ModelReturn](docs/Model/ModelReturn.md)
+- [OAuth2TokenExchange](docs/Model/OAuth2TokenExchange.md)
+- [OriginDetail](docs/Model/OriginDetail.md)
+- [ParcelCreation](docs/Model/ParcelCreation.md)
+- [ParcelCustomsInformation](docs/Model/ParcelCustomsInformation.md)
+- [ParcelCustomsInformationImporterOfRecord](docs/Model/ParcelCustomsInformationImporterOfRecord.md)
+- [ParcelCustomsInformationReturnData](docs/Model/ParcelCustomsInformationReturnData.md)
+- [ParcelCustomsInformationTaxNumbers](docs/Model/ParcelCustomsInformationTaxNumbers.md)
+- [ParcelItem](docs/Model/ParcelItem.md)
+- [ParcelItems](docs/Model/ParcelItems.md)
+- [ParcelResponseFull](docs/Model/ParcelResponseFull.md)
+- [ParcelResponseShort](docs/Model/ParcelResponseShort.md)
+- [ParcelResponseShortCarrier](docs/Model/ParcelResponseShortCarrier.md)
+- [ParcelStatusChangedWebhook](docs/Model/ParcelStatusChangedWebhook.md)
+- [ParcelStatusChangedWebhookParcel](docs/Model/ParcelStatusChangedWebhookParcel.md)
+- [ParcelStatusChangedWebhookParcelAddressDivided](docs/Model/ParcelStatusChangedWebhookParcelAddressDivided.md)
+- [ParcelStatusChangedWebhookParcelCountry](docs/Model/ParcelStatusChangedWebhookParcelCountry.md)
+- [ParcelStatusChangedWebhookParcelLabel](docs/Model/ParcelStatusChangedWebhookParcelLabel.md)
+- [ParcelStatusChangedWebhookParcelShipment](docs/Model/ParcelStatusChangedWebhookParcelShipment.md)
+- [ParcelStatusChangedWebhookParcelStatus](docs/Model/ParcelStatusChangedWebhookParcelStatus.md)
+- [PickupList](docs/Model/PickupList.md)
+- [PickupVolumeWeight](docs/Model/PickupVolumeWeight.md)
+- [PosteITDeliveryPickup](docs/Model/PosteITDeliveryPickup.md)
+- [PosteITDeliveryPickupCreate](docs/Model/PosteITDeliveryPickupCreate.md)
+- [RequestObject](docs/Model/RequestObject.md)
+- [ResponseObject](docs/Model/ResponseObject.md)
+- [ReturnCreatedWebhook](docs/Model/ReturnCreatedWebhook.md)
+- [ReturnCreatedWebhookData](docs/Model/ReturnCreatedWebhookData.md)
+- [ReturnCreatedWebhookDataItemsInner](docs/Model/ReturnCreatedWebhookDataItemsInner.md)
+- [ReturnImageObject](docs/Model/ReturnImageObject.md)
+- [ReturnIncomingParcelData](docs/Model/ReturnIncomingParcelData.md)
+- [ReturnIncomingParcelStatus](docs/Model/ReturnIncomingParcelStatus.md)
+- [ReturnParcel](docs/Model/ReturnParcel.md)
+- [ReturnParcelRulesInner](docs/Model/ReturnParcelRulesInner.md)
+- [ReturnParcelRulesInnerModificationsInner](docs/Model/ReturnParcelRulesInnerModificationsInner.md)
+- [ReturnRefund](docs/Model/ReturnRefund.md)
+- [ReturnRefundRefundType](docs/Model/ReturnRefundRefundType.md)
+- [ReturnRuleModificationsInner](docs/Model/ReturnRuleModificationsInner.md)
+- [ScPublicV2AddressesGetAllSenderAddresses200Response](docs/Model/ScPublicV2AddressesGetAllSenderAddresses200Response.md)
+- [ScPublicV2AddressesGetSenderAddressById200Response](docs/Model/ScPublicV2AddressesGetSenderAddressById200Response.md)
+- [ScPublicV2AddressesGetSenderAddressById404Response](docs/Model/ScPublicV2AddressesGetSenderAddressById404Response.md)
+- [ScPublicV2AddressesGetSenderAddressById404ResponseError](docs/Model/ScPublicV2AddressesGetSenderAddressById404ResponseError.md)
+- [ScPublicV2BrandsGetAllUserBrands200Response](docs/Model/ScPublicV2BrandsGetAllUserBrands200Response.md)
+- [ScPublicV2BrandsGetUserBrandById404Response](docs/Model/ScPublicV2BrandsGetUserBrandById404Response.md)
+- [ScPublicV2BrandsGetUserBrandById404ResponseError](docs/Model/ScPublicV2BrandsGetUserBrandById404ResponseError.md)
+- [ScPublicV2OrdersGetRetrieveAListOfShipments200Response](docs/Model/ScPublicV2OrdersGetRetrieveAListOfShipments200Response.md)
+- [ScPublicV2OrdersGetRetrieveAListOfShipments404Response](docs/Model/ScPublicV2OrdersGetRetrieveAListOfShipments404Response.md)
+- [ScPublicV2OrdersGetRetrieveAListOfShipments404ResponseError](docs/Model/ScPublicV2OrdersGetRetrieveAListOfShipments404ResponseError.md)
+- [ScPublicV2OrdersGetRetrieveAnIntegration404Response](docs/Model/ScPublicV2OrdersGetRetrieveAnIntegration404Response.md)
+- [ScPublicV2OrdersGetRetrieveAnIntegration404ResponseError](docs/Model/ScPublicV2OrdersGetRetrieveAnIntegration404ResponseError.md)
+- [ScPublicV2OrdersGetRetrieveIntegrationsLogs200Response](docs/Model/ScPublicV2OrdersGetRetrieveIntegrationsLogs200Response.md)
+- [ScPublicV2OrdersPostCreateAListOfShipments200ResponseInner](docs/Model/ScPublicV2OrdersPostCreateAListOfShipments200ResponseInner.md)
+- [ScPublicV2OrdersPostDeleteAShipmentRequest](docs/Model/ScPublicV2OrdersPostDeleteAShipmentRequest.md)
+- [ScPublicV2OrdersPostDeleteAShipmentRequestOneOf](docs/Model/ScPublicV2OrdersPostDeleteAShipmentRequestOneOf.md)
+- [ScPublicV2OrdersPostDeleteAShipmentRequestOneOf1](docs/Model/ScPublicV2OrdersPostDeleteAShipmentRequestOneOf1.md)
+- [ScPublicV2OrdersPutUpdateAnIntegration400Response](docs/Model/ScPublicV2OrdersPutUpdateAnIntegration400Response.md)
+- [ScPublicV2OrdersPutUpdateAnIntegration400ResponseError](docs/Model/ScPublicV2OrdersPutUpdateAnIntegration400ResponseError.md)
+- [ScPublicV2ScpGetAllContracts200Response](docs/Model/ScPublicV2ScpGetAllContracts200Response.md)
+- [ScPublicV2ScpGetAllParcels200Response](docs/Model/ScPublicV2ScpGetAllParcels200Response.md)
+- [ScPublicV2ScpGetAllPickups200Response](docs/Model/ScPublicV2ScpGetAllPickups200Response.md)
+- [ScPublicV2ScpGetAllReturns200Response](docs/Model/ScPublicV2ScpGetAllReturns200Response.md)
+- [ScPublicV2ScpGetAllShippingMethods200Response](docs/Model/ScPublicV2ScpGetAllShippingMethods200Response.md)
+- [ScPublicV2ScpGetAllUserInvoices200Response](docs/Model/ScPublicV2ScpGetAllUserInvoices200Response.md)
+- [ScPublicV2ScpGetCurrentUserData200Response](docs/Model/ScPublicV2ScpGetCurrentUserData200Response.md)
+- [ScPublicV2ScpGetCurrentUserData200ResponseUser](docs/Model/ScPublicV2ScpGetCurrentUserData200ResponseUser.md)
+- [ScPublicV2ScpGetCurrentUserData200ResponseUserModulesInner](docs/Model/ScPublicV2ScpGetCurrentUserData200ResponseUserModulesInner.md)
+- [ScPublicV2ScpGetInvoiceById200Response](docs/Model/ScPublicV2ScpGetInvoiceById200Response.md)
+- [ScPublicV2ScpGetLabelDocumentNormalPrinter400Response](docs/Model/ScPublicV2ScpGetLabelDocumentNormalPrinter400Response.md)
+- [ScPublicV2ScpGetParcelById200Response](docs/Model/ScPublicV2ScpGetParcelById200Response.md)
+- [ScPublicV2ScpGetPickup200ResponseInner](docs/Model/ScPublicV2ScpGetPickup200ResponseInner.md)
+- [ScPublicV2ScpGetRetrieveAllParcelStatuses200ResponseInner](docs/Model/ScPublicV2ScpGetRetrieveAllParcelStatuses200ResponseInner.md)
+- [ScPublicV2ScpGetRetrieveParcelDocuments404Response](docs/Model/ScPublicV2ScpGetRetrieveParcelDocuments404Response.md)
+- [ScPublicV2ScpGetRetrieveParcelDocuments404ResponseError](docs/Model/ScPublicV2ScpGetRetrieveParcelDocuments404ResponseError.md)
+- [ScPublicV2ScpGetReturnById404Response](docs/Model/ScPublicV2ScpGetReturnById404Response.md)
+- [ScPublicV2ScpGetReturnById404ResponseError](docs/Model/ScPublicV2ScpGetReturnById404ResponseError.md)
+- [ScPublicV2ScpGetReturnPortalUrl200Response](docs/Model/ScPublicV2ScpGetReturnPortalUrl200Response.md)
+- [ScPublicV2ScpGetShippingMethodById200Response](docs/Model/ScPublicV2ScpGetShippingMethodById200Response.md)
+- [ScPublicV2ScpGetShippingMethodById404Response](docs/Model/ScPublicV2ScpGetShippingMethodById404Response.md)
+- [ScPublicV2ScpGetShippingMethodById404ResponseError](docs/Model/ScPublicV2ScpGetShippingMethodById404ResponseError.md)
+- [ScPublicV2ScpPostCreateParcel200Response](docs/Model/ScPublicV2ScpPostCreateParcel200Response.md)
+- [ScPublicV2ScpPostCreateParcelRequest](docs/Model/ScPublicV2ScpPostCreateParcelRequest.md)
+- [ScPublicV2ScpPostFinalizeBox400Response](docs/Model/ScPublicV2ScpPostFinalizeBox400Response.md)
+- [ScPublicV2ScpPostFinalizeBox400ResponseError](docs/Model/ScPublicV2ScpPostFinalizeBox400ResponseError.md)
+- [ScPublicV2ScpPostLabelByParcelIdsRequest](docs/Model/ScPublicV2ScpPostLabelByParcelIdsRequest.md)
+- [ScPublicV2ScpPostLabelByParcelIdsRequestLabel](docs/Model/ScPublicV2ScpPostLabelByParcelIdsRequestLabel.md)
+- [ScPublicV2ScpPostPickup201ResponseInner](docs/Model/ScPublicV2ScpPostPickup201ResponseInner.md)
+- [ScPublicV2ScpPostPickupRequestInner](docs/Model/ScPublicV2ScpPostPickupRequestInner.md)
+- [ScPublicV2ScpPutUpdateAParcel200Response](docs/Model/ScPublicV2ScpPutUpdateAParcel200Response.md)
+- [ScPublicV2ScpPutUpdateAParcelRequest](docs/Model/ScPublicV2ScpPutUpdateAParcelRequest.md)
+- [ScPublicV2ServicepointsGetServicePoints400Response](docs/Model/ScPublicV2ServicepointsGetServicePoints400Response.md)
+- [ScPublicV2ServicepointsGetServicePoints400ResponseError](docs/Model/ScPublicV2ServicepointsGetServicePoints400ResponseError.md)
+- [ScPublicV2TrackingGetDetailedTrackingInformation404Response](docs/Model/ScPublicV2TrackingGetDetailedTrackingInformation404Response.md)
+- [ServicePoint](docs/Model/ServicePoint.md)
+- [ServicePointFormattedOpeningTimes](docs/Model/ServicePointFormattedOpeningTimes.md)
+- [Shipment](docs/Model/Shipment.md)
+- [ShipmentBlobOrder](docs/Model/ShipmentBlobOrder.md)
+- [ShipmentBlobOrderCreate](docs/Model/ShipmentBlobOrderCreate.md)
+- [ShipmentBlobStatus](docs/Model/ShipmentBlobStatus.md)
+- [ShipmentCreateUpdateLog](docs/Model/ShipmentCreateUpdateLog.md)
+- [ShipmentErrorLog](docs/Model/ShipmentErrorLog.md)
+- [ShippingFunctionalities](docs/Model/ShippingFunctionalities.md)
+- [ShippingFunctionalityDefinition](docs/Model/ShippingFunctionalityDefinition.md)
+- [ShippingFunctionalityDefinitionDefaultValue](docs/Model/ShippingFunctionalityDefinitionDefaultValue.md)
+- [ShippingFunctionalityDefinitions](docs/Model/ShippingFunctionalityDefinitions.md)
+- [ShippingMethod](docs/Model/ShippingMethod.md)
+- [ShippingMethodCountriesInner](docs/Model/ShippingMethodCountriesInner.md)
+- [ShippingPriceBreakdownInner](docs/Model/ShippingPriceBreakdownInner.md)
+- [ShippingProduct](docs/Model/ShippingProduct.md)
+- [ShippingProductMethod](docs/Model/ShippingProductMethod.md)
+- [ShippingProductMethodProperties](docs/Model/ShippingProductMethodProperties.md)
+- [ShippingProductMethodPropertiesMaxDimensions](docs/Model/ShippingProductMethodPropertiesMaxDimensions.md)
+- [ShippingProductWeightRange](docs/Model/ShippingProductWeightRange.md)
+- [SingleParcelCreatedResponse](docs/Model/SingleParcelCreatedResponse.md)
+- [Status](docs/Model/Status.md)
+- [TaxInformationAboutSenderReceiverAndImporterOfRecords](docs/Model/TaxInformationAboutSenderReceiverAndImporterOfRecords.md)
+- [TaxNumber](docs/Model/TaxNumber.md)
+- [UPSItems](docs/Model/UPSItems.md)
+- [UPSPickup](docs/Model/UPSPickup.md)
+- [UPSPickupCreate](docs/Model/UPSPickupCreate.md)
+
+## Authorization
+
+### HTTPBasicAuth
+
+- **Type**: HTTP basic authentication
+
+
+### OAuth2
+
+- **Type**: `OAuth`
+- **Flow**: `application`
+- **Authorization URL**: ``
+- **Scopes**: 
+    - **api**: Full API access
+
+
+### OAuth2
+
+- **Type**: `OAuth`
+- **Flow**: `accessCode`
+- **Authorization URL**: `https://account.sendcloud.com/oauth2/auth`
+- **Scopes**: 
+    - **api**: Full API access
+
+## Tests
+
+To run the tests, use:
+
+```bash
+composer install
+vendor/bin/phpunit
+```
+
+## Author
+
+contact@sendcloud.com
+
+## About this package
+
+This PHP package is automatically generated by the [OpenAPI Generator](https://openapi-generator.tech) project:
+
+- API version: `3.0.0`
+    - Package version: `1.0.0`
+    - Generator version: `7.18.0`
+- Build package: `org.openapitools.codegen.languages.PhpClientCodegen`

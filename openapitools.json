@@ -1,0 +1,27 @@
+{
+  "$schema": "./node_modules/@openapitools/openapi-generator-cli/config.schema.json",
+  "spaces": 2,
+  "generator-cli": {
+    "version": "7.18.0",
+    "generators": {
+      "sendcloud": {
+        "inputSpec": "./openapi.json",
+        "output": ".",
+        "generatorName": "php",
+        "additionalProperties": {
+          "packageName": "toppy/sendcloud-client",
+          "artifactUrl": "https://api.sendcloud.dev/docs/sendcloud-public-api/getting-started",
+          "artifactVersion": "1.0.0",
+          "developerOrganization": "Toppy",
+          "developerOrganizationUrl": "https://github.com/toppynl",
+          "composerPackageName": "toppy/sendcloud-client",
+          "invokerPackage": "Toppy\\Sendcloud",
+          "library": "psr-18",
+          "licenseName": "MIT",
+          "srcBasePath": "src",
+          "variableNamingConvention": "camelCase"
+        }
+      }
+    }
+  }
+}
