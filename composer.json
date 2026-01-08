@@ -1,7 +1,7 @@
 {
-    "name": "toppy/sendcloud-client",
-    "version": "0.1.1",
-    "description": "Complete Sendcloud API v3 specification - merged from official Stoplight documentation bundles",
+    "name": "toppy/sendcloud-v2-client",
+    "version": "0.1.0",
+    "description": "Complete Sendcloud API v2 specification - merged from official Stoplight documentation bundles",
     "keywords": [
         "openapitools",
         "openapi-generator",
