@@ -1,15 +1,15 @@
 # Toppy\Sendcloud\IntegrationsApi
 
-All URIs are relative to https://account.sendcloud.com.
+All URIs are relative to https://panel.sendcloud.sc/api/v2.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**scPublicV2OrdersDeleteDeleteAnIntegration()**](IntegrationsApi.md#scPublicV2OrdersDeleteDeleteAnIntegration) | **DELETE** /integrations/{id} | Delete an integration
 [**scPublicV2OrdersGetRetrieveAListOfIntegrations()**](IntegrationsApi.md#scPublicV2OrdersGetRetrieveAListOfIntegrations) | **GET** /integrations | Retrieve a list of integrations
 [**scPublicV2OrdersGetRetrieveAnIntegration()**](IntegrationsApi.md#scPublicV2OrdersGetRetrieveAnIntegration) | **GET** /integrations/{id} | Retrieve an integration
-[**scPublicV2OrdersGetRetrieveIntegrationLogs()**](IntegrationsApi.md#scPublicV2OrdersGetRetrieveIntegrationLogs) | **GET** /integrations/{id}/logs | Retrieve integration exceptions logs
-[**scPublicV2OrdersGetRetrieveIntegrationsLogs()**](IntegrationsApi.md#scPublicV2OrdersGetRetrieveIntegrationsLogs) | **GET** /integrations/logs | Retrieve all integration exceptions logs
-[**scPublicV2OrdersPatchPartialUpdateAnIntegration()**](IntegrationsApi.md#scPublicV2OrdersPatchPartialUpdateAnIntegration) | **PATCH** /integrations/{id} | Update an integration
+[**scPublicV2OrdersGetRetrieveIntegrationLogs()**](IntegrationsApi.md#scPublicV2OrdersGetRetrieveIntegrationLogs) | **GET** /integrations/{id}/logs | Retrieve exception logs for a specific integration
+[**scPublicV2OrdersGetRetrieveIntegrationsLogs()**](IntegrationsApi.md#scPublicV2OrdersGetRetrieveIntegrationsLogs) | **GET** /integrations/logs | Retrieve all integration exception logs
+[**scPublicV2OrdersPatchPartialUpdateAnIntegration()**](IntegrationsApi.md#scPublicV2OrdersPatchPartialUpdateAnIntegration) | **PATCH** /integrations/{id} | Partially update an integration
 [**scPublicV2OrdersPostCreateIntegrationLogs()**](IntegrationsApi.md#scPublicV2OrdersPostCreateIntegrationLogs) | **POST** /integrations/{id}/logs | Create integration exceptions logs
 [**scPublicV2OrdersPutUpdateAnIntegration()**](IntegrationsApi.md#scPublicV2OrdersPutUpdateAnIntegration) | **PUT** /integrations/{id} | Update an integration
 
@@ -22,7 +22,7 @@ scPublicV2OrdersDeleteDeleteAnIntegration($id)
 
 Delete an integration
 
-# Deleting your integration  Delete a webshop integration from the Sendcloud system.
+Delete a shop integration from the Sendcloud system.
 
 ### Example
 
@@ -43,7 +43,7 @@ $apiInstance = new Toppy\Sendcloud\Api\IntegrationsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$id = 56; // int | An id of the integration
+$id = 56; // int | The id of the integration
 
 try {
     $apiInstance->scPublicV2OrdersDeleteDeleteAnIntegration($id);
@@ -56,7 +56,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **int**| An id of the integration |
+ **id** | **int**| The id of the integration |
 
 ### Return type
 
@@ -83,7 +83,7 @@ scPublicV2OrdersGetRetrieveAListOfIntegrations($ordering): \Toppy\Sendcloud\Mode
 
 Retrieve a list of integrations
 
-# Retrieving your list of integrations  Retrieve information about all shop integrations currently connected to your Sendcloud account. The information returned includes the shop name and URL, the date, and the time of the last order fetch. The response indicates whether service point delivery is enabled for this integration and for which carriers.
+Retrieve information about all the shop integrations currently connected to your Sendcloud account.
 
 ### Example
 
@@ -145,7 +145,7 @@ scPublicV2OrdersGetRetrieveAnIntegration($id): \Toppy\Sendcloud\Model\Integratio
 
 Retrieve an integration
 
-# Retrieving your integration  Allows you to to retrieve information about a specific integration by specifying the integration `id`. The information returned includes the shop name and URL, the date and the time of the last order fetch. The response will also indicate whether service point delivery is enabled for this integration, and for which carriers.
+Retrieve information about a specific integration using its `id`.
 
 ### Example
 
@@ -166,7 +166,7 @@ $apiInstance = new Toppy\Sendcloud\Api\IntegrationsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$id = 56; // int | An id of the integration
+$id = 56; // int | The id of the integration
 
 try {
     $result = $apiInstance->scPublicV2OrdersGetRetrieveAnIntegration($id);
@@ -180,7 +180,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **int**| An id of the integration |
+ **id** | **int**| The id of the integration |
 
 ### Return type
 
@@ -205,9 +205,9 @@ Name | Type | Description  | Notes
 scPublicV2OrdersGetRetrieveIntegrationLogs($id): \Toppy\Sendcloud\Model\ScPublicV2OrdersGetRetrieveIntegrationsLogs200Response
 ```
 
-Retrieve integration exceptions logs
+Retrieve exception logs for a specific integration
 
-# Retrieving integration exception logs  Allows you to retrieve integration exception logs that are created automatically if integrations have problems with API requests to the shop systems. For examples, if some resource cannot be found, or API credentials are not valid anymore. Log record could contain information about request and response, status code and code exception, and be used as a reference to identify issues between Sendcloud and shops APIs. This endpoint could be used to get exception logs of specific integration.
+Retrieve exception logs for a specific integration. These logs are created when integrations have problems making API requests to shop systems.
 
 ### Example
 
@@ -228,7 +228,7 @@ $apiInstance = new Toppy\Sendcloud\Api\IntegrationsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$id = 56; // int | An id of an integration to which the shipments belong
+$id = 56; // int | The id of the integration to which the shipments belong
 
 try {
     $result = $apiInstance->scPublicV2OrdersGetRetrieveIntegrationLogs($id);
@@ -242,7 +242,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **int**| An id of an integration to which the shipments belong |
+ **id** | **int**| The id of the integration to which the shipments belong |
 
 ### Return type
 
@@ -267,9 +267,9 @@ Name | Type | Description  | Notes
 scPublicV2OrdersGetRetrieveIntegrationsLogs(): \Toppy\Sendcloud\Model\ScPublicV2OrdersGetRetrieveIntegrationsLogs200Response
 ```
 
-Retrieve all integration exceptions logs
+Retrieve all integration exception logs
 
-# Retrieving all integration exception logs  Allows you to retrieve integration exception logs that are created automatically if integrations have problems with API requests to the shop systems. For examples, if some resource cannot be found, or API credentials are not valid anymore. Log record could contain information about request and response, status code and code exception, and be used as a reference to identify issues between Sendcloud and shops APIs.
+Retrieve all integration exception logs. These logs are created when integrations have problems making API requests to shop systems.
 
 ### Example
 
@@ -326,9 +326,9 @@ This endpoint does not need any parameter.
 scPublicV2OrdersPatchPartialUpdateAnIntegration($id, $integrationUpdate): \Toppy\Sendcloud\Model\IntegrationUpdate
 ```
 
-Update an integration
+Partially update an integration
 
-# Updating an integration's settings  You can update the settings for the integration by making a PATCH request to our integration endpoint and including your integration `id` as the path parameter. Using this endpoint, you can change the webshop name and URL, edit the list of carriers you want to enable for service point delivery, and enable/disable service point delivery by setting `service_point_enabled` to `true` or `false`.  >You can obtain an integration `id` via the `Retrieve your list of integrations` endpoint.
+Partially update settings for a specific integration using its `id`.
 
 ### Example
 
@@ -349,7 +349,7 @@ $apiInstance = new Toppy\Sendcloud\Api\IntegrationsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$id = 56; // int | An id of the integration
+$id = 56; // int | The id of the integration
 $integrationUpdate = {"shop_name":"Integration #1","shop_url":"https://example.com","last_updated_at":"2019-08-24T14:15:22Z","service_point_enabled":true,"service_point_carriers":["ups"],"webhook_active":true,"webhook_url":"https://example.com"}; // \Toppy\Sendcloud\Model\IntegrationUpdate
 
 try {
@@ -364,7 +364,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **int**| An id of the integration |
+ **id** | **int**| The id of the integration |
  **integrationUpdate** | [**\Toppy\Sendcloud\Model\IntegrationUpdate**](../Model/IntegrationUpdate.md)|  | [optional]
 
 ### Return type
@@ -392,7 +392,7 @@ scPublicV2OrdersPostCreateIntegrationLogs($id, $integrationLog): \Toppy\Sendclou
 
 Create integration exceptions logs
 
-# Creating integration log records  You can create exeption logs with this endpoint and logs will appear in connection issue log screen of user's integration.
+Create integration exception logs, which will appear in the connection issue log screen of the user's integration.
 
 ### Example
 
@@ -413,7 +413,7 @@ $apiInstance = new Toppy\Sendcloud\Api\IntegrationsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$id = 56; // int | An id of an integration to which the shipments belong
+$id = 56; // int | The id of the integration to which the shipments belong
 $integrationLog = {"integration_id":123,"user_id":123,"base_url":"https://example.com","full_url":"https://example.com/order-note.json","method":"POST","response_code":495,"response":{"headers":{"Cache-Control":"max-age=3600","Content-Type":"text/html; charset=utf-8","Connection":"keep-alive"},"body":"<!doctype html>\n<html>\n <head>\n <title>SSL Certificate Error</title>\n </head>\n </html>\n"},"request":{"headers":{"Cache-Control":"max-age=3600","Content-Type":"text/html; charset=utf-8","Connection":"keep-alive"},"payload":{"order_note":{"note":"Success"}}},"created_at":"2023-03-01T02:02:00+01:00","exception_type":"requests.exceptions.SSLError","exception":"An SSL error occurred"}; // \Toppy\Sendcloud\Model\IntegrationLog
 
 try {
@@ -428,7 +428,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **int**| An id of an integration to which the shipments belong |
+ **id** | **int**| The id of the integration to which the shipments belong |
  **integrationLog** | [**\Toppy\Sendcloud\Model\IntegrationLog**](../Model/IntegrationLog.md)|  | [optional]
 
 ### Return type
@@ -456,7 +456,7 @@ scPublicV2OrdersPutUpdateAnIntegration($id, $integrationUpdate): \Toppy\Sendclou
 
 Update an integration
 
-# Updating an integration's settings  You can update the settings for the integration by making a PUT request to our integration endpoint and including your integration `id` as the path parameter. Using this endpoint, you can change the webshop name and URL, edit the list of carriers you want to enable for service point delivery and enable or disable service point delivery by setting `service_point_enabled` to `true` or `false`.  >You can obtain an integration `id` via the `Retrieve your list of integrations` endpoint.
+Update settings for a specific integration using its `id`.
 
 ### Example
 
@@ -477,7 +477,7 @@ $apiInstance = new Toppy\Sendcloud\Api\IntegrationsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$id = 56; // int | An id of the integration
+$id = 56; // int | The id of the integration
 $integrationUpdate = {"shop_name":"Integration #1","shop_url":"https://example.com","service_point_enabled":true,"service_point_carriers":["ups"],"webhook_active":true,"webhook_url":"https://example.com"}; // \Toppy\Sendcloud\Model\IntegrationUpdate | 
 
 try {
@@ -492,7 +492,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **int**| An id of the integration |
+ **id** | **int**| The id of the integration |
  **integrationUpdate** | [**\Toppy\Sendcloud\Model\IntegrationUpdate**](../Model/IntegrationUpdate.md)|  | [optional]
 
 ### Return type

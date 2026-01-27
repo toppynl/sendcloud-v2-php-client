@@ -1,6 +1,6 @@
 # Toppy\Sendcloud\TrackingApi
 
-All URIs are relative to https://account.sendcloud.com.
+All URIs are relative to https://panel.sendcloud.sc/api/v2.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -15,7 +15,7 @@ scPublicV2TrackingGetDetailedTrackingInformation($trackingNumber): \Toppy\Sendcl
 
 Retrieve tracking information of a parcel
 
-Fetches the detailed tracking information, including the status history of the parcel
+Fetches detailed tracking information, including the status history of the parcel.
 
 ### Example
 

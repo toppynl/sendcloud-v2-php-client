@@ -1,6 +1,6 @@
 # Toppy\Sendcloud\SenderAddressApi
 
-All URIs are relative to https://account.sendcloud.com.
+All URIs are relative to https://panel.sendcloud.sc/api/v2.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -16,7 +16,7 @@ scPublicV2AddressesGetAllSenderAddresses(): \Toppy\Sendcloud\Model\ScPublicV2Add
 
 Retrieve a list of sender addresses
 
-This endpoint returns a list of all the sender addresses which have been saved to your account. The response will include the `id` of each address, which you can include as a parameter when [**creating parcels**](https://api.sendcloud.dev/docs/sendcloud-public-api/parcels/operations/create-a-parcel) or [**looking up shipping methods**](https://api.sendcloud.dev/docs/sendcloud-public-api/shipping-methods/operations/list-shipping-methods) via the API.
+Returns a list of all the sender addresses which have been saved to your account.
 
 ### Example
 
@@ -75,7 +75,7 @@ scPublicV2AddressesGetSenderAddressById($id): \Toppy\Sendcloud\Model\ScPublicV2A
 
 Retrieve a sender address
 
-You can retrieve information about a specific sender address saved to your account via this endpoint. Sender address `id` can be obtained via the [**Get sender address**](https://api.sendcloud.dev/docs/sendcloud-public-api/sender-addresses/operations/get-a-user-address-sender) endpoint.
+Retrieve information about a specific sender address saved to your account.
 
 ### Example
 

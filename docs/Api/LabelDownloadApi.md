@@ -1,11 +1,11 @@
 # Toppy\Sendcloud\LabelDownloadApi
 
-All URIs are relative to https://account.sendcloud.com.
+All URIs are relative to https://panel.sendcloud.sc/api/v2.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**scPublicV2ScpGetLabelDocumentLabelPrinter()**](LabelDownloadApi.md#scPublicV2ScpGetLabelDocumentLabelPrinter) | **GET** /labels/label_printer/{parcel_id} | Retrieve a PDF label for a specific label printer
-[**scPublicV2ScpGetLabelDocumentMultipleLabelPrinter()**](LabelDownloadApi.md#scPublicV2ScpGetLabelDocumentMultipleLabelPrinter) | **GET** /labels/label_printer | Retrieve a PDF label for a label printer
+[**scPublicV2ScpGetLabelDocumentLabelPrinter()**](LabelDownloadApi.md#scPublicV2ScpGetLabelDocumentLabelPrinter) | **GET** /labels/label_printer/{parcel_id} | Retrieve a specific PDF label for a label printer
+[**scPublicV2ScpGetLabelDocumentMultipleLabelPrinter()**](LabelDownloadApi.md#scPublicV2ScpGetLabelDocumentMultipleLabelPrinter) | **GET** /labels/label_printer | Retrieve PDF labels for a label printer
 [**scPublicV2ScpGetLabelDocumentMultipleNormalPrinter()**](LabelDownloadApi.md#scPublicV2ScpGetLabelDocumentMultipleNormalPrinter) | **GET** /labels/normal_printer | Retrieve multiple PDF labels
 [**scPublicV2ScpGetLabelDocumentNormalPrinter()**](LabelDownloadApi.md#scPublicV2ScpGetLabelDocumentNormalPrinter) | **GET** /labels/normal_printer/{parcel_id} | Retrieve a PDF label
 
@@ -16,7 +16,7 @@ Method | HTTP request | Description
 scPublicV2ScpGetLabelDocumentLabelPrinter($parcelId): \SplFileObject
 ```
 
-Retrieve a PDF label for a specific label printer
+Retrieve a specific PDF label for a label printer
 
 Retrieve a shipping label for a specific parcel in PDF format for a label printer.
 
@@ -78,7 +78,7 @@ Name | Type | Description  | Notes
 scPublicV2ScpGetLabelDocumentMultipleLabelPrinter($ids): \SplFileObject
 ```
 
-Retrieve a PDF label for a label printer
+Retrieve PDF labels for a label printer
 
 Retrieve PDF label documents suitable for label printers for multiple different parcels at the same time.
 

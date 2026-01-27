@@ -1,10 +1,10 @@
 # Toppy\Sendcloud\LabelsApi
 
-All URIs are relative to https://account.sendcloud.com.
+All URIs are relative to https://panel.sendcloud.sc/api/v2.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**scPublicV2ScpGetLabelByParcelId()**](LabelsApi.md#scPublicV2ScpGetLabelByParcelId) | **GET** /labels/{parcel_id} | Retrieve a Label
+[**scPublicV2ScpGetLabelByParcelId()**](LabelsApi.md#scPublicV2ScpGetLabelByParcelId) | **GET** /labels/{parcel_id} | Retrieve a label for a specific parcel
 [**scPublicV2ScpPostLabelByParcelIds()**](LabelsApi.md#scPublicV2ScpPostLabelByParcelIds) | **POST** /labels | Bulk PDF label printing
 
 
@@ -14,9 +14,9 @@ Method | HTTP request | Description
 scPublicV2ScpGetLabelByParcelId($parcelId): \Toppy\Sendcloud\Model\LabelSingleResponse
 ```
 
-Retrieve a Label
+Retrieve a label for a specific parcel
 
-Retrieve a shipping label for a specific parcel in PDF format. You can lookup the `id` of a parcel via the `/parcels` endpoint.
+You will receive URLs to download the labels in PDF format, for both normal and label printers. You can get the `id` of a parcel from the [Create a parcel or parcels](/api/v2/parcels/create-a-parcel-or-parcels) endpoint.
 
 ### Example
 
@@ -78,7 +78,7 @@ scPublicV2ScpPostLabelByParcelIds($scPublicV2ScpPostLabelByParcelIdsRequest): \T
 
 Bulk PDF label printing
 
-Request multiple shipping labels for an array of parcels at the same time.
+Request multiple shipping labels for an array of parcels at the same time. You will receive URLs to download the labels in PDF format, for both normal and label printers.
 
 ### Example
 

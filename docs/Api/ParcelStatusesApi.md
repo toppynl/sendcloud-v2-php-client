@@ -1,6 +1,6 @@
 # Toppy\Sendcloud\ParcelStatusesApi
 
-All URIs are relative to https://account.sendcloud.com.
+All URIs are relative to https://panel.sendcloud.sc/api/v2.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -15,7 +15,7 @@ scPublicV2ScpGetRetrieveAllParcelStatuses(): \Toppy\Sendcloud\Model\ScPublicV2Sc
 
 Retrieve a list of parcel statuses
 
-Retrieve a list of all possible parcel statuses.
+Get a list of all parcel statuses available in the Sendcloud system, with their unique code and friendly description.
 
 ### Example
 

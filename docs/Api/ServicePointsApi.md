@@ -1,6 +1,6 @@
 # Toppy\Sendcloud\ServicePointsApi
 
-All URIs are relative to https://account.sendcloud.com.
+All URIs are relative to https://panel.sendcloud.sc/api/v2.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -8,6 +8,9 @@ Method | HTTP request | Description
 [**scPublicV2ServicepointsGetCheckAvailability()**](ServicePointsApi.md#scPublicV2ServicepointsGetCheckAvailability) | **GET** /service-points/{service_point_id}/check-availability | Retrieve availability of a service point
 [**scPublicV2ServicepointsGetServicePointById()**](ServicePointsApi.md#scPublicV2ServicepointsGetServicePointById) | **GET** /service-points/{service_point_id} | Retrieve a service point
 [**scPublicV2ServicepointsGetServicePoints()**](ServicePointsApi.md#scPublicV2ServicepointsGetServicePoints) | **GET** /service-points | Retrieve a list of service points
+[**scPublicV2ServicepointsGetStore()**](ServicePointsApi.md#scPublicV2ServicepointsGetStore) | **GET** /service-points/{shop_type}/store | Create a selected service point object
+[**scPublicV2ServicepointsPostCheckAndStore()**](ServicePointsApi.md#scPublicV2ServicepointsPostCheckAndStore) | **POST** /service-points/check_and_store | Create a selected servicepoint record after checking its availability
+[**scPublicV2ServicepointsPostItemsFitInShipment()**](ServicePointsApi.md#scPublicV2ServicepointsPostItemsFitInShipment) | **POST** /service-points/items_fit_in_shipment | Service point carrier dimension check
 
 
 ## `scPublicV2ServicepointsGetCarriers()`
@@ -18,7 +21,7 @@ scPublicV2ServicepointsGetCarriers($accessToken): string[]
 
 Retrieve a list of service point carriers
 
-Retrieve a list of carriers which are enabled for service point delivery and can be accessed by the authenticating integration. Carriers can be enabled or disabled via the integration settings menu in the Sendcloud panel.
+Retrieve a list of carriers which are enabled for service point delivery and can be accessed by the authenticating integration. Carriers can be enabled or disabled via the integration settings menu in the Sendcloud platform.
 
 ### Example
 
@@ -208,7 +211,7 @@ scPublicV2ServicepointsGetServicePoints($country, $xRequestedWith, $accessToken,
 
 Retrieve a list of service points
 
-Retrieve a list of available service points and the associated service point `id`. Only service points which are applicable to the carriers you have enabled in the integration settings menu will be returned. You can filter the results based on GPS location or `address` in combination with a search `radius`.  #### Notes - If provided, `latitude` and `longitude` specify a reference point from which a `distance` will be computed for each service point, and returned with the response. - Some carriers impose limits for certain service point, which means that they cannot accept parcels above a certain weight range. For this reason, you can specify the `weight` parameter to ensure that only usable service points are returned. - If provided, `postal_code` will return a list of service points which are located **exactly within the bounds** of the specified postal code area. - The `address` parameter retrieves a list of service points closest to the referenced location. You can adjust the radius of the results through the 'radius' parameter. - The `address` parameter accepts postal codes in addition to street names.
+Retrieve a list of available service points and the associated service point `id`.
 
 ### Example
 
@@ -292,6 +295,218 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `scPublicV2ServicepointsGetStore()`
+
+```php
+scPublicV2ServicepointsGetStore($shopType, $orderId, $shopIdentification, $servicePoint, $orderConfirmation, $checkoutShippingmethodId, $checkoutShippingmethodName, $toPostNumber): \Toppy\Sendcloud\Model\ScPublicV2ServicepointsGetStore201Response
+```
+
+Create a selected service point object
+
+Shopify-specific endpoint for storing an active service point
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+
+$apiInstance = new Toppy\Sendcloud\Api\ServicePointsApi(
+    // If you want use custom http client, pass your client which implements `Psr\Http\Client\ClientInterface`.
+    // This is optional, `Psr18ClientDiscovery` will be used to find http client. For instance `GuzzleHttp\Client` implements that interface
+    new GuzzleHttp\Client()
+);
+$shopType = shopify; // string | Shop type for which a service point is being stored
+$orderId = 123456789; // string | Order external id
+$shopIdentification = best-website.com; // string | Identifier of the shop
+$servicePoint = 1; // string | Service point id
+$orderConfirmation = John Doe + 1234; // string |  
+$checkoutShippingmethodId = shopify-Service Point Delivery DPD; // string | Unique identifier of the shipping method.
+$checkoutShippingmethodName = Service Point Delivery DPD; // string | Name of the shipping method.
+$toPostNumber = 1338; // string |  
+
+try {
+    $result = $apiInstance->scPublicV2ServicepointsGetStore($shopType, $orderId, $shopIdentification, $servicePoint, $orderConfirmation, $checkoutShippingmethodId, $checkoutShippingmethodName, $toPostNumber);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ServicePointsApi->scPublicV2ServicepointsGetStore: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **shopType** | **string**| Shop type for which a service point is being stored |
+ **orderId** | **string**| Order external id |
+ **shopIdentification** | **string**| Identifier of the shop |
+ **servicePoint** | **string**| Service point id |
+ **orderConfirmation** | **string**|   |
+ **checkoutShippingmethodId** | **string**| Unique identifier of the shipping method. | [optional]
+ **checkoutShippingmethodName** | **string**| Name of the shipping method. | [optional]
+ **toPostNumber** | **string**|   | [optional]
+
+### Return type
+
+[**\Toppy\Sendcloud\Model\ScPublicV2ServicepointsGetStore201Response**](../Model/ScPublicV2ServicepointsGetStore201Response.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `scPublicV2ServicepointsPostCheckAndStore()`
+
+```php
+scPublicV2ServicepointsPostCheckAndStore($servicePoint, $accessToken2, $checkAvailability, $storeOrderId, $checkoutShippingmethodId, $checkoutShippingmethodName, $toPostNumber, $accessToken, $xRequestedWith): \Toppy\Sendcloud\Model\ScPublicV2ServicepointsPostCheckAndStore200Response
+```
+
+Create a selected servicepoint record after checking its availability
+
+Used for two main things: 1. Verify the availability and opening times of a service point 2. Store a selected service point in the Sendcloud platform (this is necessary for integration types which don’t allow storing data on orders like PrestaShop or Lightspeed)
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure HTTP basic authorization: HTTPBasicAuth
+$config = Toppy\Sendcloud\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+
+
+$apiInstance = new Toppy\Sendcloud\Api\ServicePointsApi(
+    // If you want use custom http client, pass your client which implements `Psr\Http\Client\ClientInterface`.
+    // This is optional, `Psr18ClientDiscovery` will be used to find http client. For instance `GuzzleHttp\Client` implements that interface
+    new GuzzleHttp\Client(),
+    $config
+);
+$servicePoint = 3.4; // float
+$accessToken2 = 'accessToken_example'; // string
+$checkAvailability = True; // bool
+$storeOrderId = 'storeOrderId_example'; // string
+$checkoutShippingmethodId = 'checkoutShippingmethodId_example'; // string
+$checkoutShippingmethodName = 'checkoutShippingmethodName_example'; // string
+$toPostNumber = 'toPostNumber_example'; // string
+$accessToken = 'accessToken_example'; // string | A JSON Web Token encoding either an “id” (user ID) or “iid” (integration ID) property. Alternatively, a public API key.
+$xRequestedWith = 'xRequestedWith_example'; // string | Identifies the request as one made using JavaScript
+
+try {
+    $result = $apiInstance->scPublicV2ServicepointsPostCheckAndStore($servicePoint, $accessToken2, $checkAvailability, $storeOrderId, $checkoutShippingmethodId, $checkoutShippingmethodName, $toPostNumber, $accessToken, $xRequestedWith);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ServicePointsApi->scPublicV2ServicepointsPostCheckAndStore: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **servicePoint** | **float**|  |
+ **accessToken2** | **string**|  |
+ **checkAvailability** | **bool**|  |
+ **storeOrderId** | **string**|  |
+ **checkoutShippingmethodId** | **string**|  |
+ **checkoutShippingmethodName** | **string**|  |
+ **toPostNumber** | **string**|  |
+ **accessToken** | **string**| A JSON Web Token encoding either an “id” (user ID) or “iid” (integration ID) property. Alternatively, a public API key. | [optional]
+ **xRequestedWith** | **string**| Identifies the request as one made using JavaScript | [optional]
+
+### Return type
+
+[**\Toppy\Sendcloud\Model\ScPublicV2ServicepointsPostCheckAndStore200Response**](../Model/ScPublicV2ServicepointsPostCheckAndStore200Response.md)
+
+### Authorization
+
+[HTTPBasicAuth](../../README.md#HTTPBasicAuth)
+
+### HTTP request headers
+
+- **Content-Type**: `application/x-www-form-urlencoded`
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `scPublicV2ServicepointsPostItemsFitInShipment()`
+
+```php
+scPublicV2ServicepointsPostItemsFitInShipment($accessToken, $scPublicV2ServicepointsPostItemsFitInShipmentRequest): \Toppy\Sendcloud\Model\ScPublicV2ServicepointsPostItemsFitInShipment200Response
+```
+
+Service point carrier dimension check
+
+Retrieve a list of carriers that support cart item dimensions based on carrier size restrictions for a provided list of carriers
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure HTTP basic authorization: HTTPBasicAuth
+$config = Toppy\Sendcloud\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+
+
+$apiInstance = new Toppy\Sendcloud\Api\ServicePointsApi(
+    // If you want use custom http client, pass your client which implements `Psr\Http\Client\ClientInterface`.
+    // This is optional, `Psr18ClientDiscovery` will be used to find http client. For instance `GuzzleHttp\Client` implements that interface
+    new GuzzleHttp\Client(),
+    $config
+);
+$accessToken = 'accessToken_example'; // string | A JSON Web Token encoding either an “id” (user ID) or “iid” (integration ID) property. Alternatively, a public API key.
+$scPublicV2ServicepointsPostItemsFitInShipmentRequest = {"carrier_codes":["dpd","postnl"],"dimensions":[[100,10,1],[10,10,10]],"unit":"cm"}; // \Toppy\Sendcloud\Model\ScPublicV2ServicepointsPostItemsFitInShipmentRequest | 
+
+try {
+    $result = $apiInstance->scPublicV2ServicepointsPostItemsFitInShipment($accessToken, $scPublicV2ServicepointsPostItemsFitInShipmentRequest);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ServicePointsApi->scPublicV2ServicepointsPostItemsFitInShipment: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **accessToken** | **string**| A JSON Web Token encoding either an “id” (user ID) or “iid” (integration ID) property. Alternatively, a public API key. | [optional]
+ **scPublicV2ServicepointsPostItemsFitInShipmentRequest** | [**\Toppy\Sendcloud\Model\ScPublicV2ServicepointsPostItemsFitInShipmentRequest**](../Model/ScPublicV2ServicepointsPostItemsFitInShipmentRequest.md)|  | [optional]
+
+### Return type
+
+[**\Toppy\Sendcloud\Model\ScPublicV2ServicepointsPostItemsFitInShipment200Response**](../Model/ScPublicV2ServicepointsPostItemsFitInShipment200Response.md)
+
+### Authorization
+
+[HTTPBasicAuth](../../README.md#HTTPBasicAuth)
+
+### HTTP request headers
+
+- **Content-Type**: `application/json`
 - **Accept**: `application/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)

@@ -1,10 +1,10 @@
 # Toppy\Sendcloud\InvoicesApi
 
-All URIs are relative to https://account.sendcloud.com.
+All URIs are relative to https://panel.sendcloud.sc/api/v2.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**scPublicV2ScpGetAllUserInvoices()**](InvoicesApi.md#scPublicV2ScpGetAllUserInvoices) | **GET** /user/invoices | Retrieve all invoices that have been issued to your account
+[**scPublicV2ScpGetAllUserInvoices()**](InvoicesApi.md#scPublicV2ScpGetAllUserInvoices) | **GET** /user/invoices | Retrieve a list of invoices
 [**scPublicV2ScpGetInvoiceById()**](InvoicesApi.md#scPublicV2ScpGetInvoiceById) | **GET** /user/invoices/{id} | Retrieve a specific invoice
 
 
@@ -14,9 +14,9 @@ Method | HTTP request | Description
 scPublicV2ScpGetAllUserInvoices(): \Toppy\Sendcloud\Model\ScPublicV2ScpGetAllUserInvoices200Response
 ```
 
-Retrieve all invoices that have been issued to your account
+Retrieve a list of invoices
 
-With this endpoint, you can retrieve all of the invoices and the associated invoice `id` which have been issued to your account to date.
+Retrieve all invoices (with the associated invoice `id`) which have been issued to your account to date.
 
 ### Example
 
@@ -75,7 +75,7 @@ scPublicV2ScpGetInvoiceById($id): \Toppy\Sendcloud\Model\ScPublicV2ScpGetInvoice
 
 Retrieve a specific invoice
 
-Retrieve a single invoice issued to your Sendcloud account. You need to provide the invoice `id` to fetch details of a specific invoice. You can retrieve an invoice `id` via the [**Retrieve all invoices**](https://api.sendcloud.dev/docs/sendcloud-public-api/invoices/operations/list-user-invoices) endpoint.
+Retrieve a single invoice issued to your Sendcloud account via its `id`. You can retrieve an invoice `id` via the [Retrieve a list of invoices](/api/v2/invoices/retrieve-a-list-of-invoices) endpoint.
 
 ### Example
 

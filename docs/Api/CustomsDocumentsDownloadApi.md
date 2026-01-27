@@ -1,10 +1,10 @@
 # Toppy\Sendcloud\CustomsDocumentsDownloadApi
 
-All URIs are relative to https://account.sendcloud.com.
+All URIs are relative to https://panel.sendcloud.sc/api/v2.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**scPublicV2ScpGetCustomsDocumentMultipleNormalPrinter()**](CustomsDocumentsDownloadApi.md#scPublicV2ScpGetCustomsDocumentMultipleNormalPrinter) | **GET** /customs_declaration/normal_printer | Retrieve multiple customs declaration PDF
+[**scPublicV2ScpGetCustomsDocumentMultipleNormalPrinter()**](CustomsDocumentsDownloadApi.md#scPublicV2ScpGetCustomsDocumentMultipleNormalPrinter) | **GET** /customs_declaration/normal_printer | Retrieve multiple customs declaration PDFs
 [**scPublicV2ScpGetCustomsDocumentNormalPrinter()**](CustomsDocumentsDownloadApi.md#scPublicV2ScpGetCustomsDocumentNormalPrinter) | **GET** /customs_declaration/normal_printer/{parcel_id} | Retrieve a customs declaration PDF
 
 
@@ -14,9 +14,9 @@ Method | HTTP request | Description
 scPublicV2ScpGetCustomsDocumentMultipleNormalPrinter($ids, $startFrom): \SplFileObject
 ```
 
-Retrieve multiple customs declaration PDF
+Retrieve multiple customs declaration PDFs
 
-<!-- theme: warning --> > This endpoint is deprecated as of Mon, 08 Jan 2024 00:00:00 GMT. We will sunset this enpoint Mon, 08 Jul 2024 00:00:00 GMT. It is recommended to use the [**Retrieve Parcel Documents**](https://api.sendcloud.dev/docs/sendcloud-public-api/parcel-documents%2Foperations%2Fget-a-parcel-document) endpoint instead.  Retrieve PDF customs documents suitable for normal printers for multiple different parcels at the same time.
+Retrieve PDF customs documents suitable for normal printers for multiple different parcels at the same time.
 
 ### Example
 

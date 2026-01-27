@@ -1,6 +1,6 @@
 # Toppy\Sendcloud\ReturnsApi
 
-All URIs are relative to https://account.sendcloud.com.
+All URIs are relative to https://panel.sendcloud.sc/api/v2.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -16,7 +16,7 @@ scPublicV2ScpGetAllReturns($cursor): \Toppy\Sendcloud\Model\ScPublicV2ScpGetAllR
 
 Retrieve a list of returns
 
-Retrieve a paginated list of all the returns belonging to the authenticated user, sorted by the creation date.  <!-- theme: danger --> > There is a new version of the API. Please plan to migrate the <a href=\"https://api.sendcloud.dev/docs/sendcloud-public-api/branches/v3/returns/operations/list-returns\">new version</a>.
+Retrieve a paginated list of all the returns belonging to the authenticated user, sorted by the creation date.
 
 ### Example
 
@@ -78,7 +78,7 @@ scPublicV2ScpGetReturnById($id): \Toppy\Sendcloud\Model\ModelReturn
 
 Retrieve a return
 
-Retrieve the details of a specific return by its unique identifier.  <!-- theme: danger --> > There is a new version of the API. Please plan to migrate the <a href=\"https://api.sendcloud.dev/docs/sendcloud-public-api/branches/v3/returns/operations/get-a-return\">new version</a>.
+Retrieve the details of a specific return by its unique identifier.
 
 ### Example
 

@@ -10,8 +10,8 @@
         "generatorName": "php",
         "additionalProperties": {
           "packageName": "toppy/sendcloud-client",
-          "artifactUrl": "https://api.sendcloud.dev/docs/sendcloud-public-api/getting-started",
-          "artifactVersion": "1.0.0",
+          "artifactUrl": "https://sendcloud.dev/docs/getting-started/",
+          "artifactVersion": "0.2.0",
           "developerOrganization": "Toppy",
           "developerOrganizationUrl": "https://github.com/toppynl",
           "composerPackageName": "toppy/sendcloud-client",
