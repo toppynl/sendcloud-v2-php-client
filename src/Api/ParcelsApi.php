@@ -7,7 +7,7 @@ declare(strict_types=1);
  * PHP version 7.2
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Api;
+namespace Toppy\Sendcloud\V2\Api;
 
 use GuzzleHttp\Psr7\MultipartStream;
 use Http\Client\Common\Plugin\ErrorPlugin;
@@ -40,12 +40,12 @@ use Http\Discovery\Psr17FactoryDiscovery;
 use Http\Discovery\Psr18ClientDiscovery;
 use Http\Message\RequestFactory;
 use Http\Promise\Promise;
-use Toppy\Sendcloud\ApiException;
-use Toppy\Sendcloud\Configuration;
-use Toppy\Sendcloud\DebugPlugin;
-use Toppy\Sendcloud\HeaderSelector;
-use Toppy\Sendcloud\FormDataProcessor;
-use Toppy\Sendcloud\ObjectSerializer;
+use Toppy\Sendcloud\V2\ApiException;
+use Toppy\Sendcloud\V2\Configuration;
+use Toppy\Sendcloud\V2\DebugPlugin;
+use Toppy\Sendcloud\V2\HeaderSelector;
+use Toppy\Sendcloud\V2\FormDataProcessor;
+use Toppy\Sendcloud\V2\ObjectSerializer;
 use Psr\Http\Client\ClientExceptionInterface;
 use Psr\Http\Client\ClientInterface;
 use Psr\Http\Message\RequestFactoryInterface;
@@ -60,7 +60,7 @@ use function sprintf;
  * ParcelsApi Class Doc Comment
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -182,9 +182,9 @@ class ParcelsApi
      * @param  string $cursor Next and previous token that is used to paginate. The token is included in the response. (optional)
      * @param  string $errors If you are using this API for development purposes, you might want to use the errors query string in the URL. This allows you to visualize errors from the carrier. (optional)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Toppy\Sendcloud\Model\ScPublicV2ScpGetAllParcels200Response|\Toppy\Sendcloud\Model\ScPublicV2OrdersPostDeleteAShipment400Response
+     * @return \Toppy\Sendcloud\V2\Model\ScPublicV2ScpGetAllParcels200Response|\Toppy\Sendcloud\V2\Model\ScPublicV2OrdersPostDeleteAShipment400Response
      */
     public function scPublicV2ScpGetAllParcels($parcelStatus = null, $trackingNumber = null, $externalReference = null, $orderNumber = null, $updatedAfter = null, $announcedAfter = null, $ids = null, $cursor = null, $errors = null)
     {
@@ -207,9 +207,9 @@ class ParcelsApi
      * @param  string $cursor Next and previous token that is used to paginate. The token is included in the response. (optional)
      * @param  string $errors If you are using this API for development purposes, you might want to use the errors query string in the URL. This allows you to visualize errors from the carrier. (optional)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Toppy\Sendcloud\Model\ScPublicV2ScpGetAllParcels200Response|\Toppy\Sendcloud\Model\ScPublicV2OrdersPostDeleteAShipment400Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Toppy\Sendcloud\V2\Model\ScPublicV2ScpGetAllParcels200Response|\Toppy\Sendcloud\V2\Model\ScPublicV2OrdersPostDeleteAShipment400Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function scPublicV2ScpGetAllParcelsWithHttpInfo($parcelStatus = null, $trackingNumber = null, $externalReference = null, $orderNumber = null, $updatedAfter = null, $announcedAfter = null, $ids = null, $cursor = null, $errors = null)
     {
@@ -245,13 +245,13 @@ class ParcelsApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        \Toppy\Sendcloud\Model\ScPublicV2ScpGetAllParcels200Response::class,
+                        \Toppy\Sendcloud\V2\Model\ScPublicV2ScpGetAllParcels200Response::class,
                         $request,
                         $response,
                     );
                 case 404:
                     return $this->handleResponseWithDataType(
-                        \Toppy\Sendcloud\Model\ScPublicV2OrdersPostDeleteAShipment400Response::class,
+                        \Toppy\Sendcloud\V2\Model\ScPublicV2OrdersPostDeleteAShipment400Response::class,
                         $request,
                         $response,
                     );
@@ -272,7 +272,7 @@ class ParcelsApi
             }
 
             return $this->handleResponseWithDataType(
-                \Toppy\Sendcloud\Model\ScPublicV2ScpGetAllParcels200Response::class,
+                \Toppy\Sendcloud\V2\Model\ScPublicV2ScpGetAllParcels200Response::class,
                 $request,
                 $response,
             );
@@ -281,7 +281,7 @@ class ParcelsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\ScPublicV2ScpGetAllParcels200Response::class,
+                        \Toppy\Sendcloud\V2\Model\ScPublicV2ScpGetAllParcels200Response::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -289,7 +289,7 @@ class ParcelsApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\ScPublicV2OrdersPostDeleteAShipment400Response::class,
+                        \Toppy\Sendcloud\V2\Model\ScPublicV2OrdersPostDeleteAShipment400Response::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -349,7 +349,7 @@ class ParcelsApi
      */
     public function scPublicV2ScpGetAllParcelsAsyncWithHttpInfo($parcelStatus = null, $trackingNumber = null, $externalReference = null, $orderNumber = null, $updatedAfter = null, $announcedAfter = null, $ids = null, $cursor = null, $errors = null)
     {
-        $returnType = \Toppy\Sendcloud\Model\ScPublicV2ScpGetAllParcels200Response::class;
+        $returnType = \Toppy\Sendcloud\V2\Model\ScPublicV2ScpGetAllParcels200Response::class;
         $request = $this->scPublicV2ScpGetAllParcelsRequest($parcelStatus, $trackingNumber, $externalReference, $orderNumber, $updatedAfter, $announcedAfter, $ids, $cursor, $errors);
 
         return $this->httpAsyncClient->sendAsyncRequest($request)
@@ -583,9 +583,9 @@ class ParcelsApi
      *
      * @param  int $id The id of the parcel you want to retrieve (required)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Toppy\Sendcloud\Model\ScPublicV2ScpGetParcelById200Response
+     * @return \Toppy\Sendcloud\V2\Model\ScPublicV2ScpGetParcelById200Response
      */
     public function scPublicV2ScpGetParcelById($id)
     {
@@ -600,9 +600,9 @@ class ParcelsApi
      *
      * @param  int $id The id of the parcel you want to retrieve (required)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Toppy\Sendcloud\Model\ScPublicV2ScpGetParcelById200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Toppy\Sendcloud\V2\Model\ScPublicV2ScpGetParcelById200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function scPublicV2ScpGetParcelByIdWithHttpInfo($id)
     {
@@ -637,7 +637,7 @@ class ParcelsApi
 
             if ($statusCode === 200) {
                 return $this->handleResponseWithDataType(
-                    \Toppy\Sendcloud\Model\ScPublicV2ScpGetParcelById200Response::class,
+                    \Toppy\Sendcloud\V2\Model\ScPublicV2ScpGetParcelById200Response::class,
                     $request,
                     $response,
                 );
@@ -658,7 +658,7 @@ class ParcelsApi
             }
 
             return $this->handleResponseWithDataType(
-                \Toppy\Sendcloud\Model\ScPublicV2ScpGetParcelById200Response::class,
+                \Toppy\Sendcloud\V2\Model\ScPublicV2ScpGetParcelById200Response::class,
                 $request,
                 $response,
             );
@@ -666,7 +666,7 @@ class ParcelsApi
             if ($apiException->getCode() === 200) {
                 $data = ObjectSerializer::deserialize(
                     $apiException->getResponseBody(),
-                    \Toppy\Sendcloud\Model\ScPublicV2ScpGetParcelById200Response::class,
+                    \Toppy\Sendcloud\V2\Model\ScPublicV2ScpGetParcelById200Response::class,
                     $apiException->getResponseHeaders()
                 );
                 $apiException->setResponseObject($data);
@@ -710,7 +710,7 @@ class ParcelsApi
      */
     public function scPublicV2ScpGetParcelByIdAsyncWithHttpInfo($id)
     {
-        $returnType = \Toppy\Sendcloud\Model\ScPublicV2ScpGetParcelById200Response::class;
+        $returnType = \Toppy\Sendcloud\V2\Model\ScPublicV2ScpGetParcelById200Response::class;
         $request = $this->scPublicV2ScpGetParcelByIdRequest($id);
 
         return $this->httpAsyncClient->sendAsyncRequest($request)
@@ -841,9 +841,9 @@ class ParcelsApi
      *
      * @param  string $id ID of the parcel (required)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Toppy\Sendcloud\Model\ScPublicV2ScpGetReturnPortalUrl200Response
+     * @return \Toppy\Sendcloud\V2\Model\ScPublicV2ScpGetReturnPortalUrl200Response
      */
     public function scPublicV2ScpGetReturnPortalUrl($id)
     {
@@ -858,9 +858,9 @@ class ParcelsApi
      *
      * @param  string $id ID of the parcel (required)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Toppy\Sendcloud\Model\ScPublicV2ScpGetReturnPortalUrl200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Toppy\Sendcloud\V2\Model\ScPublicV2ScpGetReturnPortalUrl200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function scPublicV2ScpGetReturnPortalUrlWithHttpInfo($id)
     {
@@ -895,7 +895,7 @@ class ParcelsApi
 
             if ($statusCode === 200) {
                 return $this->handleResponseWithDataType(
-                    \Toppy\Sendcloud\Model\ScPublicV2ScpGetReturnPortalUrl200Response::class,
+                    \Toppy\Sendcloud\V2\Model\ScPublicV2ScpGetReturnPortalUrl200Response::class,
                     $request,
                     $response,
                 );
@@ -916,7 +916,7 @@ class ParcelsApi
             }
 
             return $this->handleResponseWithDataType(
-                \Toppy\Sendcloud\Model\ScPublicV2ScpGetReturnPortalUrl200Response::class,
+                \Toppy\Sendcloud\V2\Model\ScPublicV2ScpGetReturnPortalUrl200Response::class,
                 $request,
                 $response,
             );
@@ -924,7 +924,7 @@ class ParcelsApi
             if ($apiException->getCode() === 200) {
                 $data = ObjectSerializer::deserialize(
                     $apiException->getResponseBody(),
-                    \Toppy\Sendcloud\Model\ScPublicV2ScpGetReturnPortalUrl200Response::class,
+                    \Toppy\Sendcloud\V2\Model\ScPublicV2ScpGetReturnPortalUrl200Response::class,
                     $apiException->getResponseHeaders()
                 );
                 $apiException->setResponseObject($data);
@@ -968,7 +968,7 @@ class ParcelsApi
      */
     public function scPublicV2ScpGetReturnPortalUrlAsyncWithHttpInfo($id)
     {
-        $returnType = \Toppy\Sendcloud\Model\ScPublicV2ScpGetReturnPortalUrl200Response::class;
+        $returnType = \Toppy\Sendcloud\V2\Model\ScPublicV2ScpGetReturnPortalUrl200Response::class;
         $request = $this->scPublicV2ScpGetReturnPortalUrlRequest($id);
 
         return $this->httpAsyncClient->sendAsyncRequest($request)
@@ -1099,9 +1099,9 @@ class ParcelsApi
      *
      * @param  string $id ID of the parcel (required)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Toppy\Sendcloud\Model\CancelParcelStatus
+     * @return \Toppy\Sendcloud\V2\Model\CancelParcelStatus
      */
     public function scPublicV2ScpPostCancelSpecific($id)
     {
@@ -1116,9 +1116,9 @@ class ParcelsApi
      *
      * @param  string $id ID of the parcel (required)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Toppy\Sendcloud\Model\CancelParcelStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Toppy\Sendcloud\V2\Model\CancelParcelStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function scPublicV2ScpPostCancelSpecificWithHttpInfo($id)
     {
@@ -1153,7 +1153,7 @@ class ParcelsApi
 
             if ($statusCode === 200) {
                 return $this->handleResponseWithDataType(
-                    \Toppy\Sendcloud\Model\CancelParcelStatus::class,
+                    \Toppy\Sendcloud\V2\Model\CancelParcelStatus::class,
                     $request,
                     $response,
                 );
@@ -1174,7 +1174,7 @@ class ParcelsApi
             }
 
             return $this->handleResponseWithDataType(
-                \Toppy\Sendcloud\Model\CancelParcelStatus::class,
+                \Toppy\Sendcloud\V2\Model\CancelParcelStatus::class,
                 $request,
                 $response,
             );
@@ -1182,7 +1182,7 @@ class ParcelsApi
             if ($apiException->getCode() === 200) {
                 $data = ObjectSerializer::deserialize(
                     $apiException->getResponseBody(),
-                    \Toppy\Sendcloud\Model\CancelParcelStatus::class,
+                    \Toppy\Sendcloud\V2\Model\CancelParcelStatus::class,
                     $apiException->getResponseHeaders()
                 );
                 $apiException->setResponseObject($data);
@@ -1226,7 +1226,7 @@ class ParcelsApi
      */
     public function scPublicV2ScpPostCancelSpecificAsyncWithHttpInfo($id)
     {
-        $returnType = \Toppy\Sendcloud\Model\CancelParcelStatus::class;
+        $returnType = \Toppy\Sendcloud\V2\Model\CancelParcelStatus::class;
         $request = $this->scPublicV2ScpPostCancelSpecificRequest($id);
 
         return $this->httpAsyncClient->sendAsyncRequest($request)
@@ -1357,11 +1357,11 @@ class ParcelsApi
      *
      * @param  string $sendcloudPartnerId If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error. (optional)
      * @param  string $errors When making an API request, the errors query parameter can be used to determine the type of errors that should be included in the response. If &#x60;verbose&#x60; is specified, the response will only contain errors that Sendcloud has validated. These errors may include shipment details such as invalid addresses or missing postal codes. On the other hand, if &#x60;verbose-carrier&#x60; is specified, the response will include errors originating from the carriers side of the shipping process. These errors may result from technical or validation problems, such as connection failures or issues with the carrier&#x60;s systems, that prevent the shipment from being processed. More details are described on the page [Handling parcel errors](/docs/shipping/handling-parcel-errors). (optional)
-     * @param  \Toppy\Sendcloud\Model\ScPublicV2ScpPostCreateParcelRequest $scPublicV2ScpPostCreateParcelRequest scPublicV2ScpPostCreateParcelRequest (optional)
+     * @param  \Toppy\Sendcloud\V2\Model\ScPublicV2ScpPostCreateParcelRequest $scPublicV2ScpPostCreateParcelRequest scPublicV2ScpPostCreateParcelRequest (optional)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Toppy\Sendcloud\Model\ScPublicV2ScpPostCreateParcel200Response|\Toppy\Sendcloud\Model\CreateParcelError
+     * @return \Toppy\Sendcloud\V2\Model\ScPublicV2ScpPostCreateParcel200Response|\Toppy\Sendcloud\V2\Model\CreateParcelError
      */
     public function scPublicV2ScpPostCreateParcel($sendcloudPartnerId = null, $errors = null, $scPublicV2ScpPostCreateParcelRequest = null)
     {
@@ -1376,11 +1376,11 @@ class ParcelsApi
      *
      * @param  string $sendcloudPartnerId If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error. (optional)
      * @param  string $errors When making an API request, the errors query parameter can be used to determine the type of errors that should be included in the response. If &#x60;verbose&#x60; is specified, the response will only contain errors that Sendcloud has validated. These errors may include shipment details such as invalid addresses or missing postal codes. On the other hand, if &#x60;verbose-carrier&#x60; is specified, the response will include errors originating from the carriers side of the shipping process. These errors may result from technical or validation problems, such as connection failures or issues with the carrier&#x60;s systems, that prevent the shipment from being processed. More details are described on the page [Handling parcel errors](/docs/shipping/handling-parcel-errors). (optional)
-     * @param  \Toppy\Sendcloud\Model\ScPublicV2ScpPostCreateParcelRequest $scPublicV2ScpPostCreateParcelRequest (optional)
+     * @param  \Toppy\Sendcloud\V2\Model\ScPublicV2ScpPostCreateParcelRequest $scPublicV2ScpPostCreateParcelRequest (optional)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Toppy\Sendcloud\Model\ScPublicV2ScpPostCreateParcel200Response|\Toppy\Sendcloud\Model\CreateParcelError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Toppy\Sendcloud\V2\Model\ScPublicV2ScpPostCreateParcel200Response|\Toppy\Sendcloud\V2\Model\CreateParcelError, HTTP status code, HTTP response headers (array of strings)
      */
     public function scPublicV2ScpPostCreateParcelWithHttpInfo($sendcloudPartnerId = null, $errors = null, $scPublicV2ScpPostCreateParcelRequest = null)
     {
@@ -1416,13 +1416,13 @@ class ParcelsApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        \Toppy\Sendcloud\Model\ScPublicV2ScpPostCreateParcel200Response::class,
+                        \Toppy\Sendcloud\V2\Model\ScPublicV2ScpPostCreateParcel200Response::class,
                         $request,
                         $response,
                     );
                 case 400:
                     return $this->handleResponseWithDataType(
-                        \Toppy\Sendcloud\Model\CreateParcelError::class,
+                        \Toppy\Sendcloud\V2\Model\CreateParcelError::class,
                         $request,
                         $response,
                     );
@@ -1443,7 +1443,7 @@ class ParcelsApi
             }
 
             return $this->handleResponseWithDataType(
-                \Toppy\Sendcloud\Model\ScPublicV2ScpPostCreateParcel200Response::class,
+                \Toppy\Sendcloud\V2\Model\ScPublicV2ScpPostCreateParcel200Response::class,
                 $request,
                 $response,
             );
@@ -1452,7 +1452,7 @@ class ParcelsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\ScPublicV2ScpPostCreateParcel200Response::class,
+                        \Toppy\Sendcloud\V2\Model\ScPublicV2ScpPostCreateParcel200Response::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -1460,7 +1460,7 @@ class ParcelsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\CreateParcelError::class,
+                        \Toppy\Sendcloud\V2\Model\CreateParcelError::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -1479,7 +1479,7 @@ class ParcelsApi
      *
      * @param  string $sendcloudPartnerId If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error. (optional)
      * @param  string $errors When making an API request, the errors query parameter can be used to determine the type of errors that should be included in the response. If &#x60;verbose&#x60; is specified, the response will only contain errors that Sendcloud has validated. These errors may include shipment details such as invalid addresses or missing postal codes. On the other hand, if &#x60;verbose-carrier&#x60; is specified, the response will include errors originating from the carriers side of the shipping process. These errors may result from technical or validation problems, such as connection failures or issues with the carrier&#x60;s systems, that prevent the shipment from being processed. More details are described on the page [Handling parcel errors](/docs/shipping/handling-parcel-errors). (optional)
-     * @param  \Toppy\Sendcloud\Model\ScPublicV2ScpPostCreateParcelRequest $scPublicV2ScpPostCreateParcelRequest (optional)
+     * @param  \Toppy\Sendcloud\V2\Model\ScPublicV2ScpPostCreateParcelRequest $scPublicV2ScpPostCreateParcelRequest (optional)
      *
      * @throws \InvalidArgumentException
      * @return Promise
@@ -1501,14 +1501,14 @@ class ParcelsApi
      *
      * @param  string $sendcloudPartnerId If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error. (optional)
      * @param  string $errors When making an API request, the errors query parameter can be used to determine the type of errors that should be included in the response. If &#x60;verbose&#x60; is specified, the response will only contain errors that Sendcloud has validated. These errors may include shipment details such as invalid addresses or missing postal codes. On the other hand, if &#x60;verbose-carrier&#x60; is specified, the response will include errors originating from the carriers side of the shipping process. These errors may result from technical or validation problems, such as connection failures or issues with the carrier&#x60;s systems, that prevent the shipment from being processed. More details are described on the page [Handling parcel errors](/docs/shipping/handling-parcel-errors). (optional)
-     * @param  \Toppy\Sendcloud\Model\ScPublicV2ScpPostCreateParcelRequest $scPublicV2ScpPostCreateParcelRequest (optional)
+     * @param  \Toppy\Sendcloud\V2\Model\ScPublicV2ScpPostCreateParcelRequest $scPublicV2ScpPostCreateParcelRequest (optional)
      *
      * @throws \InvalidArgumentException
      * @return Promise
      */
     public function scPublicV2ScpPostCreateParcelAsyncWithHttpInfo($sendcloudPartnerId = null, $errors = null, $scPublicV2ScpPostCreateParcelRequest = null)
     {
-        $returnType = \Toppy\Sendcloud\Model\ScPublicV2ScpPostCreateParcel200Response::class;
+        $returnType = \Toppy\Sendcloud\V2\Model\ScPublicV2ScpPostCreateParcel200Response::class;
         $request = $this->scPublicV2ScpPostCreateParcelRequest($sendcloudPartnerId, $errors, $scPublicV2ScpPostCreateParcelRequest);
 
         return $this->httpAsyncClient->sendAsyncRequest($request)
@@ -1548,7 +1548,7 @@ class ParcelsApi
      *
      * @param  string $sendcloudPartnerId If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error. (optional)
      * @param  string $errors When making an API request, the errors query parameter can be used to determine the type of errors that should be included in the response. If &#x60;verbose&#x60; is specified, the response will only contain errors that Sendcloud has validated. These errors may include shipment details such as invalid addresses or missing postal codes. On the other hand, if &#x60;verbose-carrier&#x60; is specified, the response will include errors originating from the carriers side of the shipping process. These errors may result from technical or validation problems, such as connection failures or issues with the carrier&#x60;s systems, that prevent the shipment from being processed. More details are described on the page [Handling parcel errors](/docs/shipping/handling-parcel-errors). (optional)
-     * @param  \Toppy\Sendcloud\Model\ScPublicV2ScpPostCreateParcelRequest $scPublicV2ScpPostCreateParcelRequest (optional)
+     * @param  \Toppy\Sendcloud\V2\Model\ScPublicV2ScpPostCreateParcelRequest $scPublicV2ScpPostCreateParcelRequest (optional)
      *
      * @throws \InvalidArgumentException
      * @return RequestInterface
@@ -1648,11 +1648,11 @@ class ParcelsApi
      *
      * Update a parcel
      *
-     * @param  \Toppy\Sendcloud\Model\ScPublicV2ScpPutUpdateAParcelRequest $scPublicV2ScpPutUpdateAParcelRequest scPublicV2ScpPutUpdateAParcelRequest (optional)
+     * @param  \Toppy\Sendcloud\V2\Model\ScPublicV2ScpPutUpdateAParcelRequest $scPublicV2ScpPutUpdateAParcelRequest scPublicV2ScpPutUpdateAParcelRequest (optional)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Toppy\Sendcloud\Model\ScPublicV2ScpPutUpdateAParcel200Response
+     * @return \Toppy\Sendcloud\V2\Model\ScPublicV2ScpPutUpdateAParcel200Response
      */
     public function scPublicV2ScpPutUpdateAParcel($scPublicV2ScpPutUpdateAParcelRequest = null)
     {
@@ -1665,11 +1665,11 @@ class ParcelsApi
      *
      * Update a parcel
      *
-     * @param  \Toppy\Sendcloud\Model\ScPublicV2ScpPutUpdateAParcelRequest $scPublicV2ScpPutUpdateAParcelRequest (optional)
+     * @param  \Toppy\Sendcloud\V2\Model\ScPublicV2ScpPutUpdateAParcelRequest $scPublicV2ScpPutUpdateAParcelRequest (optional)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Toppy\Sendcloud\Model\ScPublicV2ScpPutUpdateAParcel200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Toppy\Sendcloud\V2\Model\ScPublicV2ScpPutUpdateAParcel200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function scPublicV2ScpPutUpdateAParcelWithHttpInfo($scPublicV2ScpPutUpdateAParcelRequest = null)
     {
@@ -1704,7 +1704,7 @@ class ParcelsApi
 
             if ($statusCode === 200) {
                 return $this->handleResponseWithDataType(
-                    \Toppy\Sendcloud\Model\ScPublicV2ScpPutUpdateAParcel200Response::class,
+                    \Toppy\Sendcloud\V2\Model\ScPublicV2ScpPutUpdateAParcel200Response::class,
                     $request,
                     $response,
                 );
@@ -1725,7 +1725,7 @@ class ParcelsApi
             }
 
             return $this->handleResponseWithDataType(
-                \Toppy\Sendcloud\Model\ScPublicV2ScpPutUpdateAParcel200Response::class,
+                \Toppy\Sendcloud\V2\Model\ScPublicV2ScpPutUpdateAParcel200Response::class,
                 $request,
                 $response,
             );
@@ -1733,7 +1733,7 @@ class ParcelsApi
             if ($apiException->getCode() === 200) {
                 $data = ObjectSerializer::deserialize(
                     $apiException->getResponseBody(),
-                    \Toppy\Sendcloud\Model\ScPublicV2ScpPutUpdateAParcel200Response::class,
+                    \Toppy\Sendcloud\V2\Model\ScPublicV2ScpPutUpdateAParcel200Response::class,
                     $apiException->getResponseHeaders()
                 );
                 $apiException->setResponseObject($data);
@@ -1750,7 +1750,7 @@ class ParcelsApi
      *
      * Update a parcel
      *
-     * @param  \Toppy\Sendcloud\Model\ScPublicV2ScpPutUpdateAParcelRequest $scPublicV2ScpPutUpdateAParcelRequest (optional)
+     * @param  \Toppy\Sendcloud\V2\Model\ScPublicV2ScpPutUpdateAParcelRequest $scPublicV2ScpPutUpdateAParcelRequest (optional)
      *
      * @throws \InvalidArgumentException
      * @return Promise
@@ -1770,14 +1770,14 @@ class ParcelsApi
      *
      * Update a parcel
      *
-     * @param  \Toppy\Sendcloud\Model\ScPublicV2ScpPutUpdateAParcelRequest $scPublicV2ScpPutUpdateAParcelRequest (optional)
+     * @param  \Toppy\Sendcloud\V2\Model\ScPublicV2ScpPutUpdateAParcelRequest $scPublicV2ScpPutUpdateAParcelRequest (optional)
      *
      * @throws \InvalidArgumentException
      * @return Promise
      */
     public function scPublicV2ScpPutUpdateAParcelAsyncWithHttpInfo($scPublicV2ScpPutUpdateAParcelRequest = null)
     {
-        $returnType = \Toppy\Sendcloud\Model\ScPublicV2ScpPutUpdateAParcel200Response::class;
+        $returnType = \Toppy\Sendcloud\V2\Model\ScPublicV2ScpPutUpdateAParcel200Response::class;
         $request = $this->scPublicV2ScpPutUpdateAParcelRequest($scPublicV2ScpPutUpdateAParcelRequest);
 
         return $this->httpAsyncClient->sendAsyncRequest($request)
@@ -1815,7 +1815,7 @@ class ParcelsApi
     /**
      * Create request for operation 'scPublicV2ScpPutUpdateAParcel'
      *
-     * @param  \Toppy\Sendcloud\Model\ScPublicV2ScpPutUpdateAParcelRequest $scPublicV2ScpPutUpdateAParcelRequest (optional)
+     * @param  \Toppy\Sendcloud\V2\Model\ScPublicV2ScpPutUpdateAParcelRequest $scPublicV2ScpPutUpdateAParcelRequest (optional)
      *
      * @throws \InvalidArgumentException
      * @return RequestInterface

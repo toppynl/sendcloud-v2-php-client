@@ -8,7 +8,7 @@ declare(strict_types=1);
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Model;
+namespace Toppy\Sendcloud\V2\Model;
 
 use \ArrayAccess;
-use \Toppy\Sendcloud\ObjectSerializer;
+use \Toppy\Sendcloud\V2\ObjectSerializer;
 
 /**
  * ScPublicV2ScpGetAllParcels200Response Class Doc Comment
  *
  * @category Class
  * @description Retrieve parcels
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -61,7 +61,7 @@ class ScPublicV2ScpGetAllParcels200Response implements ModelInterface, ArrayAcce
     protected static $openAPITypes = [
         'next' => 'int',
         'previous' => 'int',
-        'parcels' => '\Toppy\Sendcloud\Model\ParcelResponseShort[]'
+        'parcels' => '\Toppy\Sendcloud\V2\Model\ParcelResponseShort[]'
     ];
 
     /**
@@ -367,7 +367,7 @@ class ScPublicV2ScpGetAllParcels200Response implements ModelInterface, ArrayAcce
     /**
      * Gets parcels
      *
-     * @return \Toppy\Sendcloud\Model\ParcelResponseShort[]
+     * @return \Toppy\Sendcloud\V2\Model\ParcelResponseShort[]
      */
     public function getParcels()
     {
@@ -377,7 +377,7 @@ class ScPublicV2ScpGetAllParcels200Response implements ModelInterface, ArrayAcce
     /**
      * Sets parcels
      *
-     * @param \Toppy\Sendcloud\Model\ParcelResponseShort[] $parcels parcels
+     * @param \Toppy\Sendcloud\V2\Model\ParcelResponseShort[] $parcels parcels
      *
      * @return self
      */

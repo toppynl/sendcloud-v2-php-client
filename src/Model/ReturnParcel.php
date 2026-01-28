@@ -8,7 +8,7 @@ declare(strict_types=1);
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Model;
+namespace Toppy\Sendcloud\V2\Model;
 
 use \ArrayAccess;
-use \Toppy\Sendcloud\ObjectSerializer;
+use \Toppy\Sendcloud\V2\ObjectSerializer;
 
 /**
  * ReturnParcel Class Doc Comment
  *
  * @category Class
  * @description An object representing the details of a Parcel
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -72,7 +72,7 @@ class ReturnParcel implements ModelInterface, ArrayAccess, \JsonSerializable, \S
         'fromName' => 'string',
         'shippingMethod' => 'int',
         'extraData' => 'object',
-        'rules' => '\Toppy\Sendcloud\Model\ReturnParcelRulesInner[]'
+        'rules' => '\Toppy\Sendcloud\V2\Model\ReturnParcelRulesInner[]'
     ];
 
     /**
@@ -744,7 +744,7 @@ class ReturnParcel implements ModelInterface, ArrayAccess, \JsonSerializable, \S
     /**
      * Gets rules
      *
-     * @return \Toppy\Sendcloud\Model\ReturnParcelRulesInner[]|null
+     * @return \Toppy\Sendcloud\V2\Model\ReturnParcelRulesInner[]|null
      * @deprecated
      */
     public function getRules()
@@ -755,7 +755,7 @@ class ReturnParcel implements ModelInterface, ArrayAccess, \JsonSerializable, \S
     /**
      * Sets rules
      *
-     * @param \Toppy\Sendcloud\Model\ReturnParcelRulesInner[]|null $rules List of policy rules applied to this Parcel. DEPRECATED, Use `rule_modifications` field of the Return object instead.
+     * @param \Toppy\Sendcloud\V2\Model\ReturnParcelRulesInner[]|null $rules List of policy rules applied to this Parcel. DEPRECATED, Use `rule_modifications` field of the Return object instead.
      *
      * @return self
      * @deprecated

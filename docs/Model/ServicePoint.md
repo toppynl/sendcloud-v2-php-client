@@ -22,7 +22,7 @@ Name | Type | Description | Notes
 **homepage** | **string** |  |
 **carrier** | **string** |  |
 **country** | **string** |  |
-**formattedOpeningTimes** | [**\Toppy\Sendcloud\Model\ServicePointFormattedOpeningTimes**](ServicePointFormattedOpeningTimes.md) |  |
+**formattedOpeningTimes** | [**\Toppy\Sendcloud\V2\Model\ServicePointFormattedOpeningTimes**](ServicePointFormattedOpeningTimes.md) |  |
 **openTomorrow** | **bool** | Indicates whether the service point will be open tomorrow based on its operating schedule. This field is calculated from &#x60;formatted_opening_times&#x60; and should be used to determine operational availability. |
 **openUpcomingWeek** | **bool** | Indicates whether the service point will be open at least once during the next 7 days. This field is calculated from &#x60;formatted_opening_times&#x60; including any schedule exceptions, and should be used to determine operational availability. |
 **distance** | **float** | Distance between the reference point and the service point in meters. |

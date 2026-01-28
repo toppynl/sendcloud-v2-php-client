@@ -8,7 +8,7 @@ declare(strict_types=1);
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,15 +27,15 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Model;
-use \Toppy\Sendcloud\ObjectSerializer;
+namespace Toppy\Sendcloud\V2\Model;
+use \Toppy\Sendcloud\V2\ObjectSerializer;
 
 /**
  * CountryCodes Class Doc Comment
  *
  * @category Class
  * @description A country represented by its ISO 3166-1 alpha-2 code
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */

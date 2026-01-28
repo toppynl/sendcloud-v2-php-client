@@ -7,7 +7,7 @@ declare(strict_types=1);
  * PHP version 7.2
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Api;
+namespace Toppy\Sendcloud\V2\Api;
 
 use GuzzleHttp\Psr7\MultipartStream;
 use Http\Client\Common\Plugin\ErrorPlugin;
@@ -40,12 +40,12 @@ use Http\Discovery\Psr17FactoryDiscovery;
 use Http\Discovery\Psr18ClientDiscovery;
 use Http\Message\RequestFactory;
 use Http\Promise\Promise;
-use Toppy\Sendcloud\ApiException;
-use Toppy\Sendcloud\Configuration;
-use Toppy\Sendcloud\DebugPlugin;
-use Toppy\Sendcloud\HeaderSelector;
-use Toppy\Sendcloud\FormDataProcessor;
-use Toppy\Sendcloud\ObjectSerializer;
+use Toppy\Sendcloud\V2\ApiException;
+use Toppy\Sendcloud\V2\Configuration;
+use Toppy\Sendcloud\V2\DebugPlugin;
+use Toppy\Sendcloud\V2\HeaderSelector;
+use Toppy\Sendcloud\V2\FormDataProcessor;
+use Toppy\Sendcloud\V2\ObjectSerializer;
 use Psr\Http\Client\ClientExceptionInterface;
 use Psr\Http\Client\ClientInterface;
 use Psr\Http\Message\RequestFactoryInterface;
@@ -60,7 +60,7 @@ use function sprintf;
  * IntegrationsApi Class Doc Comment
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -174,7 +174,7 @@ class IntegrationsApi
      *
      * @param  int $id The id of the integration (required)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -190,7 +190,7 @@ class IntegrationsApi
      *
      * @param  int $id The id of the integration (required)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array<int, int|string[][]|null> of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -230,7 +230,7 @@ class IntegrationsApi
             if ($apiException->getCode() === 404) {
                 $data = ObjectSerializer::deserialize(
                     $apiException->getResponseBody(),
-                    \Toppy\Sendcloud\Model\ScPublicV2OrdersGetRetrieveAnIntegration404Response::class,
+                    \Toppy\Sendcloud\V2\Model\ScPublicV2OrdersGetRetrieveAnIntegration404Response::class,
                     $apiException->getResponseHeaders()
                 );
                 $apiException->setResponseObject($data);
@@ -394,9 +394,9 @@ class IntegrationsApi
      *
      * @param  string $ordering Specifies the field used to order the resulting response (optional)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Toppy\Sendcloud\Model\Integration[]
+     * @return \Toppy\Sendcloud\V2\Model\Integration[]
      */
     public function scPublicV2OrdersGetRetrieveAListOfIntegrations($ordering = null)
     {
@@ -411,9 +411,9 @@ class IntegrationsApi
      *
      * @param  string $ordering Specifies the field used to order the resulting response (optional)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Toppy\Sendcloud\Model\Integration[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Toppy\Sendcloud\V2\Model\Integration[], HTTP status code, HTTP response headers (array of strings)
      */
     public function scPublicV2OrdersGetRetrieveAListOfIntegrationsWithHttpInfo($ordering = null)
     {
@@ -448,7 +448,7 @@ class IntegrationsApi
 
             if ($statusCode === 200) {
                 return $this->handleResponseWithDataType(
-                    '\Toppy\Sendcloud\Model\Integration[]',
+                    '\Toppy\Sendcloud\V2\Model\Integration[]',
                     $request,
                     $response,
                 );
@@ -469,7 +469,7 @@ class IntegrationsApi
             }
 
             return $this->handleResponseWithDataType(
-                '\Toppy\Sendcloud\Model\Integration[]',
+                '\Toppy\Sendcloud\V2\Model\Integration[]',
                 $request,
                 $response,
             );
@@ -477,7 +477,7 @@ class IntegrationsApi
             if ($apiException->getCode() === 200) {
                 $data = ObjectSerializer::deserialize(
                     $apiException->getResponseBody(),
-                    '\Toppy\Sendcloud\Model\Integration[]',
+                    '\Toppy\Sendcloud\V2\Model\Integration[]',
                     $apiException->getResponseHeaders()
                 );
                 $apiException->setResponseObject($data);
@@ -521,7 +521,7 @@ class IntegrationsApi
      */
     public function scPublicV2OrdersGetRetrieveAListOfIntegrationsAsyncWithHttpInfo($ordering = null)
     {
-        $returnType = '\Toppy\Sendcloud\Model\Integration[]';
+        $returnType = '\Toppy\Sendcloud\V2\Model\Integration[]';
         $request = $this->scPublicV2OrdersGetRetrieveAListOfIntegrationsRequest($ordering);
 
         return $this->httpAsyncClient->sendAsyncRequest($request)
@@ -651,9 +651,9 @@ class IntegrationsApi
      *
      * @param  int $id The id of the integration (required)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Toppy\Sendcloud\Model\Integration|\Toppy\Sendcloud\Model\ScPublicV2OrdersGetRetrieveAnIntegration404Response
+     * @return \Toppy\Sendcloud\V2\Model\Integration|\Toppy\Sendcloud\V2\Model\ScPublicV2OrdersGetRetrieveAnIntegration404Response
      */
     public function scPublicV2OrdersGetRetrieveAnIntegration($id)
     {
@@ -668,9 +668,9 @@ class IntegrationsApi
      *
      * @param  int $id The id of the integration (required)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Toppy\Sendcloud\Model\Integration|\Toppy\Sendcloud\Model\ScPublicV2OrdersGetRetrieveAnIntegration404Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Toppy\Sendcloud\V2\Model\Integration|\Toppy\Sendcloud\V2\Model\ScPublicV2OrdersGetRetrieveAnIntegration404Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function scPublicV2OrdersGetRetrieveAnIntegrationWithHttpInfo($id)
     {
@@ -706,13 +706,13 @@ class IntegrationsApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        \Toppy\Sendcloud\Model\Integration::class,
+                        \Toppy\Sendcloud\V2\Model\Integration::class,
                         $request,
                         $response,
                     );
                 case 404:
                     return $this->handleResponseWithDataType(
-                        \Toppy\Sendcloud\Model\ScPublicV2OrdersGetRetrieveAnIntegration404Response::class,
+                        \Toppy\Sendcloud\V2\Model\ScPublicV2OrdersGetRetrieveAnIntegration404Response::class,
                         $request,
                         $response,
                     );
@@ -733,7 +733,7 @@ class IntegrationsApi
             }
 
             return $this->handleResponseWithDataType(
-                \Toppy\Sendcloud\Model\Integration::class,
+                \Toppy\Sendcloud\V2\Model\Integration::class,
                 $request,
                 $response,
             );
@@ -742,7 +742,7 @@ class IntegrationsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\Integration::class,
+                        \Toppy\Sendcloud\V2\Model\Integration::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -750,7 +750,7 @@ class IntegrationsApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\ScPublicV2OrdersGetRetrieveAnIntegration404Response::class,
+                        \Toppy\Sendcloud\V2\Model\ScPublicV2OrdersGetRetrieveAnIntegration404Response::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -794,7 +794,7 @@ class IntegrationsApi
      */
     public function scPublicV2OrdersGetRetrieveAnIntegrationAsyncWithHttpInfo($id)
     {
-        $returnType = \Toppy\Sendcloud\Model\Integration::class;
+        $returnType = \Toppy\Sendcloud\V2\Model\Integration::class;
         $request = $this->scPublicV2OrdersGetRetrieveAnIntegrationRequest($id);
 
         return $this->httpAsyncClient->sendAsyncRequest($request)
@@ -925,9 +925,9 @@ class IntegrationsApi
      *
      * @param  int $id The id of the integration to which the shipments belong (required)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Toppy\Sendcloud\Model\ScPublicV2OrdersGetRetrieveIntegrationsLogs200Response|\Toppy\Sendcloud\Model\ScPublicV2OrdersGetRetrieveAnIntegration404Response
+     * @return \Toppy\Sendcloud\V2\Model\ScPublicV2OrdersGetRetrieveIntegrationsLogs200Response|\Toppy\Sendcloud\V2\Model\ScPublicV2OrdersGetRetrieveAnIntegration404Response
      */
     public function scPublicV2OrdersGetRetrieveIntegrationLogs($id)
     {
@@ -942,9 +942,9 @@ class IntegrationsApi
      *
      * @param  int $id The id of the integration to which the shipments belong (required)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Toppy\Sendcloud\Model\ScPublicV2OrdersGetRetrieveIntegrationsLogs200Response|\Toppy\Sendcloud\Model\ScPublicV2OrdersGetRetrieveAnIntegration404Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Toppy\Sendcloud\V2\Model\ScPublicV2OrdersGetRetrieveIntegrationsLogs200Response|\Toppy\Sendcloud\V2\Model\ScPublicV2OrdersGetRetrieveAnIntegration404Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function scPublicV2OrdersGetRetrieveIntegrationLogsWithHttpInfo($id)
     {
@@ -980,13 +980,13 @@ class IntegrationsApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        \Toppy\Sendcloud\Model\ScPublicV2OrdersGetRetrieveIntegrationsLogs200Response::class,
+                        \Toppy\Sendcloud\V2\Model\ScPublicV2OrdersGetRetrieveIntegrationsLogs200Response::class,
                         $request,
                         $response,
                     );
                 case 404:
                     return $this->handleResponseWithDataType(
-                        \Toppy\Sendcloud\Model\ScPublicV2OrdersGetRetrieveAnIntegration404Response::class,
+                        \Toppy\Sendcloud\V2\Model\ScPublicV2OrdersGetRetrieveAnIntegration404Response::class,
                         $request,
                         $response,
                     );
@@ -1007,7 +1007,7 @@ class IntegrationsApi
             }
 
             return $this->handleResponseWithDataType(
-                \Toppy\Sendcloud\Model\ScPublicV2OrdersGetRetrieveIntegrationsLogs200Response::class,
+                \Toppy\Sendcloud\V2\Model\ScPublicV2OrdersGetRetrieveIntegrationsLogs200Response::class,
                 $request,
                 $response,
             );
@@ -1016,7 +1016,7 @@ class IntegrationsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\ScPublicV2OrdersGetRetrieveIntegrationsLogs200Response::class,
+                        \Toppy\Sendcloud\V2\Model\ScPublicV2OrdersGetRetrieveIntegrationsLogs200Response::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -1024,7 +1024,7 @@ class IntegrationsApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\ScPublicV2OrdersGetRetrieveAnIntegration404Response::class,
+                        \Toppy\Sendcloud\V2\Model\ScPublicV2OrdersGetRetrieveAnIntegration404Response::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -1068,7 +1068,7 @@ class IntegrationsApi
      */
     public function scPublicV2OrdersGetRetrieveIntegrationLogsAsyncWithHttpInfo($id)
     {
-        $returnType = \Toppy\Sendcloud\Model\ScPublicV2OrdersGetRetrieveIntegrationsLogs200Response::class;
+        $returnType = \Toppy\Sendcloud\V2\Model\ScPublicV2OrdersGetRetrieveIntegrationsLogs200Response::class;
         $request = $this->scPublicV2OrdersGetRetrieveIntegrationLogsRequest($id);
 
         return $this->httpAsyncClient->sendAsyncRequest($request)
@@ -1198,9 +1198,9 @@ class IntegrationsApi
      * Retrieve all integration exception logs
      *
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Toppy\Sendcloud\Model\ScPublicV2OrdersGetRetrieveIntegrationsLogs200Response
+     * @return \Toppy\Sendcloud\V2\Model\ScPublicV2OrdersGetRetrieveIntegrationsLogs200Response
      */
     public function scPublicV2OrdersGetRetrieveIntegrationsLogs()
     {
@@ -1214,9 +1214,9 @@ class IntegrationsApi
      * Retrieve all integration exception logs
      *
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Toppy\Sendcloud\Model\ScPublicV2OrdersGetRetrieveIntegrationsLogs200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Toppy\Sendcloud\V2\Model\ScPublicV2OrdersGetRetrieveIntegrationsLogs200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function scPublicV2OrdersGetRetrieveIntegrationsLogsWithHttpInfo()
     {
@@ -1251,7 +1251,7 @@ class IntegrationsApi
 
             if ($statusCode === 200) {
                 return $this->handleResponseWithDataType(
-                    \Toppy\Sendcloud\Model\ScPublicV2OrdersGetRetrieveIntegrationsLogs200Response::class,
+                    \Toppy\Sendcloud\V2\Model\ScPublicV2OrdersGetRetrieveIntegrationsLogs200Response::class,
                     $request,
                     $response,
                 );
@@ -1272,7 +1272,7 @@ class IntegrationsApi
             }
 
             return $this->handleResponseWithDataType(
-                \Toppy\Sendcloud\Model\ScPublicV2OrdersGetRetrieveIntegrationsLogs200Response::class,
+                \Toppy\Sendcloud\V2\Model\ScPublicV2OrdersGetRetrieveIntegrationsLogs200Response::class,
                 $request,
                 $response,
             );
@@ -1280,7 +1280,7 @@ class IntegrationsApi
             if ($apiException->getCode() === 200) {
                 $data = ObjectSerializer::deserialize(
                     $apiException->getResponseBody(),
-                    \Toppy\Sendcloud\Model\ScPublicV2OrdersGetRetrieveIntegrationsLogs200Response::class,
+                    \Toppy\Sendcloud\V2\Model\ScPublicV2OrdersGetRetrieveIntegrationsLogs200Response::class,
                     $apiException->getResponseHeaders()
                 );
                 $apiException->setResponseObject($data);
@@ -1322,7 +1322,7 @@ class IntegrationsApi
      */
     public function scPublicV2OrdersGetRetrieveIntegrationsLogsAsyncWithHttpInfo()
     {
-        $returnType = \Toppy\Sendcloud\Model\ScPublicV2OrdersGetRetrieveIntegrationsLogs200Response::class;
+        $returnType = \Toppy\Sendcloud\V2\Model\ScPublicV2OrdersGetRetrieveIntegrationsLogs200Response::class;
         $request = $this->scPublicV2OrdersGetRetrieveIntegrationsLogsRequest();
 
         return $this->httpAsyncClient->sendAsyncRequest($request)
@@ -1439,11 +1439,11 @@ class IntegrationsApi
      * Partially update an integration
      *
      * @param  int $id The id of the integration (required)
-     * @param  \Toppy\Sendcloud\Model\IntegrationUpdate $integrationUpdate integrationUpdate (optional)
+     * @param  \Toppy\Sendcloud\V2\Model\IntegrationUpdate $integrationUpdate integrationUpdate (optional)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Toppy\Sendcloud\Model\IntegrationUpdate|\Toppy\Sendcloud\Model\ScPublicV2OrdersPutUpdateAnIntegration400Response|\Toppy\Sendcloud\Model\ScPublicV2OrdersGetRetrieveAnIntegration404Response
+     * @return \Toppy\Sendcloud\V2\Model\IntegrationUpdate|\Toppy\Sendcloud\V2\Model\ScPublicV2OrdersPutUpdateAnIntegration400Response|\Toppy\Sendcloud\V2\Model\ScPublicV2OrdersGetRetrieveAnIntegration404Response
      */
     public function scPublicV2OrdersPatchPartialUpdateAnIntegration($id, $integrationUpdate = null)
     {
@@ -1457,11 +1457,11 @@ class IntegrationsApi
      * Partially update an integration
      *
      * @param  int $id The id of the integration (required)
-     * @param  \Toppy\Sendcloud\Model\IntegrationUpdate $integrationUpdate (optional)
+     * @param  \Toppy\Sendcloud\V2\Model\IntegrationUpdate $integrationUpdate (optional)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Toppy\Sendcloud\Model\IntegrationUpdate|\Toppy\Sendcloud\Model\ScPublicV2OrdersPutUpdateAnIntegration400Response|\Toppy\Sendcloud\Model\ScPublicV2OrdersGetRetrieveAnIntegration404Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Toppy\Sendcloud\V2\Model\IntegrationUpdate|\Toppy\Sendcloud\V2\Model\ScPublicV2OrdersPutUpdateAnIntegration400Response|\Toppy\Sendcloud\V2\Model\ScPublicV2OrdersGetRetrieveAnIntegration404Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function scPublicV2OrdersPatchPartialUpdateAnIntegrationWithHttpInfo($id, $integrationUpdate = null)
     {
@@ -1497,19 +1497,19 @@ class IntegrationsApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        \Toppy\Sendcloud\Model\IntegrationUpdate::class,
+                        \Toppy\Sendcloud\V2\Model\IntegrationUpdate::class,
                         $request,
                         $response,
                     );
                 case 400:
                     return $this->handleResponseWithDataType(
-                        \Toppy\Sendcloud\Model\ScPublicV2OrdersPutUpdateAnIntegration400Response::class,
+                        \Toppy\Sendcloud\V2\Model\ScPublicV2OrdersPutUpdateAnIntegration400Response::class,
                         $request,
                         $response,
                     );
                 case 404:
                     return $this->handleResponseWithDataType(
-                        \Toppy\Sendcloud\Model\ScPublicV2OrdersGetRetrieveAnIntegration404Response::class,
+                        \Toppy\Sendcloud\V2\Model\ScPublicV2OrdersGetRetrieveAnIntegration404Response::class,
                         $request,
                         $response,
                     );
@@ -1530,7 +1530,7 @@ class IntegrationsApi
             }
 
             return $this->handleResponseWithDataType(
-                \Toppy\Sendcloud\Model\IntegrationUpdate::class,
+                \Toppy\Sendcloud\V2\Model\IntegrationUpdate::class,
                 $request,
                 $response,
             );
@@ -1539,7 +1539,7 @@ class IntegrationsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\IntegrationUpdate::class,
+                        \Toppy\Sendcloud\V2\Model\IntegrationUpdate::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -1547,7 +1547,7 @@ class IntegrationsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\ScPublicV2OrdersPutUpdateAnIntegration400Response::class,
+                        \Toppy\Sendcloud\V2\Model\ScPublicV2OrdersPutUpdateAnIntegration400Response::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -1555,7 +1555,7 @@ class IntegrationsApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\ScPublicV2OrdersGetRetrieveAnIntegration404Response::class,
+                        \Toppy\Sendcloud\V2\Model\ScPublicV2OrdersGetRetrieveAnIntegration404Response::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -1573,7 +1573,7 @@ class IntegrationsApi
      * Partially update an integration
      *
      * @param  int $id The id of the integration (required)
-     * @param  \Toppy\Sendcloud\Model\IntegrationUpdate $integrationUpdate (optional)
+     * @param  \Toppy\Sendcloud\V2\Model\IntegrationUpdate $integrationUpdate (optional)
      *
      * @throws \InvalidArgumentException
      * @return Promise
@@ -1594,14 +1594,14 @@ class IntegrationsApi
      * Partially update an integration
      *
      * @param  int $id The id of the integration (required)
-     * @param  \Toppy\Sendcloud\Model\IntegrationUpdate $integrationUpdate (optional)
+     * @param  \Toppy\Sendcloud\V2\Model\IntegrationUpdate $integrationUpdate (optional)
      *
      * @throws \InvalidArgumentException
      * @return Promise
      */
     public function scPublicV2OrdersPatchPartialUpdateAnIntegrationAsyncWithHttpInfo($id, $integrationUpdate = null)
     {
-        $returnType = \Toppy\Sendcloud\Model\IntegrationUpdate::class;
+        $returnType = \Toppy\Sendcloud\V2\Model\IntegrationUpdate::class;
         $request = $this->scPublicV2OrdersPatchPartialUpdateAnIntegrationRequest($id, $integrationUpdate);
 
         return $this->httpAsyncClient->sendAsyncRequest($request)
@@ -1640,7 +1640,7 @@ class IntegrationsApi
      * Create request for operation 'scPublicV2OrdersPatchPartialUpdateAnIntegration'
      *
      * @param  int $id The id of the integration (required)
-     * @param  \Toppy\Sendcloud\Model\IntegrationUpdate $integrationUpdate (optional)
+     * @param  \Toppy\Sendcloud\V2\Model\IntegrationUpdate $integrationUpdate (optional)
      *
      * @throws \InvalidArgumentException
      * @return RequestInterface
@@ -1738,11 +1738,11 @@ class IntegrationsApi
      * Create integration exceptions logs
      *
      * @param  int $id The id of the integration to which the shipments belong (required)
-     * @param  \Toppy\Sendcloud\Model\IntegrationLog $integrationLog integrationLog (optional)
+     * @param  \Toppy\Sendcloud\V2\Model\IntegrationLog $integrationLog integrationLog (optional)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Toppy\Sendcloud\Model\IntegrationLog|\Toppy\Sendcloud\Model\ScPublicV2OrdersPutUpdateAnIntegration400Response|\Toppy\Sendcloud\Model\ScPublicV2OrdersGetRetrieveAnIntegration404Response
+     * @return \Toppy\Sendcloud\V2\Model\IntegrationLog|\Toppy\Sendcloud\V2\Model\ScPublicV2OrdersPutUpdateAnIntegration400Response|\Toppy\Sendcloud\V2\Model\ScPublicV2OrdersGetRetrieveAnIntegration404Response
      */
     public function scPublicV2OrdersPostCreateIntegrationLogs($id, $integrationLog = null)
     {
@@ -1756,11 +1756,11 @@ class IntegrationsApi
      * Create integration exceptions logs
      *
      * @param  int $id The id of the integration to which the shipments belong (required)
-     * @param  \Toppy\Sendcloud\Model\IntegrationLog $integrationLog (optional)
+     * @param  \Toppy\Sendcloud\V2\Model\IntegrationLog $integrationLog (optional)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Toppy\Sendcloud\Model\IntegrationLog|\Toppy\Sendcloud\Model\ScPublicV2OrdersPutUpdateAnIntegration400Response|\Toppy\Sendcloud\Model\ScPublicV2OrdersGetRetrieveAnIntegration404Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Toppy\Sendcloud\V2\Model\IntegrationLog|\Toppy\Sendcloud\V2\Model\ScPublicV2OrdersPutUpdateAnIntegration400Response|\Toppy\Sendcloud\V2\Model\ScPublicV2OrdersGetRetrieveAnIntegration404Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function scPublicV2OrdersPostCreateIntegrationLogsWithHttpInfo($id, $integrationLog = null)
     {
@@ -1796,19 +1796,19 @@ class IntegrationsApi
             switch($statusCode) {
                 case 201:
                     return $this->handleResponseWithDataType(
-                        \Toppy\Sendcloud\Model\IntegrationLog::class,
+                        \Toppy\Sendcloud\V2\Model\IntegrationLog::class,
                         $request,
                         $response,
                     );
                 case 400:
                     return $this->handleResponseWithDataType(
-                        \Toppy\Sendcloud\Model\ScPublicV2OrdersPutUpdateAnIntegration400Response::class,
+                        \Toppy\Sendcloud\V2\Model\ScPublicV2OrdersPutUpdateAnIntegration400Response::class,
                         $request,
                         $response,
                     );
                 case 404:
                     return $this->handleResponseWithDataType(
-                        \Toppy\Sendcloud\Model\ScPublicV2OrdersGetRetrieveAnIntegration404Response::class,
+                        \Toppy\Sendcloud\V2\Model\ScPublicV2OrdersGetRetrieveAnIntegration404Response::class,
                         $request,
                         $response,
                     );
@@ -1829,7 +1829,7 @@ class IntegrationsApi
             }
 
             return $this->handleResponseWithDataType(
-                \Toppy\Sendcloud\Model\IntegrationLog::class,
+                \Toppy\Sendcloud\V2\Model\IntegrationLog::class,
                 $request,
                 $response,
             );
@@ -1838,7 +1838,7 @@ class IntegrationsApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\IntegrationLog::class,
+                        \Toppy\Sendcloud\V2\Model\IntegrationLog::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -1846,7 +1846,7 @@ class IntegrationsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\ScPublicV2OrdersPutUpdateAnIntegration400Response::class,
+                        \Toppy\Sendcloud\V2\Model\ScPublicV2OrdersPutUpdateAnIntegration400Response::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -1854,7 +1854,7 @@ class IntegrationsApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\ScPublicV2OrdersGetRetrieveAnIntegration404Response::class,
+                        \Toppy\Sendcloud\V2\Model\ScPublicV2OrdersGetRetrieveAnIntegration404Response::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -1872,7 +1872,7 @@ class IntegrationsApi
      * Create integration exceptions logs
      *
      * @param  int $id The id of the integration to which the shipments belong (required)
-     * @param  \Toppy\Sendcloud\Model\IntegrationLog $integrationLog (optional)
+     * @param  \Toppy\Sendcloud\V2\Model\IntegrationLog $integrationLog (optional)
      *
      * @throws \InvalidArgumentException
      * @return Promise
@@ -1893,14 +1893,14 @@ class IntegrationsApi
      * Create integration exceptions logs
      *
      * @param  int $id The id of the integration to which the shipments belong (required)
-     * @param  \Toppy\Sendcloud\Model\IntegrationLog $integrationLog (optional)
+     * @param  \Toppy\Sendcloud\V2\Model\IntegrationLog $integrationLog (optional)
      *
      * @throws \InvalidArgumentException
      * @return Promise
      */
     public function scPublicV2OrdersPostCreateIntegrationLogsAsyncWithHttpInfo($id, $integrationLog = null)
     {
-        $returnType = \Toppy\Sendcloud\Model\IntegrationLog::class;
+        $returnType = \Toppy\Sendcloud\V2\Model\IntegrationLog::class;
         $request = $this->scPublicV2OrdersPostCreateIntegrationLogsRequest($id, $integrationLog);
 
         return $this->httpAsyncClient->sendAsyncRequest($request)
@@ -1939,7 +1939,7 @@ class IntegrationsApi
      * Create request for operation 'scPublicV2OrdersPostCreateIntegrationLogs'
      *
      * @param  int $id The id of the integration to which the shipments belong (required)
-     * @param  \Toppy\Sendcloud\Model\IntegrationLog $integrationLog (optional)
+     * @param  \Toppy\Sendcloud\V2\Model\IntegrationLog $integrationLog (optional)
      *
      * @throws \InvalidArgumentException
      * @return RequestInterface
@@ -2037,11 +2037,11 @@ class IntegrationsApi
      * Update an integration
      *
      * @param  int $id The id of the integration (required)
-     * @param  \Toppy\Sendcloud\Model\IntegrationUpdate $integrationUpdate  (optional)
+     * @param  \Toppy\Sendcloud\V2\Model\IntegrationUpdate $integrationUpdate  (optional)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Toppy\Sendcloud\Model\IntegrationUpdate|\Toppy\Sendcloud\Model\ScPublicV2OrdersPutUpdateAnIntegration400Response|\Toppy\Sendcloud\Model\ScPublicV2OrdersGetRetrieveAnIntegration404Response
+     * @return \Toppy\Sendcloud\V2\Model\IntegrationUpdate|\Toppy\Sendcloud\V2\Model\ScPublicV2OrdersPutUpdateAnIntegration400Response|\Toppy\Sendcloud\V2\Model\ScPublicV2OrdersGetRetrieveAnIntegration404Response
      */
     public function scPublicV2OrdersPutUpdateAnIntegration($id, $integrationUpdate = null)
     {
@@ -2055,11 +2055,11 @@ class IntegrationsApi
      * Update an integration
      *
      * @param  int $id The id of the integration (required)
-     * @param  \Toppy\Sendcloud\Model\IntegrationUpdate $integrationUpdate  (optional)
+     * @param  \Toppy\Sendcloud\V2\Model\IntegrationUpdate $integrationUpdate  (optional)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Toppy\Sendcloud\Model\IntegrationUpdate|\Toppy\Sendcloud\Model\ScPublicV2OrdersPutUpdateAnIntegration400Response|\Toppy\Sendcloud\Model\ScPublicV2OrdersGetRetrieveAnIntegration404Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Toppy\Sendcloud\V2\Model\IntegrationUpdate|\Toppy\Sendcloud\V2\Model\ScPublicV2OrdersPutUpdateAnIntegration400Response|\Toppy\Sendcloud\V2\Model\ScPublicV2OrdersGetRetrieveAnIntegration404Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function scPublicV2OrdersPutUpdateAnIntegrationWithHttpInfo($id, $integrationUpdate = null)
     {
@@ -2095,19 +2095,19 @@ class IntegrationsApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        \Toppy\Sendcloud\Model\IntegrationUpdate::class,
+                        \Toppy\Sendcloud\V2\Model\IntegrationUpdate::class,
                         $request,
                         $response,
                     );
                 case 400:
                     return $this->handleResponseWithDataType(
-                        \Toppy\Sendcloud\Model\ScPublicV2OrdersPutUpdateAnIntegration400Response::class,
+                        \Toppy\Sendcloud\V2\Model\ScPublicV2OrdersPutUpdateAnIntegration400Response::class,
                         $request,
                         $response,
                     );
                 case 404:
                     return $this->handleResponseWithDataType(
-                        \Toppy\Sendcloud\Model\ScPublicV2OrdersGetRetrieveAnIntegration404Response::class,
+                        \Toppy\Sendcloud\V2\Model\ScPublicV2OrdersGetRetrieveAnIntegration404Response::class,
                         $request,
                         $response,
                     );
@@ -2128,7 +2128,7 @@ class IntegrationsApi
             }
 
             return $this->handleResponseWithDataType(
-                \Toppy\Sendcloud\Model\IntegrationUpdate::class,
+                \Toppy\Sendcloud\V2\Model\IntegrationUpdate::class,
                 $request,
                 $response,
             );
@@ -2137,7 +2137,7 @@ class IntegrationsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\IntegrationUpdate::class,
+                        \Toppy\Sendcloud\V2\Model\IntegrationUpdate::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -2145,7 +2145,7 @@ class IntegrationsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\ScPublicV2OrdersPutUpdateAnIntegration400Response::class,
+                        \Toppy\Sendcloud\V2\Model\ScPublicV2OrdersPutUpdateAnIntegration400Response::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -2153,7 +2153,7 @@ class IntegrationsApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\ScPublicV2OrdersGetRetrieveAnIntegration404Response::class,
+                        \Toppy\Sendcloud\V2\Model\ScPublicV2OrdersGetRetrieveAnIntegration404Response::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -2171,7 +2171,7 @@ class IntegrationsApi
      * Update an integration
      *
      * @param  int $id The id of the integration (required)
-     * @param  \Toppy\Sendcloud\Model\IntegrationUpdate $integrationUpdate  (optional)
+     * @param  \Toppy\Sendcloud\V2\Model\IntegrationUpdate $integrationUpdate  (optional)
      *
      * @throws \InvalidArgumentException
      * @return Promise
@@ -2192,14 +2192,14 @@ class IntegrationsApi
      * Update an integration
      *
      * @param  int $id The id of the integration (required)
-     * @param  \Toppy\Sendcloud\Model\IntegrationUpdate $integrationUpdate  (optional)
+     * @param  \Toppy\Sendcloud\V2\Model\IntegrationUpdate $integrationUpdate  (optional)
      *
      * @throws \InvalidArgumentException
      * @return Promise
      */
     public function scPublicV2OrdersPutUpdateAnIntegrationAsyncWithHttpInfo($id, $integrationUpdate = null)
     {
-        $returnType = \Toppy\Sendcloud\Model\IntegrationUpdate::class;
+        $returnType = \Toppy\Sendcloud\V2\Model\IntegrationUpdate::class;
         $request = $this->scPublicV2OrdersPutUpdateAnIntegrationRequest($id, $integrationUpdate);
 
         return $this->httpAsyncClient->sendAsyncRequest($request)
@@ -2238,7 +2238,7 @@ class IntegrationsApi
      * Create request for operation 'scPublicV2OrdersPutUpdateAnIntegration'
      *
      * @param  int $id The id of the integration (required)
-     * @param  \Toppy\Sendcloud\Model\IntegrationUpdate $integrationUpdate  (optional)
+     * @param  \Toppy\Sendcloud\V2\Model\IntegrationUpdate $integrationUpdate  (optional)
      *
      * @throws \InvalidArgumentException
      * @return RequestInterface

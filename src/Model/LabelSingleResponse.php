@@ -8,7 +8,7 @@ declare(strict_types=1);
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Model;
+namespace Toppy\Sendcloud\V2\Model;
 
 use \ArrayAccess;
-use \Toppy\Sendcloud\ObjectSerializer;
+use \Toppy\Sendcloud\V2\ObjectSerializer;
 
 /**
  * LabelSingleResponse Class Doc Comment
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,8 +58,8 @@ class LabelSingleResponse implements ModelInterface, ArrayAccess, \JsonSerializa
       * @var string[]
       */
     protected static $openAPITypes = [
-        'label' => \Toppy\Sendcloud\Model\LabelObject::class,
-        'customsDeclaration' => \Toppy\Sendcloud\Model\CustomsDocumentsAssociatedWithTheLabel::class
+        'label' => \Toppy\Sendcloud\V2\Model\LabelObject::class,
+        'customsDeclaration' => \Toppy\Sendcloud\V2\Model\CustomsDocumentsAssociatedWithTheLabel::class
     ];
 
     /**
@@ -269,7 +269,7 @@ class LabelSingleResponse implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets label
      *
-     * @return \Toppy\Sendcloud\Model\LabelObject|null
+     * @return \Toppy\Sendcloud\V2\Model\LabelObject|null
      */
     public function getLabel()
     {
@@ -279,7 +279,7 @@ class LabelSingleResponse implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets label
      *
-     * @param \Toppy\Sendcloud\Model\LabelObject|null $label label
+     * @param \Toppy\Sendcloud\V2\Model\LabelObject|null $label label
      *
      * @return self
      */
@@ -297,7 +297,7 @@ class LabelSingleResponse implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets customsDeclaration
      *
-     * @return \Toppy\Sendcloud\Model\CustomsDocumentsAssociatedWithTheLabel|null
+     * @return \Toppy\Sendcloud\V2\Model\CustomsDocumentsAssociatedWithTheLabel|null
      * @deprecated
      */
     public function getCustomsDeclaration()
@@ -308,7 +308,7 @@ class LabelSingleResponse implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets customsDeclaration
      *
-     * @param \Toppy\Sendcloud\Model\CustomsDocumentsAssociatedWithTheLabel|null $customsDeclaration customsDeclaration
+     * @param \Toppy\Sendcloud\V2\Model\CustomsDocumentsAssociatedWithTheLabel|null $customsDeclaration customsDeclaration
      *
      * @return self
      * @deprecated

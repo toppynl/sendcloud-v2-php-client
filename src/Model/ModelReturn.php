@@ -8,7 +8,7 @@ declare(strict_types=1);
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Model;
+namespace Toppy\Sendcloud\V2\Model;
 
 use \ArrayAccess;
-use \Toppy\Sendcloud\ObjectSerializer;
+use \Toppy\Sendcloud\V2\ObjectSerializer;
 
 /**
  * ModelReturn Class Doc Comment
  *
  * @category Class
  * @description An object representing a Return.  This includes details of the original outgoing parcel, the incoming parcel and the returned items.
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -65,7 +65,7 @@ class ModelReturn implements ModelInterface, ArrayAccess, \JsonSerializable, \St
         'outgoingParcel' => 'int',
         'incomingParcel' => 'int',
         'message' => 'string',
-        'refund' => \Toppy\Sendcloud\Model\ReturnRefund::class,
+        'refund' => \Toppy\Sendcloud\V2\Model\ReturnRefund::class,
         'isCancellable' => 'bool',
         'returnFee' => 'float',
         'returnFeeCurrency' => 'string',
@@ -75,11 +75,11 @@ class ModelReturn implements ModelInterface, ArrayAccess, \JsonSerializable, \St
         'deliveredAt' => '\DateTime',
         'deliveryOption' => 'string',
         'storeLocation' => 'int',
-        'outgoingParcelData' => \Toppy\Sendcloud\Model\ReturnParcel::class,
-        'incomingParcelData' => \Toppy\Sendcloud\Model\ReturnIncomingParcelData::class,
-        'incomingParcelStatus' => \Toppy\Sendcloud\Model\ReturnIncomingParcelStatus::class,
-        'images' => '\Toppy\Sendcloud\Model\ReturnImageObject[]',
-        'ruleModifications' => '\Toppy\Sendcloud\Model\ReturnRuleModificationsInner[]'
+        'outgoingParcelData' => \Toppy\Sendcloud\V2\Model\ReturnParcel::class,
+        'incomingParcelData' => \Toppy\Sendcloud\V2\Model\ReturnIncomingParcelData::class,
+        'incomingParcelStatus' => \Toppy\Sendcloud\V2\Model\ReturnIncomingParcelStatus::class,
+        'images' => '\Toppy\Sendcloud\V2\Model\ReturnImageObject[]',
+        'ruleModifications' => '\Toppy\Sendcloud\V2\Model\ReturnRuleModificationsInner[]'
     ];
 
     /**
@@ -652,7 +652,7 @@ class ModelReturn implements ModelInterface, ArrayAccess, \JsonSerializable, \St
     /**
      * Gets refund
      *
-     * @return \Toppy\Sendcloud\Model\ReturnRefund|null
+     * @return \Toppy\Sendcloud\V2\Model\ReturnRefund|null
      */
     public function getRefund()
     {
@@ -662,7 +662,7 @@ class ModelReturn implements ModelInterface, ArrayAccess, \JsonSerializable, \St
     /**
      * Sets refund
      *
-     * @param \Toppy\Sendcloud\Model\ReturnRefund|null $refund refund
+     * @param \Toppy\Sendcloud\V2\Model\ReturnRefund|null $refund refund
      *
      * @return self
      */
@@ -959,7 +959,7 @@ class ModelReturn implements ModelInterface, ArrayAccess, \JsonSerializable, \St
     /**
      * Gets outgoingParcelData
      *
-     * @return \Toppy\Sendcloud\Model\ReturnParcel|null
+     * @return \Toppy\Sendcloud\V2\Model\ReturnParcel|null
      */
     public function getOutgoingParcelData()
     {
@@ -969,7 +969,7 @@ class ModelReturn implements ModelInterface, ArrayAccess, \JsonSerializable, \St
     /**
      * Sets outgoingParcelData
      *
-     * @param \Toppy\Sendcloud\Model\ReturnParcel|null $outgoingParcelData outgoingParcelData
+     * @param \Toppy\Sendcloud\V2\Model\ReturnParcel|null $outgoingParcelData outgoingParcelData
      *
      * @return self
      */
@@ -987,7 +987,7 @@ class ModelReturn implements ModelInterface, ArrayAccess, \JsonSerializable, \St
     /**
      * Gets incomingParcelData
      *
-     * @return \Toppy\Sendcloud\Model\ReturnIncomingParcelData|null
+     * @return \Toppy\Sendcloud\V2\Model\ReturnIncomingParcelData|null
      */
     public function getIncomingParcelData()
     {
@@ -997,7 +997,7 @@ class ModelReturn implements ModelInterface, ArrayAccess, \JsonSerializable, \St
     /**
      * Sets incomingParcelData
      *
-     * @param \Toppy\Sendcloud\Model\ReturnIncomingParcelData|null $incomingParcelData incomingParcelData
+     * @param \Toppy\Sendcloud\V2\Model\ReturnIncomingParcelData|null $incomingParcelData incomingParcelData
      *
      * @return self
      */
@@ -1015,7 +1015,7 @@ class ModelReturn implements ModelInterface, ArrayAccess, \JsonSerializable, \St
     /**
      * Gets incomingParcelStatus
      *
-     * @return \Toppy\Sendcloud\Model\ReturnIncomingParcelStatus|null
+     * @return \Toppy\Sendcloud\V2\Model\ReturnIncomingParcelStatus|null
      */
     public function getIncomingParcelStatus()
     {
@@ -1025,7 +1025,7 @@ class ModelReturn implements ModelInterface, ArrayAccess, \JsonSerializable, \St
     /**
      * Sets incomingParcelStatus
      *
-     * @param \Toppy\Sendcloud\Model\ReturnIncomingParcelStatus|null $incomingParcelStatus incomingParcelStatus
+     * @param \Toppy\Sendcloud\V2\Model\ReturnIncomingParcelStatus|null $incomingParcelStatus incomingParcelStatus
      *
      * @return self
      */
@@ -1043,7 +1043,7 @@ class ModelReturn implements ModelInterface, ArrayAccess, \JsonSerializable, \St
     /**
      * Gets images
      *
-     * @return \Toppy\Sendcloud\Model\ReturnImageObject[]|null
+     * @return \Toppy\Sendcloud\V2\Model\ReturnImageObject[]|null
      */
     public function getImages()
     {
@@ -1053,7 +1053,7 @@ class ModelReturn implements ModelInterface, ArrayAccess, \JsonSerializable, \St
     /**
      * Sets images
      *
-     * @param \Toppy\Sendcloud\Model\ReturnImageObject[]|null $images A list of images attached to a return
+     * @param \Toppy\Sendcloud\V2\Model\ReturnImageObject[]|null $images A list of images attached to a return
      *
      * @return self
      */
@@ -1071,7 +1071,7 @@ class ModelReturn implements ModelInterface, ArrayAccess, \JsonSerializable, \St
     /**
      * Gets ruleModifications
      *
-     * @return \Toppy\Sendcloud\Model\ReturnRuleModificationsInner[]|null
+     * @return \Toppy\Sendcloud\V2\Model\ReturnRuleModificationsInner[]|null
      */
     public function getRuleModifications()
     {
@@ -1081,7 +1081,7 @@ class ModelReturn implements ModelInterface, ArrayAccess, \JsonSerializable, \St
     /**
      * Sets ruleModifications
      *
-     * @param \Toppy\Sendcloud\Model\ReturnRuleModificationsInner[]|null $ruleModifications List of return rules applied to this Return
+     * @param \Toppy\Sendcloud\V2\Model\ReturnRuleModificationsInner[]|null $ruleModifications List of return rules applied to this Return
      *
      * @return self
      */

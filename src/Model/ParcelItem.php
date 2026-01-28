@@ -8,7 +8,7 @@ declare(strict_types=1);
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Model;
+namespace Toppy\Sendcloud\V2\Model;
 
 use \ArrayAccess;
-use \Toppy\Sendcloud\ObjectSerializer;
+use \Toppy\Sendcloud\V2\ObjectSerializer;
 
 /**
  * ParcelItem Class Doc Comment
  *
  * @category Class
  * @description The items of a Parcel
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -74,7 +74,7 @@ class ParcelItem implements ModelInterface, ArrayAccess, \JsonSerializable, \Str
         'midCode' => 'string',
         'materialContent' => 'string',
         'intendedUse' => 'string',
-        'dangerousGoods' => \Toppy\Sendcloud\Model\DangerousGoods::class,
+        'dangerousGoods' => \Toppy\Sendcloud\V2\Model\DangerousGoods::class,
         'ddsReference' => 'string',
         'taricDocCode' => 'string'
     ];
@@ -904,7 +904,7 @@ class ParcelItem implements ModelInterface, ArrayAccess, \JsonSerializable, \Str
     /**
      * Gets dangerousGoods
      *
-     * @return \Toppy\Sendcloud\Model\DangerousGoods|null
+     * @return \Toppy\Sendcloud\V2\Model\DangerousGoods|null
      */
     public function getDangerousGoods()
     {
@@ -914,7 +914,7 @@ class ParcelItem implements ModelInterface, ArrayAccess, \JsonSerializable, \Str
     /**
      * Sets dangerousGoods
      *
-     * @param \Toppy\Sendcloud\Model\DangerousGoods|null $dangerousGoods dangerousGoods
+     * @param \Toppy\Sendcloud\V2\Model\DangerousGoods|null $dangerousGoods dangerousGoods
      *
      * @return self
      */

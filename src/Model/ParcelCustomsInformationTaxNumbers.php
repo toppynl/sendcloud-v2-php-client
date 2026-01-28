@@ -8,7 +8,7 @@ declare(strict_types=1);
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Model;
+namespace Toppy\Sendcloud\V2\Model;
 
 use \ArrayAccess;
-use \Toppy\Sendcloud\ObjectSerializer;
+use \Toppy\Sendcloud\V2\ObjectSerializer;
 
 /**
  * ParcelCustomsInformationTaxNumbers Class Doc Comment
  *
  * @category Class
  * @description Identification numbers and codes related to sender, receiver and importer of record provider.
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,9 +59,9 @@ class ParcelCustomsInformationTaxNumbers implements ModelInterface, ArrayAccess,
       * @var string[]
       */
     protected static $openAPITypes = [
-        'sender' => '\Toppy\Sendcloud\Model\TaxNumber[]',
-        'receiver' => '\Toppy\Sendcloud\Model\TaxNumber[]',
-        'importerOfRecord' => '\Toppy\Sendcloud\Model\TaxNumber[]'
+        'sender' => '\Toppy\Sendcloud\V2\Model\TaxNumber[]',
+        'receiver' => '\Toppy\Sendcloud\V2\Model\TaxNumber[]',
+        'importerOfRecord' => '\Toppy\Sendcloud\V2\Model\TaxNumber[]'
     ];
 
     /**
@@ -303,7 +303,7 @@ class ParcelCustomsInformationTaxNumbers implements ModelInterface, ArrayAccess,
     /**
      * Gets sender
      *
-     * @return \Toppy\Sendcloud\Model\TaxNumber[]
+     * @return \Toppy\Sendcloud\V2\Model\TaxNumber[]
      */
     public function getSender()
     {
@@ -313,7 +313,7 @@ class ParcelCustomsInformationTaxNumbers implements ModelInterface, ArrayAccess,
     /**
      * Sets sender
      *
-     * @param \Toppy\Sendcloud\Model\TaxNumber[] $sender Sender's list of identification number objects
+     * @param \Toppy\Sendcloud\V2\Model\TaxNumber[] $sender Sender's list of identification number objects
      *
      * @return self
      */
@@ -335,7 +335,7 @@ class ParcelCustomsInformationTaxNumbers implements ModelInterface, ArrayAccess,
     /**
      * Gets receiver
      *
-     * @return \Toppy\Sendcloud\Model\TaxNumber[]
+     * @return \Toppy\Sendcloud\V2\Model\TaxNumber[]
      */
     public function getReceiver()
     {
@@ -345,7 +345,7 @@ class ParcelCustomsInformationTaxNumbers implements ModelInterface, ArrayAccess,
     /**
      * Sets receiver
      *
-     * @param \Toppy\Sendcloud\Model\TaxNumber[] $receiver Receiver's list of identification number objects
+     * @param \Toppy\Sendcloud\V2\Model\TaxNumber[] $receiver Receiver's list of identification number objects
      *
      * @return self
      */
@@ -367,7 +367,7 @@ class ParcelCustomsInformationTaxNumbers implements ModelInterface, ArrayAccess,
     /**
      * Gets importerOfRecord
      *
-     * @return \Toppy\Sendcloud\Model\TaxNumber[]
+     * @return \Toppy\Sendcloud\V2\Model\TaxNumber[]
      */
     public function getImporterOfRecord()
     {
@@ -377,7 +377,7 @@ class ParcelCustomsInformationTaxNumbers implements ModelInterface, ArrayAccess,
     /**
      * Sets importerOfRecord
      *
-     * @param \Toppy\Sendcloud\Model\TaxNumber[] $importerOfRecord Importer of record's list of identification number objects
+     * @param \Toppy\Sendcloud\V2\Model\TaxNumber[] $importerOfRecord Importer of record's list of identification number objects
      *
      * @return self
      */

@@ -1,4 +1,4 @@
-# Toppy\Sendcloud\ServicePointsApi
+# Toppy\Sendcloud\V2\ServicePointsApi
 
 All URIs are relative to https://panel.sendcloud.sc/api/v2.
 
@@ -31,12 +31,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: HTTPBasicAuth
-$config = Toppy\Sendcloud\Configuration::getDefaultConfiguration()
+$config = Toppy\Sendcloud\V2\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Toppy\Sendcloud\Api\ServicePointsApi(
+$apiInstance = new Toppy\Sendcloud\V2\Api\ServicePointsApi(
     // If you want use custom http client, pass your client which implements `Psr\Http\Client\ClientInterface`.
     // This is optional, `Psr18ClientDiscovery` will be used to find http client. For instance `GuzzleHttp\Client` implements that interface
     new GuzzleHttp\Client(),
@@ -93,12 +93,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: HTTPBasicAuth
-$config = Toppy\Sendcloud\Configuration::getDefaultConfiguration()
+$config = Toppy\Sendcloud\V2\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Toppy\Sendcloud\Api\ServicePointsApi(
+$apiInstance = new Toppy\Sendcloud\V2\Api\ServicePointsApi(
     // If you want use custom http client, pass your client which implements `Psr\Http\Client\ClientInterface`.
     // This is optional, `Psr18ClientDiscovery` will be used to find http client. For instance `GuzzleHttp\Client` implements that interface
     new GuzzleHttp\Client(),
@@ -142,7 +142,7 @@ Name | Type | Description  | Notes
 ## `scPublicV2ServicepointsGetServicePointById()`
 
 ```php
-scPublicV2ServicepointsGetServicePointById($servicePointId, $accessToken): \Toppy\Sendcloud\Model\ServicePoint
+scPublicV2ServicepointsGetServicePointById($servicePointId, $accessToken): \Toppy\Sendcloud\V2\Model\ServicePoint
 ```
 
 Retrieve a service point
@@ -157,12 +157,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: HTTPBasicAuth
-$config = Toppy\Sendcloud\Configuration::getDefaultConfiguration()
+$config = Toppy\Sendcloud\V2\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Toppy\Sendcloud\Api\ServicePointsApi(
+$apiInstance = new Toppy\Sendcloud\V2\Api\ServicePointsApi(
     // If you want use custom http client, pass your client which implements `Psr\Http\Client\ClientInterface`.
     // This is optional, `Psr18ClientDiscovery` will be used to find http client. For instance `GuzzleHttp\Client` implements that interface
     new GuzzleHttp\Client(),
@@ -188,7 +188,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Toppy\Sendcloud\Model\ServicePoint**](../Model/ServicePoint.md)
+[**\Toppy\Sendcloud\V2\Model\ServicePoint**](../Model/ServicePoint.md)
 
 ### Authorization
 
@@ -206,7 +206,7 @@ Name | Type | Description  | Notes
 ## `scPublicV2ServicepointsGetServicePoints()`
 
 ```php
-scPublicV2ServicepointsGetServicePoints($country, $xRequestedWith, $accessToken, $carrier, $latitude, $longitude, $neLatitude, $neLongitude, $swLatitude, $swLongitude, $address, $city, $postalCode, $houseNumber, $radius, $weight, $pudoId, $shopType, $generalShopType): \Toppy\Sendcloud\Model\ServicePoint[]
+scPublicV2ServicepointsGetServicePoints($country, $xRequestedWith, $accessToken, $carrier, $latitude, $longitude, $neLatitude, $neLongitude, $swLatitude, $swLongitude, $address, $city, $postalCode, $houseNumber, $radius, $weight, $pudoId, $shopType, $generalShopType): \Toppy\Sendcloud\V2\Model\ServicePoint[]
 ```
 
 Retrieve a list of service points
@@ -221,12 +221,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: HTTPBasicAuth
-$config = Toppy\Sendcloud\Configuration::getDefaultConfiguration()
+$config = Toppy\Sendcloud\V2\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Toppy\Sendcloud\Api\ServicePointsApi(
+$apiInstance = new Toppy\Sendcloud\V2\Api\ServicePointsApi(
     // If you want use custom http client, pass your client which implements `Psr\Http\Client\ClientInterface`.
     // This is optional, `Psr18ClientDiscovery` will be used to find http client. For instance `GuzzleHttp\Client` implements that interface
     new GuzzleHttp\Client(),
@@ -286,7 +286,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Toppy\Sendcloud\Model\ServicePoint[]**](../Model/ServicePoint.md)
+[**\Toppy\Sendcloud\V2\Model\ServicePoint[]**](../Model/ServicePoint.md)
 
 ### Authorization
 
@@ -304,7 +304,7 @@ Name | Type | Description  | Notes
 ## `scPublicV2ServicepointsGetStore()`
 
 ```php
-scPublicV2ServicepointsGetStore($shopType, $orderId, $shopIdentification, $servicePoint, $orderConfirmation, $checkoutShippingmethodId, $checkoutShippingmethodName, $toPostNumber): \Toppy\Sendcloud\Model\ScPublicV2ServicepointsGetStore201Response
+scPublicV2ServicepointsGetStore($shopType, $orderId, $shopIdentification, $servicePoint, $orderConfirmation, $checkoutShippingmethodId, $checkoutShippingmethodName, $toPostNumber): \Toppy\Sendcloud\V2\Model\ScPublicV2ServicepointsGetStore201Response
 ```
 
 Create a selected service point object
@@ -319,7 +319,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new Toppy\Sendcloud\Api\ServicePointsApi(
+$apiInstance = new Toppy\Sendcloud\V2\Api\ServicePointsApi(
     // If you want use custom http client, pass your client which implements `Psr\Http\Client\ClientInterface`.
     // This is optional, `Psr18ClientDiscovery` will be used to find http client. For instance `GuzzleHttp\Client` implements that interface
     new GuzzleHttp\Client()
@@ -356,7 +356,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Toppy\Sendcloud\Model\ScPublicV2ServicepointsGetStore201Response**](../Model/ScPublicV2ServicepointsGetStore201Response.md)
+[**\Toppy\Sendcloud\V2\Model\ScPublicV2ServicepointsGetStore201Response**](../Model/ScPublicV2ServicepointsGetStore201Response.md)
 
 ### Authorization
 
@@ -374,7 +374,7 @@ No authorization required
 ## `scPublicV2ServicepointsPostCheckAndStore()`
 
 ```php
-scPublicV2ServicepointsPostCheckAndStore($servicePoint, $accessToken2, $checkAvailability, $storeOrderId, $checkoutShippingmethodId, $checkoutShippingmethodName, $toPostNumber, $accessToken, $xRequestedWith): \Toppy\Sendcloud\Model\ScPublicV2ServicepointsPostCheckAndStore200Response
+scPublicV2ServicepointsPostCheckAndStore($servicePoint, $accessToken2, $checkAvailability, $storeOrderId, $checkoutShippingmethodId, $checkoutShippingmethodName, $toPostNumber, $accessToken, $xRequestedWith): \Toppy\Sendcloud\V2\Model\ScPublicV2ServicepointsPostCheckAndStore200Response
 ```
 
 Create a selected servicepoint record after checking its availability
@@ -389,12 +389,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: HTTPBasicAuth
-$config = Toppy\Sendcloud\Configuration::getDefaultConfiguration()
+$config = Toppy\Sendcloud\V2\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Toppy\Sendcloud\Api\ServicePointsApi(
+$apiInstance = new Toppy\Sendcloud\V2\Api\ServicePointsApi(
     // If you want use custom http client, pass your client which implements `Psr\Http\Client\ClientInterface`.
     // This is optional, `Psr18ClientDiscovery` will be used to find http client. For instance `GuzzleHttp\Client` implements that interface
     new GuzzleHttp\Client(),
@@ -434,7 +434,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Toppy\Sendcloud\Model\ScPublicV2ServicepointsPostCheckAndStore200Response**](../Model/ScPublicV2ServicepointsPostCheckAndStore200Response.md)
+[**\Toppy\Sendcloud\V2\Model\ScPublicV2ServicepointsPostCheckAndStore200Response**](../Model/ScPublicV2ServicepointsPostCheckAndStore200Response.md)
 
 ### Authorization
 
@@ -452,7 +452,7 @@ Name | Type | Description  | Notes
 ## `scPublicV2ServicepointsPostItemsFitInShipment()`
 
 ```php
-scPublicV2ServicepointsPostItemsFitInShipment($accessToken, $scPublicV2ServicepointsPostItemsFitInShipmentRequest): \Toppy\Sendcloud\Model\ScPublicV2ServicepointsPostItemsFitInShipment200Response
+scPublicV2ServicepointsPostItemsFitInShipment($accessToken, $scPublicV2ServicepointsPostItemsFitInShipmentRequest): \Toppy\Sendcloud\V2\Model\ScPublicV2ServicepointsPostItemsFitInShipment200Response
 ```
 
 Service point carrier dimension check
@@ -467,19 +467,19 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: HTTPBasicAuth
-$config = Toppy\Sendcloud\Configuration::getDefaultConfiguration()
+$config = Toppy\Sendcloud\V2\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Toppy\Sendcloud\Api\ServicePointsApi(
+$apiInstance = new Toppy\Sendcloud\V2\Api\ServicePointsApi(
     // If you want use custom http client, pass your client which implements `Psr\Http\Client\ClientInterface`.
     // This is optional, `Psr18ClientDiscovery` will be used to find http client. For instance `GuzzleHttp\Client` implements that interface
     new GuzzleHttp\Client(),
     $config
 );
 $accessToken = 'accessToken_example'; // string | A JSON Web Token encoding either an “id” (user ID) or “iid” (integration ID) property. Alternatively, a public API key.
-$scPublicV2ServicepointsPostItemsFitInShipmentRequest = {"carrier_codes":["dpd","postnl"],"dimensions":[[100,10,1],[10,10,10]],"unit":"cm"}; // \Toppy\Sendcloud\Model\ScPublicV2ServicepointsPostItemsFitInShipmentRequest | 
+$scPublicV2ServicepointsPostItemsFitInShipmentRequest = {"carrier_codes":["dpd","postnl"],"dimensions":[[100,10,1],[10,10,10]],"unit":"cm"}; // \Toppy\Sendcloud\V2\Model\ScPublicV2ServicepointsPostItemsFitInShipmentRequest | 
 
 try {
     $result = $apiInstance->scPublicV2ServicepointsPostItemsFitInShipment($accessToken, $scPublicV2ServicepointsPostItemsFitInShipmentRequest);
@@ -494,11 +494,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **accessToken** | **string**| A JSON Web Token encoding either an “id” (user ID) or “iid” (integration ID) property. Alternatively, a public API key. | [optional]
- **scPublicV2ServicepointsPostItemsFitInShipmentRequest** | [**\Toppy\Sendcloud\Model\ScPublicV2ServicepointsPostItemsFitInShipmentRequest**](../Model/ScPublicV2ServicepointsPostItemsFitInShipmentRequest.md)|  | [optional]
+ **scPublicV2ServicepointsPostItemsFitInShipmentRequest** | [**\Toppy\Sendcloud\V2\Model\ScPublicV2ServicepointsPostItemsFitInShipmentRequest**](../Model/ScPublicV2ServicepointsPostItemsFitInShipmentRequest.md)|  | [optional]
 
 ### Return type
 
-[**\Toppy\Sendcloud\Model\ScPublicV2ServicepointsPostItemsFitInShipment200Response**](../Model/ScPublicV2ServicepointsPostItemsFitInShipment200Response.md)
+[**\Toppy\Sendcloud\V2\Model\ScPublicV2ServicepointsPostItemsFitInShipment200Response**](../Model/ScPublicV2ServicepointsPostItemsFitInShipment200Response.md)
 
 ### Authorization
 

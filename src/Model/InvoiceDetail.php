@@ -8,7 +8,7 @@ declare(strict_types=1);
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Model;
+namespace Toppy\Sendcloud\V2\Model;
 
 use \ArrayAccess;
-use \Toppy\Sendcloud\ObjectSerializer;
+use \Toppy\Sendcloud\V2\ObjectSerializer;
 
 /**
  * InvoiceDetail Class Doc Comment
  *
  * @category Class
  * @description An invoice object as returned within a list
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -66,7 +66,7 @@ class InvoiceDetail implements ModelInterface, ArrayAccess, \JsonSerializable, \
         'priceExcl' => 'float',
         'isPayed' => 'bool',
         'date' => '\DateTime',
-        'items' => '\Toppy\Sendcloud\Model\InvoiceDetailItemsInner[]'
+        'items' => '\Toppy\Sendcloud\V2\Model\InvoiceDetailItemsInner[]'
     ];
 
     /**
@@ -591,7 +591,7 @@ class InvoiceDetail implements ModelInterface, ArrayAccess, \JsonSerializable, \
     /**
      * Gets items
      *
-     * @return \Toppy\Sendcloud\Model\InvoiceDetailItemsInner[]|null
+     * @return \Toppy\Sendcloud\V2\Model\InvoiceDetailItemsInner[]|null
      */
     public function getItems()
     {
@@ -601,7 +601,7 @@ class InvoiceDetail implements ModelInterface, ArrayAccess, \JsonSerializable, \
     /**
      * Sets items
      *
-     * @param \Toppy\Sendcloud\Model\InvoiceDetailItemsInner[]|null $items A list of the invoice items
+     * @param \Toppy\Sendcloud\V2\Model\InvoiceDetailItemsInner[]|null $items A list of the invoice items
      *
      * @return self
      */

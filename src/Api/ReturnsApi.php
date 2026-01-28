@@ -7,7 +7,7 @@ declare(strict_types=1);
  * PHP version 7.2
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Api;
+namespace Toppy\Sendcloud\V2\Api;
 
 use GuzzleHttp\Psr7\MultipartStream;
 use Http\Client\Common\Plugin\ErrorPlugin;
@@ -40,12 +40,12 @@ use Http\Discovery\Psr17FactoryDiscovery;
 use Http\Discovery\Psr18ClientDiscovery;
 use Http\Message\RequestFactory;
 use Http\Promise\Promise;
-use Toppy\Sendcloud\ApiException;
-use Toppy\Sendcloud\Configuration;
-use Toppy\Sendcloud\DebugPlugin;
-use Toppy\Sendcloud\HeaderSelector;
-use Toppy\Sendcloud\FormDataProcessor;
-use Toppy\Sendcloud\ObjectSerializer;
+use Toppy\Sendcloud\V2\ApiException;
+use Toppy\Sendcloud\V2\Configuration;
+use Toppy\Sendcloud\V2\DebugPlugin;
+use Toppy\Sendcloud\V2\HeaderSelector;
+use Toppy\Sendcloud\V2\FormDataProcessor;
+use Toppy\Sendcloud\V2\ObjectSerializer;
 use Psr\Http\Client\ClientExceptionInterface;
 use Psr\Http\Client\ClientInterface;
 use Psr\Http\Message\RequestFactoryInterface;
@@ -60,7 +60,7 @@ use function sprintf;
  * ReturnsApi Class Doc Comment
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -174,9 +174,9 @@ class ReturnsApi
      *
      * @param  string $cursor The cursor query string will be used as the pivot value to filter results. If no value is provided, the service must return the first page. The value is Base64 encoded GET parameters. example:   For a cursor string there are 3 possible parameters to encode:   - o: Offset   - r: Reverse   - p: Position   Combine into GET parameters. Example: r&#x3D;1&amp;p&#x3D;300   Base 64 encoded it would become: cj0xJnA9MzAw   GET parameter in url would be https://some.url.com/api/endpoint/?cursor&#x3D;cj0xJnA9MzAw (optional)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Toppy\Sendcloud\Model\ScPublicV2ScpGetAllReturns200Response
+     * @return \Toppy\Sendcloud\V2\Model\ScPublicV2ScpGetAllReturns200Response
      */
     public function scPublicV2ScpGetAllReturns($cursor = null)
     {
@@ -191,9 +191,9 @@ class ReturnsApi
      *
      * @param  string $cursor The cursor query string will be used as the pivot value to filter results. If no value is provided, the service must return the first page. The value is Base64 encoded GET parameters. example:   For a cursor string there are 3 possible parameters to encode:   - o: Offset   - r: Reverse   - p: Position   Combine into GET parameters. Example: r&#x3D;1&amp;p&#x3D;300   Base 64 encoded it would become: cj0xJnA9MzAw   GET parameter in url would be https://some.url.com/api/endpoint/?cursor&#x3D;cj0xJnA9MzAw (optional)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Toppy\Sendcloud\Model\ScPublicV2ScpGetAllReturns200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Toppy\Sendcloud\V2\Model\ScPublicV2ScpGetAllReturns200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function scPublicV2ScpGetAllReturnsWithHttpInfo($cursor = null)
     {
@@ -228,7 +228,7 @@ class ReturnsApi
 
             if ($statusCode === 200) {
                 return $this->handleResponseWithDataType(
-                    \Toppy\Sendcloud\Model\ScPublicV2ScpGetAllReturns200Response::class,
+                    \Toppy\Sendcloud\V2\Model\ScPublicV2ScpGetAllReturns200Response::class,
                     $request,
                     $response,
                 );
@@ -249,7 +249,7 @@ class ReturnsApi
             }
 
             return $this->handleResponseWithDataType(
-                \Toppy\Sendcloud\Model\ScPublicV2ScpGetAllReturns200Response::class,
+                \Toppy\Sendcloud\V2\Model\ScPublicV2ScpGetAllReturns200Response::class,
                 $request,
                 $response,
             );
@@ -257,7 +257,7 @@ class ReturnsApi
             if ($apiException->getCode() === 200) {
                 $data = ObjectSerializer::deserialize(
                     $apiException->getResponseBody(),
-                    \Toppy\Sendcloud\Model\ScPublicV2ScpGetAllReturns200Response::class,
+                    \Toppy\Sendcloud\V2\Model\ScPublicV2ScpGetAllReturns200Response::class,
                     $apiException->getResponseHeaders()
                 );
                 $apiException->setResponseObject($data);
@@ -301,7 +301,7 @@ class ReturnsApi
      */
     public function scPublicV2ScpGetAllReturnsAsyncWithHttpInfo($cursor = null)
     {
-        $returnType = \Toppy\Sendcloud\Model\ScPublicV2ScpGetAllReturns200Response::class;
+        $returnType = \Toppy\Sendcloud\V2\Model\ScPublicV2ScpGetAllReturns200Response::class;
         $request = $this->scPublicV2ScpGetAllReturnsRequest($cursor);
 
         return $this->httpAsyncClient->sendAsyncRequest($request)
@@ -431,9 +431,9 @@ class ReturnsApi
      *
      * @param  int $id The unique identifier of this return object (required)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Toppy\Sendcloud\Model\ModelReturn|\Toppy\Sendcloud\Model\ScPublicV2ScpGetReturnById404Response
+     * @return \Toppy\Sendcloud\V2\Model\ModelReturn|\Toppy\Sendcloud\V2\Model\ScPublicV2ScpGetReturnById404Response
      */
     public function scPublicV2ScpGetReturnById($id)
     {
@@ -448,9 +448,9 @@ class ReturnsApi
      *
      * @param  int $id The unique identifier of this return object (required)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Toppy\Sendcloud\Model\ModelReturn|\Toppy\Sendcloud\Model\ScPublicV2ScpGetReturnById404Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Toppy\Sendcloud\V2\Model\ModelReturn|\Toppy\Sendcloud\V2\Model\ScPublicV2ScpGetReturnById404Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function scPublicV2ScpGetReturnByIdWithHttpInfo($id)
     {
@@ -486,13 +486,13 @@ class ReturnsApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        \Toppy\Sendcloud\Model\ModelReturn::class,
+                        \Toppy\Sendcloud\V2\Model\ModelReturn::class,
                         $request,
                         $response,
                     );
                 case 404:
                     return $this->handleResponseWithDataType(
-                        \Toppy\Sendcloud\Model\ScPublicV2ScpGetReturnById404Response::class,
+                        \Toppy\Sendcloud\V2\Model\ScPublicV2ScpGetReturnById404Response::class,
                         $request,
                         $response,
                     );
@@ -513,7 +513,7 @@ class ReturnsApi
             }
 
             return $this->handleResponseWithDataType(
-                \Toppy\Sendcloud\Model\ModelReturn::class,
+                \Toppy\Sendcloud\V2\Model\ModelReturn::class,
                 $request,
                 $response,
             );
@@ -522,7 +522,7 @@ class ReturnsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\ModelReturn::class,
+                        \Toppy\Sendcloud\V2\Model\ModelReturn::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -530,7 +530,7 @@ class ReturnsApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\ScPublicV2ScpGetReturnById404Response::class,
+                        \Toppy\Sendcloud\V2\Model\ScPublicV2ScpGetReturnById404Response::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -574,7 +574,7 @@ class ReturnsApi
      */
     public function scPublicV2ScpGetReturnByIdAsyncWithHttpInfo($id)
     {
-        $returnType = \Toppy\Sendcloud\Model\ModelReturn::class;
+        $returnType = \Toppy\Sendcloud\V2\Model\ModelReturn::class;
         $request = $this->scPublicV2ScpGetReturnByIdRequest($id);
 
         return $this->httpAsyncClient->sendAsyncRequest($request)

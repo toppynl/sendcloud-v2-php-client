@@ -8,7 +8,7 @@ declare(strict_types=1);
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Model;
+namespace Toppy\Sendcloud\V2\Model;
 
 use \ArrayAccess;
-use \Toppy\Sendcloud\ObjectSerializer;
+use \Toppy\Sendcloud\V2\ObjectSerializer;
 
 /**
  * ScPublicV2ScpGetReturnById404Response Class Doc Comment
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,7 +58,7 @@ class ScPublicV2ScpGetReturnById404Response implements ModelInterface, ArrayAcce
       * @var string[]
       */
     protected static $openAPITypes = [
-        'error' => \Toppy\Sendcloud\Model\ScPublicV2ScpGetReturnById404ResponseError::class
+        'error' => \Toppy\Sendcloud\V2\Model\ScPublicV2ScpGetReturnById404ResponseError::class
     ];
 
     /**
@@ -262,7 +262,7 @@ class ScPublicV2ScpGetReturnById404Response implements ModelInterface, ArrayAcce
     /**
      * Gets error
      *
-     * @return \Toppy\Sendcloud\Model\ScPublicV2ScpGetReturnById404ResponseError|null
+     * @return \Toppy\Sendcloud\V2\Model\ScPublicV2ScpGetReturnById404ResponseError|null
      */
     public function getError()
     {
@@ -272,7 +272,7 @@ class ScPublicV2ScpGetReturnById404Response implements ModelInterface, ArrayAcce
     /**
      * Sets error
      *
-     * @param \Toppy\Sendcloud\Model\ScPublicV2ScpGetReturnById404ResponseError|null $error error
+     * @param \Toppy\Sendcloud\V2\Model\ScPublicV2ScpGetReturnById404ResponseError|null $error error
      *
      * @return self
      */

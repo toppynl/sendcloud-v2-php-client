@@ -7,7 +7,7 @@ declare(strict_types=1);
  * PHP version 7.2
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Api;
+namespace Toppy\Sendcloud\V2\Api;
 
 use GuzzleHttp\Psr7\MultipartStream;
 use Http\Client\Common\Plugin\ErrorPlugin;
@@ -40,12 +40,12 @@ use Http\Discovery\Psr17FactoryDiscovery;
 use Http\Discovery\Psr18ClientDiscovery;
 use Http\Message\RequestFactory;
 use Http\Promise\Promise;
-use Toppy\Sendcloud\ApiException;
-use Toppy\Sendcloud\Configuration;
-use Toppy\Sendcloud\DebugPlugin;
-use Toppy\Sendcloud\HeaderSelector;
-use Toppy\Sendcloud\FormDataProcessor;
-use Toppy\Sendcloud\ObjectSerializer;
+use Toppy\Sendcloud\V2\ApiException;
+use Toppy\Sendcloud\V2\Configuration;
+use Toppy\Sendcloud\V2\DebugPlugin;
+use Toppy\Sendcloud\V2\HeaderSelector;
+use Toppy\Sendcloud\V2\FormDataProcessor;
+use Toppy\Sendcloud\V2\ObjectSerializer;
 use Psr\Http\Client\ClientExceptionInterface;
 use Psr\Http\Client\ClientInterface;
 use Psr\Http\Message\RequestFactoryInterface;
@@ -60,7 +60,7 @@ use function sprintf;
  * TrackingApi Class Doc Comment
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -174,9 +174,9 @@ class TrackingApi
      *
      * @param  string $trackingNumber The tracking number that the user received (required)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Toppy\Sendcloud\Model\DetailedTrackingBlob|\Toppy\Sendcloud\Model\ScPublicV2TrackingGetDetailedTrackingInformation404Response
+     * @return \Toppy\Sendcloud\V2\Model\DetailedTrackingBlob|\Toppy\Sendcloud\V2\Model\ScPublicV2TrackingGetDetailedTrackingInformation404Response
      */
     public function scPublicV2TrackingGetDetailedTrackingInformation($trackingNumber)
     {
@@ -191,9 +191,9 @@ class TrackingApi
      *
      * @param  string $trackingNumber The tracking number that the user received (required)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Toppy\Sendcloud\Model\DetailedTrackingBlob|\Toppy\Sendcloud\Model\ScPublicV2TrackingGetDetailedTrackingInformation404Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Toppy\Sendcloud\V2\Model\DetailedTrackingBlob|\Toppy\Sendcloud\V2\Model\ScPublicV2TrackingGetDetailedTrackingInformation404Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function scPublicV2TrackingGetDetailedTrackingInformationWithHttpInfo($trackingNumber)
     {
@@ -229,13 +229,13 @@ class TrackingApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        \Toppy\Sendcloud\Model\DetailedTrackingBlob::class,
+                        \Toppy\Sendcloud\V2\Model\DetailedTrackingBlob::class,
                         $request,
                         $response,
                     );
                 case 404:
                     return $this->handleResponseWithDataType(
-                        \Toppy\Sendcloud\Model\ScPublicV2TrackingGetDetailedTrackingInformation404Response::class,
+                        \Toppy\Sendcloud\V2\Model\ScPublicV2TrackingGetDetailedTrackingInformation404Response::class,
                         $request,
                         $response,
                     );
@@ -256,7 +256,7 @@ class TrackingApi
             }
 
             return $this->handleResponseWithDataType(
-                \Toppy\Sendcloud\Model\DetailedTrackingBlob::class,
+                \Toppy\Sendcloud\V2\Model\DetailedTrackingBlob::class,
                 $request,
                 $response,
             );
@@ -265,7 +265,7 @@ class TrackingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\DetailedTrackingBlob::class,
+                        \Toppy\Sendcloud\V2\Model\DetailedTrackingBlob::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -273,7 +273,7 @@ class TrackingApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\ScPublicV2TrackingGetDetailedTrackingInformation404Response::class,
+                        \Toppy\Sendcloud\V2\Model\ScPublicV2TrackingGetDetailedTrackingInformation404Response::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -317,7 +317,7 @@ class TrackingApi
      */
     public function scPublicV2TrackingGetDetailedTrackingInformationAsyncWithHttpInfo($trackingNumber)
     {
-        $returnType = \Toppy\Sendcloud\Model\DetailedTrackingBlob::class;
+        $returnType = \Toppy\Sendcloud\V2\Model\DetailedTrackingBlob::class;
         $request = $this->scPublicV2TrackingGetDetailedTrackingInformationRequest($trackingNumber);
 
         return $this->httpAsyncClient->sendAsyncRequest($request)

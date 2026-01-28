@@ -8,7 +8,7 @@ declare(strict_types=1);
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Model;
+namespace Toppy\Sendcloud\V2\Model;
 
 use \ArrayAccess;
-use \Toppy\Sendcloud\ObjectSerializer;
+use \Toppy\Sendcloud\V2\ObjectSerializer;
 
 /**
  * ParcelResponseShortCarrier Class Doc Comment
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,7 +58,7 @@ class ParcelResponseShortCarrier implements ModelInterface, ArrayAccess, \JsonSe
       * @var string[]
       */
     protected static $openAPITypes = [
-        'code' => \Toppy\Sendcloud\Model\Carrier::class
+        'code' => \Toppy\Sendcloud\V2\Model\Carrier::class
     ];
 
     /**
@@ -262,7 +262,7 @@ class ParcelResponseShortCarrier implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Gets code
      *
-     * @return \Toppy\Sendcloud\Model\Carrier|null
+     * @return \Toppy\Sendcloud\V2\Model\Carrier|null
      */
     public function getCode()
     {
@@ -272,7 +272,7 @@ class ParcelResponseShortCarrier implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets code
      *
-     * @param \Toppy\Sendcloud\Model\Carrier|null $code code
+     * @param \Toppy\Sendcloud\V2\Model\Carrier|null $code code
      *
      * @return self
      */

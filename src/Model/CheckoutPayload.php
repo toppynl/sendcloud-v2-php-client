@@ -8,7 +8,7 @@ declare(strict_types=1);
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Model;
+namespace Toppy\Sendcloud\V2\Model;
 
 use \ArrayAccess;
-use \Toppy\Sendcloud\ObjectSerializer;
+use \Toppy\Sendcloud\V2\ObjectSerializer;
 
 /**
  * CheckoutPayload Class Doc Comment
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -61,7 +61,7 @@ class CheckoutPayload implements ModelInterface, ArrayAccess, \JsonSerializable,
         'senderAddressId' => 'int',
         'shippingProduct' => 'object',
         'deliveryMethodType' => 'string',
-        'deliveryMethodData' => \Toppy\Sendcloud\Model\CheckoutPayloadDeliveryMethodData::class
+        'deliveryMethodData' => \Toppy\Sendcloud\V2\Model\CheckoutPayloadDeliveryMethodData::class
     ];
 
     /**
@@ -389,7 +389,7 @@ class CheckoutPayload implements ModelInterface, ArrayAccess, \JsonSerializable,
     /**
      * Gets deliveryMethodData
      *
-     * @return \Toppy\Sendcloud\Model\CheckoutPayloadDeliveryMethodData|null
+     * @return \Toppy\Sendcloud\V2\Model\CheckoutPayloadDeliveryMethodData|null
      */
     public function getDeliveryMethodData()
     {
@@ -399,7 +399,7 @@ class CheckoutPayload implements ModelInterface, ArrayAccess, \JsonSerializable,
     /**
      * Sets deliveryMethodData
      *
-     * @param \Toppy\Sendcloud\Model\CheckoutPayloadDeliveryMethodData|null $deliveryMethodData deliveryMethodData
+     * @param \Toppy\Sendcloud\V2\Model\CheckoutPayloadDeliveryMethodData|null $deliveryMethodData deliveryMethodData
      *
      * @return self
      */

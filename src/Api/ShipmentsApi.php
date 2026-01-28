@@ -7,7 +7,7 @@ declare(strict_types=1);
  * PHP version 7.2
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Api;
+namespace Toppy\Sendcloud\V2\Api;
 
 use GuzzleHttp\Psr7\MultipartStream;
 use Http\Client\Common\Plugin\ErrorPlugin;
@@ -40,12 +40,12 @@ use Http\Discovery\Psr17FactoryDiscovery;
 use Http\Discovery\Psr18ClientDiscovery;
 use Http\Message\RequestFactory;
 use Http\Promise\Promise;
-use Toppy\Sendcloud\ApiException;
-use Toppy\Sendcloud\Configuration;
-use Toppy\Sendcloud\DebugPlugin;
-use Toppy\Sendcloud\HeaderSelector;
-use Toppy\Sendcloud\FormDataProcessor;
-use Toppy\Sendcloud\ObjectSerializer;
+use Toppy\Sendcloud\V2\ApiException;
+use Toppy\Sendcloud\V2\Configuration;
+use Toppy\Sendcloud\V2\DebugPlugin;
+use Toppy\Sendcloud\V2\HeaderSelector;
+use Toppy\Sendcloud\V2\FormDataProcessor;
+use Toppy\Sendcloud\V2\ObjectSerializer;
 use Psr\Http\Client\ClientExceptionInterface;
 use Psr\Http\Client\ClientInterface;
 use Psr\Http\Message\RequestFactoryInterface;
@@ -60,7 +60,7 @@ use function sprintf;
  * ShipmentsApi Class Doc Comment
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -182,9 +182,9 @@ class ShipmentsApi
      * @param  string $orderNumber Filters results to shipments on &#x60;order_number&#x60;. (optional)
      * @param  int $senderAddress Allows to specify a sender address id to display proper &#x60;allowed_shipping_methods&#x60;. (optional)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Toppy\Sendcloud\Model\ScPublicV2OrdersGetRetrieveAListOfShipments200Response|\Toppy\Sendcloud\Model\ScPublicV2OrdersGetRetrieveAListOfShipments404Response
+     * @return \Toppy\Sendcloud\V2\Model\ScPublicV2OrdersGetRetrieveAListOfShipments200Response|\Toppy\Sendcloud\V2\Model\ScPublicV2OrdersGetRetrieveAListOfShipments404Response
      */
     public function scPublicV2OrdersGetRetrieveAListOfShipments($id, $cursor = null, $startDate = null, $endDate = null, $externalOrderIds = null, $externalShipmentIds = null, $shippingRules = null, $orderNumber = null, $senderAddress = null)
     {
@@ -207,9 +207,9 @@ class ShipmentsApi
      * @param  string $orderNumber Filters results to shipments on &#x60;order_number&#x60;. (optional)
      * @param  int $senderAddress Allows to specify a sender address id to display proper &#x60;allowed_shipping_methods&#x60;. (optional)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Toppy\Sendcloud\Model\ScPublicV2OrdersGetRetrieveAListOfShipments200Response|\Toppy\Sendcloud\Model\ScPublicV2OrdersGetRetrieveAListOfShipments404Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Toppy\Sendcloud\V2\Model\ScPublicV2OrdersGetRetrieveAListOfShipments200Response|\Toppy\Sendcloud\V2\Model\ScPublicV2OrdersGetRetrieveAListOfShipments404Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function scPublicV2OrdersGetRetrieveAListOfShipmentsWithHttpInfo($id, $cursor = null, $startDate = null, $endDate = null, $externalOrderIds = null, $externalShipmentIds = null, $shippingRules = null, $orderNumber = null, $senderAddress = null)
     {
@@ -245,13 +245,13 @@ class ShipmentsApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        \Toppy\Sendcloud\Model\ScPublicV2OrdersGetRetrieveAListOfShipments200Response::class,
+                        \Toppy\Sendcloud\V2\Model\ScPublicV2OrdersGetRetrieveAListOfShipments200Response::class,
                         $request,
                         $response,
                     );
                 case 404:
                     return $this->handleResponseWithDataType(
-                        \Toppy\Sendcloud\Model\ScPublicV2OrdersGetRetrieveAListOfShipments404Response::class,
+                        \Toppy\Sendcloud\V2\Model\ScPublicV2OrdersGetRetrieveAListOfShipments404Response::class,
                         $request,
                         $response,
                     );
@@ -272,7 +272,7 @@ class ShipmentsApi
             }
 
             return $this->handleResponseWithDataType(
-                \Toppy\Sendcloud\Model\ScPublicV2OrdersGetRetrieveAListOfShipments200Response::class,
+                \Toppy\Sendcloud\V2\Model\ScPublicV2OrdersGetRetrieveAListOfShipments200Response::class,
                 $request,
                 $response,
             );
@@ -281,7 +281,7 @@ class ShipmentsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\ScPublicV2OrdersGetRetrieveAListOfShipments200Response::class,
+                        \Toppy\Sendcloud\V2\Model\ScPublicV2OrdersGetRetrieveAListOfShipments200Response::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -289,7 +289,7 @@ class ShipmentsApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\ScPublicV2OrdersGetRetrieveAListOfShipments404Response::class,
+                        \Toppy\Sendcloud\V2\Model\ScPublicV2OrdersGetRetrieveAListOfShipments404Response::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -349,7 +349,7 @@ class ShipmentsApi
      */
     public function scPublicV2OrdersGetRetrieveAListOfShipmentsAsyncWithHttpInfo($id, $cursor = null, $startDate = null, $endDate = null, $externalOrderIds = null, $externalShipmentIds = null, $shippingRules = null, $orderNumber = null, $senderAddress = null)
     {
-        $returnType = \Toppy\Sendcloud\Model\ScPublicV2OrdersGetRetrieveAListOfShipments200Response::class;
+        $returnType = \Toppy\Sendcloud\V2\Model\ScPublicV2OrdersGetRetrieveAListOfShipments200Response::class;
         $request = $this->scPublicV2OrdersGetRetrieveAListOfShipmentsRequest($id, $cursor, $startDate, $endDate, $externalOrderIds, $externalShipmentIds, $shippingRules, $orderNumber, $senderAddress);
 
         return $this->httpAsyncClient->sendAsyncRequest($request)
@@ -582,11 +582,11 @@ class ShipmentsApi
      * Create or update a list of shipments
      *
      * @param  int $id The id of the integration to which the shipments belong (required)
-     * @param  \Toppy\Sendcloud\Model\ShipmentBlobOrderCreate[] $shipmentBlobOrderCreate  (optional)
+     * @param  \Toppy\Sendcloud\V2\Model\ShipmentBlobOrderCreate[] $shipmentBlobOrderCreate  (optional)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Toppy\Sendcloud\Model\ScPublicV2OrdersPostCreateAListOfShipments200ResponseInner[]|\Toppy\Sendcloud\Model\ScPublicV2OrdersGetRetrieveAListOfShipments404Response
+     * @return \Toppy\Sendcloud\V2\Model\ScPublicV2OrdersPostCreateAListOfShipments200ResponseInner[]|\Toppy\Sendcloud\V2\Model\ScPublicV2OrdersGetRetrieveAListOfShipments404Response
      */
     public function scPublicV2OrdersPostCreateAListOfShipments($id, $shipmentBlobOrderCreate = null)
     {
@@ -600,11 +600,11 @@ class ShipmentsApi
      * Create or update a list of shipments
      *
      * @param  int $id The id of the integration to which the shipments belong (required)
-     * @param  \Toppy\Sendcloud\Model\ShipmentBlobOrderCreate[] $shipmentBlobOrderCreate  (optional)
+     * @param  \Toppy\Sendcloud\V2\Model\ShipmentBlobOrderCreate[] $shipmentBlobOrderCreate  (optional)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Toppy\Sendcloud\Model\ScPublicV2OrdersPostCreateAListOfShipments200ResponseInner[]|\Toppy\Sendcloud\Model\ScPublicV2OrdersGetRetrieveAListOfShipments404Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Toppy\Sendcloud\V2\Model\ScPublicV2OrdersPostCreateAListOfShipments200ResponseInner[]|\Toppy\Sendcloud\V2\Model\ScPublicV2OrdersGetRetrieveAListOfShipments404Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function scPublicV2OrdersPostCreateAListOfShipmentsWithHttpInfo($id, $shipmentBlobOrderCreate = null)
     {
@@ -640,13 +640,13 @@ class ShipmentsApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\Toppy\Sendcloud\Model\ScPublicV2OrdersPostCreateAListOfShipments200ResponseInner[]',
+                        '\Toppy\Sendcloud\V2\Model\ScPublicV2OrdersPostCreateAListOfShipments200ResponseInner[]',
                         $request,
                         $response,
                     );
                 case 404:
                     return $this->handleResponseWithDataType(
-                        \Toppy\Sendcloud\Model\ScPublicV2OrdersGetRetrieveAListOfShipments404Response::class,
+                        \Toppy\Sendcloud\V2\Model\ScPublicV2OrdersGetRetrieveAListOfShipments404Response::class,
                         $request,
                         $response,
                     );
@@ -667,7 +667,7 @@ class ShipmentsApi
             }
 
             return $this->handleResponseWithDataType(
-                '\Toppy\Sendcloud\Model\ScPublicV2OrdersPostCreateAListOfShipments200ResponseInner[]',
+                '\Toppy\Sendcloud\V2\Model\ScPublicV2OrdersPostCreateAListOfShipments200ResponseInner[]',
                 $request,
                 $response,
             );
@@ -676,7 +676,7 @@ class ShipmentsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        '\Toppy\Sendcloud\Model\ScPublicV2OrdersPostCreateAListOfShipments200ResponseInner[]',
+                        '\Toppy\Sendcloud\V2\Model\ScPublicV2OrdersPostCreateAListOfShipments200ResponseInner[]',
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -684,7 +684,7 @@ class ShipmentsApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\ScPublicV2OrdersGetRetrieveAListOfShipments404Response::class,
+                        \Toppy\Sendcloud\V2\Model\ScPublicV2OrdersGetRetrieveAListOfShipments404Response::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -702,7 +702,7 @@ class ShipmentsApi
      * Create or update a list of shipments
      *
      * @param  int $id The id of the integration to which the shipments belong (required)
-     * @param  \Toppy\Sendcloud\Model\ShipmentBlobOrderCreate[] $shipmentBlobOrderCreate  (optional)
+     * @param  \Toppy\Sendcloud\V2\Model\ShipmentBlobOrderCreate[] $shipmentBlobOrderCreate  (optional)
      *
      * @throws \InvalidArgumentException
      * @return Promise
@@ -723,14 +723,14 @@ class ShipmentsApi
      * Create or update a list of shipments
      *
      * @param  int $id The id of the integration to which the shipments belong (required)
-     * @param  \Toppy\Sendcloud\Model\ShipmentBlobOrderCreate[] $shipmentBlobOrderCreate  (optional)
+     * @param  \Toppy\Sendcloud\V2\Model\ShipmentBlobOrderCreate[] $shipmentBlobOrderCreate  (optional)
      *
      * @throws \InvalidArgumentException
      * @return Promise
      */
     public function scPublicV2OrdersPostCreateAListOfShipmentsAsyncWithHttpInfo($id, $shipmentBlobOrderCreate = null)
     {
-        $returnType = '\Toppy\Sendcloud\Model\ScPublicV2OrdersPostCreateAListOfShipments200ResponseInner[]';
+        $returnType = '\Toppy\Sendcloud\V2\Model\ScPublicV2OrdersPostCreateAListOfShipments200ResponseInner[]';
         $request = $this->scPublicV2OrdersPostCreateAListOfShipmentsRequest($id, $shipmentBlobOrderCreate);
 
         return $this->httpAsyncClient->sendAsyncRequest($request)
@@ -769,7 +769,7 @@ class ShipmentsApi
      * Create request for operation 'scPublicV2OrdersPostCreateAListOfShipments'
      *
      * @param  int $id The id of the integration to which the shipments belong (required)
-     * @param  \Toppy\Sendcloud\Model\ShipmentBlobOrderCreate[] $shipmentBlobOrderCreate  (optional)
+     * @param  \Toppy\Sendcloud\V2\Model\ShipmentBlobOrderCreate[] $shipmentBlobOrderCreate  (optional)
      *
      * @throws \InvalidArgumentException
      * @return RequestInterface
@@ -867,9 +867,9 @@ class ShipmentsApi
      * Delete a shipment
      *
      * @param  int $id The id of the integration to which the shipments belong (required)
-     * @param  \Toppy\Sendcloud\Model\ScPublicV2OrdersPostDeleteAShipmentRequest $scPublicV2OrdersPostDeleteAShipmentRequest You must provide either a shipment_uuid or the combination of external_order_id and external_shipment_id to this endpoint. (optional)
+     * @param  \Toppy\Sendcloud\V2\Model\ScPublicV2OrdersPostDeleteAShipmentRequest $scPublicV2OrdersPostDeleteAShipmentRequest You must provide either a shipment_uuid or the combination of external_order_id and external_shipment_id to this endpoint. (optional)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -884,9 +884,9 @@ class ShipmentsApi
      * Delete a shipment
      *
      * @param  int $id The id of the integration to which the shipments belong (required)
-     * @param  \Toppy\Sendcloud\Model\ScPublicV2OrdersPostDeleteAShipmentRequest $scPublicV2OrdersPostDeleteAShipmentRequest You must provide either a shipment_uuid or the combination of external_order_id and external_shipment_id to this endpoint. (optional)
+     * @param  \Toppy\Sendcloud\V2\Model\ScPublicV2OrdersPostDeleteAShipmentRequest $scPublicV2OrdersPostDeleteAShipmentRequest You must provide either a shipment_uuid or the combination of external_order_id and external_shipment_id to this endpoint. (optional)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array<int, int|string[][]|null> of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -927,7 +927,7 @@ class ShipmentsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\ScPublicV2OrdersPostDeleteAShipment400Response::class,
+                        \Toppy\Sendcloud\V2\Model\ScPublicV2OrdersPostDeleteAShipment400Response::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -935,7 +935,7 @@ class ShipmentsApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\ScPublicV2OrdersGetRetrieveAListOfShipments404Response::class,
+                        \Toppy\Sendcloud\V2\Model\ScPublicV2OrdersGetRetrieveAListOfShipments404Response::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -953,7 +953,7 @@ class ShipmentsApi
      * Delete a shipment
      *
      * @param  int $id The id of the integration to which the shipments belong (required)
-     * @param  \Toppy\Sendcloud\Model\ScPublicV2OrdersPostDeleteAShipmentRequest $scPublicV2OrdersPostDeleteAShipmentRequest You must provide either a shipment_uuid or the combination of external_order_id and external_shipment_id to this endpoint. (optional)
+     * @param  \Toppy\Sendcloud\V2\Model\ScPublicV2OrdersPostDeleteAShipmentRequest $scPublicV2OrdersPostDeleteAShipmentRequest You must provide either a shipment_uuid or the combination of external_order_id and external_shipment_id to this endpoint. (optional)
      *
      * @throws \InvalidArgumentException
      * @return Promise
@@ -974,7 +974,7 @@ class ShipmentsApi
      * Delete a shipment
      *
      * @param  int $id The id of the integration to which the shipments belong (required)
-     * @param  \Toppy\Sendcloud\Model\ScPublicV2OrdersPostDeleteAShipmentRequest $scPublicV2OrdersPostDeleteAShipmentRequest You must provide either a shipment_uuid or the combination of external_order_id and external_shipment_id to this endpoint. (optional)
+     * @param  \Toppy\Sendcloud\V2\Model\ScPublicV2OrdersPostDeleteAShipmentRequest $scPublicV2OrdersPostDeleteAShipmentRequest You must provide either a shipment_uuid or the combination of external_order_id and external_shipment_id to this endpoint. (optional)
      *
      * @throws \InvalidArgumentException
      * @return Promise
@@ -1009,7 +1009,7 @@ class ShipmentsApi
      * Create request for operation 'scPublicV2OrdersPostDeleteAShipment'
      *
      * @param  int $id The id of the integration to which the shipments belong (required)
-     * @param  \Toppy\Sendcloud\Model\ScPublicV2OrdersPostDeleteAShipmentRequest $scPublicV2OrdersPostDeleteAShipmentRequest You must provide either a shipment_uuid or the combination of external_order_id and external_shipment_id to this endpoint. (optional)
+     * @param  \Toppy\Sendcloud\V2\Model\ScPublicV2OrdersPostDeleteAShipmentRequest $scPublicV2OrdersPostDeleteAShipmentRequest You must provide either a shipment_uuid or the combination of external_order_id and external_shipment_id to this endpoint. (optional)
      *
      * @throws \InvalidArgumentException
      * @return RequestInterface

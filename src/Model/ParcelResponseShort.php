@@ -8,7 +8,7 @@ declare(strict_types=1);
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Model;
+namespace Toppy\Sendcloud\V2\Model;
 
 use \ArrayAccess;
-use \Toppy\Sendcloud\ObjectSerializer;
+use \Toppy\Sendcloud\V2\ObjectSerializer;
 
 /**
  * ParcelResponseShort Class Doc Comment
  *
  * @category Class
  * @description Parcel object model
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -61,12 +61,12 @@ class ParcelResponseShort implements ModelInterface, ArrayAccess, \JsonSerializa
     protected static $openAPITypes = [
         'address' => 'string',
         'address2' => 'string',
-        'addressDivided' => \Toppy\Sendcloud\Model\AddressDivided::class,
-        'carrier' => \Toppy\Sendcloud\Model\ParcelResponseShortCarrier::class,
+        'addressDivided' => \Toppy\Sendcloud\V2\Model\AddressDivided::class,
+        'carrier' => \Toppy\Sendcloud\V2\Model\ParcelResponseShortCarrier::class,
         'city' => 'string',
         'companyName' => 'string',
         'contract' => 'int',
-        'country' => \Toppy\Sendcloud\Model\Country::class,
+        'country' => \Toppy\Sendcloud\V2\Model\Country::class,
         'customsInvoiceNr' => 'string',
         'customsShipmentType' => 'int',
         'data' => 'object',
@@ -76,17 +76,17 @@ class ParcelResponseShort implements ModelInterface, ArrayAccess, \JsonSerializa
         'email' => 'string',
         'id' => 'int',
         'insuredValue' => 'int',
-        'label' => \Toppy\Sendcloud\Model\Label::class,
+        'label' => \Toppy\Sendcloud\V2\Model\Label::class,
         'name' => 'string',
         'orderNumber' => 'string',
         'shipmentUuid' => 'string',
-        'parcelItems' => '\Toppy\Sendcloud\Model\ParcelItem[]',
+        'parcelItems' => '\Toppy\Sendcloud\V2\Model\ParcelItem[]',
         'postalCode' => 'string',
         'externalReference' => 'string',
         'reference' => 'string',
-        'shipment' => \Toppy\Sendcloud\Model\Shipment::class,
-        'status' => \Toppy\Sendcloud\Model\Status::class,
-        'documents' => '\Toppy\Sendcloud\Model\Documents[]',
+        'shipment' => \Toppy\Sendcloud\V2\Model\Shipment::class,
+        'status' => \Toppy\Sendcloud\V2\Model\Status::class,
+        'documents' => '\Toppy\Sendcloud\V2\Model\Documents[]',
         'telephone' => 'string',
         'toServicePoint' => 'string',
         'toState' => 'string',
@@ -109,7 +109,7 @@ class ParcelResponseShort implements ModelInterface, ArrayAccess, \JsonSerializa
         'shippingMethodCheckoutName' => 'string',
         'customsDeclaration' => 'object',
         'note' => 'string',
-        'errors' => \Toppy\Sendcloud\Model\CarrierErrors::class
+        'errors' => \Toppy\Sendcloud\V2\Model\CarrierErrors::class
     ];
 
     /**
@@ -749,7 +749,7 @@ class ParcelResponseShort implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets addressDivided
      *
-     * @return \Toppy\Sendcloud\Model\AddressDivided|null
+     * @return \Toppy\Sendcloud\V2\Model\AddressDivided|null
      */
     public function getAddressDivided()
     {
@@ -759,7 +759,7 @@ class ParcelResponseShort implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets addressDivided
      *
-     * @param \Toppy\Sendcloud\Model\AddressDivided|null $addressDivided addressDivided
+     * @param \Toppy\Sendcloud\V2\Model\AddressDivided|null $addressDivided addressDivided
      *
      * @return self
      */
@@ -777,7 +777,7 @@ class ParcelResponseShort implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets carrier
      *
-     * @return \Toppy\Sendcloud\Model\ParcelResponseShortCarrier|null
+     * @return \Toppy\Sendcloud\V2\Model\ParcelResponseShortCarrier|null
      */
     public function getCarrier()
     {
@@ -787,7 +787,7 @@ class ParcelResponseShort implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets carrier
      *
-     * @param \Toppy\Sendcloud\Model\ParcelResponseShortCarrier|null $carrier carrier
+     * @param \Toppy\Sendcloud\V2\Model\ParcelResponseShortCarrier|null $carrier carrier
      *
      * @return self
      */
@@ -900,7 +900,7 @@ class ParcelResponseShort implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets country
      *
-     * @return \Toppy\Sendcloud\Model\Country|null
+     * @return \Toppy\Sendcloud\V2\Model\Country|null
      */
     public function getCountry()
     {
@@ -910,7 +910,7 @@ class ParcelResponseShort implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets country
      *
-     * @param \Toppy\Sendcloud\Model\Country|null $country country
+     * @param \Toppy\Sendcloud\V2\Model\Country|null $country country
      *
      * @return self
      */
@@ -1200,7 +1200,7 @@ class ParcelResponseShort implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets label
      *
-     * @return \Toppy\Sendcloud\Model\Label|null
+     * @return \Toppy\Sendcloud\V2\Model\Label|null
      */
     public function getLabel()
     {
@@ -1210,7 +1210,7 @@ class ParcelResponseShort implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets label
      *
-     * @param \Toppy\Sendcloud\Model\Label|null $label label
+     * @param \Toppy\Sendcloud\V2\Model\Label|null $label label
      *
      * @return self
      */
@@ -1312,7 +1312,7 @@ class ParcelResponseShort implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets parcelItems
      *
-     * @return \Toppy\Sendcloud\Model\ParcelItem[]|null
+     * @return \Toppy\Sendcloud\V2\Model\ParcelItem[]|null
      */
     public function getParcelItems()
     {
@@ -1322,7 +1322,7 @@ class ParcelResponseShort implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets parcelItems
      *
-     * @param \Toppy\Sendcloud\Model\ParcelItem[]|null $parcelItems parcelItems
+     * @param \Toppy\Sendcloud\V2\Model\ParcelItem[]|null $parcelItems parcelItems
      *
      * @return self
      */
@@ -1438,7 +1438,7 @@ class ParcelResponseShort implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets shipment
      *
-     * @return \Toppy\Sendcloud\Model\Shipment|null
+     * @return \Toppy\Sendcloud\V2\Model\Shipment|null
      */
     public function getShipment()
     {
@@ -1448,7 +1448,7 @@ class ParcelResponseShort implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets shipment
      *
-     * @param \Toppy\Sendcloud\Model\Shipment|null $shipment shipment
+     * @param \Toppy\Sendcloud\V2\Model\Shipment|null $shipment shipment
      *
      * @return self
      */
@@ -1466,7 +1466,7 @@ class ParcelResponseShort implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets status
      *
-     * @return \Toppy\Sendcloud\Model\Status|null
+     * @return \Toppy\Sendcloud\V2\Model\Status|null
      */
     public function getStatus()
     {
@@ -1476,7 +1476,7 @@ class ParcelResponseShort implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets status
      *
-     * @param \Toppy\Sendcloud\Model\Status|null $status status
+     * @param \Toppy\Sendcloud\V2\Model\Status|null $status status
      *
      * @return self
      */
@@ -1494,7 +1494,7 @@ class ParcelResponseShort implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets documents
      *
-     * @return \Toppy\Sendcloud\Model\Documents[]|null
+     * @return \Toppy\Sendcloud\V2\Model\Documents[]|null
      */
     public function getDocuments()
     {
@@ -1504,7 +1504,7 @@ class ParcelResponseShort implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets documents
      *
-     * @param \Toppy\Sendcloud\Model\Documents[]|null $documents An array of documents. A parcel can contain multiple documents, for instance labels and a customs form. This field returns an array of all the available documents for this parcel.
+     * @param \Toppy\Sendcloud\V2\Model\Documents[]|null $documents An array of documents. A parcel can contain multiple documents, for instance labels and a customs form. This field returns an array of all the available documents for this parcel.
      *
      * @return self
      */
@@ -2203,7 +2203,7 @@ class ParcelResponseShort implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets errors
      *
-     * @return \Toppy\Sendcloud\Model\CarrierErrors|null
+     * @return \Toppy\Sendcloud\V2\Model\CarrierErrors|null
      */
     public function getErrors()
     {
@@ -2213,7 +2213,7 @@ class ParcelResponseShort implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets errors
      *
-     * @param \Toppy\Sendcloud\Model\CarrierErrors|null $errors errors
+     * @param \Toppy\Sendcloud\V2\Model\CarrierErrors|null $errors errors
      *
      * @return self
      */

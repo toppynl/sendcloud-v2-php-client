@@ -8,7 +8,7 @@ declare(strict_types=1);
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Model;
+namespace Toppy\Sendcloud\V2\Model;
 
 use \ArrayAccess;
-use \Toppy\Sendcloud\ObjectSerializer;
+use \Toppy\Sendcloud\V2\ObjectSerializer;
 
 /**
  * LabelMultipleResponse Class Doc Comment
  *
  * @category Class
  * @description Response for multiple labels in bulk
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,7 +59,7 @@ class LabelMultipleResponse implements ModelInterface, ArrayAccess, \JsonSeriali
       * @var string[]
       */
     protected static $openAPITypes = [
-        'label' => \Toppy\Sendcloud\Model\LabelObject1::class
+        'label' => \Toppy\Sendcloud\V2\Model\LabelObject1::class
     ];
 
     /**
@@ -263,7 +263,7 @@ class LabelMultipleResponse implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Gets label
      *
-     * @return \Toppy\Sendcloud\Model\LabelObject1|null
+     * @return \Toppy\Sendcloud\V2\Model\LabelObject1|null
      */
     public function getLabel()
     {
@@ -273,7 +273,7 @@ class LabelMultipleResponse implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets label
      *
-     * @param \Toppy\Sendcloud\Model\LabelObject1|null $label label
+     * @param \Toppy\Sendcloud\V2\Model\LabelObject1|null $label label
      *
      * @return self
      */

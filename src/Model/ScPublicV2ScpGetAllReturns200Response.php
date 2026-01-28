@@ -8,7 +8,7 @@ declare(strict_types=1);
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Model;
+namespace Toppy\Sendcloud\V2\Model;
 
 use \ArrayAccess;
-use \Toppy\Sendcloud\ObjectSerializer;
+use \Toppy\Sendcloud\V2\ObjectSerializer;
 
 /**
  * ScPublicV2ScpGetAllReturns200Response Class Doc Comment
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -60,7 +60,7 @@ class ScPublicV2ScpGetAllReturns200Response implements ModelInterface, ArrayAcce
     protected static $openAPITypes = [
         'next' => 'string',
         'previous' => 'string',
-        'returns' => '\Toppy\Sendcloud\Model\ModelReturn[]'
+        'returns' => '\Toppy\Sendcloud\V2\Model\ModelReturn[]'
     ];
 
     /**
@@ -356,7 +356,7 @@ class ScPublicV2ScpGetAllReturns200Response implements ModelInterface, ArrayAcce
     /**
      * Gets returns
      *
-     * @return \Toppy\Sendcloud\Model\ModelReturn[]|null
+     * @return \Toppy\Sendcloud\V2\Model\ModelReturn[]|null
      */
     public function getReturns()
     {
@@ -366,7 +366,7 @@ class ScPublicV2ScpGetAllReturns200Response implements ModelInterface, ArrayAcce
     /**
      * Sets returns
      *
-     * @param \Toppy\Sendcloud\Model\ModelReturn[]|null $returns returns
+     * @param \Toppy\Sendcloud\V2\Model\ModelReturn[]|null $returns returns
      *
      * @return self
      */

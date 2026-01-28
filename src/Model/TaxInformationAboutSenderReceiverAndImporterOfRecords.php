@@ -8,7 +8,7 @@ declare(strict_types=1);
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Model;
+namespace Toppy\Sendcloud\V2\Model;
 
 use \ArrayAccess;
-use \Toppy\Sendcloud\ObjectSerializer;
+use \Toppy\Sendcloud\V2\ObjectSerializer;
 
 /**
  * TaxInformationAboutSenderReceiverAndImporterOfRecords Class Doc Comment
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,9 +58,9 @@ class TaxInformationAboutSenderReceiverAndImporterOfRecords implements ModelInte
       * @var string[]
       */
     protected static $openAPITypes = [
-        'sender' => '\Toppy\Sendcloud\Model\TaxNumber[]',
-        'receiver' => '\Toppy\Sendcloud\Model\TaxNumber[]',
-        'importerOfRecords' => '\Toppy\Sendcloud\Model\TaxNumber[]'
+        'sender' => '\Toppy\Sendcloud\V2\Model\TaxNumber[]',
+        'receiver' => '\Toppy\Sendcloud\V2\Model\TaxNumber[]',
+        'importerOfRecords' => '\Toppy\Sendcloud\V2\Model\TaxNumber[]'
     ];
 
     /**
@@ -290,7 +290,7 @@ class TaxInformationAboutSenderReceiverAndImporterOfRecords implements ModelInte
     /**
      * Gets sender
      *
-     * @return \Toppy\Sendcloud\Model\TaxNumber[]|null
+     * @return \Toppy\Sendcloud\V2\Model\TaxNumber[]|null
      */
     public function getSender()
     {
@@ -300,7 +300,7 @@ class TaxInformationAboutSenderReceiverAndImporterOfRecords implements ModelInte
     /**
      * Sets sender
      *
-     * @param \Toppy\Sendcloud\Model\TaxNumber[]|null $sender sender
+     * @param \Toppy\Sendcloud\V2\Model\TaxNumber[]|null $sender sender
      *
      * @return self
      */
@@ -323,7 +323,7 @@ class TaxInformationAboutSenderReceiverAndImporterOfRecords implements ModelInte
     /**
      * Gets receiver
      *
-     * @return \Toppy\Sendcloud\Model\TaxNumber[]|null
+     * @return \Toppy\Sendcloud\V2\Model\TaxNumber[]|null
      */
     public function getReceiver()
     {
@@ -333,7 +333,7 @@ class TaxInformationAboutSenderReceiverAndImporterOfRecords implements ModelInte
     /**
      * Sets receiver
      *
-     * @param \Toppy\Sendcloud\Model\TaxNumber[]|null $receiver receiver
+     * @param \Toppy\Sendcloud\V2\Model\TaxNumber[]|null $receiver receiver
      *
      * @return self
      */
@@ -356,7 +356,7 @@ class TaxInformationAboutSenderReceiverAndImporterOfRecords implements ModelInte
     /**
      * Gets importerOfRecords
      *
-     * @return \Toppy\Sendcloud\Model\TaxNumber[]|null
+     * @return \Toppy\Sendcloud\V2\Model\TaxNumber[]|null
      */
     public function getImporterOfRecords()
     {
@@ -366,7 +366,7 @@ class TaxInformationAboutSenderReceiverAndImporterOfRecords implements ModelInte
     /**
      * Sets importerOfRecords
      *
-     * @param \Toppy\Sendcloud\Model\TaxNumber[]|null $importerOfRecords importerOfRecords
+     * @param \Toppy\Sendcloud\V2\Model\TaxNumber[]|null $importerOfRecords importerOfRecords
      *
      * @return self
      */

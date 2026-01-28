@@ -8,7 +8,7 @@ declare(strict_types=1);
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Model;
+namespace Toppy\Sendcloud\V2\Model;
 
 use \ArrayAccess;
-use \Toppy\Sendcloud\ObjectSerializer;
+use \Toppy\Sendcloud\V2\ObjectSerializer;
 
 /**
  * ScPublicV2ScpPutUpdateAParcelRequest Class Doc Comment
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,7 +58,7 @@ class ScPublicV2ScpPutUpdateAParcelRequest implements ModelInterface, ArrayAcces
       * @var string[]
       */
     protected static $openAPITypes = [
-        'parcel' => \Toppy\Sendcloud\Model\ParcelCreation::class
+        'parcel' => \Toppy\Sendcloud\V2\Model\ParcelCreation::class
     ];
 
     /**
@@ -262,7 +262,7 @@ class ScPublicV2ScpPutUpdateAParcelRequest implements ModelInterface, ArrayAcces
     /**
      * Gets parcel
      *
-     * @return \Toppy\Sendcloud\Model\ParcelCreation|null
+     * @return \Toppy\Sendcloud\V2\Model\ParcelCreation|null
      */
     public function getParcel()
     {
@@ -272,7 +272,7 @@ class ScPublicV2ScpPutUpdateAParcelRequest implements ModelInterface, ArrayAcces
     /**
      * Sets parcel
      *
-     * @param \Toppy\Sendcloud\Model\ParcelCreation|null $parcel parcel
+     * @param \Toppy\Sendcloud\V2\Model\ParcelCreation|null $parcel parcel
      *
      * @return self
      */

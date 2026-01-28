@@ -10,6 +10,6 @@ Name | Type | Description | Notes
 **iso2** | **string** | ISO 3166-1 alpha-2 code of the country. | [optional]
 **iso3** | **string** | ISO 3166-1 alpha-3 code of the country. | [optional]
 **leadTimeHours** | **int** | Lead time of the shipping method in hours | [optional]
-**priceBreakdown** | [**\Toppy\Sendcloud\Model\ShippingPriceBreakdownInner[]**](ShippingPriceBreakdownInner.md) | A Sendcloud shipping price breakdown. | [optional]
+**priceBreakdown** | [**\Toppy\Sendcloud\V2\Model\ShippingPriceBreakdownInner[]**](ShippingPriceBreakdownInner.md) | A Sendcloud shipping price breakdown. | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

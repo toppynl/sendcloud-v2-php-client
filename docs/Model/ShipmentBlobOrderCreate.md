@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **address2** | **string** |  |
 **city** | **string** |  |
 **companyName** | **string** |  |
-**country** | [**\Toppy\Sendcloud\Model\CountryCodes**](CountryCodes.md) |  |
+**country** | [**\Toppy\Sendcloud\V2\Model\CountryCodes**](CountryCodes.md) |  |
 **createdAt** | **\DateTime** | Timestamp indicating when the shipment was created in the shop system. This value will be saved and accessible through &#x60;shipment_created_at&#x60; field in GET response. |
 **currency** | **string** | ISO 4217 currency code |
 **customsInvoiceNr** | **string** | Your own commercial invoice number |
@@ -19,9 +19,9 @@ Name | Type | Description | Notes
 **houseNumber** | **string** |  |
 **name** | **string** |  |
 **orderNumber** | **string** | Unique order number generated manualy or by the shop system |
-**orderStatus** | [**\Toppy\Sendcloud\Model\ShipmentBlobStatus**](ShipmentBlobStatus.md) |  |
-**parcelItems** | [**\Toppy\Sendcloud\Model\ParcelItems[]**](ParcelItems.md) | List of items the parcel contains |
-**paymentStatus** | [**\Toppy\Sendcloud\Model\ShipmentBlobStatus**](ShipmentBlobStatus.md) |  |
+**orderStatus** | [**\Toppy\Sendcloud\V2\Model\ShipmentBlobStatus**](ShipmentBlobStatus.md) |  |
+**parcelItems** | [**\Toppy\Sendcloud\V2\Model\ParcelItems[]**](ParcelItems.md) | List of items the parcel contains |
+**paymentStatus** | [**\Toppy\Sendcloud\V2\Model\ShipmentBlobStatus**](ShipmentBlobStatus.md) |  |
 **postalCode** | **string** |  |
 **shippingMethod** | **int** | Foreign key indicating shipping method used | [optional]
 **shippingMethodCheckoutName** | **string** | Human readable shipping method name |
@@ -32,10 +32,10 @@ Name | Type | Description | Notes
 **totalOrderValue** | **float** | The total price of an order | [optional]
 **updatedAt** | **\DateTime** | Timestamp indicating when the shipment was updated in the shop system. This value will be saved and accessible through &#x60;shipment_updated_at&#x60; field in GET response. |
 **weight** | **float** | Total weight of the order. Cannot be smaler than 0.001 | [optional]
-**checkoutPayload** | [**\Toppy\Sendcloud\Model\CheckoutPayload**](CheckoutPayload.md) |  | [optional]
+**checkoutPayload** | [**\Toppy\Sendcloud\V2\Model\CheckoutPayload**](CheckoutPayload.md) |  | [optional]
 **width** | **float** | Volumetric weight width | [optional]
 **height** | **float** | Volumetric weight height | [optional]
 **length** | **float** | Volumetric weight length | [optional]
-**customsDetails** | [**\Toppy\Sendcloud\Model\CustomsInformation**](CustomsInformation.md) |  | [optional]
+**customsDetails** | [**\Toppy\Sendcloud\V2\Model\CustomsInformation**](CustomsInformation.md) |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

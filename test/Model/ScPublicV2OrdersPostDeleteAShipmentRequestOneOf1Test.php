@@ -5,7 +5,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,7 +27,7 @@
  * Please update the test case below to test the model.
  */
 
-namespace Toppy\Sendcloud\Test\Model;
+namespace Toppy\Sendcloud\V2\Test\Model;
 
 use PHPUnit\Framework\TestCase;
 
@@ -36,7 +36,7 @@ use PHPUnit\Framework\TestCase;
  *
  * @category    Class
  * @description ScPublicV2OrdersPostDeleteAShipmentRequestOneOf1
- * @package     Toppy\Sendcloud
+ * @package     Toppy\Sendcloud\V2
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */

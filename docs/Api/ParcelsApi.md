@@ -1,4 +1,4 @@
-# Toppy\Sendcloud\ParcelsApi
+# Toppy\Sendcloud\V2\ParcelsApi
 
 All URIs are relative to https://panel.sendcloud.sc/api/v2.
 
@@ -15,7 +15,7 @@ Method | HTTP request | Description
 ## `scPublicV2ScpGetAllParcels()`
 
 ```php
-scPublicV2ScpGetAllParcels($parcelStatus, $trackingNumber, $externalReference, $orderNumber, $updatedAfter, $announcedAfter, $ids, $cursor, $errors): \Toppy\Sendcloud\Model\ScPublicV2ScpGetAllParcels200Response
+scPublicV2ScpGetAllParcels($parcelStatus, $trackingNumber, $externalReference, $orderNumber, $updatedAfter, $announcedAfter, $ids, $cursor, $errors): \Toppy\Sendcloud\V2\Model\ScPublicV2ScpGetAllParcels200Response
 ```
 
 Retrieve parcels
@@ -30,12 +30,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: HTTPBasicAuth
-$config = Toppy\Sendcloud\Configuration::getDefaultConfiguration()
+$config = Toppy\Sendcloud\V2\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Toppy\Sendcloud\Api\ParcelsApi(
+$apiInstance = new Toppy\Sendcloud\V2\Api\ParcelsApi(
     // If you want use custom http client, pass your client which implements `Psr\Http\Client\ClientInterface`.
     // This is optional, `Psr18ClientDiscovery` will be used to find http client. For instance `GuzzleHttp\Client` implements that interface
     new GuzzleHttp\Client(),
@@ -75,7 +75,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Toppy\Sendcloud\Model\ScPublicV2ScpGetAllParcels200Response**](../Model/ScPublicV2ScpGetAllParcels200Response.md)
+[**\Toppy\Sendcloud\V2\Model\ScPublicV2ScpGetAllParcels200Response**](../Model/ScPublicV2ScpGetAllParcels200Response.md)
 
 ### Authorization
 
@@ -93,7 +93,7 @@ Name | Type | Description  | Notes
 ## `scPublicV2ScpGetParcelById()`
 
 ```php
-scPublicV2ScpGetParcelById($id): \Toppy\Sendcloud\Model\ScPublicV2ScpGetParcelById200Response
+scPublicV2ScpGetParcelById($id): \Toppy\Sendcloud\V2\Model\ScPublicV2ScpGetParcelById200Response
 ```
 
 Retrieve a parcel
@@ -108,12 +108,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: HTTPBasicAuth
-$config = Toppy\Sendcloud\Configuration::getDefaultConfiguration()
+$config = Toppy\Sendcloud\V2\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Toppy\Sendcloud\Api\ParcelsApi(
+$apiInstance = new Toppy\Sendcloud\V2\Api\ParcelsApi(
     // If you want use custom http client, pass your client which implements `Psr\Http\Client\ClientInterface`.
     // This is optional, `Psr18ClientDiscovery` will be used to find http client. For instance `GuzzleHttp\Client` implements that interface
     new GuzzleHttp\Client(),
@@ -137,7 +137,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Toppy\Sendcloud\Model\ScPublicV2ScpGetParcelById200Response**](../Model/ScPublicV2ScpGetParcelById200Response.md)
+[**\Toppy\Sendcloud\V2\Model\ScPublicV2ScpGetParcelById200Response**](../Model/ScPublicV2ScpGetParcelById200Response.md)
 
 ### Authorization
 
@@ -155,7 +155,7 @@ Name | Type | Description  | Notes
 ## `scPublicV2ScpGetReturnPortalUrl()`
 
 ```php
-scPublicV2ScpGetReturnPortalUrl($id): \Toppy\Sendcloud\Model\ScPublicV2ScpGetReturnPortalUrl200Response
+scPublicV2ScpGetReturnPortalUrl($id): \Toppy\Sendcloud\V2\Model\ScPublicV2ScpGetReturnPortalUrl200Response
 ```
 
 Retrieve a return portal URL
@@ -170,12 +170,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: HTTPBasicAuth
-$config = Toppy\Sendcloud\Configuration::getDefaultConfiguration()
+$config = Toppy\Sendcloud\V2\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Toppy\Sendcloud\Api\ParcelsApi(
+$apiInstance = new Toppy\Sendcloud\V2\Api\ParcelsApi(
     // If you want use custom http client, pass your client which implements `Psr\Http\Client\ClientInterface`.
     // This is optional, `Psr18ClientDiscovery` will be used to find http client. For instance `GuzzleHttp\Client` implements that interface
     new GuzzleHttp\Client(),
@@ -199,7 +199,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Toppy\Sendcloud\Model\ScPublicV2ScpGetReturnPortalUrl200Response**](../Model/ScPublicV2ScpGetReturnPortalUrl200Response.md)
+[**\Toppy\Sendcloud\V2\Model\ScPublicV2ScpGetReturnPortalUrl200Response**](../Model/ScPublicV2ScpGetReturnPortalUrl200Response.md)
 
 ### Authorization
 
@@ -217,7 +217,7 @@ Name | Type | Description  | Notes
 ## `scPublicV2ScpPostCancelSpecific()`
 
 ```php
-scPublicV2ScpPostCancelSpecific($id): \Toppy\Sendcloud\Model\CancelParcelStatus
+scPublicV2ScpPostCancelSpecific($id): \Toppy\Sendcloud\V2\Model\CancelParcelStatus
 ```
 
 Cancel a parcel
@@ -232,12 +232,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: HTTPBasicAuth
-$config = Toppy\Sendcloud\Configuration::getDefaultConfiguration()
+$config = Toppy\Sendcloud\V2\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Toppy\Sendcloud\Api\ParcelsApi(
+$apiInstance = new Toppy\Sendcloud\V2\Api\ParcelsApi(
     // If you want use custom http client, pass your client which implements `Psr\Http\Client\ClientInterface`.
     // This is optional, `Psr18ClientDiscovery` will be used to find http client. For instance `GuzzleHttp\Client` implements that interface
     new GuzzleHttp\Client(),
@@ -261,7 +261,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Toppy\Sendcloud\Model\CancelParcelStatus**](../Model/CancelParcelStatus.md)
+[**\Toppy\Sendcloud\V2\Model\CancelParcelStatus**](../Model/CancelParcelStatus.md)
 
 ### Authorization
 
@@ -279,7 +279,7 @@ Name | Type | Description  | Notes
 ## `scPublicV2ScpPostCreateParcel()`
 
 ```php
-scPublicV2ScpPostCreateParcel($sendcloudPartnerId, $errors, $scPublicV2ScpPostCreateParcelRequest): \Toppy\Sendcloud\Model\ScPublicV2ScpPostCreateParcel200Response
+scPublicV2ScpPostCreateParcel($sendcloudPartnerId, $errors, $scPublicV2ScpPostCreateParcelRequest): \Toppy\Sendcloud\V2\Model\ScPublicV2ScpPostCreateParcel200Response
 ```
 
 Create a parcel or parcels
@@ -294,12 +294,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: HTTPBasicAuth
-$config = Toppy\Sendcloud\Configuration::getDefaultConfiguration()
+$config = Toppy\Sendcloud\V2\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Toppy\Sendcloud\Api\ParcelsApi(
+$apiInstance = new Toppy\Sendcloud\V2\Api\ParcelsApi(
     // If you want use custom http client, pass your client which implements `Psr\Http\Client\ClientInterface`.
     // This is optional, `Psr18ClientDiscovery` will be used to find http client. For instance `GuzzleHttp\Client` implements that interface
     new GuzzleHttp\Client(),
@@ -307,7 +307,7 @@ $apiInstance = new Toppy\Sendcloud\Api\ParcelsApi(
 );
 $sendcloudPartnerId = 'sendcloudPartnerId_example'; // string | If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error.
 $errors = 'errors_example'; // string | When making an API request, the errors query parameter can be used to determine the type of errors that should be included in the response. If `verbose` is specified, the response will only contain errors that Sendcloud has validated. These errors may include shipment details such as invalid addresses or missing postal codes. On the other hand, if `verbose-carrier` is specified, the response will include errors originating from the carriers side of the shipping process. These errors may result from technical or validation problems, such as connection failures or issues with the carrier`s systems, that prevent the shipment from being processed. More details are described on the page [Handling parcel errors](/docs/shipping/handling-parcel-errors).
-$scPublicV2ScpPostCreateParcelRequest = {"parcel":{"name":"John Doe","company_name":"Sendcloud","address":"Stadhuisplein","house_number":"10","city":"Eindhoven","postal_code":"5611 EM","telephone":"+31612345678","request_label":true,"email":"john@doe.com","data":{},"country":"NL","shipment":{"id":8},"weight":"10.000","order_number":"1234567890","insured_value":0,"total_order_value_currency":"GBP","total_order_value":"11.11","quantity":1,"shipping_method_checkout_name":"DHL Express Domestic"}}; // \Toppy\Sendcloud\Model\ScPublicV2ScpPostCreateParcelRequest
+$scPublicV2ScpPostCreateParcelRequest = {"parcel":{"name":"John Doe","company_name":"Sendcloud","address":"Stadhuisplein","house_number":"10","city":"Eindhoven","postal_code":"5611 EM","telephone":"+31612345678","request_label":true,"email":"john@doe.com","data":{},"country":"NL","shipment":{"id":8},"weight":"10.000","order_number":"1234567890","insured_value":0,"total_order_value_currency":"GBP","total_order_value":"11.11","quantity":1,"shipping_method_checkout_name":"DHL Express Domestic"}}; // \Toppy\Sendcloud\V2\Model\ScPublicV2ScpPostCreateParcelRequest
 
 try {
     $result = $apiInstance->scPublicV2ScpPostCreateParcel($sendcloudPartnerId, $errors, $scPublicV2ScpPostCreateParcelRequest);
@@ -323,11 +323,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **sendcloudPartnerId** | **string**| If you are an official [Sendcloud Tech Partner](https://www.sendcloud.com/ecosystem/), send your unique Sendcloud Partner UUID as a request header for the system to recognize you.  The header is not required but if it is set, the system will check it. An unknown or invalid UUID will cause a 400 error. | [optional]
  **errors** | **string**| When making an API request, the errors query parameter can be used to determine the type of errors that should be included in the response. If &#x60;verbose&#x60; is specified, the response will only contain errors that Sendcloud has validated. These errors may include shipment details such as invalid addresses or missing postal codes. On the other hand, if &#x60;verbose-carrier&#x60; is specified, the response will include errors originating from the carriers side of the shipping process. These errors may result from technical or validation problems, such as connection failures or issues with the carrier&#x60;s systems, that prevent the shipment from being processed. More details are described on the page [Handling parcel errors](/docs/shipping/handling-parcel-errors). | [optional]
- **scPublicV2ScpPostCreateParcelRequest** | [**\Toppy\Sendcloud\Model\ScPublicV2ScpPostCreateParcelRequest**](../Model/ScPublicV2ScpPostCreateParcelRequest.md)|  | [optional]
+ **scPublicV2ScpPostCreateParcelRequest** | [**\Toppy\Sendcloud\V2\Model\ScPublicV2ScpPostCreateParcelRequest**](../Model/ScPublicV2ScpPostCreateParcelRequest.md)|  | [optional]
 
 ### Return type
 
-[**\Toppy\Sendcloud\Model\ScPublicV2ScpPostCreateParcel200Response**](../Model/ScPublicV2ScpPostCreateParcel200Response.md)
+[**\Toppy\Sendcloud\V2\Model\ScPublicV2ScpPostCreateParcel200Response**](../Model/ScPublicV2ScpPostCreateParcel200Response.md)
 
 ### Authorization
 
@@ -345,7 +345,7 @@ Name | Type | Description  | Notes
 ## `scPublicV2ScpPutUpdateAParcel()`
 
 ```php
-scPublicV2ScpPutUpdateAParcel($scPublicV2ScpPutUpdateAParcelRequest): \Toppy\Sendcloud\Model\ScPublicV2ScpPutUpdateAParcel200Response
+scPublicV2ScpPutUpdateAParcel($scPublicV2ScpPutUpdateAParcelRequest): \Toppy\Sendcloud\V2\Model\ScPublicV2ScpPutUpdateAParcel200Response
 ```
 
 Update a parcel
@@ -360,18 +360,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: HTTPBasicAuth
-$config = Toppy\Sendcloud\Configuration::getDefaultConfiguration()
+$config = Toppy\Sendcloud\V2\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Toppy\Sendcloud\Api\ParcelsApi(
+$apiInstance = new Toppy\Sendcloud\V2\Api\ParcelsApi(
     // If you want use custom http client, pass your client which implements `Psr\Http\Client\ClientInterface`.
     // This is optional, `Psr18ClientDiscovery` will be used to find http client. For instance `GuzzleHttp\Client` implements that interface
     new GuzzleHttp\Client(),
     $config
 );
-$scPublicV2ScpPutUpdateAParcelRequest = {"parcel":{"id":3,"name":"Sendcloud Userß","address":"Stadhuisplein 10","postal_code":"5611 EM","city":"Eindhoven","country":"NL","company_name":"Summer Co"}}; // \Toppy\Sendcloud\Model\ScPublicV2ScpPutUpdateAParcelRequest
+$scPublicV2ScpPutUpdateAParcelRequest = {"parcel":{"id":3,"name":"Sendcloud Userß","address":"Stadhuisplein 10","postal_code":"5611 EM","city":"Eindhoven","country":"NL","company_name":"Summer Co"}}; // \Toppy\Sendcloud\V2\Model\ScPublicV2ScpPutUpdateAParcelRequest
 
 try {
     $result = $apiInstance->scPublicV2ScpPutUpdateAParcel($scPublicV2ScpPutUpdateAParcelRequest);
@@ -385,11 +385,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **scPublicV2ScpPutUpdateAParcelRequest** | [**\Toppy\Sendcloud\Model\ScPublicV2ScpPutUpdateAParcelRequest**](../Model/ScPublicV2ScpPutUpdateAParcelRequest.md)|  | [optional]
+ **scPublicV2ScpPutUpdateAParcelRequest** | [**\Toppy\Sendcloud\V2\Model\ScPublicV2ScpPutUpdateAParcelRequest**](../Model/ScPublicV2ScpPutUpdateAParcelRequest.md)|  | [optional]
 
 ### Return type
 
-[**\Toppy\Sendcloud\Model\ScPublicV2ScpPutUpdateAParcel200Response**](../Model/ScPublicV2ScpPutUpdateAParcel200Response.md)
+[**\Toppy\Sendcloud\V2\Model\ScPublicV2ScpPutUpdateAParcel200Response**](../Model/ScPublicV2ScpPutUpdateAParcel200Response.md)
 
 ### Authorization
 

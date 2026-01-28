@@ -8,7 +8,7 @@ declare(strict_types=1);
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Model;
+namespace Toppy\Sendcloud\V2\Model;
 
 use \ArrayAccess;
-use \Toppy\Sendcloud\ObjectSerializer;
+use \Toppy\Sendcloud\V2\ObjectSerializer;
 
 /**
  * ScPublicV2ServicepointsPostCheckAndStore200Response Class Doc Comment
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,7 +59,7 @@ class ScPublicV2ServicepointsPostCheckAndStore200Response implements ModelInterf
       */
     protected static $openAPITypes = [
         'availability' => 'int',
-        'servicePoint' => \Toppy\Sendcloud\Model\ServicePoint::class,
+        'servicePoint' => \Toppy\Sendcloud\V2\Model\ServicePoint::class,
         'stored' => 'bool'
     ];
 
@@ -353,7 +353,7 @@ class ScPublicV2ServicepointsPostCheckAndStore200Response implements ModelInterf
     /**
      * Gets servicePoint
      *
-     * @return \Toppy\Sendcloud\Model\ServicePoint
+     * @return \Toppy\Sendcloud\V2\Model\ServicePoint
      */
     public function getServicePoint()
     {
@@ -363,7 +363,7 @@ class ScPublicV2ServicepointsPostCheckAndStore200Response implements ModelInterf
     /**
      * Sets servicePoint
      *
-     * @param \Toppy\Sendcloud\Model\ServicePoint $servicePoint servicePoint
+     * @param \Toppy\Sendcloud\V2\Model\ServicePoint $servicePoint servicePoint
      *
      * @return self
      */

@@ -8,7 +8,7 @@ declare(strict_types=1);
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Model;
+namespace Toppy\Sendcloud\V2\Model;
 
 use \ArrayAccess;
-use \Toppy\Sendcloud\ObjectSerializer;
+use \Toppy\Sendcloud\V2\ObjectSerializer;
 
 /**
  * ScPublicV2ScpPostCreateParcel200Response Class Doc Comment
  *
  * @category Class
  * @description Create a parcel
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,9 +59,9 @@ class ScPublicV2ScpPostCreateParcel200Response implements ModelInterface, ArrayA
       * @var string[]
       */
     protected static $openAPITypes = [
-        'failedParcels' => '\Toppy\Sendcloud\Model\FailedToCreateParcelsResponseFailedParcelsInner[]',
-        'parcel' => \Toppy\Sendcloud\Model\ParcelResponseFull::class,
-        'parcels' => '\Toppy\Sendcloud\Model\ParcelResponseFull[]'
+        'failedParcels' => '\Toppy\Sendcloud\V2\Model\FailedToCreateParcelsResponseFailedParcelsInner[]',
+        'parcel' => \Toppy\Sendcloud\V2\Model\ParcelResponseFull::class,
+        'parcels' => '\Toppy\Sendcloud\V2\Model\ParcelResponseFull[]'
     ];
 
     /**
@@ -277,7 +277,7 @@ class ScPublicV2ScpPostCreateParcel200Response implements ModelInterface, ArrayA
     /**
      * Gets failedParcels
      *
-     * @return \Toppy\Sendcloud\Model\FailedToCreateParcelsResponseFailedParcelsInner[]|null
+     * @return \Toppy\Sendcloud\V2\Model\FailedToCreateParcelsResponseFailedParcelsInner[]|null
      */
     public function getFailedParcels()
     {
@@ -287,7 +287,7 @@ class ScPublicV2ScpPostCreateParcel200Response implements ModelInterface, ArrayA
     /**
      * Sets failedParcels
      *
-     * @param \Toppy\Sendcloud\Model\FailedToCreateParcelsResponseFailedParcelsInner[]|null $failedParcels failedParcels
+     * @param \Toppy\Sendcloud\V2\Model\FailedToCreateParcelsResponseFailedParcelsInner[]|null $failedParcels failedParcels
      *
      * @return self
      */
@@ -306,7 +306,7 @@ class ScPublicV2ScpPostCreateParcel200Response implements ModelInterface, ArrayA
     /**
      * Gets parcel
      *
-     * @return \Toppy\Sendcloud\Model\ParcelResponseFull|null
+     * @return \Toppy\Sendcloud\V2\Model\ParcelResponseFull|null
      */
     public function getParcel()
     {
@@ -316,7 +316,7 @@ class ScPublicV2ScpPostCreateParcel200Response implements ModelInterface, ArrayA
     /**
      * Sets parcel
      *
-     * @param \Toppy\Sendcloud\Model\ParcelResponseFull|null $parcel parcel
+     * @param \Toppy\Sendcloud\V2\Model\ParcelResponseFull|null $parcel parcel
      *
      * @return self
      */
@@ -334,7 +334,7 @@ class ScPublicV2ScpPostCreateParcel200Response implements ModelInterface, ArrayA
     /**
      * Gets parcels
      *
-     * @return \Toppy\Sendcloud\Model\ParcelResponseFull[]|null
+     * @return \Toppy\Sendcloud\V2\Model\ParcelResponseFull[]|null
      */
     public function getParcels()
     {
@@ -344,7 +344,7 @@ class ScPublicV2ScpPostCreateParcel200Response implements ModelInterface, ArrayA
     /**
      * Sets parcels
      *
-     * @param \Toppy\Sendcloud\Model\ParcelResponseFull[]|null $parcels parcels
+     * @param \Toppy\Sendcloud\V2\Model\ParcelResponseFull[]|null $parcels parcels
      *
      * @return self
      */

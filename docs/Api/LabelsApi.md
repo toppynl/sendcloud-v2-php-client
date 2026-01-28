@@ -1,4 +1,4 @@
-# Toppy\Sendcloud\LabelsApi
+# Toppy\Sendcloud\V2\LabelsApi
 
 All URIs are relative to https://panel.sendcloud.sc/api/v2.
 
@@ -11,7 +11,7 @@ Method | HTTP request | Description
 ## `scPublicV2ScpGetLabelByParcelId()`
 
 ```php
-scPublicV2ScpGetLabelByParcelId($parcelId): \Toppy\Sendcloud\Model\LabelSingleResponse
+scPublicV2ScpGetLabelByParcelId($parcelId): \Toppy\Sendcloud\V2\Model\LabelSingleResponse
 ```
 
 Retrieve a label for a specific parcel
@@ -26,12 +26,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: HTTPBasicAuth
-$config = Toppy\Sendcloud\Configuration::getDefaultConfiguration()
+$config = Toppy\Sendcloud\V2\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Toppy\Sendcloud\Api\LabelsApi(
+$apiInstance = new Toppy\Sendcloud\V2\Api\LabelsApi(
     // If you want use custom http client, pass your client which implements `Psr\Http\Client\ClientInterface`.
     // This is optional, `Psr18ClientDiscovery` will be used to find http client. For instance `GuzzleHttp\Client` implements that interface
     new GuzzleHttp\Client(),
@@ -55,7 +55,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Toppy\Sendcloud\Model\LabelSingleResponse**](../Model/LabelSingleResponse.md)
+[**\Toppy\Sendcloud\V2\Model\LabelSingleResponse**](../Model/LabelSingleResponse.md)
 
 ### Authorization
 
@@ -73,7 +73,7 @@ Name | Type | Description  | Notes
 ## `scPublicV2ScpPostLabelByParcelIds()`
 
 ```php
-scPublicV2ScpPostLabelByParcelIds($scPublicV2ScpPostLabelByParcelIdsRequest): \Toppy\Sendcloud\Model\LabelMultipleResponse
+scPublicV2ScpPostLabelByParcelIds($scPublicV2ScpPostLabelByParcelIdsRequest): \Toppy\Sendcloud\V2\Model\LabelMultipleResponse
 ```
 
 Bulk PDF label printing
@@ -88,18 +88,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: HTTPBasicAuth
-$config = Toppy\Sendcloud\Configuration::getDefaultConfiguration()
+$config = Toppy\Sendcloud\V2\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Toppy\Sendcloud\Api\LabelsApi(
+$apiInstance = new Toppy\Sendcloud\V2\Api\LabelsApi(
     // If you want use custom http client, pass your client which implements `Psr\Http\Client\ClientInterface`.
     // This is optional, `Psr18ClientDiscovery` will be used to find http client. For instance `GuzzleHttp\Client` implements that interface
     new GuzzleHttp\Client(),
     $config
 );
-$scPublicV2ScpPostLabelByParcelIdsRequest = new \Toppy\Sendcloud\Model\ScPublicV2ScpPostLabelByParcelIdsRequest(); // \Toppy\Sendcloud\Model\ScPublicV2ScpPostLabelByParcelIdsRequest
+$scPublicV2ScpPostLabelByParcelIdsRequest = new \Toppy\Sendcloud\V2\Model\ScPublicV2ScpPostLabelByParcelIdsRequest(); // \Toppy\Sendcloud\V2\Model\ScPublicV2ScpPostLabelByParcelIdsRequest
 
 try {
     $result = $apiInstance->scPublicV2ScpPostLabelByParcelIds($scPublicV2ScpPostLabelByParcelIdsRequest);
@@ -113,11 +113,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **scPublicV2ScpPostLabelByParcelIdsRequest** | [**\Toppy\Sendcloud\Model\ScPublicV2ScpPostLabelByParcelIdsRequest**](../Model/ScPublicV2ScpPostLabelByParcelIdsRequest.md)|  |
+ **scPublicV2ScpPostLabelByParcelIdsRequest** | [**\Toppy\Sendcloud\V2\Model\ScPublicV2ScpPostLabelByParcelIdsRequest**](../Model/ScPublicV2ScpPostLabelByParcelIdsRequest.md)|  |
 
 ### Return type
 
-[**\Toppy\Sendcloud\Model\LabelMultipleResponse**](../Model/LabelMultipleResponse.md)
+[**\Toppy\Sendcloud\V2\Model\LabelMultipleResponse**](../Model/LabelMultipleResponse.md)
 
 ### Authorization
 

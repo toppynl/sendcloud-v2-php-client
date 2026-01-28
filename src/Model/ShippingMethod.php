@@ -8,7 +8,7 @@ declare(strict_types=1);
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Model;
+namespace Toppy\Sendcloud\V2\Model;
 
 use \ArrayAccess;
-use \Toppy\Sendcloud\ObjectSerializer;
+use \Toppy\Sendcloud\V2\ObjectSerializer;
 
 /**
  * ShippingMethod Class Doc Comment
  *
  * @category Class
  * @description A Sendcloud shipping method
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -66,7 +66,7 @@ class ShippingMethod implements ModelInterface, ArrayAccess, \JsonSerializable, 
         'maxWeight' => 'string',
         'servicePointInput' => 'string',
         'price' => 'int',
-        'countries' => '\Toppy\Sendcloud\Model\ShippingMethodCountriesInner[]'
+        'countries' => '\Toppy\Sendcloud\V2\Model\ShippingMethodCountriesInner[]'
     ];
 
     /**
@@ -640,7 +640,7 @@ class ShippingMethod implements ModelInterface, ArrayAccess, \JsonSerializable, 
     /**
      * Gets countries
      *
-     * @return \Toppy\Sendcloud\Model\ShippingMethodCountriesInner[]|null
+     * @return \Toppy\Sendcloud\V2\Model\ShippingMethodCountriesInner[]|null
      */
     public function getCountries()
     {
@@ -650,7 +650,7 @@ class ShippingMethod implements ModelInterface, ArrayAccess, \JsonSerializable, 
     /**
      * Sets countries
      *
-     * @param \Toppy\Sendcloud\Model\ShippingMethodCountriesInner[]|null $countries A list of countries that you can ship to with the shipping method.
+     * @param \Toppy\Sendcloud\V2\Model\ShippingMethodCountriesInner[]|null $countries A list of countries that you can ship to with the shipping method.
      *
      * @return self
      */

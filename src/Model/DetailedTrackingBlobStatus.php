@@ -8,7 +8,7 @@ declare(strict_types=1);
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Model;
+namespace Toppy\Sendcloud\V2\Model;
 
 use \ArrayAccess;
-use \Toppy\Sendcloud\ObjectSerializer;
+use \Toppy\Sendcloud\V2\ObjectSerializer;
 
 /**
  * DetailedTrackingBlobStatus Class Doc Comment
  *
  * @category Class
  * @description List of shipping statuses for the parcel
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -62,7 +62,7 @@ class DetailedTrackingBlobStatus implements ModelInterface, ArrayAccess, \JsonSe
         'carrierUpdateTimestamp' => 'string',
         'parcelStatusHistoryId' => 'string',
         'parentStatus' => 'string',
-        'carrierCode' => \Toppy\Sendcloud\Model\Carrier::class,
+        'carrierCode' => \Toppy\Sendcloud\V2\Model\Carrier::class,
         'carrierMessage' => 'string'
     ];
 
@@ -375,7 +375,7 @@ class DetailedTrackingBlobStatus implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Gets carrierCode
      *
-     * @return \Toppy\Sendcloud\Model\Carrier|null
+     * @return \Toppy\Sendcloud\V2\Model\Carrier|null
      */
     public function getCarrierCode()
     {
@@ -385,7 +385,7 @@ class DetailedTrackingBlobStatus implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets carrierCode
      *
-     * @param \Toppy\Sendcloud\Model\Carrier|null $carrierCode carrierCode
+     * @param \Toppy\Sendcloud\V2\Model\Carrier|null $carrierCode carrierCode
      *
      * @return self
      */

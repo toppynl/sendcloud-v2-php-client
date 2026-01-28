@@ -8,7 +8,7 @@ declare(strict_types=1);
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Model;
+namespace Toppy\Sendcloud\V2\Model;
 
 use \ArrayAccess;
-use \Toppy\Sendcloud\ObjectSerializer;
+use \Toppy\Sendcloud\V2\ObjectSerializer;
 
 /**
  * ShipmentBlobOrderCreate Class Doc Comment
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -62,7 +62,7 @@ class ShipmentBlobOrderCreate implements ModelInterface, ArrayAccess, \JsonSeria
         'address2' => 'string',
         'city' => 'string',
         'companyName' => 'string',
-        'country' => \Toppy\Sendcloud\Model\CountryCodes::class,
+        'country' => \Toppy\Sendcloud\V2\Model\CountryCodes::class,
         'createdAt' => '\DateTime',
         'currency' => 'string',
         'customsInvoiceNr' => 'string',
@@ -73,9 +73,9 @@ class ShipmentBlobOrderCreate implements ModelInterface, ArrayAccess, \JsonSeria
         'houseNumber' => 'string',
         'name' => 'string',
         'orderNumber' => 'string',
-        'orderStatus' => \Toppy\Sendcloud\Model\ShipmentBlobStatus::class,
-        'parcelItems' => '\Toppy\Sendcloud\Model\ParcelItems[]',
-        'paymentStatus' => \Toppy\Sendcloud\Model\ShipmentBlobStatus::class,
+        'orderStatus' => \Toppy\Sendcloud\V2\Model\ShipmentBlobStatus::class,
+        'parcelItems' => '\Toppy\Sendcloud\V2\Model\ParcelItems[]',
+        'paymentStatus' => \Toppy\Sendcloud\V2\Model\ShipmentBlobStatus::class,
         'postalCode' => 'string',
         'shippingMethod' => 'int',
         'shippingMethodCheckoutName' => 'string',
@@ -86,11 +86,11 @@ class ShipmentBlobOrderCreate implements ModelInterface, ArrayAccess, \JsonSeria
         'totalOrderValue' => 'float',
         'updatedAt' => '\DateTime',
         'weight' => 'float',
-        'checkoutPayload' => \Toppy\Sendcloud\Model\CheckoutPayload::class,
+        'checkoutPayload' => \Toppy\Sendcloud\V2\Model\CheckoutPayload::class,
         'width' => 'float',
         'height' => 'float',
         'length' => 'float',
-        'customsDetails' => \Toppy\Sendcloud\Model\CustomsInformation::class
+        'customsDetails' => \Toppy\Sendcloud\V2\Model\CustomsInformation::class
     ];
 
     /**
@@ -875,7 +875,7 @@ class ShipmentBlobOrderCreate implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Gets country
      *
-     * @return \Toppy\Sendcloud\Model\CountryCodes
+     * @return \Toppy\Sendcloud\V2\Model\CountryCodes
      */
     public function getCountry()
     {
@@ -885,7 +885,7 @@ class ShipmentBlobOrderCreate implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Sets country
      *
-     * @param \Toppy\Sendcloud\Model\CountryCodes $country country
+     * @param \Toppy\Sendcloud\V2\Model\CountryCodes $country country
      *
      * @return self
      */
@@ -1245,7 +1245,7 @@ class ShipmentBlobOrderCreate implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Gets orderStatus
      *
-     * @return \Toppy\Sendcloud\Model\ShipmentBlobStatus
+     * @return \Toppy\Sendcloud\V2\Model\ShipmentBlobStatus
      */
     public function getOrderStatus()
     {
@@ -1255,7 +1255,7 @@ class ShipmentBlobOrderCreate implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Sets orderStatus
      *
-     * @param \Toppy\Sendcloud\Model\ShipmentBlobStatus $orderStatus orderStatus
+     * @param \Toppy\Sendcloud\V2\Model\ShipmentBlobStatus $orderStatus orderStatus
      *
      * @return self
      */
@@ -1273,7 +1273,7 @@ class ShipmentBlobOrderCreate implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Gets parcelItems
      *
-     * @return \Toppy\Sendcloud\Model\ParcelItems[]
+     * @return \Toppy\Sendcloud\V2\Model\ParcelItems[]
      */
     public function getParcelItems()
     {
@@ -1283,7 +1283,7 @@ class ShipmentBlobOrderCreate implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Sets parcelItems
      *
-     * @param \Toppy\Sendcloud\Model\ParcelItems[] $parcelItems List of items the parcel contains
+     * @param \Toppy\Sendcloud\V2\Model\ParcelItems[] $parcelItems List of items the parcel contains
      *
      * @return self
      */
@@ -1301,7 +1301,7 @@ class ShipmentBlobOrderCreate implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Gets paymentStatus
      *
-     * @return \Toppy\Sendcloud\Model\ShipmentBlobStatus
+     * @return \Toppy\Sendcloud\V2\Model\ShipmentBlobStatus
      */
     public function getPaymentStatus()
     {
@@ -1311,7 +1311,7 @@ class ShipmentBlobOrderCreate implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Sets paymentStatus
      *
-     * @param \Toppy\Sendcloud\Model\ShipmentBlobStatus $paymentStatus paymentStatus
+     * @param \Toppy\Sendcloud\V2\Model\ShipmentBlobStatus $paymentStatus paymentStatus
      *
      * @return self
      */
@@ -1637,7 +1637,7 @@ class ShipmentBlobOrderCreate implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Gets checkoutPayload
      *
-     * @return \Toppy\Sendcloud\Model\CheckoutPayload|null
+     * @return \Toppy\Sendcloud\V2\Model\CheckoutPayload|null
      */
     public function getCheckoutPayload()
     {
@@ -1647,7 +1647,7 @@ class ShipmentBlobOrderCreate implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Sets checkoutPayload
      *
-     * @param \Toppy\Sendcloud\Model\CheckoutPayload|null $checkoutPayload checkoutPayload
+     * @param \Toppy\Sendcloud\V2\Model\CheckoutPayload|null $checkoutPayload checkoutPayload
      *
      * @return self
      */
@@ -1761,7 +1761,7 @@ class ShipmentBlobOrderCreate implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Gets customsDetails
      *
-     * @return \Toppy\Sendcloud\Model\CustomsInformation|null
+     * @return \Toppy\Sendcloud\V2\Model\CustomsInformation|null
      */
     public function getCustomsDetails()
     {
@@ -1771,7 +1771,7 @@ class ShipmentBlobOrderCreate implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Sets customsDetails
      *
-     * @param \Toppy\Sendcloud\Model\CustomsInformation|null $customsDetails customsDetails
+     * @param \Toppy\Sendcloud\V2\Model\CustomsInformation|null $customsDetails customsDetails
      *
      * @return self
      */

@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **fontColor** | **string** |  | [optional]
 **postalCode** | **string** |  | [optional]
 **phoneNumber** | **string** |  | [optional]
-**socialMedia** | [**\Toppy\Sendcloud\Model\BrandCustomizationSettingsFooterSocialMedia**](BrandCustomizationSettingsFooterSocialMedia.md) |  | [optional]
+**socialMedia** | [**\Toppy\Sendcloud\V2\Model\BrandCustomizationSettingsFooterSocialMedia**](BrandCustomizationSettingsFooterSocialMedia.md) |  | [optional]
 **supportEmail** | **string** | An email address for the shop&#39;s customer support | [optional]
 **backgroundColor** | **string** | Background colour to be used for displaying footer information | [optional]
 **whatsappBusiness** | **string** | The WhatsApp contact number of the business/brand. | [optional]

@@ -19,7 +19,7 @@ Name | Type | Description | Notes
 **midCode** | **string** | Code to identify the manufacturer of the product. It is required when shipping to the US and is used for generating commercial invoice. | [optional]
 **materialContent** | **string** | Composition of the items. Used for commercial invoice generation. | [optional]
 **intendedUse** | **string** | Text that identifies the Intended Use of the item. This will be used to classify the item based on the new ICS2 system. Used for commercial invoice generation. | [optional]
-**dangerousGoods** | [**\Toppy\Sendcloud\Model\DangerousGoods**](DangerousGoods.md) |  | [optional]
+**dangerousGoods** | [**\Toppy\Sendcloud\V2\Model\DangerousGoods**](DangerousGoods.md) |  | [optional]
 **ddsReference** | **string** | The DDS (Due Diligence Statement) reference number associated with the item, if applicable. See EUDR system for more details. | [optional]
 **taricDocCode** | **string** | TARIC document codes are specific alphanumeric codes used in EU customs declarations (Box 44) to identify required supporting documents, certificates, or conditions for a product, like health certificates (e.g., 3200), origin proofs (e.g., EUR.1), or special authorizations (e.g., C716 for due diligence) for simplified procedures, ensuring compliance with EU trade rules for various goods. | [optional]
 

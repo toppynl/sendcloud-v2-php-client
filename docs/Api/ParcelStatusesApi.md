@@ -1,4 +1,4 @@
-# Toppy\Sendcloud\ParcelStatusesApi
+# Toppy\Sendcloud\V2\ParcelStatusesApi
 
 All URIs are relative to https://panel.sendcloud.sc/api/v2.
 
@@ -10,7 +10,7 @@ Method | HTTP request | Description
 ## `scPublicV2ScpGetRetrieveAllParcelStatuses()`
 
 ```php
-scPublicV2ScpGetRetrieveAllParcelStatuses(): \Toppy\Sendcloud\Model\ScPublicV2ScpGetRetrieveAllParcelStatuses200ResponseInner[]
+scPublicV2ScpGetRetrieveAllParcelStatuses(): \Toppy\Sendcloud\V2\Model\ScPublicV2ScpGetRetrieveAllParcelStatuses200ResponseInner[]
 ```
 
 Retrieve a list of parcel statuses
@@ -25,12 +25,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: HTTPBasicAuth
-$config = Toppy\Sendcloud\Configuration::getDefaultConfiguration()
+$config = Toppy\Sendcloud\V2\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Toppy\Sendcloud\Api\ParcelStatusesApi(
+$apiInstance = new Toppy\Sendcloud\V2\Api\ParcelStatusesApi(
     // If you want use custom http client, pass your client which implements `Psr\Http\Client\ClientInterface`.
     // This is optional, `Psr18ClientDiscovery` will be used to find http client. For instance `GuzzleHttp\Client` implements that interface
     new GuzzleHttp\Client(),
@@ -51,7 +51,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Toppy\Sendcloud\Model\ScPublicV2ScpGetRetrieveAllParcelStatuses200ResponseInner[]**](../Model/ScPublicV2ScpGetRetrieveAllParcelStatuses200ResponseInner.md)
+[**\Toppy\Sendcloud\V2\Model\ScPublicV2ScpGetRetrieveAllParcelStatuses200ResponseInner[]**](../Model/ScPublicV2ScpGetRetrieveAllParcelStatuses200ResponseInner.md)
 
 ### Authorization
 

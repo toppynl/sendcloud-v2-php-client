@@ -7,7 +7,7 @@ declare(strict_types=1);
  * PHP version 7.2
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Api;
+namespace Toppy\Sendcloud\V2\Api;
 
 use GuzzleHttp\Psr7\MultipartStream;
 use Http\Client\Common\Plugin\ErrorPlugin;
@@ -40,12 +40,12 @@ use Http\Discovery\Psr17FactoryDiscovery;
 use Http\Discovery\Psr18ClientDiscovery;
 use Http\Message\RequestFactory;
 use Http\Promise\Promise;
-use Toppy\Sendcloud\ApiException;
-use Toppy\Sendcloud\Configuration;
-use Toppy\Sendcloud\DebugPlugin;
-use Toppy\Sendcloud\HeaderSelector;
-use Toppy\Sendcloud\FormDataProcessor;
-use Toppy\Sendcloud\ObjectSerializer;
+use Toppy\Sendcloud\V2\ApiException;
+use Toppy\Sendcloud\V2\Configuration;
+use Toppy\Sendcloud\V2\DebugPlugin;
+use Toppy\Sendcloud\V2\HeaderSelector;
+use Toppy\Sendcloud\V2\FormDataProcessor;
+use Toppy\Sendcloud\V2\ObjectSerializer;
 use Psr\Http\Client\ClientExceptionInterface;
 use Psr\Http\Client\ClientInterface;
 use Psr\Http\Message\RequestFactoryInterface;
@@ -60,7 +60,7 @@ use function sprintf;
  * LabelsApi Class Doc Comment
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -174,9 +174,9 @@ class LabelsApi
      *
      * @param  int $parcelId Unique parcel identifier (required)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Toppy\Sendcloud\Model\LabelSingleResponse|object
+     * @return \Toppy\Sendcloud\V2\Model\LabelSingleResponse|object
      */
     public function scPublicV2ScpGetLabelByParcelId($parcelId)
     {
@@ -191,9 +191,9 @@ class LabelsApi
      *
      * @param  int $parcelId Unique parcel identifier (required)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Toppy\Sendcloud\Model\LabelSingleResponse|object, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Toppy\Sendcloud\V2\Model\LabelSingleResponse|object, HTTP status code, HTTP response headers (array of strings)
      */
     public function scPublicV2ScpGetLabelByParcelIdWithHttpInfo($parcelId)
     {
@@ -229,7 +229,7 @@ class LabelsApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        \Toppy\Sendcloud\Model\LabelSingleResponse::class,
+                        \Toppy\Sendcloud\V2\Model\LabelSingleResponse::class,
                         $request,
                         $response,
                     );
@@ -256,7 +256,7 @@ class LabelsApi
             }
 
             return $this->handleResponseWithDataType(
-                \Toppy\Sendcloud\Model\LabelSingleResponse::class,
+                \Toppy\Sendcloud\V2\Model\LabelSingleResponse::class,
                 $request,
                 $response,
             );
@@ -265,7 +265,7 @@ class LabelsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\LabelSingleResponse::class,
+                        \Toppy\Sendcloud\V2\Model\LabelSingleResponse::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -317,7 +317,7 @@ class LabelsApi
      */
     public function scPublicV2ScpGetLabelByParcelIdAsyncWithHttpInfo($parcelId)
     {
-        $returnType = \Toppy\Sendcloud\Model\LabelSingleResponse::class;
+        $returnType = \Toppy\Sendcloud\V2\Model\LabelSingleResponse::class;
         $request = $this->scPublicV2ScpGetLabelByParcelIdRequest($parcelId);
 
         return $this->httpAsyncClient->sendAsyncRequest($request)
@@ -451,11 +451,11 @@ class LabelsApi
      *
      * Bulk PDF label printing
      *
-     * @param  \Toppy\Sendcloud\Model\ScPublicV2ScpPostLabelByParcelIdsRequest $scPublicV2ScpPostLabelByParcelIdsRequest scPublicV2ScpPostLabelByParcelIdsRequest (required)
+     * @param  \Toppy\Sendcloud\V2\Model\ScPublicV2ScpPostLabelByParcelIdsRequest $scPublicV2ScpPostLabelByParcelIdsRequest scPublicV2ScpPostLabelByParcelIdsRequest (required)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Toppy\Sendcloud\Model\LabelMultipleResponse|object
+     * @return \Toppy\Sendcloud\V2\Model\LabelMultipleResponse|object
      */
     public function scPublicV2ScpPostLabelByParcelIds($scPublicV2ScpPostLabelByParcelIdsRequest)
     {
@@ -468,11 +468,11 @@ class LabelsApi
      *
      * Bulk PDF label printing
      *
-     * @param  \Toppy\Sendcloud\Model\ScPublicV2ScpPostLabelByParcelIdsRequest $scPublicV2ScpPostLabelByParcelIdsRequest (required)
+     * @param  \Toppy\Sendcloud\V2\Model\ScPublicV2ScpPostLabelByParcelIdsRequest $scPublicV2ScpPostLabelByParcelIdsRequest (required)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Toppy\Sendcloud\Model\LabelMultipleResponse|object, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Toppy\Sendcloud\V2\Model\LabelMultipleResponse|object, HTTP status code, HTTP response headers (array of strings)
      */
     public function scPublicV2ScpPostLabelByParcelIdsWithHttpInfo($scPublicV2ScpPostLabelByParcelIdsRequest)
     {
@@ -508,7 +508,7 @@ class LabelsApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        \Toppy\Sendcloud\Model\LabelMultipleResponse::class,
+                        \Toppy\Sendcloud\V2\Model\LabelMultipleResponse::class,
                         $request,
                         $response,
                     );
@@ -535,7 +535,7 @@ class LabelsApi
             }
 
             return $this->handleResponseWithDataType(
-                \Toppy\Sendcloud\Model\LabelMultipleResponse::class,
+                \Toppy\Sendcloud\V2\Model\LabelMultipleResponse::class,
                 $request,
                 $response,
             );
@@ -544,7 +544,7 @@ class LabelsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\LabelMultipleResponse::class,
+                        \Toppy\Sendcloud\V2\Model\LabelMultipleResponse::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -569,7 +569,7 @@ class LabelsApi
      *
      * Bulk PDF label printing
      *
-     * @param  \Toppy\Sendcloud\Model\ScPublicV2ScpPostLabelByParcelIdsRequest $scPublicV2ScpPostLabelByParcelIdsRequest (required)
+     * @param  \Toppy\Sendcloud\V2\Model\ScPublicV2ScpPostLabelByParcelIdsRequest $scPublicV2ScpPostLabelByParcelIdsRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return Promise
@@ -589,14 +589,14 @@ class LabelsApi
      *
      * Bulk PDF label printing
      *
-     * @param  \Toppy\Sendcloud\Model\ScPublicV2ScpPostLabelByParcelIdsRequest $scPublicV2ScpPostLabelByParcelIdsRequest (required)
+     * @param  \Toppy\Sendcloud\V2\Model\ScPublicV2ScpPostLabelByParcelIdsRequest $scPublicV2ScpPostLabelByParcelIdsRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return Promise
      */
     public function scPublicV2ScpPostLabelByParcelIdsAsyncWithHttpInfo($scPublicV2ScpPostLabelByParcelIdsRequest)
     {
-        $returnType = \Toppy\Sendcloud\Model\LabelMultipleResponse::class;
+        $returnType = \Toppy\Sendcloud\V2\Model\LabelMultipleResponse::class;
         $request = $this->scPublicV2ScpPostLabelByParcelIdsRequest($scPublicV2ScpPostLabelByParcelIdsRequest);
 
         return $this->httpAsyncClient->sendAsyncRequest($request)
@@ -634,7 +634,7 @@ class LabelsApi
     /**
      * Create request for operation 'scPublicV2ScpPostLabelByParcelIds'
      *
-     * @param  \Toppy\Sendcloud\Model\ScPublicV2ScpPostLabelByParcelIdsRequest $scPublicV2ScpPostLabelByParcelIdsRequest (required)
+     * @param  \Toppy\Sendcloud\V2\Model\ScPublicV2ScpPostLabelByParcelIdsRequest $scPublicV2ScpPostLabelByParcelIdsRequest (required)
      *
      * @throws \InvalidArgumentException
      * @return RequestInterface

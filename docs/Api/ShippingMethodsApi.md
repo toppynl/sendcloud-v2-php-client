@@ -1,4 +1,4 @@
-# Toppy\Sendcloud\ShippingMethodsApi
+# Toppy\Sendcloud\V2\ShippingMethodsApi
 
 All URIs are relative to https://panel.sendcloud.sc/api/v2.
 
@@ -11,7 +11,7 @@ Method | HTTP request | Description
 ## `scPublicV2ScpGetAllShippingMethods()`
 
 ```php
-scPublicV2ScpGetAllShippingMethods($senderAddress, $servicePointId, $isReturn, $fromPostalCode, $toPostalCode, $toCountry, $cursor, $limit): \Toppy\Sendcloud\Model\ScPublicV2ScpGetAllShippingMethods200Response
+scPublicV2ScpGetAllShippingMethods($senderAddress, $servicePointId, $isReturn, $fromPostalCode, $toPostalCode, $toCountry, $cursor, $limit): \Toppy\Sendcloud\V2\Model\ScPublicV2ScpGetAllShippingMethods200Response
 ```
 
 Retrieve a list of shipping methods
@@ -26,12 +26,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: HTTPBasicAuth
-$config = Toppy\Sendcloud\Configuration::getDefaultConfiguration()
+$config = Toppy\Sendcloud\V2\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Toppy\Sendcloud\Api\ShippingMethodsApi(
+$apiInstance = new Toppy\Sendcloud\V2\Api\ShippingMethodsApi(
     // If you want use custom http client, pass your client which implements `Psr\Http\Client\ClientInterface`.
     // This is optional, `Psr18ClientDiscovery` will be used to find http client. For instance `GuzzleHttp\Client` implements that interface
     new GuzzleHttp\Client(),
@@ -42,7 +42,7 @@ $servicePointId = 56; // int | The ID of the service point for which you would l
 $isReturn = True; // bool | If set to `true` the endpoint will return shipping methods which can be used for making a return  shipment.
 $fromPostalCode = 01000; // string | Postal code of the sender. Required if the carrier is zonal.
 $toPostalCode = 01000; // string | Postal code of the recipient. Required if the carrier is zonal. Also required to see if remote surcharges apply.
-$toCountry = new \Toppy\Sendcloud\Model\\Toppy\Sendcloud\Model\CountryCodes(); // \Toppy\Sendcloud\Model\CountryCodes | A country ISO 2 code for the recipient country. Required if the carrier is zonal. Also required to see if remote surcharges apply.
+$toCountry = new \Toppy\Sendcloud\V2\Model\\Toppy\Sendcloud\V2\Model\CountryCodes(); // \Toppy\Sendcloud\V2\Model\CountryCodes | A country ISO 2 code for the recipient country. Required if the carrier is zonal. Also required to see if remote surcharges apply.
 $cursor = 56; // int | If `limit` is set, the result is divided into pages, `cursor` allows you to iterate over these pages. Next and previous page urls are returned in the result as well.
 $limit = 56; // int | Sets amount of results to be returned per page, if not set all results are returned.
 
@@ -63,13 +63,13 @@ Name | Type | Description  | Notes
  **isReturn** | **bool**| If set to &#x60;true&#x60; the endpoint will return shipping methods which can be used for making a return  shipment. | [optional]
  **fromPostalCode** | **string**| Postal code of the sender. Required if the carrier is zonal. | [optional]
  **toPostalCode** | **string**| Postal code of the recipient. Required if the carrier is zonal. Also required to see if remote surcharges apply. | [optional]
- **toCountry** | [**\Toppy\Sendcloud\Model\CountryCodes**](../Model/.md)| A country ISO 2 code for the recipient country. Required if the carrier is zonal. Also required to see if remote surcharges apply. | [optional]
+ **toCountry** | [**\Toppy\Sendcloud\V2\Model\CountryCodes**](../Model/.md)| A country ISO 2 code for the recipient country. Required if the carrier is zonal. Also required to see if remote surcharges apply. | [optional]
  **cursor** | **int**| If &#x60;limit&#x60; is set, the result is divided into pages, &#x60;cursor&#x60; allows you to iterate over these pages. Next and previous page urls are returned in the result as well. | [optional]
  **limit** | **int**| Sets amount of results to be returned per page, if not set all results are returned. | [optional]
 
 ### Return type
 
-[**\Toppy\Sendcloud\Model\ScPublicV2ScpGetAllShippingMethods200Response**](../Model/ScPublicV2ScpGetAllShippingMethods200Response.md)
+[**\Toppy\Sendcloud\V2\Model\ScPublicV2ScpGetAllShippingMethods200Response**](../Model/ScPublicV2ScpGetAllShippingMethods200Response.md)
 
 ### Authorization
 
@@ -87,7 +87,7 @@ Name | Type | Description  | Notes
 ## `scPublicV2ScpGetShippingMethodById()`
 
 ```php
-scPublicV2ScpGetShippingMethodById($id, $senderAddress, $servicePointId, $isReturn, $fromPostalCode, $toPostalCode, $toCountry): \Toppy\Sendcloud\Model\ScPublicV2ScpGetShippingMethodById200Response
+scPublicV2ScpGetShippingMethodById($id, $senderAddress, $servicePointId, $isReturn, $fromPostalCode, $toPostalCode, $toCountry): \Toppy\Sendcloud\V2\Model\ScPublicV2ScpGetShippingMethodById200Response
 ```
 
 Retrieve a shipping method
@@ -102,12 +102,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: HTTPBasicAuth
-$config = Toppy\Sendcloud\Configuration::getDefaultConfiguration()
+$config = Toppy\Sendcloud\V2\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Toppy\Sendcloud\Api\ShippingMethodsApi(
+$apiInstance = new Toppy\Sendcloud\V2\Api\ShippingMethodsApi(
     // If you want use custom http client, pass your client which implements `Psr\Http\Client\ClientInterface`.
     // This is optional, `Psr18ClientDiscovery` will be used to find http client. For instance `GuzzleHttp\Client` implements that interface
     new GuzzleHttp\Client(),
@@ -119,7 +119,7 @@ $servicePointId = 56; // int | The ID of the service point for which you would l
 $isReturn = True; // bool | If set to `true` the endpoint will return the  shipping method only if  it is a return shipping method.
 $fromPostalCode = 01000; // string | Postal code of the sender.
 $toPostalCode = 01000; // string | Postal code of the recipient.
-$toCountry = new \Toppy\Sendcloud\Model\\Toppy\Sendcloud\Model\CountryCodes(); // \Toppy\Sendcloud\Model\CountryCodes | A country ISO 2 code for the recipient country.
+$toCountry = new \Toppy\Sendcloud\V2\Model\\Toppy\Sendcloud\V2\Model\CountryCodes(); // \Toppy\Sendcloud\V2\Model\CountryCodes | A country ISO 2 code for the recipient country.
 
 try {
     $result = $apiInstance->scPublicV2ScpGetShippingMethodById($id, $senderAddress, $servicePointId, $isReturn, $fromPostalCode, $toPostalCode, $toCountry);
@@ -139,11 +139,11 @@ Name | Type | Description  | Notes
  **isReturn** | **bool**| If set to &#x60;true&#x60; the endpoint will return the  shipping method only if  it is a return shipping method. | [optional]
  **fromPostalCode** | **string**| Postal code of the sender. | [optional]
  **toPostalCode** | **string**| Postal code of the recipient. | [optional]
- **toCountry** | [**\Toppy\Sendcloud\Model\CountryCodes**](../Model/.md)| A country ISO 2 code for the recipient country. | [optional]
+ **toCountry** | [**\Toppy\Sendcloud\V2\Model\CountryCodes**](../Model/.md)| A country ISO 2 code for the recipient country. | [optional]
 
 ### Return type
 
-[**\Toppy\Sendcloud\Model\ScPublicV2ScpGetShippingMethodById200Response**](../Model/ScPublicV2ScpGetShippingMethodById200Response.md)
+[**\Toppy\Sendcloud\V2\Model\ScPublicV2ScpGetShippingMethodById200Response**](../Model/ScPublicV2ScpGetShippingMethodById200Response.md)
 
 ### Authorization
 

@@ -8,7 +8,7 @@ declare(strict_types=1);
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Model;
+namespace Toppy\Sendcloud\V2\Model;
 
 use \ArrayAccess;
-use \Toppy\Sendcloud\ObjectSerializer;
+use \Toppy\Sendcloud\V2\ObjectSerializer;
 
 /**
  * BrandCustomizationSettings Class Doc Comment
  *
  * @category Class
  * @description Header and footer customization settings for the brand
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,8 +59,8 @@ class BrandCustomizationSettings implements ModelInterface, ArrayAccess, \JsonSe
       * @var string[]
       */
     protected static $openAPITypes = [
-        'header' => \Toppy\Sendcloud\Model\BrandCustomizationSettingsHeader::class,
-        'footer' => \Toppy\Sendcloud\Model\BrandCustomizationSettingsFooter::class
+        'header' => \Toppy\Sendcloud\V2\Model\BrandCustomizationSettingsHeader::class,
+        'footer' => \Toppy\Sendcloud\V2\Model\BrandCustomizationSettingsFooter::class
     ];
 
     /**
@@ -280,7 +280,7 @@ class BrandCustomizationSettings implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Gets header
      *
-     * @return \Toppy\Sendcloud\Model\BrandCustomizationSettingsHeader|null
+     * @return \Toppy\Sendcloud\V2\Model\BrandCustomizationSettingsHeader|null
      */
     public function getHeader()
     {
@@ -290,7 +290,7 @@ class BrandCustomizationSettings implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets header
      *
-     * @param \Toppy\Sendcloud\Model\BrandCustomizationSettingsHeader|null $header header
+     * @param \Toppy\Sendcloud\V2\Model\BrandCustomizationSettingsHeader|null $header header
      *
      * @return self
      */
@@ -315,7 +315,7 @@ class BrandCustomizationSettings implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Gets footer
      *
-     * @return \Toppy\Sendcloud\Model\BrandCustomizationSettingsFooter|null
+     * @return \Toppy\Sendcloud\V2\Model\BrandCustomizationSettingsFooter|null
      */
     public function getFooter()
     {
@@ -325,7 +325,7 @@ class BrandCustomizationSettings implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets footer
      *
-     * @param \Toppy\Sendcloud\Model\BrandCustomizationSettingsFooter|null $footer footer
+     * @param \Toppy\Sendcloud\V2\Model\BrandCustomizationSettingsFooter|null $footer footer
      *
      * @return self
      */

@@ -7,7 +7,7 @@ declare(strict_types=1);
  * PHP version 7.2
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Api;
+namespace Toppy\Sendcloud\V2\Api;
 
 use GuzzleHttp\Psr7\MultipartStream;
 use Http\Client\Common\Plugin\ErrorPlugin;
@@ -40,12 +40,12 @@ use Http\Discovery\Psr17FactoryDiscovery;
 use Http\Discovery\Psr18ClientDiscovery;
 use Http\Message\RequestFactory;
 use Http\Promise\Promise;
-use Toppy\Sendcloud\ApiException;
-use Toppy\Sendcloud\Configuration;
-use Toppy\Sendcloud\DebugPlugin;
-use Toppy\Sendcloud\HeaderSelector;
-use Toppy\Sendcloud\FormDataProcessor;
-use Toppy\Sendcloud\ObjectSerializer;
+use Toppy\Sendcloud\V2\ApiException;
+use Toppy\Sendcloud\V2\Configuration;
+use Toppy\Sendcloud\V2\DebugPlugin;
+use Toppy\Sendcloud\V2\HeaderSelector;
+use Toppy\Sendcloud\V2\FormDataProcessor;
+use Toppy\Sendcloud\V2\ObjectSerializer;
 use Psr\Http\Client\ClientExceptionInterface;
 use Psr\Http\Client\ClientInterface;
 use Psr\Http\Message\RequestFactoryInterface;
@@ -60,7 +60,7 @@ use function sprintf;
  * BrandsApi Class Doc Comment
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -173,9 +173,9 @@ class BrandsApi
      * Retrieve a list of brands
      *
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Toppy\Sendcloud\Model\ScPublicV2BrandsGetAllUserBrands200Response
+     * @return \Toppy\Sendcloud\V2\Model\ScPublicV2BrandsGetAllUserBrands200Response
      */
     public function scPublicV2BrandsGetAllUserBrands()
     {
@@ -189,9 +189,9 @@ class BrandsApi
      * Retrieve a list of brands
      *
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Toppy\Sendcloud\Model\ScPublicV2BrandsGetAllUserBrands200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Toppy\Sendcloud\V2\Model\ScPublicV2BrandsGetAllUserBrands200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function scPublicV2BrandsGetAllUserBrandsWithHttpInfo()
     {
@@ -226,7 +226,7 @@ class BrandsApi
 
             if ($statusCode === 200) {
                 return $this->handleResponseWithDataType(
-                    \Toppy\Sendcloud\Model\ScPublicV2BrandsGetAllUserBrands200Response::class,
+                    \Toppy\Sendcloud\V2\Model\ScPublicV2BrandsGetAllUserBrands200Response::class,
                     $request,
                     $response,
                 );
@@ -247,7 +247,7 @@ class BrandsApi
             }
 
             return $this->handleResponseWithDataType(
-                \Toppy\Sendcloud\Model\ScPublicV2BrandsGetAllUserBrands200Response::class,
+                \Toppy\Sendcloud\V2\Model\ScPublicV2BrandsGetAllUserBrands200Response::class,
                 $request,
                 $response,
             );
@@ -255,7 +255,7 @@ class BrandsApi
             if ($apiException->getCode() === 200) {
                 $data = ObjectSerializer::deserialize(
                     $apiException->getResponseBody(),
-                    \Toppy\Sendcloud\Model\ScPublicV2BrandsGetAllUserBrands200Response::class,
+                    \Toppy\Sendcloud\V2\Model\ScPublicV2BrandsGetAllUserBrands200Response::class,
                     $apiException->getResponseHeaders()
                 );
                 $apiException->setResponseObject($data);
@@ -297,7 +297,7 @@ class BrandsApi
      */
     public function scPublicV2BrandsGetAllUserBrandsAsyncWithHttpInfo()
     {
-        $returnType = \Toppy\Sendcloud\Model\ScPublicV2BrandsGetAllUserBrands200Response::class;
+        $returnType = \Toppy\Sendcloud\V2\Model\ScPublicV2BrandsGetAllUserBrands200Response::class;
         $request = $this->scPublicV2BrandsGetAllUserBrandsRequest();
 
         return $this->httpAsyncClient->sendAsyncRequest($request)
@@ -415,9 +415,9 @@ class BrandsApi
      *
      * @param  int $id The unique id of the user&#39;s configured brand (required)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Toppy\Sendcloud\Model\Brand|\Toppy\Sendcloud\Model\ScPublicV2BrandsGetUserBrandById404Response
+     * @return \Toppy\Sendcloud\V2\Model\Brand|\Toppy\Sendcloud\V2\Model\ScPublicV2BrandsGetUserBrandById404Response
      */
     public function scPublicV2BrandsGetUserBrandById($id)
     {
@@ -432,9 +432,9 @@ class BrandsApi
      *
      * @param  int $id The unique id of the user&#39;s configured brand (required)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Toppy\Sendcloud\Model\Brand|\Toppy\Sendcloud\Model\ScPublicV2BrandsGetUserBrandById404Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Toppy\Sendcloud\V2\Model\Brand|\Toppy\Sendcloud\V2\Model\ScPublicV2BrandsGetUserBrandById404Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function scPublicV2BrandsGetUserBrandByIdWithHttpInfo($id)
     {
@@ -470,13 +470,13 @@ class BrandsApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        \Toppy\Sendcloud\Model\Brand::class,
+                        \Toppy\Sendcloud\V2\Model\Brand::class,
                         $request,
                         $response,
                     );
                 case 404:
                     return $this->handleResponseWithDataType(
-                        \Toppy\Sendcloud\Model\ScPublicV2BrandsGetUserBrandById404Response::class,
+                        \Toppy\Sendcloud\V2\Model\ScPublicV2BrandsGetUserBrandById404Response::class,
                         $request,
                         $response,
                     );
@@ -497,7 +497,7 @@ class BrandsApi
             }
 
             return $this->handleResponseWithDataType(
-                \Toppy\Sendcloud\Model\Brand::class,
+                \Toppy\Sendcloud\V2\Model\Brand::class,
                 $request,
                 $response,
             );
@@ -506,7 +506,7 @@ class BrandsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\Brand::class,
+                        \Toppy\Sendcloud\V2\Model\Brand::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -514,7 +514,7 @@ class BrandsApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\ScPublicV2BrandsGetUserBrandById404Response::class,
+                        \Toppy\Sendcloud\V2\Model\ScPublicV2BrandsGetUserBrandById404Response::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -558,7 +558,7 @@ class BrandsApi
      */
     public function scPublicV2BrandsGetUserBrandByIdAsyncWithHttpInfo($id)
     {
-        $returnType = \Toppy\Sendcloud\Model\Brand::class;
+        $returnType = \Toppy\Sendcloud\V2\Model\Brand::class;
         $request = $this->scPublicV2BrandsGetUserBrandByIdRequest($id);
 
         return $this->httpAsyncClient->sendAsyncRequest($request)

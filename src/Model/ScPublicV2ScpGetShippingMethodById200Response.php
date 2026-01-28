@@ -8,7 +8,7 @@ declare(strict_types=1);
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Model;
+namespace Toppy\Sendcloud\V2\Model;
 
 use \ArrayAccess;
-use \Toppy\Sendcloud\ObjectSerializer;
+use \Toppy\Sendcloud\V2\ObjectSerializer;
 
 /**
  * ScPublicV2ScpGetShippingMethodById200Response Class Doc Comment
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,7 +58,7 @@ class ScPublicV2ScpGetShippingMethodById200Response implements ModelInterface, A
       * @var string[]
       */
     protected static $openAPITypes = [
-        'shippingMethod' => \Toppy\Sendcloud\Model\ShippingMethod::class
+        'shippingMethod' => \Toppy\Sendcloud\V2\Model\ShippingMethod::class
     ];
 
     /**
@@ -262,7 +262,7 @@ class ScPublicV2ScpGetShippingMethodById200Response implements ModelInterface, A
     /**
      * Gets shippingMethod
      *
-     * @return \Toppy\Sendcloud\Model\ShippingMethod|null
+     * @return \Toppy\Sendcloud\V2\Model\ShippingMethod|null
      */
     public function getShippingMethod()
     {
@@ -272,7 +272,7 @@ class ScPublicV2ScpGetShippingMethodById200Response implements ModelInterface, A
     /**
      * Sets shippingMethod
      *
-     * @param \Toppy\Sendcloud\Model\ShippingMethod|null $shippingMethod shippingMethod
+     * @param \Toppy\Sendcloud\V2\Model\ShippingMethod|null $shippingMethod shippingMethod
      *
      * @return self
      */

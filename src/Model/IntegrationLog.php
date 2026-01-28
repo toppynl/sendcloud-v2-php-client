@@ -8,7 +8,7 @@ declare(strict_types=1);
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Model;
+namespace Toppy\Sendcloud\V2\Model;
 
 use \ArrayAccess;
-use \Toppy\Sendcloud\ObjectSerializer;
+use \Toppy\Sendcloud\V2\ObjectSerializer;
 
 /**
  * IntegrationLog Class Doc Comment
  *
  * @category Class
  * @description 
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -66,8 +66,8 @@ class IntegrationLog implements ModelInterface, ArrayAccess, \JsonSerializable, 
         'fullUrl' => 'string',
         'method' => 'string',
         'responseCode' => 'int',
-        'response' => \Toppy\Sendcloud\Model\ResponseObject::class,
-        'request' => \Toppy\Sendcloud\Model\RequestObject::class,
+        'response' => \Toppy\Sendcloud\V2\Model\ResponseObject::class,
+        'request' => \Toppy\Sendcloud\V2\Model\RequestObject::class,
         'createdAt' => '\DateTime',
         'exceptionType' => 'string',
         'exception' => 'string',
@@ -589,7 +589,7 @@ class IntegrationLog implements ModelInterface, ArrayAccess, \JsonSerializable, 
     /**
      * Gets response
      *
-     * @return \Toppy\Sendcloud\Model\ResponseObject|null
+     * @return \Toppy\Sendcloud\V2\Model\ResponseObject|null
      */
     public function getResponse()
     {
@@ -599,7 +599,7 @@ class IntegrationLog implements ModelInterface, ArrayAccess, \JsonSerializable, 
     /**
      * Sets response
      *
-     * @param \Toppy\Sendcloud\Model\ResponseObject|null $response response
+     * @param \Toppy\Sendcloud\V2\Model\ResponseObject|null $response response
      *
      * @return self
      */
@@ -617,7 +617,7 @@ class IntegrationLog implements ModelInterface, ArrayAccess, \JsonSerializable, 
     /**
      * Gets request
      *
-     * @return \Toppy\Sendcloud\Model\RequestObject|null
+     * @return \Toppy\Sendcloud\V2\Model\RequestObject|null
      */
     public function getRequest()
     {
@@ -627,7 +627,7 @@ class IntegrationLog implements ModelInterface, ArrayAccess, \JsonSerializable, 
     /**
      * Sets request
      *
-     * @param \Toppy\Sendcloud\Model\RequestObject|null $request request
+     * @param \Toppy\Sendcloud\V2\Model\RequestObject|null $request request
      *
      * @return self
      */

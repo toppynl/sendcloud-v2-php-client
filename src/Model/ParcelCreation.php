@@ -8,7 +8,7 @@ declare(strict_types=1);
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Model;
+namespace Toppy\Sendcloud\V2\Model;
 
 use \ArrayAccess;
-use \Toppy\Sendcloud\ObjectSerializer;
+use \Toppy\Sendcloud\V2\ObjectSerializer;
 
 /**
  * ParcelCreation Class Doc Comment
  *
  * @category Class
  * @description Parcel object for a parcel creation
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -73,7 +73,7 @@ class ParcelCreation implements ModelInterface, ArrayAccess, \JsonSerializable, 
         'email' => 'string',
         'data' => 'object',
         'country' => 'string',
-        'shipment' => \Toppy\Sendcloud\Model\Shipment::class,
+        'shipment' => \Toppy\Sendcloud\V2\Model\Shipment::class,
         'weight' => 'string',
         'orderNumber' => 'string',
         'insuredValue' => 'int',
@@ -91,7 +91,7 @@ class ParcelCreation implements ModelInterface, ArrayAccess, \JsonSerializable, 
         'toServicePoint' => 'int',
         'totalInsuredValue' => 'int',
         'shipmentUuid' => 'string',
-        'parcelItems' => '\Toppy\Sendcloud\Model\ParcelItem[]',
+        'parcelItems' => '\Toppy\Sendcloud\V2\Model\ParcelItem[]',
         'isReturn' => 'bool',
         'length' => 'string',
         'width' => 'string',
@@ -113,7 +113,7 @@ class ParcelCreation implements ModelInterface, ArrayAccess, \JsonSerializable, 
         'fromInboundVatNumber' => 'string',
         'fromInboundEoriNumber' => 'string',
         'fromIossNumber' => 'string',
-        'customsInformation' => \Toppy\Sendcloud\Model\ParcelCustomsInformation::class
+        'customsInformation' => \Toppy\Sendcloud\V2\Model\ParcelCustomsInformation::class
     ];
 
     /**
@@ -1144,7 +1144,7 @@ class ParcelCreation implements ModelInterface, ArrayAccess, \JsonSerializable, 
     /**
      * Gets shipment
      *
-     * @return \Toppy\Sendcloud\Model\Shipment|null
+     * @return \Toppy\Sendcloud\V2\Model\Shipment|null
      */
     public function getShipment()
     {
@@ -1154,7 +1154,7 @@ class ParcelCreation implements ModelInterface, ArrayAccess, \JsonSerializable, 
     /**
      * Sets shipment
      *
-     * @param \Toppy\Sendcloud\Model\Shipment|null $shipment shipment
+     * @param \Toppy\Sendcloud\V2\Model\Shipment|null $shipment shipment
      *
      * @return self
      */
@@ -1681,7 +1681,7 @@ class ParcelCreation implements ModelInterface, ArrayAccess, \JsonSerializable, 
     /**
      * Gets parcelItems
      *
-     * @return \Toppy\Sendcloud\Model\ParcelItem[]|null
+     * @return \Toppy\Sendcloud\V2\Model\ParcelItem[]|null
      */
     public function getParcelItems()
     {
@@ -1691,7 +1691,7 @@ class ParcelCreation implements ModelInterface, ArrayAccess, \JsonSerializable, 
     /**
      * Sets parcelItems
      *
-     * @param \Toppy\Sendcloud\Model\ParcelItem[]|null $parcelItems List of items the order contains. Check the structure of a parcel_item in the “Parcel_items” section (remember, it’s a list of them!).
+     * @param \Toppy\Sendcloud\V2\Model\ParcelItem[]|null $parcelItems List of items the order contains. Check the structure of a parcel_item in the “Parcel_items” section (remember, it’s a list of them!).
      *
      * @return self
      */
@@ -2305,7 +2305,7 @@ class ParcelCreation implements ModelInterface, ArrayAccess, \JsonSerializable, 
     /**
      * Gets customsInformation
      *
-     * @return \Toppy\Sendcloud\Model\ParcelCustomsInformation|null
+     * @return \Toppy\Sendcloud\V2\Model\ParcelCustomsInformation|null
      */
     public function getCustomsInformation()
     {
@@ -2315,7 +2315,7 @@ class ParcelCreation implements ModelInterface, ArrayAccess, \JsonSerializable, 
     /**
      * Sets customsInformation
      *
-     * @param \Toppy\Sendcloud\Model\ParcelCustomsInformation|null $customsInformation customsInformation
+     * @param \Toppy\Sendcloud\V2\Model\ParcelCustomsInformation|null $customsInformation customsInformation
      *
      * @return self
      */

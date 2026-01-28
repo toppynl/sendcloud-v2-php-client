@@ -7,7 +7,7 @@ declare(strict_types=1);
  * PHP version 7.2
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Api;
+namespace Toppy\Sendcloud\V2\Api;
 
 use GuzzleHttp\Psr7\MultipartStream;
 use Http\Client\Common\Plugin\ErrorPlugin;
@@ -40,12 +40,12 @@ use Http\Discovery\Psr17FactoryDiscovery;
 use Http\Discovery\Psr18ClientDiscovery;
 use Http\Message\RequestFactory;
 use Http\Promise\Promise;
-use Toppy\Sendcloud\ApiException;
-use Toppy\Sendcloud\Configuration;
-use Toppy\Sendcloud\DebugPlugin;
-use Toppy\Sendcloud\HeaderSelector;
-use Toppy\Sendcloud\FormDataProcessor;
-use Toppy\Sendcloud\ObjectSerializer;
+use Toppy\Sendcloud\V2\ApiException;
+use Toppy\Sendcloud\V2\Configuration;
+use Toppy\Sendcloud\V2\DebugPlugin;
+use Toppy\Sendcloud\V2\HeaderSelector;
+use Toppy\Sendcloud\V2\FormDataProcessor;
+use Toppy\Sendcloud\V2\ObjectSerializer;
 use Psr\Http\Client\ClientExceptionInterface;
 use Psr\Http\Client\ClientInterface;
 use Psr\Http\Message\RequestFactoryInterface;
@@ -60,7 +60,7 @@ use function sprintf;
  * ShippingMethodsApi Class Doc Comment
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -177,13 +177,13 @@ class ShippingMethodsApi
      * @param  bool $isReturn If set to &#x60;true&#x60; the endpoint will return shipping methods which can be used for making a return  shipment. (optional)
      * @param  string $fromPostalCode Postal code of the sender. Required if the carrier is zonal. (optional)
      * @param  string $toPostalCode Postal code of the recipient. Required if the carrier is zonal. Also required to see if remote surcharges apply. (optional)
-     * @param  \Toppy\Sendcloud\Model\CountryCodes $toCountry A country ISO 2 code for the recipient country. Required if the carrier is zonal. Also required to see if remote surcharges apply. (optional)
+     * @param  \Toppy\Sendcloud\V2\Model\CountryCodes $toCountry A country ISO 2 code for the recipient country. Required if the carrier is zonal. Also required to see if remote surcharges apply. (optional)
      * @param  int $cursor If &#x60;limit&#x60; is set, the result is divided into pages, &#x60;cursor&#x60; allows you to iterate over these pages. Next and previous page urls are returned in the result as well. (optional)
      * @param  int $limit Sets amount of results to be returned per page, if not set all results are returned. (optional)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Toppy\Sendcloud\Model\ScPublicV2ScpGetAllShippingMethods200Response
+     * @return \Toppy\Sendcloud\V2\Model\ScPublicV2ScpGetAllShippingMethods200Response
      */
     public function scPublicV2ScpGetAllShippingMethods($senderAddress = null, $servicePointId = null, $isReturn = null, $fromPostalCode = null, $toPostalCode = null, $toCountry = null, $cursor = null, $limit = null)
     {
@@ -201,13 +201,13 @@ class ShippingMethodsApi
      * @param  bool $isReturn If set to &#x60;true&#x60; the endpoint will return shipping methods which can be used for making a return  shipment. (optional)
      * @param  string $fromPostalCode Postal code of the sender. Required if the carrier is zonal. (optional)
      * @param  string $toPostalCode Postal code of the recipient. Required if the carrier is zonal. Also required to see if remote surcharges apply. (optional)
-     * @param  \Toppy\Sendcloud\Model\CountryCodes $toCountry A country ISO 2 code for the recipient country. Required if the carrier is zonal. Also required to see if remote surcharges apply. (optional)
+     * @param  \Toppy\Sendcloud\V2\Model\CountryCodes $toCountry A country ISO 2 code for the recipient country. Required if the carrier is zonal. Also required to see if remote surcharges apply. (optional)
      * @param  int $cursor If &#x60;limit&#x60; is set, the result is divided into pages, &#x60;cursor&#x60; allows you to iterate over these pages. Next and previous page urls are returned in the result as well. (optional)
      * @param  int $limit Sets amount of results to be returned per page, if not set all results are returned. (optional)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Toppy\Sendcloud\Model\ScPublicV2ScpGetAllShippingMethods200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Toppy\Sendcloud\V2\Model\ScPublicV2ScpGetAllShippingMethods200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function scPublicV2ScpGetAllShippingMethodsWithHttpInfo($senderAddress = null, $servicePointId = null, $isReturn = null, $fromPostalCode = null, $toPostalCode = null, $toCountry = null, $cursor = null, $limit = null)
     {
@@ -242,7 +242,7 @@ class ShippingMethodsApi
 
             if ($statusCode === 200) {
                 return $this->handleResponseWithDataType(
-                    \Toppy\Sendcloud\Model\ScPublicV2ScpGetAllShippingMethods200Response::class,
+                    \Toppy\Sendcloud\V2\Model\ScPublicV2ScpGetAllShippingMethods200Response::class,
                     $request,
                     $response,
                 );
@@ -263,7 +263,7 @@ class ShippingMethodsApi
             }
 
             return $this->handleResponseWithDataType(
-                \Toppy\Sendcloud\Model\ScPublicV2ScpGetAllShippingMethods200Response::class,
+                \Toppy\Sendcloud\V2\Model\ScPublicV2ScpGetAllShippingMethods200Response::class,
                 $request,
                 $response,
             );
@@ -271,7 +271,7 @@ class ShippingMethodsApi
             if ($apiException->getCode() === 200) {
                 $data = ObjectSerializer::deserialize(
                     $apiException->getResponseBody(),
-                    \Toppy\Sendcloud\Model\ScPublicV2ScpGetAllShippingMethods200Response::class,
+                    \Toppy\Sendcloud\V2\Model\ScPublicV2ScpGetAllShippingMethods200Response::class,
                     $apiException->getResponseHeaders()
                 );
                 $apiException->setResponseObject($data);
@@ -293,7 +293,7 @@ class ShippingMethodsApi
      * @param  bool $isReturn If set to &#x60;true&#x60; the endpoint will return shipping methods which can be used for making a return  shipment. (optional)
      * @param  string $fromPostalCode Postal code of the sender. Required if the carrier is zonal. (optional)
      * @param  string $toPostalCode Postal code of the recipient. Required if the carrier is zonal. Also required to see if remote surcharges apply. (optional)
-     * @param  \Toppy\Sendcloud\Model\CountryCodes $toCountry A country ISO 2 code for the recipient country. Required if the carrier is zonal. Also required to see if remote surcharges apply. (optional)
+     * @param  \Toppy\Sendcloud\V2\Model\CountryCodes $toCountry A country ISO 2 code for the recipient country. Required if the carrier is zonal. Also required to see if remote surcharges apply. (optional)
      * @param  int $cursor If &#x60;limit&#x60; is set, the result is divided into pages, &#x60;cursor&#x60; allows you to iterate over these pages. Next and previous page urls are returned in the result as well. (optional)
      * @param  int $limit Sets amount of results to be returned per page, if not set all results are returned. (optional)
      *
@@ -320,7 +320,7 @@ class ShippingMethodsApi
      * @param  bool $isReturn If set to &#x60;true&#x60; the endpoint will return shipping methods which can be used for making a return  shipment. (optional)
      * @param  string $fromPostalCode Postal code of the sender. Required if the carrier is zonal. (optional)
      * @param  string $toPostalCode Postal code of the recipient. Required if the carrier is zonal. Also required to see if remote surcharges apply. (optional)
-     * @param  \Toppy\Sendcloud\Model\CountryCodes $toCountry A country ISO 2 code for the recipient country. Required if the carrier is zonal. Also required to see if remote surcharges apply. (optional)
+     * @param  \Toppy\Sendcloud\V2\Model\CountryCodes $toCountry A country ISO 2 code for the recipient country. Required if the carrier is zonal. Also required to see if remote surcharges apply. (optional)
      * @param  int $cursor If &#x60;limit&#x60; is set, the result is divided into pages, &#x60;cursor&#x60; allows you to iterate over these pages. Next and previous page urls are returned in the result as well. (optional)
      * @param  int $limit Sets amount of results to be returned per page, if not set all results are returned. (optional)
      *
@@ -329,7 +329,7 @@ class ShippingMethodsApi
      */
     public function scPublicV2ScpGetAllShippingMethodsAsyncWithHttpInfo($senderAddress = null, $servicePointId = null, $isReturn = null, $fromPostalCode = null, $toPostalCode = null, $toCountry = null, $cursor = null, $limit = null)
     {
-        $returnType = \Toppy\Sendcloud\Model\ScPublicV2ScpGetAllShippingMethods200Response::class;
+        $returnType = \Toppy\Sendcloud\V2\Model\ScPublicV2ScpGetAllShippingMethods200Response::class;
         $request = $this->scPublicV2ScpGetAllShippingMethodsRequest($senderAddress, $servicePointId, $isReturn, $fromPostalCode, $toPostalCode, $toCountry, $cursor, $limit);
 
         return $this->httpAsyncClient->sendAsyncRequest($request)
@@ -372,7 +372,7 @@ class ShippingMethodsApi
      * @param  bool $isReturn If set to &#x60;true&#x60; the endpoint will return shipping methods which can be used for making a return  shipment. (optional)
      * @param  string $fromPostalCode Postal code of the sender. Required if the carrier is zonal. (optional)
      * @param  string $toPostalCode Postal code of the recipient. Required if the carrier is zonal. Also required to see if remote surcharges apply. (optional)
-     * @param  \Toppy\Sendcloud\Model\CountryCodes $toCountry A country ISO 2 code for the recipient country. Required if the carrier is zonal. Also required to see if remote surcharges apply. (optional)
+     * @param  \Toppy\Sendcloud\V2\Model\CountryCodes $toCountry A country ISO 2 code for the recipient country. Required if the carrier is zonal. Also required to see if remote surcharges apply. (optional)
      * @param  int $cursor If &#x60;limit&#x60; is set, the result is divided into pages, &#x60;cursor&#x60; allows you to iterate over these pages. Next and previous page urls are returned in the result as well. (optional)
      * @param  int $limit Sets amount of results to be returned per page, if not set all results are returned. (optional)
      *
@@ -562,11 +562,11 @@ class ShippingMethodsApi
      * @param  bool $isReturn If set to &#x60;true&#x60; the endpoint will return the  shipping method only if  it is a return shipping method. (optional)
      * @param  string $fromPostalCode Postal code of the sender. (optional)
      * @param  string $toPostalCode Postal code of the recipient. (optional)
-     * @param  \Toppy\Sendcloud\Model\CountryCodes $toCountry A country ISO 2 code for the recipient country. (optional)
+     * @param  \Toppy\Sendcloud\V2\Model\CountryCodes $toCountry A country ISO 2 code for the recipient country. (optional)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Toppy\Sendcloud\Model\ScPublicV2ScpGetShippingMethodById200Response|\Toppy\Sendcloud\Model\ScPublicV2ScpGetShippingMethodById404Response
+     * @return \Toppy\Sendcloud\V2\Model\ScPublicV2ScpGetShippingMethodById200Response|\Toppy\Sendcloud\V2\Model\ScPublicV2ScpGetShippingMethodById404Response
      */
     public function scPublicV2ScpGetShippingMethodById($id, $senderAddress = null, $servicePointId = null, $isReturn = null, $fromPostalCode = null, $toPostalCode = null, $toCountry = null)
     {
@@ -585,11 +585,11 @@ class ShippingMethodsApi
      * @param  bool $isReturn If set to &#x60;true&#x60; the endpoint will return the  shipping method only if  it is a return shipping method. (optional)
      * @param  string $fromPostalCode Postal code of the sender. (optional)
      * @param  string $toPostalCode Postal code of the recipient. (optional)
-     * @param  \Toppy\Sendcloud\Model\CountryCodes $toCountry A country ISO 2 code for the recipient country. (optional)
+     * @param  \Toppy\Sendcloud\V2\Model\CountryCodes $toCountry A country ISO 2 code for the recipient country. (optional)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Toppy\Sendcloud\Model\ScPublicV2ScpGetShippingMethodById200Response|\Toppy\Sendcloud\Model\ScPublicV2ScpGetShippingMethodById404Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Toppy\Sendcloud\V2\Model\ScPublicV2ScpGetShippingMethodById200Response|\Toppy\Sendcloud\V2\Model\ScPublicV2ScpGetShippingMethodById404Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function scPublicV2ScpGetShippingMethodByIdWithHttpInfo($id, $senderAddress = null, $servicePointId = null, $isReturn = null, $fromPostalCode = null, $toPostalCode = null, $toCountry = null)
     {
@@ -625,13 +625,13 @@ class ShippingMethodsApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        \Toppy\Sendcloud\Model\ScPublicV2ScpGetShippingMethodById200Response::class,
+                        \Toppy\Sendcloud\V2\Model\ScPublicV2ScpGetShippingMethodById200Response::class,
                         $request,
                         $response,
                     );
                 case 404:
                     return $this->handleResponseWithDataType(
-                        \Toppy\Sendcloud\Model\ScPublicV2ScpGetShippingMethodById404Response::class,
+                        \Toppy\Sendcloud\V2\Model\ScPublicV2ScpGetShippingMethodById404Response::class,
                         $request,
                         $response,
                     );
@@ -652,7 +652,7 @@ class ShippingMethodsApi
             }
 
             return $this->handleResponseWithDataType(
-                \Toppy\Sendcloud\Model\ScPublicV2ScpGetShippingMethodById200Response::class,
+                \Toppy\Sendcloud\V2\Model\ScPublicV2ScpGetShippingMethodById200Response::class,
                 $request,
                 $response,
             );
@@ -661,7 +661,7 @@ class ShippingMethodsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\ScPublicV2ScpGetShippingMethodById200Response::class,
+                        \Toppy\Sendcloud\V2\Model\ScPublicV2ScpGetShippingMethodById200Response::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -669,7 +669,7 @@ class ShippingMethodsApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\ScPublicV2ScpGetShippingMethodById404Response::class,
+                        \Toppy\Sendcloud\V2\Model\ScPublicV2ScpGetShippingMethodById404Response::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -692,7 +692,7 @@ class ShippingMethodsApi
      * @param  bool $isReturn If set to &#x60;true&#x60; the endpoint will return the  shipping method only if  it is a return shipping method. (optional)
      * @param  string $fromPostalCode Postal code of the sender. (optional)
      * @param  string $toPostalCode Postal code of the recipient. (optional)
-     * @param  \Toppy\Sendcloud\Model\CountryCodes $toCountry A country ISO 2 code for the recipient country. (optional)
+     * @param  \Toppy\Sendcloud\V2\Model\CountryCodes $toCountry A country ISO 2 code for the recipient country. (optional)
      *
      * @throws \InvalidArgumentException
      * @return Promise
@@ -718,14 +718,14 @@ class ShippingMethodsApi
      * @param  bool $isReturn If set to &#x60;true&#x60; the endpoint will return the  shipping method only if  it is a return shipping method. (optional)
      * @param  string $fromPostalCode Postal code of the sender. (optional)
      * @param  string $toPostalCode Postal code of the recipient. (optional)
-     * @param  \Toppy\Sendcloud\Model\CountryCodes $toCountry A country ISO 2 code for the recipient country. (optional)
+     * @param  \Toppy\Sendcloud\V2\Model\CountryCodes $toCountry A country ISO 2 code for the recipient country. (optional)
      *
      * @throws \InvalidArgumentException
      * @return Promise
      */
     public function scPublicV2ScpGetShippingMethodByIdAsyncWithHttpInfo($id, $senderAddress = null, $servicePointId = null, $isReturn = null, $fromPostalCode = null, $toPostalCode = null, $toCountry = null)
     {
-        $returnType = \Toppy\Sendcloud\Model\ScPublicV2ScpGetShippingMethodById200Response::class;
+        $returnType = \Toppy\Sendcloud\V2\Model\ScPublicV2ScpGetShippingMethodById200Response::class;
         $request = $this->scPublicV2ScpGetShippingMethodByIdRequest($id, $senderAddress, $servicePointId, $isReturn, $fromPostalCode, $toPostalCode, $toCountry);
 
         return $this->httpAsyncClient->sendAsyncRequest($request)
@@ -769,7 +769,7 @@ class ShippingMethodsApi
      * @param  bool $isReturn If set to &#x60;true&#x60; the endpoint will return the  shipping method only if  it is a return shipping method. (optional)
      * @param  string $fromPostalCode Postal code of the sender. (optional)
      * @param  string $toPostalCode Postal code of the recipient. (optional)
-     * @param  \Toppy\Sendcloud\Model\CountryCodes $toCountry A country ISO 2 code for the recipient country. (optional)
+     * @param  \Toppy\Sendcloud\V2\Model\CountryCodes $toCountry A country ISO 2 code for the recipient country. (optional)
      *
      * @throws \InvalidArgumentException
      * @return RequestInterface

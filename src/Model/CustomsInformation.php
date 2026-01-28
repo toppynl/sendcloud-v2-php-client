@@ -8,7 +8,7 @@ declare(strict_types=1);
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Model;
+namespace Toppy\Sendcloud\V2\Model;
 
 use \ArrayAccess;
-use \Toppy\Sendcloud\ObjectSerializer;
+use \Toppy\Sendcloud\V2\ObjectSerializer;
 
 /**
  * CustomsInformation Class Doc Comment
  *
  * @category Class
  * @description Customs information related to this shipment
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,11 +59,11 @@ class CustomsInformation implements ModelInterface, ArrayAccess, \JsonSerializab
       * @var string[]
       */
     protected static $openAPITypes = [
-        'discountGranted' => \Toppy\Sendcloud\Model\CostsObject::class,
-        'insuranceCosts' => \Toppy\Sendcloud\Model\CostsObject::class,
-        'freightCosts' => \Toppy\Sendcloud\Model\CostsObject::class,
-        'otherCosts' => \Toppy\Sendcloud\Model\CostsObject::class,
-        'taxNumbers' => \Toppy\Sendcloud\Model\TaxInformationAboutSenderReceiverAndImporterOfRecords::class
+        'discountGranted' => \Toppy\Sendcloud\V2\Model\CostsObject::class,
+        'insuranceCosts' => \Toppy\Sendcloud\V2\Model\CostsObject::class,
+        'freightCosts' => \Toppy\Sendcloud\V2\Model\CostsObject::class,
+        'otherCosts' => \Toppy\Sendcloud\V2\Model\CostsObject::class,
+        'taxNumbers' => \Toppy\Sendcloud\V2\Model\TaxInformationAboutSenderReceiverAndImporterOfRecords::class
     ];
 
     /**
@@ -291,7 +291,7 @@ class CustomsInformation implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets discountGranted
      *
-     * @return \Toppy\Sendcloud\Model\CostsObject|null
+     * @return \Toppy\Sendcloud\V2\Model\CostsObject|null
      */
     public function getDiscountGranted()
     {
@@ -301,7 +301,7 @@ class CustomsInformation implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets discountGranted
      *
-     * @param \Toppy\Sendcloud\Model\CostsObject|null $discountGranted discountGranted
+     * @param \Toppy\Sendcloud\V2\Model\CostsObject|null $discountGranted discountGranted
      *
      * @return self
      */
@@ -319,7 +319,7 @@ class CustomsInformation implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets insuranceCosts
      *
-     * @return \Toppy\Sendcloud\Model\CostsObject|null
+     * @return \Toppy\Sendcloud\V2\Model\CostsObject|null
      */
     public function getInsuranceCosts()
     {
@@ -329,7 +329,7 @@ class CustomsInformation implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets insuranceCosts
      *
-     * @param \Toppy\Sendcloud\Model\CostsObject|null $insuranceCosts insuranceCosts
+     * @param \Toppy\Sendcloud\V2\Model\CostsObject|null $insuranceCosts insuranceCosts
      *
      * @return self
      */
@@ -347,7 +347,7 @@ class CustomsInformation implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets freightCosts
      *
-     * @return \Toppy\Sendcloud\Model\CostsObject|null
+     * @return \Toppy\Sendcloud\V2\Model\CostsObject|null
      */
     public function getFreightCosts()
     {
@@ -357,7 +357,7 @@ class CustomsInformation implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets freightCosts
      *
-     * @param \Toppy\Sendcloud\Model\CostsObject|null $freightCosts freightCosts
+     * @param \Toppy\Sendcloud\V2\Model\CostsObject|null $freightCosts freightCosts
      *
      * @return self
      */
@@ -375,7 +375,7 @@ class CustomsInformation implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets otherCosts
      *
-     * @return \Toppy\Sendcloud\Model\CostsObject|null
+     * @return \Toppy\Sendcloud\V2\Model\CostsObject|null
      */
     public function getOtherCosts()
     {
@@ -385,7 +385,7 @@ class CustomsInformation implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets otherCosts
      *
-     * @param \Toppy\Sendcloud\Model\CostsObject|null $otherCosts otherCosts
+     * @param \Toppy\Sendcloud\V2\Model\CostsObject|null $otherCosts otherCosts
      *
      * @return self
      */
@@ -403,7 +403,7 @@ class CustomsInformation implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets taxNumbers
      *
-     * @return \Toppy\Sendcloud\Model\TaxInformationAboutSenderReceiverAndImporterOfRecords|null
+     * @return \Toppy\Sendcloud\V2\Model\TaxInformationAboutSenderReceiverAndImporterOfRecords|null
      */
     public function getTaxNumbers()
     {
@@ -413,7 +413,7 @@ class CustomsInformation implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets taxNumbers
      *
-     * @param \Toppy\Sendcloud\Model\TaxInformationAboutSenderReceiverAndImporterOfRecords|null $taxNumbers taxNumbers
+     * @param \Toppy\Sendcloud\V2\Model\TaxInformationAboutSenderReceiverAndImporterOfRecords|null $taxNumbers taxNumbers
      *
      * @return self
      */

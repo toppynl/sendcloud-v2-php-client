@@ -8,7 +8,7 @@ declare(strict_types=1);
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Model;
+namespace Toppy\Sendcloud\V2\Model;
 
 use \ArrayAccess;
-use \Toppy\Sendcloud\ObjectSerializer;
+use \Toppy\Sendcloud\V2\ObjectSerializer;
 
 /**
  * ReturnIncomingParcelData Class Doc Comment
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -71,8 +71,8 @@ class ReturnIncomingParcelData implements ModelInterface, ArrayAccess, \JsonSeri
         'fromName' => 'string',
         'shippingMethod' => 'int',
         'extraData' => 'object',
-        'rules' => '\Toppy\Sendcloud\Model\ReturnParcelRulesInner[]',
-        'customsInformation' => \Toppy\Sendcloud\Model\IncomingParcelCustomsInformation::class
+        'rules' => '\Toppy\Sendcloud\V2\Model\ReturnParcelRulesInner[]',
+        'customsInformation' => \Toppy\Sendcloud\V2\Model\IncomingParcelCustomsInformation::class
     ];
 
     /**
@@ -750,7 +750,7 @@ class ReturnIncomingParcelData implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Gets rules
      *
-     * @return \Toppy\Sendcloud\Model\ReturnParcelRulesInner[]|null
+     * @return \Toppy\Sendcloud\V2\Model\ReturnParcelRulesInner[]|null
      * @deprecated
      */
     public function getRules()
@@ -761,7 +761,7 @@ class ReturnIncomingParcelData implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets rules
      *
-     * @param \Toppy\Sendcloud\Model\ReturnParcelRulesInner[]|null $rules List of policy rules applied to this Parcel. DEPRECATED, Use `rule_modifications` field of the Return object instead.
+     * @param \Toppy\Sendcloud\V2\Model\ReturnParcelRulesInner[]|null $rules List of policy rules applied to this Parcel. DEPRECATED, Use `rule_modifications` field of the Return object instead.
      *
      * @return self
      * @deprecated
@@ -780,7 +780,7 @@ class ReturnIncomingParcelData implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Gets customsInformation
      *
-     * @return \Toppy\Sendcloud\Model\IncomingParcelCustomsInformation|null
+     * @return \Toppy\Sendcloud\V2\Model\IncomingParcelCustomsInformation|null
      */
     public function getCustomsInformation()
     {
@@ -790,7 +790,7 @@ class ReturnIncomingParcelData implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets customsInformation
      *
-     * @param \Toppy\Sendcloud\Model\IncomingParcelCustomsInformation|null $customsInformation customsInformation
+     * @param \Toppy\Sendcloud\V2\Model\IncomingParcelCustomsInformation|null $customsInformation customsInformation
      *
      * @return self
      */

@@ -4,7 +4,7 @@
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,18 +26,18 @@
  * Please update the test case below to test the endpoint.
  */
 
-namespace Toppy\Sendcloud\Test\Api;
+namespace Toppy\Sendcloud\V2\Test\Api;
 
-use \Toppy\Sendcloud\Configuration;
-use \Toppy\Sendcloud\ApiException;
-use \Toppy\Sendcloud\ObjectSerializer;
+use \Toppy\Sendcloud\V2\Configuration;
+use \Toppy\Sendcloud\V2\ApiException;
+use \Toppy\Sendcloud\V2\ObjectSerializer;
 use PHPUnit\Framework\TestCase;
 
 /**
  * ParcelStatusesApiTest Class Doc Comment
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */

@@ -1,4 +1,4 @@
-# Toppy\Sendcloud\InvoicesApi
+# Toppy\Sendcloud\V2\InvoicesApi
 
 All URIs are relative to https://panel.sendcloud.sc/api/v2.
 
@@ -11,7 +11,7 @@ Method | HTTP request | Description
 ## `scPublicV2ScpGetAllUserInvoices()`
 
 ```php
-scPublicV2ScpGetAllUserInvoices(): \Toppy\Sendcloud\Model\ScPublicV2ScpGetAllUserInvoices200Response
+scPublicV2ScpGetAllUserInvoices(): \Toppy\Sendcloud\V2\Model\ScPublicV2ScpGetAllUserInvoices200Response
 ```
 
 Retrieve a list of invoices
@@ -26,12 +26,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: HTTPBasicAuth
-$config = Toppy\Sendcloud\Configuration::getDefaultConfiguration()
+$config = Toppy\Sendcloud\V2\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Toppy\Sendcloud\Api\InvoicesApi(
+$apiInstance = new Toppy\Sendcloud\V2\Api\InvoicesApi(
     // If you want use custom http client, pass your client which implements `Psr\Http\Client\ClientInterface`.
     // This is optional, `Psr18ClientDiscovery` will be used to find http client. For instance `GuzzleHttp\Client` implements that interface
     new GuzzleHttp\Client(),
@@ -52,7 +52,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Toppy\Sendcloud\Model\ScPublicV2ScpGetAllUserInvoices200Response**](../Model/ScPublicV2ScpGetAllUserInvoices200Response.md)
+[**\Toppy\Sendcloud\V2\Model\ScPublicV2ScpGetAllUserInvoices200Response**](../Model/ScPublicV2ScpGetAllUserInvoices200Response.md)
 
 ### Authorization
 
@@ -70,7 +70,7 @@ This endpoint does not need any parameter.
 ## `scPublicV2ScpGetInvoiceById()`
 
 ```php
-scPublicV2ScpGetInvoiceById($id): \Toppy\Sendcloud\Model\ScPublicV2ScpGetInvoiceById200Response
+scPublicV2ScpGetInvoiceById($id): \Toppy\Sendcloud\V2\Model\ScPublicV2ScpGetInvoiceById200Response
 ```
 
 Retrieve a specific invoice
@@ -85,12 +85,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: HTTPBasicAuth
-$config = Toppy\Sendcloud\Configuration::getDefaultConfiguration()
+$config = Toppy\Sendcloud\V2\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Toppy\Sendcloud\Api\InvoicesApi(
+$apiInstance = new Toppy\Sendcloud\V2\Api\InvoicesApi(
     // If you want use custom http client, pass your client which implements `Psr\Http\Client\ClientInterface`.
     // This is optional, `Psr18ClientDiscovery` will be used to find http client. For instance `GuzzleHttp\Client` implements that interface
     new GuzzleHttp\Client(),
@@ -114,7 +114,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Toppy\Sendcloud\Model\ScPublicV2ScpGetInvoiceById200Response**](../Model/ScPublicV2ScpGetInvoiceById200Response.md)
+[**\Toppy\Sendcloud\V2\Model\ScPublicV2ScpGetInvoiceById200Response**](../Model/ScPublicV2ScpGetInvoiceById200Response.md)
 
 ### Authorization
 

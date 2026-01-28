@@ -8,7 +8,7 @@ declare(strict_types=1);
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Model;
+namespace Toppy\Sendcloud\V2\Model;
 
 use \ArrayAccess;
-use \Toppy\Sendcloud\ObjectSerializer;
+use \Toppy\Sendcloud\V2\ObjectSerializer;
 
 /**
  * BrandCustomizationSettingsFooter Class Doc Comment
  *
  * @category Class
  * @description Indicates information to be shown in the footer of the tracking page and return portal
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -65,7 +65,7 @@ class BrandCustomizationSettingsFooter implements ModelInterface, ArrayAccess, \
         'fontColor' => 'string',
         'postalCode' => 'string',
         'phoneNumber' => 'string',
-        'socialMedia' => \Toppy\Sendcloud\Model\BrandCustomizationSettingsFooterSocialMedia::class,
+        'socialMedia' => \Toppy\Sendcloud\V2\Model\BrandCustomizationSettingsFooterSocialMedia::class,
         'supportEmail' => 'string',
         'backgroundColor' => 'string',
         'whatsappBusiness' => 'string'
@@ -494,7 +494,7 @@ class BrandCustomizationSettingsFooter implements ModelInterface, ArrayAccess, \
     /**
      * Gets socialMedia
      *
-     * @return \Toppy\Sendcloud\Model\BrandCustomizationSettingsFooterSocialMedia|null
+     * @return \Toppy\Sendcloud\V2\Model\BrandCustomizationSettingsFooterSocialMedia|null
      */
     public function getSocialMedia()
     {
@@ -504,7 +504,7 @@ class BrandCustomizationSettingsFooter implements ModelInterface, ArrayAccess, \
     /**
      * Sets socialMedia
      *
-     * @param \Toppy\Sendcloud\Model\BrandCustomizationSettingsFooterSocialMedia|null $socialMedia socialMedia
+     * @param \Toppy\Sendcloud\V2\Model\BrandCustomizationSettingsFooterSocialMedia|null $socialMedia socialMedia
      *
      * @return self
      */

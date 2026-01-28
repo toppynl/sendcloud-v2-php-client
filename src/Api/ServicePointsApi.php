@@ -7,7 +7,7 @@ declare(strict_types=1);
  * PHP version 7.2
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Api;
+namespace Toppy\Sendcloud\V2\Api;
 
 use GuzzleHttp\Psr7\MultipartStream;
 use Http\Client\Common\Plugin\ErrorPlugin;
@@ -40,12 +40,12 @@ use Http\Discovery\Psr17FactoryDiscovery;
 use Http\Discovery\Psr18ClientDiscovery;
 use Http\Message\RequestFactory;
 use Http\Promise\Promise;
-use Toppy\Sendcloud\ApiException;
-use Toppy\Sendcloud\Configuration;
-use Toppy\Sendcloud\DebugPlugin;
-use Toppy\Sendcloud\HeaderSelector;
-use Toppy\Sendcloud\FormDataProcessor;
-use Toppy\Sendcloud\ObjectSerializer;
+use Toppy\Sendcloud\V2\ApiException;
+use Toppy\Sendcloud\V2\Configuration;
+use Toppy\Sendcloud\V2\DebugPlugin;
+use Toppy\Sendcloud\V2\HeaderSelector;
+use Toppy\Sendcloud\V2\FormDataProcessor;
+use Toppy\Sendcloud\V2\ObjectSerializer;
 use Psr\Http\Client\ClientExceptionInterface;
 use Psr\Http\Client\ClientInterface;
 use Psr\Http\Message\RequestFactoryInterface;
@@ -60,7 +60,7 @@ use function sprintf;
  * ServicePointsApi Class Doc Comment
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -174,9 +174,9 @@ class ServicePointsApi
      *
      * @param  string $accessToken A JSON Web Token encoding either an “id” (user ID) or “iid” (integration ID) property. Alternatively, a public API key. (optional)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return string[]|\Toppy\Sendcloud\Model\ScPublicV2ScpGetReturnById404Response
+     * @return string[]|\Toppy\Sendcloud\V2\Model\ScPublicV2ScpGetReturnById404Response
      */
     public function scPublicV2ServicepointsGetCarriers($accessToken = null)
     {
@@ -191,9 +191,9 @@ class ServicePointsApi
      *
      * @param  string $accessToken A JSON Web Token encoding either an “id” (user ID) or “iid” (integration ID) property. Alternatively, a public API key. (optional)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of string[]|\Toppy\Sendcloud\Model\ScPublicV2ScpGetReturnById404Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of string[]|\Toppy\Sendcloud\V2\Model\ScPublicV2ScpGetReturnById404Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function scPublicV2ServicepointsGetCarriersWithHttpInfo($accessToken = null)
     {
@@ -235,7 +235,7 @@ class ServicePointsApi
                     );
                 case 404:
                     return $this->handleResponseWithDataType(
-                        \Toppy\Sendcloud\Model\ScPublicV2ScpGetReturnById404Response::class,
+                        \Toppy\Sendcloud\V2\Model\ScPublicV2ScpGetReturnById404Response::class,
                         $request,
                         $response,
                     );
@@ -273,7 +273,7 @@ class ServicePointsApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\ScPublicV2ScpGetReturnById404Response::class,
+                        \Toppy\Sendcloud\V2\Model\ScPublicV2ScpGetReturnById404Response::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -448,9 +448,9 @@ class ServicePointsApi
      * @param  float $servicePointId ID of the service point (required)
      * @param  string $accessToken A JSON Web Token encoding either an “id” (user ID) or “iid” (integration ID) property. Alternatively, a public API key. (optional)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return bool|\Toppy\Sendcloud\Model\ScPublicV2ScpGetReturnById404Response
+     * @return bool|\Toppy\Sendcloud\V2\Model\ScPublicV2ScpGetReturnById404Response
      */
     public function scPublicV2ServicepointsGetCheckAvailability($servicePointId, $accessToken = null)
     {
@@ -466,9 +466,9 @@ class ServicePointsApi
      * @param  float $servicePointId ID of the service point (required)
      * @param  string $accessToken A JSON Web Token encoding either an “id” (user ID) or “iid” (integration ID) property. Alternatively, a public API key. (optional)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of bool|\Toppy\Sendcloud\Model\ScPublicV2ScpGetReturnById404Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of bool|\Toppy\Sendcloud\V2\Model\ScPublicV2ScpGetReturnById404Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function scPublicV2ServicepointsGetCheckAvailabilityWithHttpInfo($servicePointId, $accessToken = null)
     {
@@ -510,7 +510,7 @@ class ServicePointsApi
                     );
                 case 404:
                     return $this->handleResponseWithDataType(
-                        \Toppy\Sendcloud\Model\ScPublicV2ScpGetReturnById404Response::class,
+                        \Toppy\Sendcloud\V2\Model\ScPublicV2ScpGetReturnById404Response::class,
                         $request,
                         $response,
                     );
@@ -548,7 +548,7 @@ class ServicePointsApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\ScPublicV2ScpGetReturnById404Response::class,
+                        \Toppy\Sendcloud\V2\Model\ScPublicV2ScpGetReturnById404Response::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -738,9 +738,9 @@ class ServicePointsApi
      * @param  float $servicePointId ID of the service point (required)
      * @param  string $accessToken A JSON Web Token encoding either an “id” (user ID) or “iid” (integration ID) property. Alternatively, a public API key. (optional)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Toppy\Sendcloud\Model\ServicePoint|\Toppy\Sendcloud\Model\ScPublicV2ScpGetReturnById404Response
+     * @return \Toppy\Sendcloud\V2\Model\ServicePoint|\Toppy\Sendcloud\V2\Model\ScPublicV2ScpGetReturnById404Response
      */
     public function scPublicV2ServicepointsGetServicePointById($servicePointId, $accessToken = null)
     {
@@ -756,9 +756,9 @@ class ServicePointsApi
      * @param  float $servicePointId ID of the service point (required)
      * @param  string $accessToken A JSON Web Token encoding either an “id” (user ID) or “iid” (integration ID) property. Alternatively, a public API key. (optional)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Toppy\Sendcloud\Model\ServicePoint|\Toppy\Sendcloud\Model\ScPublicV2ScpGetReturnById404Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Toppy\Sendcloud\V2\Model\ServicePoint|\Toppy\Sendcloud\V2\Model\ScPublicV2ScpGetReturnById404Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function scPublicV2ServicepointsGetServicePointByIdWithHttpInfo($servicePointId, $accessToken = null)
     {
@@ -794,13 +794,13 @@ class ServicePointsApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        \Toppy\Sendcloud\Model\ServicePoint::class,
+                        \Toppy\Sendcloud\V2\Model\ServicePoint::class,
                         $request,
                         $response,
                     );
                 case 404:
                     return $this->handleResponseWithDataType(
-                        \Toppy\Sendcloud\Model\ScPublicV2ScpGetReturnById404Response::class,
+                        \Toppy\Sendcloud\V2\Model\ScPublicV2ScpGetReturnById404Response::class,
                         $request,
                         $response,
                     );
@@ -821,7 +821,7 @@ class ServicePointsApi
             }
 
             return $this->handleResponseWithDataType(
-                \Toppy\Sendcloud\Model\ServicePoint::class,
+                \Toppy\Sendcloud\V2\Model\ServicePoint::class,
                 $request,
                 $response,
             );
@@ -830,7 +830,7 @@ class ServicePointsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\ServicePoint::class,
+                        \Toppy\Sendcloud\V2\Model\ServicePoint::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -838,7 +838,7 @@ class ServicePointsApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\ScPublicV2ScpGetReturnById404Response::class,
+                        \Toppy\Sendcloud\V2\Model\ScPublicV2ScpGetReturnById404Response::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -884,7 +884,7 @@ class ServicePointsApi
      */
     public function scPublicV2ServicepointsGetServicePointByIdAsyncWithHttpInfo($servicePointId, $accessToken = null)
     {
-        $returnType = \Toppy\Sendcloud\Model\ServicePoint::class;
+        $returnType = \Toppy\Sendcloud\V2\Model\ServicePoint::class;
         $request = $this->scPublicV2ServicepointsGetServicePointByIdRequest($servicePointId, $accessToken);
 
         return $this->httpAsyncClient->sendAsyncRequest($request)
@@ -1045,9 +1045,9 @@ class ServicePointsApi
      * @param  string $shopType Filters results by their shop type. (optional)
      * @param  string $generalShopType Filters results by general shop type. Accepts a single value (e.g., &#x60;servicepoint&#x60;) or a comma-separated list of values (e.g., &#x60;servicepoint,locker,post_office&#x60;).  Possible options: - &#x60;servicepoint&#x60; - &#x60;locker&#x60; - &#x60;post_office&#x60; - &#x60;carrier_depot&#x60; (optional)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Toppy\Sendcloud\Model\ServicePoint[]|\Toppy\Sendcloud\Model\ScPublicV2ServicepointsGetServicePoints400Response
+     * @return \Toppy\Sendcloud\V2\Model\ServicePoint[]|\Toppy\Sendcloud\V2\Model\ScPublicV2ServicepointsGetServicePoints400Response
      */
     public function scPublicV2ServicepointsGetServicePoints($country, $xRequestedWith = null, $accessToken = null, $carrier = null, $latitude = null, $longitude = null, $neLatitude = null, $neLongitude = null, $swLatitude = null, $swLongitude = null, $address = null, $city = null, $postalCode = null, $houseNumber = null, $radius = null, $weight = null, $pudoId = null, $shopType = null, $generalShopType = null)
     {
@@ -1080,9 +1080,9 @@ class ServicePointsApi
      * @param  string $shopType Filters results by their shop type. (optional)
      * @param  string $generalShopType Filters results by general shop type. Accepts a single value (e.g., &#x60;servicepoint&#x60;) or a comma-separated list of values (e.g., &#x60;servicepoint,locker,post_office&#x60;).  Possible options: - &#x60;servicepoint&#x60; - &#x60;locker&#x60; - &#x60;post_office&#x60; - &#x60;carrier_depot&#x60; (optional)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Toppy\Sendcloud\Model\ServicePoint[]|\Toppy\Sendcloud\Model\ScPublicV2ServicepointsGetServicePoints400Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Toppy\Sendcloud\V2\Model\ServicePoint[]|\Toppy\Sendcloud\V2\Model\ScPublicV2ServicepointsGetServicePoints400Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function scPublicV2ServicepointsGetServicePointsWithHttpInfo($country, $xRequestedWith = null, $accessToken = null, $carrier = null, $latitude = null, $longitude = null, $neLatitude = null, $neLongitude = null, $swLatitude = null, $swLongitude = null, $address = null, $city = null, $postalCode = null, $houseNumber = null, $radius = null, $weight = null, $pudoId = null, $shopType = null, $generalShopType = null)
     {
@@ -1118,13 +1118,13 @@ class ServicePointsApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\Toppy\Sendcloud\Model\ServicePoint[]',
+                        '\Toppy\Sendcloud\V2\Model\ServicePoint[]',
                         $request,
                         $response,
                     );
                 case 400:
                     return $this->handleResponseWithDataType(
-                        \Toppy\Sendcloud\Model\ScPublicV2ServicepointsGetServicePoints400Response::class,
+                        \Toppy\Sendcloud\V2\Model\ScPublicV2ServicepointsGetServicePoints400Response::class,
                         $request,
                         $response,
                     );
@@ -1145,7 +1145,7 @@ class ServicePointsApi
             }
 
             return $this->handleResponseWithDataType(
-                '\Toppy\Sendcloud\Model\ServicePoint[]',
+                '\Toppy\Sendcloud\V2\Model\ServicePoint[]',
                 $request,
                 $response,
             );
@@ -1154,7 +1154,7 @@ class ServicePointsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        '\Toppy\Sendcloud\Model\ServicePoint[]',
+                        '\Toppy\Sendcloud\V2\Model\ServicePoint[]',
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -1162,7 +1162,7 @@ class ServicePointsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\ScPublicV2ServicepointsGetServicePoints400Response::class,
+                        \Toppy\Sendcloud\V2\Model\ScPublicV2ServicepointsGetServicePoints400Response::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -1242,7 +1242,7 @@ class ServicePointsApi
      */
     public function scPublicV2ServicepointsGetServicePointsAsyncWithHttpInfo($country, $xRequestedWith = null, $accessToken = null, $carrier = null, $latitude = null, $longitude = null, $neLatitude = null, $neLongitude = null, $swLatitude = null, $swLongitude = null, $address = null, $city = null, $postalCode = null, $houseNumber = null, $radius = null, $weight = null, $pudoId = null, $shopType = null, $generalShopType = null)
     {
-        $returnType = '\Toppy\Sendcloud\Model\ServicePoint[]';
+        $returnType = '\Toppy\Sendcloud\V2\Model\ServicePoint[]';
         $request = $this->scPublicV2ServicepointsGetServicePointsRequest($country, $xRequestedWith, $accessToken, $carrier, $latitude, $longitude, $neLatitude, $neLongitude, $swLatitude, $swLongitude, $address, $city, $postalCode, $houseNumber, $radius, $weight, $pudoId, $shopType, $generalShopType);
 
         return $this->httpAsyncClient->sendAsyncRequest($request)
@@ -1625,9 +1625,9 @@ class ServicePointsApi
      * @param  string $checkoutShippingmethodName Name of the shipping method. (optional)
      * @param  string $toPostNumber   (optional)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Toppy\Sendcloud\Model\ScPublicV2ServicepointsGetStore201Response|\Toppy\Sendcloud\Model\ScPublicV2ServicepointsGetServicePoints400Response|\Toppy\Sendcloud\Model\ScPublicV2ScpGetReturnById404Response
+     * @return \Toppy\Sendcloud\V2\Model\ScPublicV2ServicepointsGetStore201Response|\Toppy\Sendcloud\V2\Model\ScPublicV2ServicepointsGetServicePoints400Response|\Toppy\Sendcloud\V2\Model\ScPublicV2ScpGetReturnById404Response
      */
     public function scPublicV2ServicepointsGetStore($shopType, $orderId, $shopIdentification, $servicePoint, $orderConfirmation, $checkoutShippingmethodId = null, $checkoutShippingmethodName = null, $toPostNumber = null)
     {
@@ -1652,9 +1652,9 @@ class ServicePointsApi
      * @param  string $checkoutShippingmethodName Name of the shipping method. (optional)
      * @param  string $toPostNumber   (optional)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Toppy\Sendcloud\Model\ScPublicV2ServicepointsGetStore201Response|\Toppy\Sendcloud\Model\ScPublicV2ServicepointsGetServicePoints400Response|\Toppy\Sendcloud\Model\ScPublicV2ScpGetReturnById404Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Toppy\Sendcloud\V2\Model\ScPublicV2ServicepointsGetStore201Response|\Toppy\Sendcloud\V2\Model\ScPublicV2ServicepointsGetServicePoints400Response|\Toppy\Sendcloud\V2\Model\ScPublicV2ScpGetReturnById404Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function scPublicV2ServicepointsGetStoreWithHttpInfo($shopType, $orderId, $shopIdentification, $servicePoint, $orderConfirmation, $checkoutShippingmethodId = null, $checkoutShippingmethodName = null, $toPostNumber = null)
     {
@@ -1690,19 +1690,19 @@ class ServicePointsApi
             switch($statusCode) {
                 case 201:
                     return $this->handleResponseWithDataType(
-                        \Toppy\Sendcloud\Model\ScPublicV2ServicepointsGetStore201Response::class,
+                        \Toppy\Sendcloud\V2\Model\ScPublicV2ServicepointsGetStore201Response::class,
                         $request,
                         $response,
                     );
                 case 400:
                     return $this->handleResponseWithDataType(
-                        \Toppy\Sendcloud\Model\ScPublicV2ServicepointsGetServicePoints400Response::class,
+                        \Toppy\Sendcloud\V2\Model\ScPublicV2ServicepointsGetServicePoints400Response::class,
                         $request,
                         $response,
                     );
                 case 404:
                     return $this->handleResponseWithDataType(
-                        \Toppy\Sendcloud\Model\ScPublicV2ScpGetReturnById404Response::class,
+                        \Toppy\Sendcloud\V2\Model\ScPublicV2ScpGetReturnById404Response::class,
                         $request,
                         $response,
                     );
@@ -1723,7 +1723,7 @@ class ServicePointsApi
             }
 
             return $this->handleResponseWithDataType(
-                \Toppy\Sendcloud\Model\ScPublicV2ServicepointsGetStore201Response::class,
+                \Toppy\Sendcloud\V2\Model\ScPublicV2ServicepointsGetStore201Response::class,
                 $request,
                 $response,
             );
@@ -1732,7 +1732,7 @@ class ServicePointsApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\ScPublicV2ServicepointsGetStore201Response::class,
+                        \Toppy\Sendcloud\V2\Model\ScPublicV2ServicepointsGetStore201Response::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -1740,7 +1740,7 @@ class ServicePointsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\ScPublicV2ServicepointsGetServicePoints400Response::class,
+                        \Toppy\Sendcloud\V2\Model\ScPublicV2ServicepointsGetServicePoints400Response::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -1748,7 +1748,7 @@ class ServicePointsApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\ScPublicV2ScpGetReturnById404Response::class,
+                        \Toppy\Sendcloud\V2\Model\ScPublicV2ScpGetReturnById404Response::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -1812,7 +1812,7 @@ class ServicePointsApi
      */
     public function scPublicV2ServicepointsGetStoreAsyncWithHttpInfo($shopType, $orderId, $shopIdentification, $servicePoint, $orderConfirmation, $checkoutShippingmethodId = null, $checkoutShippingmethodName = null, $toPostNumber = null)
     {
-        $returnType = \Toppy\Sendcloud\Model\ScPublicV2ServicepointsGetStore201Response::class;
+        $returnType = \Toppy\Sendcloud\V2\Model\ScPublicV2ServicepointsGetStore201Response::class;
         $request = $this->scPublicV2ServicepointsGetStoreRequest($shopType, $orderId, $shopIdentification, $servicePoint, $orderConfirmation, $checkoutShippingmethodId, $checkoutShippingmethodName, $toPostNumber);
 
         return $this->httpAsyncClient->sendAsyncRequest($request)
@@ -2064,9 +2064,9 @@ class ServicePointsApi
      * @param  string $accessToken A JSON Web Token encoding either an “id” (user ID) or “iid” (integration ID) property. Alternatively, a public API key. (optional)
      * @param  string $xRequestedWith Identifies the request as one made using JavaScript (optional)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Toppy\Sendcloud\Model\ScPublicV2ServicepointsPostCheckAndStore200Response|\Toppy\Sendcloud\Model\ScPublicV2ServicepointsGetServicePoints400Response|\Toppy\Sendcloud\Model\ScPublicV2ScpGetReturnById404Response
+     * @return \Toppy\Sendcloud\V2\Model\ScPublicV2ServicepointsPostCheckAndStore200Response|\Toppy\Sendcloud\V2\Model\ScPublicV2ServicepointsGetServicePoints400Response|\Toppy\Sendcloud\V2\Model\ScPublicV2ScpGetReturnById404Response
      */
     public function scPublicV2ServicepointsPostCheckAndStore($servicePoint, $accessToken2, $checkAvailability, $storeOrderId, $checkoutShippingmethodId, $checkoutShippingmethodName, $toPostNumber, $accessToken = null, $xRequestedWith = null)
     {
@@ -2089,9 +2089,9 @@ class ServicePointsApi
      * @param  string $accessToken A JSON Web Token encoding either an “id” (user ID) or “iid” (integration ID) property. Alternatively, a public API key. (optional)
      * @param  string $xRequestedWith Identifies the request as one made using JavaScript (optional)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Toppy\Sendcloud\Model\ScPublicV2ServicepointsPostCheckAndStore200Response|\Toppy\Sendcloud\Model\ScPublicV2ServicepointsGetServicePoints400Response|\Toppy\Sendcloud\Model\ScPublicV2ScpGetReturnById404Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Toppy\Sendcloud\V2\Model\ScPublicV2ServicepointsPostCheckAndStore200Response|\Toppy\Sendcloud\V2\Model\ScPublicV2ServicepointsGetServicePoints400Response|\Toppy\Sendcloud\V2\Model\ScPublicV2ScpGetReturnById404Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function scPublicV2ServicepointsPostCheckAndStoreWithHttpInfo($servicePoint, $accessToken2, $checkAvailability, $storeOrderId, $checkoutShippingmethodId, $checkoutShippingmethodName, $toPostNumber, $accessToken = null, $xRequestedWith = null)
     {
@@ -2127,19 +2127,19 @@ class ServicePointsApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        \Toppy\Sendcloud\Model\ScPublicV2ServicepointsPostCheckAndStore200Response::class,
+                        \Toppy\Sendcloud\V2\Model\ScPublicV2ServicepointsPostCheckAndStore200Response::class,
                         $request,
                         $response,
                     );
                 case 400:
                     return $this->handleResponseWithDataType(
-                        \Toppy\Sendcloud\Model\ScPublicV2ServicepointsGetServicePoints400Response::class,
+                        \Toppy\Sendcloud\V2\Model\ScPublicV2ServicepointsGetServicePoints400Response::class,
                         $request,
                         $response,
                     );
                 case 404:
                     return $this->handleResponseWithDataType(
-                        \Toppy\Sendcloud\Model\ScPublicV2ScpGetReturnById404Response::class,
+                        \Toppy\Sendcloud\V2\Model\ScPublicV2ScpGetReturnById404Response::class,
                         $request,
                         $response,
                     );
@@ -2160,7 +2160,7 @@ class ServicePointsApi
             }
 
             return $this->handleResponseWithDataType(
-                \Toppy\Sendcloud\Model\ScPublicV2ServicepointsPostCheckAndStore200Response::class,
+                \Toppy\Sendcloud\V2\Model\ScPublicV2ServicepointsPostCheckAndStore200Response::class,
                 $request,
                 $response,
             );
@@ -2169,7 +2169,7 @@ class ServicePointsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\ScPublicV2ServicepointsPostCheckAndStore200Response::class,
+                        \Toppy\Sendcloud\V2\Model\ScPublicV2ServicepointsPostCheckAndStore200Response::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -2177,7 +2177,7 @@ class ServicePointsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\ScPublicV2ServicepointsGetServicePoints400Response::class,
+                        \Toppy\Sendcloud\V2\Model\ScPublicV2ServicepointsGetServicePoints400Response::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -2185,7 +2185,7 @@ class ServicePointsApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\ScPublicV2ScpGetReturnById404Response::class,
+                        \Toppy\Sendcloud\V2\Model\ScPublicV2ScpGetReturnById404Response::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -2245,7 +2245,7 @@ class ServicePointsApi
      */
     public function scPublicV2ServicepointsPostCheckAndStoreAsyncWithHttpInfo($servicePoint, $accessToken2, $checkAvailability, $storeOrderId, $checkoutShippingmethodId, $checkoutShippingmethodName, $toPostNumber, $accessToken = null, $xRequestedWith = null)
     {
-        $returnType = \Toppy\Sendcloud\Model\ScPublicV2ServicepointsPostCheckAndStore200Response::class;
+        $returnType = \Toppy\Sendcloud\V2\Model\ScPublicV2ServicepointsPostCheckAndStore200Response::class;
         $request = $this->scPublicV2ServicepointsPostCheckAndStoreRequest($servicePoint, $accessToken2, $checkAvailability, $storeOrderId, $checkoutShippingmethodId, $checkoutShippingmethodName, $toPostNumber, $accessToken, $xRequestedWith);
 
         return $this->httpAsyncClient->sendAsyncRequest($request)
@@ -2449,11 +2449,11 @@ class ServicePointsApi
      * Service point carrier dimension check
      *
      * @param  string $accessToken A JSON Web Token encoding either an “id” (user ID) or “iid” (integration ID) property. Alternatively, a public API key. (optional)
-     * @param  \Toppy\Sendcloud\Model\ScPublicV2ServicepointsPostItemsFitInShipmentRequest $scPublicV2ServicepointsPostItemsFitInShipmentRequest  (optional)
+     * @param  \Toppy\Sendcloud\V2\Model\ScPublicV2ServicepointsPostItemsFitInShipmentRequest $scPublicV2ServicepointsPostItemsFitInShipmentRequest  (optional)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Toppy\Sendcloud\Model\ScPublicV2ServicepointsPostItemsFitInShipment200Response|\Toppy\Sendcloud\Model\ScPublicV2ServicepointsGetServicePoints400Response|\Toppy\Sendcloud\Model\ScPublicV2ScpGetReturnById404Response
+     * @return \Toppy\Sendcloud\V2\Model\ScPublicV2ServicepointsPostItemsFitInShipment200Response|\Toppy\Sendcloud\V2\Model\ScPublicV2ServicepointsGetServicePoints400Response|\Toppy\Sendcloud\V2\Model\ScPublicV2ScpGetReturnById404Response
      */
     public function scPublicV2ServicepointsPostItemsFitInShipment($accessToken = null, $scPublicV2ServicepointsPostItemsFitInShipmentRequest = null)
     {
@@ -2467,11 +2467,11 @@ class ServicePointsApi
      * Service point carrier dimension check
      *
      * @param  string $accessToken A JSON Web Token encoding either an “id” (user ID) or “iid” (integration ID) property. Alternatively, a public API key. (optional)
-     * @param  \Toppy\Sendcloud\Model\ScPublicV2ServicepointsPostItemsFitInShipmentRequest $scPublicV2ServicepointsPostItemsFitInShipmentRequest  (optional)
+     * @param  \Toppy\Sendcloud\V2\Model\ScPublicV2ServicepointsPostItemsFitInShipmentRequest $scPublicV2ServicepointsPostItemsFitInShipmentRequest  (optional)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Toppy\Sendcloud\Model\ScPublicV2ServicepointsPostItemsFitInShipment200Response|\Toppy\Sendcloud\Model\ScPublicV2ServicepointsGetServicePoints400Response|\Toppy\Sendcloud\Model\ScPublicV2ScpGetReturnById404Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Toppy\Sendcloud\V2\Model\ScPublicV2ServicepointsPostItemsFitInShipment200Response|\Toppy\Sendcloud\V2\Model\ScPublicV2ServicepointsGetServicePoints400Response|\Toppy\Sendcloud\V2\Model\ScPublicV2ScpGetReturnById404Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function scPublicV2ServicepointsPostItemsFitInShipmentWithHttpInfo($accessToken = null, $scPublicV2ServicepointsPostItemsFitInShipmentRequest = null)
     {
@@ -2507,19 +2507,19 @@ class ServicePointsApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        \Toppy\Sendcloud\Model\ScPublicV2ServicepointsPostItemsFitInShipment200Response::class,
+                        \Toppy\Sendcloud\V2\Model\ScPublicV2ServicepointsPostItemsFitInShipment200Response::class,
                         $request,
                         $response,
                     );
                 case 400:
                     return $this->handleResponseWithDataType(
-                        \Toppy\Sendcloud\Model\ScPublicV2ServicepointsGetServicePoints400Response::class,
+                        \Toppy\Sendcloud\V2\Model\ScPublicV2ServicepointsGetServicePoints400Response::class,
                         $request,
                         $response,
                     );
                 case 404:
                     return $this->handleResponseWithDataType(
-                        \Toppy\Sendcloud\Model\ScPublicV2ScpGetReturnById404Response::class,
+                        \Toppy\Sendcloud\V2\Model\ScPublicV2ScpGetReturnById404Response::class,
                         $request,
                         $response,
                     );
@@ -2540,7 +2540,7 @@ class ServicePointsApi
             }
 
             return $this->handleResponseWithDataType(
-                \Toppy\Sendcloud\Model\ScPublicV2ServicepointsPostItemsFitInShipment200Response::class,
+                \Toppy\Sendcloud\V2\Model\ScPublicV2ServicepointsPostItemsFitInShipment200Response::class,
                 $request,
                 $response,
             );
@@ -2549,7 +2549,7 @@ class ServicePointsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\ScPublicV2ServicepointsPostItemsFitInShipment200Response::class,
+                        \Toppy\Sendcloud\V2\Model\ScPublicV2ServicepointsPostItemsFitInShipment200Response::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -2557,7 +2557,7 @@ class ServicePointsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\ScPublicV2ServicepointsGetServicePoints400Response::class,
+                        \Toppy\Sendcloud\V2\Model\ScPublicV2ServicepointsGetServicePoints400Response::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -2565,7 +2565,7 @@ class ServicePointsApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\ScPublicV2ScpGetReturnById404Response::class,
+                        \Toppy\Sendcloud\V2\Model\ScPublicV2ScpGetReturnById404Response::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -2583,7 +2583,7 @@ class ServicePointsApi
      * Service point carrier dimension check
      *
      * @param  string $accessToken A JSON Web Token encoding either an “id” (user ID) or “iid” (integration ID) property. Alternatively, a public API key. (optional)
-     * @param  \Toppy\Sendcloud\Model\ScPublicV2ServicepointsPostItemsFitInShipmentRequest $scPublicV2ServicepointsPostItemsFitInShipmentRequest  (optional)
+     * @param  \Toppy\Sendcloud\V2\Model\ScPublicV2ServicepointsPostItemsFitInShipmentRequest $scPublicV2ServicepointsPostItemsFitInShipmentRequest  (optional)
      *
      * @throws \InvalidArgumentException
      * @return Promise
@@ -2604,14 +2604,14 @@ class ServicePointsApi
      * Service point carrier dimension check
      *
      * @param  string $accessToken A JSON Web Token encoding either an “id” (user ID) or “iid” (integration ID) property. Alternatively, a public API key. (optional)
-     * @param  \Toppy\Sendcloud\Model\ScPublicV2ServicepointsPostItemsFitInShipmentRequest $scPublicV2ServicepointsPostItemsFitInShipmentRequest  (optional)
+     * @param  \Toppy\Sendcloud\V2\Model\ScPublicV2ServicepointsPostItemsFitInShipmentRequest $scPublicV2ServicepointsPostItemsFitInShipmentRequest  (optional)
      *
      * @throws \InvalidArgumentException
      * @return Promise
      */
     public function scPublicV2ServicepointsPostItemsFitInShipmentAsyncWithHttpInfo($accessToken = null, $scPublicV2ServicepointsPostItemsFitInShipmentRequest = null)
     {
-        $returnType = \Toppy\Sendcloud\Model\ScPublicV2ServicepointsPostItemsFitInShipment200Response::class;
+        $returnType = \Toppy\Sendcloud\V2\Model\ScPublicV2ServicepointsPostItemsFitInShipment200Response::class;
         $request = $this->scPublicV2ServicepointsPostItemsFitInShipmentRequest($accessToken, $scPublicV2ServicepointsPostItemsFitInShipmentRequest);
 
         return $this->httpAsyncClient->sendAsyncRequest($request)
@@ -2650,7 +2650,7 @@ class ServicePointsApi
      * Create request for operation 'scPublicV2ServicepointsPostItemsFitInShipment'
      *
      * @param  string $accessToken A JSON Web Token encoding either an “id” (user ID) or “iid” (integration ID) property. Alternatively, a public API key. (optional)
-     * @param  \Toppy\Sendcloud\Model\ScPublicV2ServicepointsPostItemsFitInShipmentRequest $scPublicV2ServicepointsPostItemsFitInShipmentRequest  (optional)
+     * @param  \Toppy\Sendcloud\V2\Model\ScPublicV2ServicepointsPostItemsFitInShipmentRequest $scPublicV2ServicepointsPostItemsFitInShipmentRequest  (optional)
      *
      * @throws \InvalidArgumentException
      * @return RequestInterface

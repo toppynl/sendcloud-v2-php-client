@@ -8,7 +8,7 @@ declare(strict_types=1);
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Model;
+namespace Toppy\Sendcloud\V2\Model;
 
 use \ArrayAccess;
-use \Toppy\Sendcloud\ObjectSerializer;
+use \Toppy\Sendcloud\V2\ObjectSerializer;
 
 /**
  * Brand Class Doc Comment
  *
  * @category Class
  * @description A user&#39;s configured brand within Sendcloud
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -64,9 +64,9 @@ class Brand implements ModelInterface, ArrayAccess, \JsonSerializable, \Stringab
         'color' => 'string',
         'secondaryColor' => 'string',
         'website' => 'string',
-        'screenLogo' => \Toppy\Sendcloud\Model\BrandScreenLogo::class,
+        'screenLogo' => \Toppy\Sendcloud\V2\Model\BrandScreenLogo::class,
         'overlayLogo' => 'object',
-        'printLogo' => \Toppy\Sendcloud\Model\BrandPrintLogo::class,
+        'printLogo' => \Toppy\Sendcloud\V2\Model\BrandPrintLogo::class,
         'overlayThumb' => 'object',
         'screenThumb' => 'string',
         'printThumb' => 'string',
@@ -75,8 +75,8 @@ class Brand implements ModelInterface, ArrayAccess, \JsonSerializable, \Stringab
         'notifyBccEmail' => 'string',
         'hidePoweredBy' => 'bool',
         'googleAnalyticsId' => 'string',
-        'features' => \Toppy\Sendcloud\Model\BrandFeatures::class,
-        'customizationSettings' => \Toppy\Sendcloud\Model\BrandCustomizationSettings::class
+        'features' => \Toppy\Sendcloud\V2\Model\BrandFeatures::class,
+        'customizationSettings' => \Toppy\Sendcloud\V2\Model\BrandCustomizationSettings::class
     ];
 
     /**
@@ -679,7 +679,7 @@ class Brand implements ModelInterface, ArrayAccess, \JsonSerializable, \Stringab
     /**
      * Gets screenLogo
      *
-     * @return \Toppy\Sendcloud\Model\BrandScreenLogo|null
+     * @return \Toppy\Sendcloud\V2\Model\BrandScreenLogo|null
      */
     public function getScreenLogo()
     {
@@ -689,7 +689,7 @@ class Brand implements ModelInterface, ArrayAccess, \JsonSerializable, \Stringab
     /**
      * Sets screenLogo
      *
-     * @param \Toppy\Sendcloud\Model\BrandScreenLogo|null $screenLogo screenLogo
+     * @param \Toppy\Sendcloud\V2\Model\BrandScreenLogo|null $screenLogo screenLogo
      *
      * @return self
      */
@@ -748,7 +748,7 @@ class Brand implements ModelInterface, ArrayAccess, \JsonSerializable, \Stringab
     /**
      * Gets printLogo
      *
-     * @return \Toppy\Sendcloud\Model\BrandPrintLogo|null
+     * @return \Toppy\Sendcloud\V2\Model\BrandPrintLogo|null
      */
     public function getPrintLogo()
     {
@@ -758,7 +758,7 @@ class Brand implements ModelInterface, ArrayAccess, \JsonSerializable, \Stringab
     /**
      * Sets printLogo
      *
-     * @param \Toppy\Sendcloud\Model\BrandPrintLogo|null $printLogo printLogo
+     * @param \Toppy\Sendcloud\V2\Model\BrandPrintLogo|null $printLogo printLogo
      *
      * @return self
      */
@@ -1060,7 +1060,7 @@ class Brand implements ModelInterface, ArrayAccess, \JsonSerializable, \Stringab
     /**
      * Gets features
      *
-     * @return \Toppy\Sendcloud\Model\BrandFeatures
+     * @return \Toppy\Sendcloud\V2\Model\BrandFeatures
      */
     public function getFeatures()
     {
@@ -1070,7 +1070,7 @@ class Brand implements ModelInterface, ArrayAccess, \JsonSerializable, \Stringab
     /**
      * Sets features
      *
-     * @param \Toppy\Sendcloud\Model\BrandFeatures $features features
+     * @param \Toppy\Sendcloud\V2\Model\BrandFeatures $features features
      *
      * @return self
      */
@@ -1088,7 +1088,7 @@ class Brand implements ModelInterface, ArrayAccess, \JsonSerializable, \Stringab
     /**
      * Gets customizationSettings
      *
-     * @return \Toppy\Sendcloud\Model\BrandCustomizationSettings|null
+     * @return \Toppy\Sendcloud\V2\Model\BrandCustomizationSettings|null
      */
     public function getCustomizationSettings()
     {
@@ -1098,7 +1098,7 @@ class Brand implements ModelInterface, ArrayAccess, \JsonSerializable, \Stringab
     /**
      * Sets customizationSettings
      *
-     * @param \Toppy\Sendcloud\Model\BrandCustomizationSettings|null $customizationSettings customizationSettings
+     * @param \Toppy\Sendcloud\V2\Model\BrandCustomizationSettings|null $customizationSettings customizationSettings
      *
      * @return self
      */

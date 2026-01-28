@@ -8,7 +8,7 @@ declare(strict_types=1);
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Model;
+namespace Toppy\Sendcloud\V2\Model;
 
 use \ArrayAccess;
-use \Toppy\Sendcloud\ObjectSerializer;
+use \Toppy\Sendcloud\V2\ObjectSerializer;
 
 /**
  * ServicePoint Class Doc Comment
  *
  * @category Class
  * @description A Sendcloud service point object.
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -77,7 +77,7 @@ class ServicePoint implements ModelInterface, ArrayAccess, \JsonSerializable, \S
         'homepage' => 'string',
         'carrier' => 'string',
         'country' => 'string',
-        'formattedOpeningTimes' => \Toppy\Sendcloud\Model\ServicePointFormattedOpeningTimes::class,
+        'formattedOpeningTimes' => \Toppy\Sendcloud\V2\Model\ServicePointFormattedOpeningTimes::class,
         'openTomorrow' => 'bool',
         'openUpcomingWeek' => 'bool',
         'distance' => 'float'
@@ -1020,7 +1020,7 @@ class ServicePoint implements ModelInterface, ArrayAccess, \JsonSerializable, \S
     /**
      * Gets formattedOpeningTimes
      *
-     * @return \Toppy\Sendcloud\Model\ServicePointFormattedOpeningTimes
+     * @return \Toppy\Sendcloud\V2\Model\ServicePointFormattedOpeningTimes
      */
     public function getFormattedOpeningTimes()
     {
@@ -1030,7 +1030,7 @@ class ServicePoint implements ModelInterface, ArrayAccess, \JsonSerializable, \S
     /**
      * Sets formattedOpeningTimes
      *
-     * @param \Toppy\Sendcloud\Model\ServicePointFormattedOpeningTimes $formattedOpeningTimes formattedOpeningTimes
+     * @param \Toppy\Sendcloud\V2\Model\ServicePointFormattedOpeningTimes $formattedOpeningTimes formattedOpeningTimes
      *
      * @return self
      */

@@ -17,6 +17,6 @@ Name | Type | Description | Notes
 **fromName** | **string** | Name of the sender of this Parcel | [optional]
 **shippingMethod** | **int** | Identifier of the Shipping Method chosen for this Parcel | [optional]
 **extraData** | **object** | Arbitrary data about this parcel | [optional]
-**rules** | [**\Toppy\Sendcloud\Model\ReturnParcelRulesInner[]**](ReturnParcelRulesInner.md) | List of policy rules applied to this Parcel. DEPRECATED, Use &#x60;rule_modifications&#x60; field of the Return object instead. | [optional]
+**rules** | [**\Toppy\Sendcloud\V2\Model\ReturnParcelRulesInner[]**](ReturnParcelRulesInner.md) | List of policy rules applied to this Parcel. DEPRECATED, Use &#x60;rule_modifications&#x60; field of the Return object instead. | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

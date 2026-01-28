@@ -1,4 +1,4 @@
-# Toppy\Sendcloud\IntegrationsApi
+# Toppy\Sendcloud\V2\IntegrationsApi
 
 All URIs are relative to https://panel.sendcloud.sc/api/v2.
 
@@ -32,12 +32,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: HTTPBasicAuth
-$config = Toppy\Sendcloud\Configuration::getDefaultConfiguration()
+$config = Toppy\Sendcloud\V2\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Toppy\Sendcloud\Api\IntegrationsApi(
+$apiInstance = new Toppy\Sendcloud\V2\Api\IntegrationsApi(
     // If you want use custom http client, pass your client which implements `Psr\Http\Client\ClientInterface`.
     // This is optional, `Psr18ClientDiscovery` will be used to find http client. For instance `GuzzleHttp\Client` implements that interface
     new GuzzleHttp\Client(),
@@ -78,7 +78,7 @@ void (empty response body)
 ## `scPublicV2OrdersGetRetrieveAListOfIntegrations()`
 
 ```php
-scPublicV2OrdersGetRetrieveAListOfIntegrations($ordering): \Toppy\Sendcloud\Model\Integration[]
+scPublicV2OrdersGetRetrieveAListOfIntegrations($ordering): \Toppy\Sendcloud\V2\Model\Integration[]
 ```
 
 Retrieve a list of integrations
@@ -93,12 +93,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: HTTPBasicAuth
-$config = Toppy\Sendcloud\Configuration::getDefaultConfiguration()
+$config = Toppy\Sendcloud\V2\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Toppy\Sendcloud\Api\IntegrationsApi(
+$apiInstance = new Toppy\Sendcloud\V2\Api\IntegrationsApi(
     // If you want use custom http client, pass your client which implements `Psr\Http\Client\ClientInterface`.
     // This is optional, `Psr18ClientDiscovery` will be used to find http client. For instance `GuzzleHttp\Client` implements that interface
     new GuzzleHttp\Client(),
@@ -122,7 +122,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Toppy\Sendcloud\Model\Integration[]**](../Model/Integration.md)
+[**\Toppy\Sendcloud\V2\Model\Integration[]**](../Model/Integration.md)
 
 ### Authorization
 
@@ -140,7 +140,7 @@ Name | Type | Description  | Notes
 ## `scPublicV2OrdersGetRetrieveAnIntegration()`
 
 ```php
-scPublicV2OrdersGetRetrieveAnIntegration($id): \Toppy\Sendcloud\Model\Integration
+scPublicV2OrdersGetRetrieveAnIntegration($id): \Toppy\Sendcloud\V2\Model\Integration
 ```
 
 Retrieve an integration
@@ -155,12 +155,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: HTTPBasicAuth
-$config = Toppy\Sendcloud\Configuration::getDefaultConfiguration()
+$config = Toppy\Sendcloud\V2\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Toppy\Sendcloud\Api\IntegrationsApi(
+$apiInstance = new Toppy\Sendcloud\V2\Api\IntegrationsApi(
     // If you want use custom http client, pass your client which implements `Psr\Http\Client\ClientInterface`.
     // This is optional, `Psr18ClientDiscovery` will be used to find http client. For instance `GuzzleHttp\Client` implements that interface
     new GuzzleHttp\Client(),
@@ -184,7 +184,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Toppy\Sendcloud\Model\Integration**](../Model/Integration.md)
+[**\Toppy\Sendcloud\V2\Model\Integration**](../Model/Integration.md)
 
 ### Authorization
 
@@ -202,7 +202,7 @@ Name | Type | Description  | Notes
 ## `scPublicV2OrdersGetRetrieveIntegrationLogs()`
 
 ```php
-scPublicV2OrdersGetRetrieveIntegrationLogs($id): \Toppy\Sendcloud\Model\ScPublicV2OrdersGetRetrieveIntegrationsLogs200Response
+scPublicV2OrdersGetRetrieveIntegrationLogs($id): \Toppy\Sendcloud\V2\Model\ScPublicV2OrdersGetRetrieveIntegrationsLogs200Response
 ```
 
 Retrieve exception logs for a specific integration
@@ -217,12 +217,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: HTTPBasicAuth
-$config = Toppy\Sendcloud\Configuration::getDefaultConfiguration()
+$config = Toppy\Sendcloud\V2\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Toppy\Sendcloud\Api\IntegrationsApi(
+$apiInstance = new Toppy\Sendcloud\V2\Api\IntegrationsApi(
     // If you want use custom http client, pass your client which implements `Psr\Http\Client\ClientInterface`.
     // This is optional, `Psr18ClientDiscovery` will be used to find http client. For instance `GuzzleHttp\Client` implements that interface
     new GuzzleHttp\Client(),
@@ -246,7 +246,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Toppy\Sendcloud\Model\ScPublicV2OrdersGetRetrieveIntegrationsLogs200Response**](../Model/ScPublicV2OrdersGetRetrieveIntegrationsLogs200Response.md)
+[**\Toppy\Sendcloud\V2\Model\ScPublicV2OrdersGetRetrieveIntegrationsLogs200Response**](../Model/ScPublicV2OrdersGetRetrieveIntegrationsLogs200Response.md)
 
 ### Authorization
 
@@ -264,7 +264,7 @@ Name | Type | Description  | Notes
 ## `scPublicV2OrdersGetRetrieveIntegrationsLogs()`
 
 ```php
-scPublicV2OrdersGetRetrieveIntegrationsLogs(): \Toppy\Sendcloud\Model\ScPublicV2OrdersGetRetrieveIntegrationsLogs200Response
+scPublicV2OrdersGetRetrieveIntegrationsLogs(): \Toppy\Sendcloud\V2\Model\ScPublicV2OrdersGetRetrieveIntegrationsLogs200Response
 ```
 
 Retrieve all integration exception logs
@@ -279,12 +279,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: HTTPBasicAuth
-$config = Toppy\Sendcloud\Configuration::getDefaultConfiguration()
+$config = Toppy\Sendcloud\V2\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Toppy\Sendcloud\Api\IntegrationsApi(
+$apiInstance = new Toppy\Sendcloud\V2\Api\IntegrationsApi(
     // If you want use custom http client, pass your client which implements `Psr\Http\Client\ClientInterface`.
     // This is optional, `Psr18ClientDiscovery` will be used to find http client. For instance `GuzzleHttp\Client` implements that interface
     new GuzzleHttp\Client(),
@@ -305,7 +305,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Toppy\Sendcloud\Model\ScPublicV2OrdersGetRetrieveIntegrationsLogs200Response**](../Model/ScPublicV2OrdersGetRetrieveIntegrationsLogs200Response.md)
+[**\Toppy\Sendcloud\V2\Model\ScPublicV2OrdersGetRetrieveIntegrationsLogs200Response**](../Model/ScPublicV2OrdersGetRetrieveIntegrationsLogs200Response.md)
 
 ### Authorization
 
@@ -323,7 +323,7 @@ This endpoint does not need any parameter.
 ## `scPublicV2OrdersPatchPartialUpdateAnIntegration()`
 
 ```php
-scPublicV2OrdersPatchPartialUpdateAnIntegration($id, $integrationUpdate): \Toppy\Sendcloud\Model\IntegrationUpdate
+scPublicV2OrdersPatchPartialUpdateAnIntegration($id, $integrationUpdate): \Toppy\Sendcloud\V2\Model\IntegrationUpdate
 ```
 
 Partially update an integration
@@ -338,19 +338,19 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: HTTPBasicAuth
-$config = Toppy\Sendcloud\Configuration::getDefaultConfiguration()
+$config = Toppy\Sendcloud\V2\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Toppy\Sendcloud\Api\IntegrationsApi(
+$apiInstance = new Toppy\Sendcloud\V2\Api\IntegrationsApi(
     // If you want use custom http client, pass your client which implements `Psr\Http\Client\ClientInterface`.
     // This is optional, `Psr18ClientDiscovery` will be used to find http client. For instance `GuzzleHttp\Client` implements that interface
     new GuzzleHttp\Client(),
     $config
 );
 $id = 56; // int | The id of the integration
-$integrationUpdate = {"shop_name":"Integration #1","shop_url":"https://example.com","last_updated_at":"2019-08-24T14:15:22Z","service_point_enabled":true,"service_point_carriers":["ups"],"webhook_active":true,"webhook_url":"https://example.com"}; // \Toppy\Sendcloud\Model\IntegrationUpdate
+$integrationUpdate = {"shop_name":"Integration #1","shop_url":"https://example.com","last_updated_at":"2019-08-24T14:15:22Z","service_point_enabled":true,"service_point_carriers":["ups"],"webhook_active":true,"webhook_url":"https://example.com"}; // \Toppy\Sendcloud\V2\Model\IntegrationUpdate
 
 try {
     $result = $apiInstance->scPublicV2OrdersPatchPartialUpdateAnIntegration($id, $integrationUpdate);
@@ -365,11 +365,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| The id of the integration |
- **integrationUpdate** | [**\Toppy\Sendcloud\Model\IntegrationUpdate**](../Model/IntegrationUpdate.md)|  | [optional]
+ **integrationUpdate** | [**\Toppy\Sendcloud\V2\Model\IntegrationUpdate**](../Model/IntegrationUpdate.md)|  | [optional]
 
 ### Return type
 
-[**\Toppy\Sendcloud\Model\IntegrationUpdate**](../Model/IntegrationUpdate.md)
+[**\Toppy\Sendcloud\V2\Model\IntegrationUpdate**](../Model/IntegrationUpdate.md)
 
 ### Authorization
 
@@ -387,7 +387,7 @@ Name | Type | Description  | Notes
 ## `scPublicV2OrdersPostCreateIntegrationLogs()`
 
 ```php
-scPublicV2OrdersPostCreateIntegrationLogs($id, $integrationLog): \Toppy\Sendcloud\Model\IntegrationLog
+scPublicV2OrdersPostCreateIntegrationLogs($id, $integrationLog): \Toppy\Sendcloud\V2\Model\IntegrationLog
 ```
 
 Create integration exceptions logs
@@ -402,19 +402,19 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: HTTPBasicAuth
-$config = Toppy\Sendcloud\Configuration::getDefaultConfiguration()
+$config = Toppy\Sendcloud\V2\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Toppy\Sendcloud\Api\IntegrationsApi(
+$apiInstance = new Toppy\Sendcloud\V2\Api\IntegrationsApi(
     // If you want use custom http client, pass your client which implements `Psr\Http\Client\ClientInterface`.
     // This is optional, `Psr18ClientDiscovery` will be used to find http client. For instance `GuzzleHttp\Client` implements that interface
     new GuzzleHttp\Client(),
     $config
 );
 $id = 56; // int | The id of the integration to which the shipments belong
-$integrationLog = {"integration_id":123,"user_id":123,"base_url":"https://example.com","full_url":"https://example.com/order-note.json","method":"POST","response_code":495,"response":{"headers":{"Cache-Control":"max-age=3600","Content-Type":"text/html; charset=utf-8","Connection":"keep-alive"},"body":"<!doctype html>\n<html>\n <head>\n <title>SSL Certificate Error</title>\n </head>\n </html>\n"},"request":{"headers":{"Cache-Control":"max-age=3600","Content-Type":"text/html; charset=utf-8","Connection":"keep-alive"},"payload":{"order_note":{"note":"Success"}}},"created_at":"2023-03-01T02:02:00+01:00","exception_type":"requests.exceptions.SSLError","exception":"An SSL error occurred"}; // \Toppy\Sendcloud\Model\IntegrationLog
+$integrationLog = {"integration_id":123,"user_id":123,"base_url":"https://example.com","full_url":"https://example.com/order-note.json","method":"POST","response_code":495,"response":{"headers":{"Cache-Control":"max-age=3600","Content-Type":"text/html; charset=utf-8","Connection":"keep-alive"},"body":"<!doctype html>\n<html>\n <head>\n <title>SSL Certificate Error</title>\n </head>\n </html>\n"},"request":{"headers":{"Cache-Control":"max-age=3600","Content-Type":"text/html; charset=utf-8","Connection":"keep-alive"},"payload":{"order_note":{"note":"Success"}}},"created_at":"2023-03-01T02:02:00+01:00","exception_type":"requests.exceptions.SSLError","exception":"An SSL error occurred"}; // \Toppy\Sendcloud\V2\Model\IntegrationLog
 
 try {
     $result = $apiInstance->scPublicV2OrdersPostCreateIntegrationLogs($id, $integrationLog);
@@ -429,11 +429,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| The id of the integration to which the shipments belong |
- **integrationLog** | [**\Toppy\Sendcloud\Model\IntegrationLog**](../Model/IntegrationLog.md)|  | [optional]
+ **integrationLog** | [**\Toppy\Sendcloud\V2\Model\IntegrationLog**](../Model/IntegrationLog.md)|  | [optional]
 
 ### Return type
 
-[**\Toppy\Sendcloud\Model\IntegrationLog**](../Model/IntegrationLog.md)
+[**\Toppy\Sendcloud\V2\Model\IntegrationLog**](../Model/IntegrationLog.md)
 
 ### Authorization
 
@@ -451,7 +451,7 @@ Name | Type | Description  | Notes
 ## `scPublicV2OrdersPutUpdateAnIntegration()`
 
 ```php
-scPublicV2OrdersPutUpdateAnIntegration($id, $integrationUpdate): \Toppy\Sendcloud\Model\IntegrationUpdate
+scPublicV2OrdersPutUpdateAnIntegration($id, $integrationUpdate): \Toppy\Sendcloud\V2\Model\IntegrationUpdate
 ```
 
 Update an integration
@@ -466,19 +466,19 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: HTTPBasicAuth
-$config = Toppy\Sendcloud\Configuration::getDefaultConfiguration()
+$config = Toppy\Sendcloud\V2\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Toppy\Sendcloud\Api\IntegrationsApi(
+$apiInstance = new Toppy\Sendcloud\V2\Api\IntegrationsApi(
     // If you want use custom http client, pass your client which implements `Psr\Http\Client\ClientInterface`.
     // This is optional, `Psr18ClientDiscovery` will be used to find http client. For instance `GuzzleHttp\Client` implements that interface
     new GuzzleHttp\Client(),
     $config
 );
 $id = 56; // int | The id of the integration
-$integrationUpdate = {"shop_name":"Integration #1","shop_url":"https://example.com","service_point_enabled":true,"service_point_carriers":["ups"],"webhook_active":true,"webhook_url":"https://example.com"}; // \Toppy\Sendcloud\Model\IntegrationUpdate | 
+$integrationUpdate = {"shop_name":"Integration #1","shop_url":"https://example.com","service_point_enabled":true,"service_point_carriers":["ups"],"webhook_active":true,"webhook_url":"https://example.com"}; // \Toppy\Sendcloud\V2\Model\IntegrationUpdate | 
 
 try {
     $result = $apiInstance->scPublicV2OrdersPutUpdateAnIntegration($id, $integrationUpdate);
@@ -493,11 +493,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| The id of the integration |
- **integrationUpdate** | [**\Toppy\Sendcloud\Model\IntegrationUpdate**](../Model/IntegrationUpdate.md)|  | [optional]
+ **integrationUpdate** | [**\Toppy\Sendcloud\V2\Model\IntegrationUpdate**](../Model/IntegrationUpdate.md)|  | [optional]
 
 ### Return type
 
-[**\Toppy\Sendcloud\Model\IntegrationUpdate**](../Model/IntegrationUpdate.md)
+[**\Toppy\Sendcloud\V2\Model\IntegrationUpdate**](../Model/IntegrationUpdate.md)
 
 ### Authorization
 

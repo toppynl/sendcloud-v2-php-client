@@ -7,7 +7,7 @@ declare(strict_types=1);
  * PHP version 7.2
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Api;
+namespace Toppy\Sendcloud\V2\Api;
 
 use GuzzleHttp\Psr7\MultipartStream;
 use Http\Client\Common\Plugin\ErrorPlugin;
@@ -40,12 +40,12 @@ use Http\Discovery\Psr17FactoryDiscovery;
 use Http\Discovery\Psr18ClientDiscovery;
 use Http\Message\RequestFactory;
 use Http\Promise\Promise;
-use Toppy\Sendcloud\ApiException;
-use Toppy\Sendcloud\Configuration;
-use Toppy\Sendcloud\DebugPlugin;
-use Toppy\Sendcloud\HeaderSelector;
-use Toppy\Sendcloud\FormDataProcessor;
-use Toppy\Sendcloud\ObjectSerializer;
+use Toppy\Sendcloud\V2\ApiException;
+use Toppy\Sendcloud\V2\Configuration;
+use Toppy\Sendcloud\V2\DebugPlugin;
+use Toppy\Sendcloud\V2\HeaderSelector;
+use Toppy\Sendcloud\V2\FormDataProcessor;
+use Toppy\Sendcloud\V2\ObjectSerializer;
 use Psr\Http\Client\ClientExceptionInterface;
 use Psr\Http\Client\ClientInterface;
 use Psr\Http\Message\RequestFactoryInterface;
@@ -60,7 +60,7 @@ use function sprintf;
  * LabelDownloadApi Class Doc Comment
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -174,9 +174,9 @@ class LabelDownloadApi
      *
      * @param  int $parcelId Unique parcel identifier (required)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \SplFileObject|\Toppy\Sendcloud\Model\ScPublicV2ScpGetLabelDocumentNormalPrinter400Response|object
+     * @return \SplFileObject|\Toppy\Sendcloud\V2\Model\ScPublicV2ScpGetLabelDocumentNormalPrinter400Response|object
      */
     public function scPublicV2ScpGetLabelDocumentLabelPrinter($parcelId)
     {
@@ -191,9 +191,9 @@ class LabelDownloadApi
      *
      * @param  int $parcelId Unique parcel identifier (required)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \SplFileObject|\Toppy\Sendcloud\Model\ScPublicV2ScpGetLabelDocumentNormalPrinter400Response|object, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \SplFileObject|\Toppy\Sendcloud\V2\Model\ScPublicV2ScpGetLabelDocumentNormalPrinter400Response|object, HTTP status code, HTTP response headers (array of strings)
      */
     public function scPublicV2ScpGetLabelDocumentLabelPrinterWithHttpInfo($parcelId)
     {
@@ -235,7 +235,7 @@ class LabelDownloadApi
                     );
                 case 400:
                     return $this->handleResponseWithDataType(
-                        \Toppy\Sendcloud\Model\ScPublicV2ScpGetLabelDocumentNormalPrinter400Response::class,
+                        \Toppy\Sendcloud\V2\Model\ScPublicV2ScpGetLabelDocumentNormalPrinter400Response::class,
                         $request,
                         $response,
                     );
@@ -279,7 +279,7 @@ class LabelDownloadApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\ScPublicV2ScpGetLabelDocumentNormalPrinter400Response::class,
+                        \Toppy\Sendcloud\V2\Model\ScPublicV2ScpGetLabelDocumentNormalPrinter400Response::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -467,9 +467,9 @@ class LabelDownloadApi
      *
      * @param  int[] $ids Comma separated parcel ids (required)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \SplFileObject|\Toppy\Sendcloud\Model\ScPublicV2ScpGetLabelDocumentNormalPrinter400Response|object
+     * @return \SplFileObject|\Toppy\Sendcloud\V2\Model\ScPublicV2ScpGetLabelDocumentNormalPrinter400Response|object
      */
     public function scPublicV2ScpGetLabelDocumentMultipleLabelPrinter($ids)
     {
@@ -484,9 +484,9 @@ class LabelDownloadApi
      *
      * @param  int[] $ids Comma separated parcel ids (required)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \SplFileObject|\Toppy\Sendcloud\Model\ScPublicV2ScpGetLabelDocumentNormalPrinter400Response|object, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \SplFileObject|\Toppy\Sendcloud\V2\Model\ScPublicV2ScpGetLabelDocumentNormalPrinter400Response|object, HTTP status code, HTTP response headers (array of strings)
      */
     public function scPublicV2ScpGetLabelDocumentMultipleLabelPrinterWithHttpInfo($ids)
     {
@@ -528,7 +528,7 @@ class LabelDownloadApi
                     );
                 case 400:
                     return $this->handleResponseWithDataType(
-                        \Toppy\Sendcloud\Model\ScPublicV2ScpGetLabelDocumentNormalPrinter400Response::class,
+                        \Toppy\Sendcloud\V2\Model\ScPublicV2ScpGetLabelDocumentNormalPrinter400Response::class,
                         $request,
                         $response,
                     );
@@ -572,7 +572,7 @@ class LabelDownloadApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\ScPublicV2ScpGetLabelDocumentNormalPrinter400Response::class,
+                        \Toppy\Sendcloud\V2\Model\ScPublicV2ScpGetLabelDocumentNormalPrinter400Response::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -759,9 +759,9 @@ class LabelDownloadApi
      * @param  int[] $ids Comma separated parcel ids (required)
      * @param  int $startFrom The position of the label on an A4 page.  0 - Top left 1 - Top right 2 - Bottom left 3 - Bottom right (required)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \SplFileObject|\Toppy\Sendcloud\Model\ScPublicV2ScpGetLabelDocumentNormalPrinter400Response|object
+     * @return \SplFileObject|\Toppy\Sendcloud\V2\Model\ScPublicV2ScpGetLabelDocumentNormalPrinter400Response|object
      */
     public function scPublicV2ScpGetLabelDocumentMultipleNormalPrinter($ids, $startFrom)
     {
@@ -777,9 +777,9 @@ class LabelDownloadApi
      * @param  int[] $ids Comma separated parcel ids (required)
      * @param  int $startFrom The position of the label on an A4 page.  0 - Top left 1 - Top right 2 - Bottom left 3 - Bottom right (required)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \SplFileObject|\Toppy\Sendcloud\Model\ScPublicV2ScpGetLabelDocumentNormalPrinter400Response|object, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \SplFileObject|\Toppy\Sendcloud\V2\Model\ScPublicV2ScpGetLabelDocumentNormalPrinter400Response|object, HTTP status code, HTTP response headers (array of strings)
      */
     public function scPublicV2ScpGetLabelDocumentMultipleNormalPrinterWithHttpInfo($ids, $startFrom)
     {
@@ -821,7 +821,7 @@ class LabelDownloadApi
                     );
                 case 400:
                     return $this->handleResponseWithDataType(
-                        \Toppy\Sendcloud\Model\ScPublicV2ScpGetLabelDocumentNormalPrinter400Response::class,
+                        \Toppy\Sendcloud\V2\Model\ScPublicV2ScpGetLabelDocumentNormalPrinter400Response::class,
                         $request,
                         $response,
                     );
@@ -865,7 +865,7 @@ class LabelDownloadApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\ScPublicV2ScpGetLabelDocumentNormalPrinter400Response::class,
+                        \Toppy\Sendcloud\V2\Model\ScPublicV2ScpGetLabelDocumentNormalPrinter400Response::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);
@@ -1080,9 +1080,9 @@ class LabelDownloadApi
      * @param  int $parcelId Unique parcel identifier (required)
      * @param  int $startFrom The position of the label on an A4 page.  0 - Top left 1 - Top right 2 - Bottom left 3 - Bottom right (required)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \SplFileObject|\Toppy\Sendcloud\Model\ScPublicV2ScpGetLabelDocumentNormalPrinter400Response|object
+     * @return \SplFileObject|\Toppy\Sendcloud\V2\Model\ScPublicV2ScpGetLabelDocumentNormalPrinter400Response|object
      */
     public function scPublicV2ScpGetLabelDocumentNormalPrinter($parcelId, $startFrom)
     {
@@ -1098,9 +1098,9 @@ class LabelDownloadApi
      * @param  int $parcelId Unique parcel identifier (required)
      * @param  int $startFrom The position of the label on an A4 page.  0 - Top left 1 - Top right 2 - Bottom left 3 - Bottom right (required)
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \SplFileObject|\Toppy\Sendcloud\Model\ScPublicV2ScpGetLabelDocumentNormalPrinter400Response|object, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \SplFileObject|\Toppy\Sendcloud\V2\Model\ScPublicV2ScpGetLabelDocumentNormalPrinter400Response|object, HTTP status code, HTTP response headers (array of strings)
      */
     public function scPublicV2ScpGetLabelDocumentNormalPrinterWithHttpInfo($parcelId, $startFrom)
     {
@@ -1142,7 +1142,7 @@ class LabelDownloadApi
                     );
                 case 400:
                     return $this->handleResponseWithDataType(
-                        \Toppy\Sendcloud\Model\ScPublicV2ScpGetLabelDocumentNormalPrinter400Response::class,
+                        \Toppy\Sendcloud\V2\Model\ScPublicV2ScpGetLabelDocumentNormalPrinter400Response::class,
                         $request,
                         $response,
                     );
@@ -1186,7 +1186,7 @@ class LabelDownloadApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $apiException->getResponseBody(),
-                        \Toppy\Sendcloud\Model\ScPublicV2ScpGetLabelDocumentNormalPrinter400Response::class,
+                        \Toppy\Sendcloud\V2\Model\ScPublicV2ScpGetLabelDocumentNormalPrinter400Response::class,
                         $apiException->getResponseHeaders()
                     );
                     $apiException->setResponseObject($data);

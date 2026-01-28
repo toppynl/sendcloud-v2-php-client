@@ -7,7 +7,7 @@ declare(strict_types=1);
  * PHP version 7.2
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Api;
+namespace Toppy\Sendcloud\V2\Api;
 
 use GuzzleHttp\Psr7\MultipartStream;
 use Http\Client\Common\Plugin\ErrorPlugin;
@@ -40,12 +40,12 @@ use Http\Discovery\Psr17FactoryDiscovery;
 use Http\Discovery\Psr18ClientDiscovery;
 use Http\Message\RequestFactory;
 use Http\Promise\Promise;
-use Toppy\Sendcloud\ApiException;
-use Toppy\Sendcloud\Configuration;
-use Toppy\Sendcloud\DebugPlugin;
-use Toppy\Sendcloud\HeaderSelector;
-use Toppy\Sendcloud\FormDataProcessor;
-use Toppy\Sendcloud\ObjectSerializer;
+use Toppy\Sendcloud\V2\ApiException;
+use Toppy\Sendcloud\V2\Configuration;
+use Toppy\Sendcloud\V2\DebugPlugin;
+use Toppy\Sendcloud\V2\HeaderSelector;
+use Toppy\Sendcloud\V2\FormDataProcessor;
+use Toppy\Sendcloud\V2\ObjectSerializer;
 use Psr\Http\Client\ClientExceptionInterface;
 use Psr\Http\Client\ClientInterface;
 use Psr\Http\Message\RequestFactoryInterface;
@@ -60,7 +60,7 @@ use function sprintf;
  * ParcelStatusesApi Class Doc Comment
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -173,9 +173,9 @@ class ParcelStatusesApi
      * Retrieve a list of parcel statuses
      *
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Toppy\Sendcloud\Model\ScPublicV2ScpGetRetrieveAllParcelStatuses200ResponseInner[]
+     * @return \Toppy\Sendcloud\V2\Model\ScPublicV2ScpGetRetrieveAllParcelStatuses200ResponseInner[]
      */
     public function scPublicV2ScpGetRetrieveAllParcelStatuses()
     {
@@ -189,9 +189,9 @@ class ParcelStatusesApi
      * Retrieve a list of parcel statuses
      *
      *
-     * @throws \Toppy\Sendcloud\ApiException on non-2xx response
+     * @throws \Toppy\Sendcloud\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Toppy\Sendcloud\Model\ScPublicV2ScpGetRetrieveAllParcelStatuses200ResponseInner[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Toppy\Sendcloud\V2\Model\ScPublicV2ScpGetRetrieveAllParcelStatuses200ResponseInner[], HTTP status code, HTTP response headers (array of strings)
      */
     public function scPublicV2ScpGetRetrieveAllParcelStatusesWithHttpInfo()
     {
@@ -226,7 +226,7 @@ class ParcelStatusesApi
 
             if ($statusCode === 200) {
                 return $this->handleResponseWithDataType(
-                    '\Toppy\Sendcloud\Model\ScPublicV2ScpGetRetrieveAllParcelStatuses200ResponseInner[]',
+                    '\Toppy\Sendcloud\V2\Model\ScPublicV2ScpGetRetrieveAllParcelStatuses200ResponseInner[]',
                     $request,
                     $response,
                 );
@@ -247,7 +247,7 @@ class ParcelStatusesApi
             }
 
             return $this->handleResponseWithDataType(
-                '\Toppy\Sendcloud\Model\ScPublicV2ScpGetRetrieveAllParcelStatuses200ResponseInner[]',
+                '\Toppy\Sendcloud\V2\Model\ScPublicV2ScpGetRetrieveAllParcelStatuses200ResponseInner[]',
                 $request,
                 $response,
             );
@@ -255,7 +255,7 @@ class ParcelStatusesApi
             if ($apiException->getCode() === 200) {
                 $data = ObjectSerializer::deserialize(
                     $apiException->getResponseBody(),
-                    '\Toppy\Sendcloud\Model\ScPublicV2ScpGetRetrieveAllParcelStatuses200ResponseInner[]',
+                    '\Toppy\Sendcloud\V2\Model\ScPublicV2ScpGetRetrieveAllParcelStatuses200ResponseInner[]',
                     $apiException->getResponseHeaders()
                 );
                 $apiException->setResponseObject($data);
@@ -297,7 +297,7 @@ class ParcelStatusesApi
      */
     public function scPublicV2ScpGetRetrieveAllParcelStatusesAsyncWithHttpInfo()
     {
-        $returnType = '\Toppy\Sendcloud\Model\ScPublicV2ScpGetRetrieveAllParcelStatuses200ResponseInner[]';
+        $returnType = '\Toppy\Sendcloud\V2\Model\ScPublicV2ScpGetRetrieveAllParcelStatuses200ResponseInner[]';
         $request = $this->scPublicV2ScpGetRetrieveAllParcelStatusesRequest();
 
         return $this->httpAsyncClient->sendAsyncRequest($request)

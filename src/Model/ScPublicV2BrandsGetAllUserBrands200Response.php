@@ -8,7 +8,7 @@ declare(strict_types=1);
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Model;
+namespace Toppy\Sendcloud\V2\Model;
 
 use \ArrayAccess;
-use \Toppy\Sendcloud\ObjectSerializer;
+use \Toppy\Sendcloud\V2\ObjectSerializer;
 
 /**
  * ScPublicV2BrandsGetAllUserBrands200Response Class Doc Comment
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -60,7 +60,7 @@ class ScPublicV2BrandsGetAllUserBrands200Response implements ModelInterface, Arr
     protected static $openAPITypes = [
         'next' => 'string',
         'previous' => 'string',
-        'brands' => '\Toppy\Sendcloud\Model\Brand[]'
+        'brands' => '\Toppy\Sendcloud\V2\Model\Brand[]'
     ];
 
     /**
@@ -356,7 +356,7 @@ class ScPublicV2BrandsGetAllUserBrands200Response implements ModelInterface, Arr
     /**
      * Gets brands
      *
-     * @return \Toppy\Sendcloud\Model\Brand[]|null
+     * @return \Toppy\Sendcloud\V2\Model\Brand[]|null
      */
     public function getBrands()
     {
@@ -366,7 +366,7 @@ class ScPublicV2BrandsGetAllUserBrands200Response implements ModelInterface, Arr
     /**
      * Sets brands
      *
-     * @param \Toppy\Sendcloud\Model\Brand[]|null $brands brands
+     * @param \Toppy\Sendcloud\V2\Model\Brand[]|null $brands brands
      *
      * @return self
      */

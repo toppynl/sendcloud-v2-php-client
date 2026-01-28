@@ -8,7 +8,7 @@ declare(strict_types=1);
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Model;
+namespace Toppy\Sendcloud\V2\Model;
 
 use \ArrayAccess;
-use \Toppy\Sendcloud\ObjectSerializer;
+use \Toppy\Sendcloud\V2\ObjectSerializer;
 
 /**
  * DetailedTrackingBlob Class Doc Comment
  *
  * @category Class
  * @description A definition of a detailed tracking blob.
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -60,7 +60,7 @@ class DetailedTrackingBlob implements ModelInterface, ArrayAccess, \JsonSerializ
       */
     protected static $openAPITypes = [
         'parcelId' => 'string',
-        'carrierCode' => \Toppy\Sendcloud\Model\Carrier::class,
+        'carrierCode' => \Toppy\Sendcloud\V2\Model\Carrier::class,
         'createdAt' => 'string',
         'carrierTrackingUrl' => 'string',
         'sendcloudTrackingUrl' => 'string',
@@ -68,7 +68,7 @@ class DetailedTrackingBlob implements ModelInterface, ArrayAccess, \JsonSerializ
         'isToServicePoint' => 'bool',
         'isMailBox' => 'bool',
         'expectedDeliveryDate' => '\DateTime',
-        'statuses' => '\Toppy\Sendcloud\Model\DetailedTrackingBlobStatus[]'
+        'statuses' => '\Toppy\Sendcloud\V2\Model\DetailedTrackingBlobStatus[]'
     ];
 
     /**
@@ -354,7 +354,7 @@ class DetailedTrackingBlob implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets carrierCode
      *
-     * @return \Toppy\Sendcloud\Model\Carrier|null
+     * @return \Toppy\Sendcloud\V2\Model\Carrier|null
      */
     public function getCarrierCode()
     {
@@ -364,7 +364,7 @@ class DetailedTrackingBlob implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets carrierCode
      *
-     * @param \Toppy\Sendcloud\Model\Carrier|null $carrierCode carrierCode
+     * @param \Toppy\Sendcloud\V2\Model\Carrier|null $carrierCode carrierCode
      *
      * @return self
      */
@@ -578,7 +578,7 @@ class DetailedTrackingBlob implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets statuses
      *
-     * @return \Toppy\Sendcloud\Model\DetailedTrackingBlobStatus[]|null
+     * @return \Toppy\Sendcloud\V2\Model\DetailedTrackingBlobStatus[]|null
      */
     public function getStatuses()
     {
@@ -588,7 +588,7 @@ class DetailedTrackingBlob implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets statuses
      *
-     * @param \Toppy\Sendcloud\Model\DetailedTrackingBlobStatus[]|null $statuses statuses
+     * @param \Toppy\Sendcloud\V2\Model\DetailedTrackingBlobStatus[]|null $statuses statuses
      *
      * @return self
      */

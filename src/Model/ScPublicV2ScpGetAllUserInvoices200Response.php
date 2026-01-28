@@ -8,7 +8,7 @@ declare(strict_types=1);
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Model;
+namespace Toppy\Sendcloud\V2\Model;
 
 use \ArrayAccess;
-use \Toppy\Sendcloud\ObjectSerializer;
+use \Toppy\Sendcloud\V2\ObjectSerializer;
 
 /**
  * ScPublicV2ScpGetAllUserInvoices200Response Class Doc Comment
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,7 +58,7 @@ class ScPublicV2ScpGetAllUserInvoices200Response implements ModelInterface, Arra
       * @var string[]
       */
     protected static $openAPITypes = [
-        'invoices' => '\Toppy\Sendcloud\Model\Invoice[]'
+        'invoices' => '\Toppy\Sendcloud\V2\Model\Invoice[]'
     ];
 
     /**
@@ -268,7 +268,7 @@ class ScPublicV2ScpGetAllUserInvoices200Response implements ModelInterface, Arra
     /**
      * Gets invoices
      *
-     * @return \Toppy\Sendcloud\Model\Invoice[]|null
+     * @return \Toppy\Sendcloud\V2\Model\Invoice[]|null
      */
     public function getInvoices()
     {
@@ -278,7 +278,7 @@ class ScPublicV2ScpGetAllUserInvoices200Response implements ModelInterface, Arra
     /**
      * Sets invoices
      *
-     * @param \Toppy\Sendcloud\Model\Invoice[]|null $invoices invoices
+     * @param \Toppy\Sendcloud\V2\Model\Invoice[]|null $invoices invoices
      *
      * @return self
      */

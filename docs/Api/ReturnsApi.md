@@ -1,4 +1,4 @@
-# Toppy\Sendcloud\ReturnsApi
+# Toppy\Sendcloud\V2\ReturnsApi
 
 All URIs are relative to https://panel.sendcloud.sc/api/v2.
 
@@ -11,7 +11,7 @@ Method | HTTP request | Description
 ## `scPublicV2ScpGetAllReturns()`
 
 ```php
-scPublicV2ScpGetAllReturns($cursor): \Toppy\Sendcloud\Model\ScPublicV2ScpGetAllReturns200Response
+scPublicV2ScpGetAllReturns($cursor): \Toppy\Sendcloud\V2\Model\ScPublicV2ScpGetAllReturns200Response
 ```
 
 Retrieve a list of returns
@@ -26,12 +26,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: HTTPBasicAuth
-$config = Toppy\Sendcloud\Configuration::getDefaultConfiguration()
+$config = Toppy\Sendcloud\V2\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Toppy\Sendcloud\Api\ReturnsApi(
+$apiInstance = new Toppy\Sendcloud\V2\Api\ReturnsApi(
     // If you want use custom http client, pass your client which implements `Psr\Http\Client\ClientInterface`.
     // This is optional, `Psr18ClientDiscovery` will be used to find http client. For instance `GuzzleHttp\Client` implements that interface
     new GuzzleHttp\Client(),
@@ -55,7 +55,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Toppy\Sendcloud\Model\ScPublicV2ScpGetAllReturns200Response**](../Model/ScPublicV2ScpGetAllReturns200Response.md)
+[**\Toppy\Sendcloud\V2\Model\ScPublicV2ScpGetAllReturns200Response**](../Model/ScPublicV2ScpGetAllReturns200Response.md)
 
 ### Authorization
 
@@ -73,7 +73,7 @@ Name | Type | Description  | Notes
 ## `scPublicV2ScpGetReturnById()`
 
 ```php
-scPublicV2ScpGetReturnById($id): \Toppy\Sendcloud\Model\ModelReturn
+scPublicV2ScpGetReturnById($id): \Toppy\Sendcloud\V2\Model\ModelReturn
 ```
 
 Retrieve a return
@@ -88,12 +88,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: HTTPBasicAuth
-$config = Toppy\Sendcloud\Configuration::getDefaultConfiguration()
+$config = Toppy\Sendcloud\V2\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Toppy\Sendcloud\Api\ReturnsApi(
+$apiInstance = new Toppy\Sendcloud\V2\Api\ReturnsApi(
     // If you want use custom http client, pass your client which implements `Psr\Http\Client\ClientInterface`.
     // This is optional, `Psr18ClientDiscovery` will be used to find http client. For instance `GuzzleHttp\Client` implements that interface
     new GuzzleHttp\Client(),
@@ -117,7 +117,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Toppy\Sendcloud\Model\ModelReturn**](../Model/ModelReturn.md)
+[**\Toppy\Sendcloud\V2\Model\ModelReturn**](../Model/ModelReturn.md)
 
 ### Authorization
 

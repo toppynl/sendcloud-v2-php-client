@@ -8,7 +8,7 @@ declare(strict_types=1);
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Model;
+namespace Toppy\Sendcloud\V2\Model;
 
 use \ArrayAccess;
-use \Toppy\Sendcloud\ObjectSerializer;
+use \Toppy\Sendcloud\V2\ObjectSerializer;
 
 /**
  * ParcelResponseFull Class Doc Comment
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -60,12 +60,12 @@ class ParcelResponseFull implements ModelInterface, ArrayAccess, \JsonSerializab
     protected static $openAPITypes = [
         'address' => 'string',
         'address2' => 'string',
-        'addressDivided' => \Toppy\Sendcloud\Model\AddressDivided::class,
-        'carrier' => \Toppy\Sendcloud\Model\ParcelResponseShortCarrier::class,
+        'addressDivided' => \Toppy\Sendcloud\V2\Model\AddressDivided::class,
+        'carrier' => \Toppy\Sendcloud\V2\Model\ParcelResponseShortCarrier::class,
         'city' => 'string',
         'companyName' => 'string',
         'contract' => 'int',
-        'country' => \Toppy\Sendcloud\Model\Country::class,
+        'country' => \Toppy\Sendcloud\V2\Model\Country::class,
         'customsInvoiceNr' => 'string',
         'customsShipmentType' => 'int',
         'data' => 'object',
@@ -75,17 +75,17 @@ class ParcelResponseFull implements ModelInterface, ArrayAccess, \JsonSerializab
         'email' => 'string',
         'id' => 'int',
         'insuredValue' => 'int',
-        'label' => \Toppy\Sendcloud\Model\Label::class,
+        'label' => \Toppy\Sendcloud\V2\Model\Label::class,
         'name' => 'string',
         'orderNumber' => 'string',
         'shipmentUuid' => 'string',
-        'parcelItems' => '\Toppy\Sendcloud\Model\ParcelItem[]',
+        'parcelItems' => '\Toppy\Sendcloud\V2\Model\ParcelItem[]',
         'postalCode' => 'string',
         'externalReference' => 'string',
         'reference' => 'string',
-        'shipment' => \Toppy\Sendcloud\Model\Shipment::class,
-        'status' => \Toppy\Sendcloud\Model\Status::class,
-        'documents' => '\Toppy\Sendcloud\Model\Documents[]',
+        'shipment' => \Toppy\Sendcloud\V2\Model\Shipment::class,
+        'status' => \Toppy\Sendcloud\V2\Model\Status::class,
+        'documents' => '\Toppy\Sendcloud\V2\Model\Documents[]',
         'telephone' => 'string',
         'toServicePoint' => 'string',
         'toState' => 'string',
@@ -108,8 +108,8 @@ class ParcelResponseFull implements ModelInterface, ArrayAccess, \JsonSerializab
         'shippingMethodCheckoutName' => 'string',
         'customsDeclaration' => 'object',
         'note' => 'string',
-        'errors' => \Toppy\Sendcloud\Model\CarrierErrors::class,
-        'customsInformation' => \Toppy\Sendcloud\Model\ParcelCustomsInformation::class
+        'errors' => \Toppy\Sendcloud\V2\Model\CarrierErrors::class,
+        'customsInformation' => \Toppy\Sendcloud\V2\Model\ParcelCustomsInformation::class
     ];
 
     /**
@@ -755,7 +755,7 @@ class ParcelResponseFull implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets addressDivided
      *
-     * @return \Toppy\Sendcloud\Model\AddressDivided|null
+     * @return \Toppy\Sendcloud\V2\Model\AddressDivided|null
      */
     public function getAddressDivided()
     {
@@ -765,7 +765,7 @@ class ParcelResponseFull implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets addressDivided
      *
-     * @param \Toppy\Sendcloud\Model\AddressDivided|null $addressDivided addressDivided
+     * @param \Toppy\Sendcloud\V2\Model\AddressDivided|null $addressDivided addressDivided
      *
      * @return self
      */
@@ -783,7 +783,7 @@ class ParcelResponseFull implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets carrier
      *
-     * @return \Toppy\Sendcloud\Model\ParcelResponseShortCarrier|null
+     * @return \Toppy\Sendcloud\V2\Model\ParcelResponseShortCarrier|null
      */
     public function getCarrier()
     {
@@ -793,7 +793,7 @@ class ParcelResponseFull implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets carrier
      *
-     * @param \Toppy\Sendcloud\Model\ParcelResponseShortCarrier|null $carrier carrier
+     * @param \Toppy\Sendcloud\V2\Model\ParcelResponseShortCarrier|null $carrier carrier
      *
      * @return self
      */
@@ -906,7 +906,7 @@ class ParcelResponseFull implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets country
      *
-     * @return \Toppy\Sendcloud\Model\Country|null
+     * @return \Toppy\Sendcloud\V2\Model\Country|null
      */
     public function getCountry()
     {
@@ -916,7 +916,7 @@ class ParcelResponseFull implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets country
      *
-     * @param \Toppy\Sendcloud\Model\Country|null $country country
+     * @param \Toppy\Sendcloud\V2\Model\Country|null $country country
      *
      * @return self
      */
@@ -1206,7 +1206,7 @@ class ParcelResponseFull implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets label
      *
-     * @return \Toppy\Sendcloud\Model\Label|null
+     * @return \Toppy\Sendcloud\V2\Model\Label|null
      */
     public function getLabel()
     {
@@ -1216,7 +1216,7 @@ class ParcelResponseFull implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets label
      *
-     * @param \Toppy\Sendcloud\Model\Label|null $label label
+     * @param \Toppy\Sendcloud\V2\Model\Label|null $label label
      *
      * @return self
      */
@@ -1318,7 +1318,7 @@ class ParcelResponseFull implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets parcelItems
      *
-     * @return \Toppy\Sendcloud\Model\ParcelItem[]|null
+     * @return \Toppy\Sendcloud\V2\Model\ParcelItem[]|null
      */
     public function getParcelItems()
     {
@@ -1328,7 +1328,7 @@ class ParcelResponseFull implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets parcelItems
      *
-     * @param \Toppy\Sendcloud\Model\ParcelItem[]|null $parcelItems parcelItems
+     * @param \Toppy\Sendcloud\V2\Model\ParcelItem[]|null $parcelItems parcelItems
      *
      * @return self
      */
@@ -1444,7 +1444,7 @@ class ParcelResponseFull implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets shipment
      *
-     * @return \Toppy\Sendcloud\Model\Shipment|null
+     * @return \Toppy\Sendcloud\V2\Model\Shipment|null
      */
     public function getShipment()
     {
@@ -1454,7 +1454,7 @@ class ParcelResponseFull implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets shipment
      *
-     * @param \Toppy\Sendcloud\Model\Shipment|null $shipment shipment
+     * @param \Toppy\Sendcloud\V2\Model\Shipment|null $shipment shipment
      *
      * @return self
      */
@@ -1472,7 +1472,7 @@ class ParcelResponseFull implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets status
      *
-     * @return \Toppy\Sendcloud\Model\Status|null
+     * @return \Toppy\Sendcloud\V2\Model\Status|null
      */
     public function getStatus()
     {
@@ -1482,7 +1482,7 @@ class ParcelResponseFull implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets status
      *
-     * @param \Toppy\Sendcloud\Model\Status|null $status status
+     * @param \Toppy\Sendcloud\V2\Model\Status|null $status status
      *
      * @return self
      */
@@ -1500,7 +1500,7 @@ class ParcelResponseFull implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets documents
      *
-     * @return \Toppy\Sendcloud\Model\Documents[]|null
+     * @return \Toppy\Sendcloud\V2\Model\Documents[]|null
      */
     public function getDocuments()
     {
@@ -1510,7 +1510,7 @@ class ParcelResponseFull implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets documents
      *
-     * @param \Toppy\Sendcloud\Model\Documents[]|null $documents An array of documents. A parcel can contain multiple documents, for instance labels and a customs form. This field returns an array of all the available documents for this parcel.
+     * @param \Toppy\Sendcloud\V2\Model\Documents[]|null $documents An array of documents. A parcel can contain multiple documents, for instance labels and a customs form. This field returns an array of all the available documents for this parcel.
      *
      * @return self
      */
@@ -2209,7 +2209,7 @@ class ParcelResponseFull implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets errors
      *
-     * @return \Toppy\Sendcloud\Model\CarrierErrors|null
+     * @return \Toppy\Sendcloud\V2\Model\CarrierErrors|null
      */
     public function getErrors()
     {
@@ -2219,7 +2219,7 @@ class ParcelResponseFull implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets errors
      *
-     * @param \Toppy\Sendcloud\Model\CarrierErrors|null $errors errors
+     * @param \Toppy\Sendcloud\V2\Model\CarrierErrors|null $errors errors
      *
      * @return self
      */
@@ -2237,7 +2237,7 @@ class ParcelResponseFull implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets customsInformation
      *
-     * @return \Toppy\Sendcloud\Model\ParcelCustomsInformation|null
+     * @return \Toppy\Sendcloud\V2\Model\ParcelCustomsInformation|null
      */
     public function getCustomsInformation()
     {
@@ -2247,7 +2247,7 @@ class ParcelResponseFull implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets customsInformation
      *
-     * @param \Toppy\Sendcloud\Model\ParcelCustomsInformation|null $customsInformation customsInformation
+     * @param \Toppy\Sendcloud\V2\Model\ParcelCustomsInformation|null $customsInformation customsInformation
      *
      * @return self
      */

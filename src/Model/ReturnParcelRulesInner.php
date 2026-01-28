@@ -8,7 +8,7 @@ declare(strict_types=1);
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Model;
+namespace Toppy\Sendcloud\V2\Model;
 
 use \ArrayAccess;
-use \Toppy\Sendcloud\ObjectSerializer;
+use \Toppy\Sendcloud\V2\ObjectSerializer;
 
 /**
  * ReturnParcelRulesInner Class Doc Comment
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,7 +58,7 @@ class ReturnParcelRulesInner implements ModelInterface, ArrayAccess, \JsonSerial
       * @var string[]
       */
     protected static $openAPITypes = [
-        'modifications' => '\Toppy\Sendcloud\Model\ReturnParcelRulesInnerModificationsInner[]'
+        'modifications' => '\Toppy\Sendcloud\V2\Model\ReturnParcelRulesInnerModificationsInner[]'
     ];
 
     /**
@@ -262,7 +262,7 @@ class ReturnParcelRulesInner implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Gets modifications
      *
-     * @return \Toppy\Sendcloud\Model\ReturnParcelRulesInnerModificationsInner[]|null
+     * @return \Toppy\Sendcloud\V2\Model\ReturnParcelRulesInnerModificationsInner[]|null
      */
     public function getModifications()
     {
@@ -272,7 +272,7 @@ class ReturnParcelRulesInner implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets modifications
      *
-     * @param \Toppy\Sendcloud\Model\ReturnParcelRulesInnerModificationsInner[]|null $modifications List of modifications as a result of applied rules
+     * @param \Toppy\Sendcloud\V2\Model\ReturnParcelRulesInnerModificationsInner[]|null $modifications List of modifications as a result of applied rules
      *
      * @return self
      */

@@ -8,7 +8,7 @@ declare(strict_types=1);
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Model;
+namespace Toppy\Sendcloud\V2\Model;
 
 use \ArrayAccess;
-use \Toppy\Sendcloud\ObjectSerializer;
+use \Toppy\Sendcloud\V2\ObjectSerializer;
 
 /**
  * ReturnRefund Class Doc Comment
  *
  * @category Class
  * @description The type of compensation the customer chose for the returned items
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -62,7 +62,7 @@ class ReturnRefund implements ModelInterface, ArrayAccess, \JsonSerializable, \S
         'totalRefund' => 'string',
         'refundedAt' => 'int',
         'message' => 'string',
-        'refundType' => \Toppy\Sendcloud\Model\ReturnRefundRefundType::class
+        'refundType' => \Toppy\Sendcloud\V2\Model\ReturnRefundRefundType::class
     ];
 
     /**
@@ -378,7 +378,7 @@ class ReturnRefund implements ModelInterface, ArrayAccess, \JsonSerializable, \S
     /**
      * Gets refundType
      *
-     * @return \Toppy\Sendcloud\Model\ReturnRefundRefundType|null
+     * @return \Toppy\Sendcloud\V2\Model\ReturnRefundRefundType|null
      */
     public function getRefundType()
     {
@@ -388,7 +388,7 @@ class ReturnRefund implements ModelInterface, ArrayAccess, \JsonSerializable, \S
     /**
      * Sets refundType
      *
-     * @param \Toppy\Sendcloud\Model\ReturnRefundRefundType|null $refundType refundType
+     * @param \Toppy\Sendcloud\V2\Model\ReturnRefundRefundType|null $refundType refundType
      *
      * @return self
      */

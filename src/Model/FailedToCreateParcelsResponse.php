@@ -8,7 +8,7 @@ declare(strict_types=1);
  * PHP version 8.1
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@ declare(strict_types=1);
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-namespace Toppy\Sendcloud\Model;
+namespace Toppy\Sendcloud\V2\Model;
 
 use \ArrayAccess;
-use \Toppy\Sendcloud\ObjectSerializer;
+use \Toppy\Sendcloud\V2\ObjectSerializer;
 
 /**
  * FailedToCreateParcelsResponse Class Doc Comment
  *
  * @category Class
- * @package  Toppy\Sendcloud
+ * @package  Toppy\Sendcloud\V2
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,7 +58,7 @@ class FailedToCreateParcelsResponse implements ModelInterface, ArrayAccess, \Jso
       * @var string[]
       */
     protected static $openAPITypes = [
-        'failedParcels' => '\Toppy\Sendcloud\Model\FailedToCreateParcelsResponseFailedParcelsInner[]'
+        'failedParcels' => '\Toppy\Sendcloud\V2\Model\FailedToCreateParcelsResponseFailedParcelsInner[]'
     ];
 
     /**
@@ -262,7 +262,7 @@ class FailedToCreateParcelsResponse implements ModelInterface, ArrayAccess, \Jso
     /**
      * Gets failedParcels
      *
-     * @return \Toppy\Sendcloud\Model\FailedToCreateParcelsResponseFailedParcelsInner[]|null
+     * @return \Toppy\Sendcloud\V2\Model\FailedToCreateParcelsResponseFailedParcelsInner[]|null
      */
     public function getFailedParcels()
     {
@@ -272,7 +272,7 @@ class FailedToCreateParcelsResponse implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets failedParcels
      *
-     * @param \Toppy\Sendcloud\Model\FailedToCreateParcelsResponseFailedParcelsInner[]|null $failedParcels failedParcels
+     * @param \Toppy\Sendcloud\V2\Model\FailedToCreateParcelsResponseFailedParcelsInner[]|null $failedParcels failedParcels
      *
      * @return self
      */
