@@ -59,7 +59,7 @@ class ScPublicV2ScpGetAllShippingMethods200Response implements ModelInterface, A
       * @var string[]
       */
     protected static $openAPITypes = [
-        'shippingMethods' => '\Toppy\Sendcloud\V2\Model\ShippingMethod[]'
+        'shippingMethods' => '\Toppy\Sendcloud\V2\Model\ShippingMethodsShippingMethod[]'
     ];
 
     /**
@@ -273,7 +273,7 @@ class ScPublicV2ScpGetAllShippingMethods200Response implements ModelInterface, A
     /**
      * Gets shippingMethods
      *
-     * @return \Toppy\Sendcloud\V2\Model\ShippingMethod[]
+     * @return \Toppy\Sendcloud\V2\Model\ShippingMethodsShippingMethod[]
      */
     public function getShippingMethods()
     {
@@ -283,7 +283,7 @@ class ScPublicV2ScpGetAllShippingMethods200Response implements ModelInterface, A
     /**
      * Sets shippingMethods
      *
-     * @param \Toppy\Sendcloud\V2\Model\ShippingMethod[] $shippingMethods Array of available shipping methods.
+     * @param \Toppy\Sendcloud\V2\Model\ShippingMethodsShippingMethod[] $shippingMethods Array of available shipping methods.
      *
      * @return self
      */

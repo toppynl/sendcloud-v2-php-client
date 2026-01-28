@@ -53,6 +53,24 @@ for cmd in curl jq yq; do
     fi
 done
 
+# Normalize schema name to PHP class name equivalent
+normalize_schema_name() {
+    echo "$1" | sed -E 's/(^|-)([a-z])/\U\2/g'
+}
+
+# Create structural hash of schema (ignoring metadata)
+schema_structural_hash() {
+    local spec_file="$1"
+    local schema_name="$2"
+    jq --arg name "$schema_name" '
+        .components.schemas[$name] // {} |
+        walk(if type == "object" then
+            del(.title, .description, .example, .examples, .default) |
+            with_entries(select(.key | startswith("x-") | not))
+        else . end)
+    ' "$spec_file" | sha256sum | cut -d' ' -f1
+}
+
 # Step 1: Fetch OpenAPI specs for each resource
 echo "Step 1: Fetching OpenAPI specs..."
 BUNDLE_DIR="$TEMP_DIR/bundles"
@@ -76,6 +94,157 @@ for resource in "${V2_RESOURCES[@]}"; do
 
     # Small delay to be nice to the API
     sleep 0.1
+done
+
+echo ""
+
+# Step 1.5: Detecting schema collisions
+echo "Step 1.5: Detecting schema collisions..."
+
+declare -A SCHEMA_ORIGINS      # schema -> "resource1,resource2"
+declare -A SCHEMA_HASHES       # resource:schema -> hash
+declare -A NORMALIZED_GROUPS   # normalized_name -> "schema1,schema2"
+
+# Collect schema info from each bundle
+for bundle_file in "$BUNDLE_DIR"/*.json; do
+    [ -f "$bundle_file" ] || continue
+    resource=$(basename "$bundle_file" .json)
+
+    for schema in $(jq -r '.components.schemas // {} | keys[]' "$bundle_file"); do
+        SCHEMA_ORIGINS[$schema]="${SCHEMA_ORIGINS[$schema]:+${SCHEMA_ORIGINS[$schema]},}$resource"
+        SCHEMA_HASHES["$resource:$schema"]=$(schema_structural_hash "$bundle_file" "$schema")
+
+        normalized=$(normalize_schema_name "$schema")
+        existing="${NORMALIZED_GROUPS[$normalized]:-}"
+        if [[ -z "$existing" ]] || [[ ! "$existing" =~ (^|,)$schema(,|$) ]]; then
+            NORMALIZED_GROUPS[$normalized]="${existing:+${existing},}$schema"
+        fi
+    done
+done
+
+# Resolve collisions
+declare -A SCHEMA_RENAMES  # "resource:schema" -> "new-name"
+declare -A SHARED_SCHEMAS  # normalized -> chosen_schema
+
+for normalized in "${!NORMALIZED_GROUPS[@]}"; do
+    IFS=',' read -ra schemas <<< "${NORMALIZED_GROUPS[$normalized]}"
+    [ ${#schemas[@]} -le 1 ] && continue
+
+    # Check if all schemas are structurally identical
+    first_hash=""
+    all_identical=true
+
+    for schema in "${schemas[@]}"; do
+        IFS=',' read -ra resources <<< "${SCHEMA_ORIGINS[$schema]}"
+        hash="${SCHEMA_HASHES[${resources[0]}:$schema]}"
+
+        if [ -z "$first_hash" ]; then
+            first_hash="$hash"
+        elif [ "$hash" != "$first_hash" ]; then
+            all_identical=false
+            break
+        fi
+    done
+
+    if $all_identical; then
+        # Whitelist: keep first schema, others will redirect
+        SHARED_SCHEMAS[$normalized]="${schemas[0]}"
+        echo "  [SHARED] $normalized: keeping ${schemas[0]}"
+    else
+        # Conflict: prefix all with resource name
+        echo "  [CONFLICT] $normalized: ${schemas[*]}"
+        for schema in "${schemas[@]}"; do
+            IFS=',' read -ra resources <<< "${SCHEMA_ORIGINS[$schema]}"
+            for resource in "${resources[@]}"; do
+                SCHEMA_RENAMES["$resource:$schema"]="${resource}-${schema}"
+                echo "    -> $resource:$schema => ${resource}-${schema}"
+            done
+        done
+    fi
+done
+
+echo ""
+
+# Step 1.6: Applying schema renames
+echo "Step 1.6: Applying schema renames..."
+
+for bundle_file in "$BUNDLE_DIR"/*.json; do
+    [ -f "$bundle_file" ] || continue
+    resource=$(basename "$bundle_file" .json)
+
+    # Collect renames for this resource
+    declare -a renames_old=()
+    declare -a renames_new=()
+
+    for key in "${!SCHEMA_RENAMES[@]}"; do
+        [[ "$key" != "$resource:"* ]] && continue
+        old_name="${key#$resource:}"
+        new_name="${SCHEMA_RENAMES[$key]}"
+        renames_old+=("$old_name")
+        renames_new+=("$new_name")
+    done
+
+    # Collect shared schema redirects for this resource
+    declare -a redirects_from=()
+    declare -a redirects_to=()
+
+    for normalized in "${!SHARED_SCHEMAS[@]}"; do
+        chosen="${SHARED_SCHEMAS[$normalized]}"
+        IFS=',' read -ra schemas <<< "${NORMALIZED_GROUPS[$normalized]}"
+        for schema in "${schemas[@]}"; do
+            [ "$schema" = "$chosen" ] && continue
+            [[ "${SCHEMA_ORIGINS[$schema]}" != *"$resource"* ]] && continue
+            redirects_from+=("$schema")
+            redirects_to+=("$chosen")
+        done
+    done
+
+    if [ ${#renames_old[@]} -gt 0 ] || [ ${#redirects_from[@]} -gt 0 ]; then
+        echo "  Applying renames to $resource..."
+
+        # Build JSON arrays for jq
+        renames_old_json=$(printf '%s\n' "${renames_old[@]}" | jq -R . | jq -s .)
+        renames_new_json=$(printf '%s\n' "${renames_new[@]}" | jq -R . | jq -s .)
+        redirects_from_json=$(printf '%s\n' "${redirects_from[@]}" | jq -R . | jq -s . 2>/dev/null || echo '[]')
+        redirects_to_json=$(printf '%s\n' "${redirects_to[@]}" | jq -R . | jq -s . 2>/dev/null || echo '[]')
+
+        jq --argjson renames_old "$renames_old_json" \
+           --argjson renames_new "$renames_new_json" \
+           --argjson redirects_from "$redirects_from_json" \
+           --argjson redirects_to "$redirects_to_json" '
+            # Build rename mapping
+            ([$renames_old, $renames_new] | transpose | map({(.[0]): .[1]}) | add // {}) as $rename_map |
+            # Build redirect mapping
+            ([$redirects_from, $redirects_to] | transpose | map({(.[0]): .[1]}) | add // {}) as $redirect_map |
+
+            # Apply renames to schema definitions
+            .components.schemas = (
+                .components.schemas | to_entries | map(
+                    if $rename_map[.key] then
+                        .key = $rename_map[.key]
+                    else . end
+                ) | from_entries
+            ) |
+
+            # Remove redirected schemas
+            .components.schemas = (.components.schemas | with_entries(select($redirect_map[.key] | not))) |
+
+            # Update all $ref references
+            walk(if type == "object" and .["$ref"]? then
+                .["$ref"] as $ref |
+                ($ref | capture("#/components/schemas/(?<name>.+)") | .name) as $schema_name |
+                if $schema_name then
+                    if $rename_map[$schema_name] then
+                        .["$ref"] = "#/components/schemas/" + $rename_map[$schema_name]
+                    elif $redirect_map[$schema_name] then
+                        .["$ref"] = "#/components/schemas/" + $redirect_map[$schema_name]
+                    else . end
+                else . end
+            else . end)
+        ' "$bundle_file" > "$bundle_file.tmp" && mv "$bundle_file.tmp" "$bundle_file"
+    fi
+
+    unset renames_old renames_new redirects_from redirects_to
 done
 
 echo ""

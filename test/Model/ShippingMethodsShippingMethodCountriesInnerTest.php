@@ -1,6 +1,6 @@
 <?php
 /**
- * ShippingMethodCountriesInnerTest
+ * ShippingMethodsShippingMethodCountriesInnerTest
  *
  * PHP version 8.1
  *
@@ -32,15 +32,15 @@ namespace Toppy\Sendcloud\V2\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * ShippingMethodCountriesInnerTest Class Doc Comment
+ * ShippingMethodsShippingMethodCountriesInnerTest Class Doc Comment
  *
  * @category    Class
- * @description ShippingMethodCountriesInner
+ * @description ShippingMethodsShippingMethodCountriesInner
  * @package     Toppy\Sendcloud\V2
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class ShippingMethodCountriesInnerTest extends TestCase
+class ShippingMethodsShippingMethodCountriesInnerTest extends TestCase
 {
 
     /**
@@ -72,9 +72,9 @@ class ShippingMethodCountriesInnerTest extends TestCase
     }
 
     /**
-     * Test "ShippingMethodCountriesInner"
+     * Test "ShippingMethodsShippingMethodCountriesInner"
      */
-    public function testShippingMethodCountriesInner()
+    public function testShippingMethodsShippingMethodCountriesInner()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

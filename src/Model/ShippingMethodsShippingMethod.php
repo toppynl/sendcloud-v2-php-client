@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 /**
- * ShippingMethod
+ * ShippingMethodsShippingMethod
  *
  * PHP version 8.1
  *
@@ -33,7 +33,7 @@ use \ArrayAccess;
 use \Toppy\Sendcloud\V2\ObjectSerializer;
 
 /**
- * ShippingMethod Class Doc Comment
+ * ShippingMethodsShippingMethod Class Doc Comment
  *
  * @category Class
  * @description A Sendcloud shipping method
@@ -42,7 +42,7 @@ use \Toppy\Sendcloud\V2\ObjectSerializer;
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class ShippingMethod implements ModelInterface, ArrayAccess, \JsonSerializable, \Stringable
+class ShippingMethodsShippingMethod implements ModelInterface, ArrayAccess, \JsonSerializable, \Stringable
 {
     public const DISCRIMINATOR = null;
 
@@ -51,7 +51,7 @@ class ShippingMethod implements ModelInterface, ArrayAccess, \JsonSerializable, 
       *
       * @var string
       */
-    protected static $openAPIModelName = 'shipping-method';
+    protected static $openAPIModelName = 'shipping-methods-shipping-method';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -66,7 +66,7 @@ class ShippingMethod implements ModelInterface, ArrayAccess, \JsonSerializable, 
         'maxWeight' => 'string',
         'servicePointInput' => 'string',
         'price' => 'int',
-        'countries' => '\Toppy\Sendcloud\V2\Model\ShippingMethodCountriesInner[]'
+        'countries' => '\Toppy\Sendcloud\V2\Model\ShippingMethodsShippingMethodCountriesInner[]'
     ];
 
     /**
@@ -420,7 +420,7 @@ class ShippingMethod implements ModelInterface, ArrayAccess, \JsonSerializable, 
         }
 
         if (($id < 1)) {
-            throw new \InvalidArgumentException('invalid value for $id when calling ShippingMethod., must be bigger than or equal to 1.');
+            throw new \InvalidArgumentException('invalid value for $id when calling ShippingMethodsShippingMethod., must be bigger than or equal to 1.');
         }
 
         $this->container['id'] = $id;
@@ -452,7 +452,7 @@ class ShippingMethod implements ModelInterface, ArrayAccess, \JsonSerializable, 
         }
 
         if ((mb_strlen($name) < 1)) {
-            throw new \InvalidArgumentException('invalid length for $name when calling ShippingMethod., must be bigger than or equal to 1.');
+            throw new \InvalidArgumentException('invalid length for $name when calling ShippingMethodsShippingMethod., must be bigger than or equal to 1.');
         }
 
         $this->container['name'] = $name;
@@ -484,7 +484,7 @@ class ShippingMethod implements ModelInterface, ArrayAccess, \JsonSerializable, 
         }
 
         if ((mb_strlen($carrier) < 1)) {
-            throw new \InvalidArgumentException('invalid length for $carrier when calling ShippingMethod., must be bigger than or equal to 1.');
+            throw new \InvalidArgumentException('invalid length for $carrier when calling ShippingMethodsShippingMethod., must be bigger than or equal to 1.');
         }
 
         $this->container['carrier'] = $carrier;
@@ -516,7 +516,7 @@ class ShippingMethod implements ModelInterface, ArrayAccess, \JsonSerializable, 
         }
 
         if ((mb_strlen($minWeight) < 5)) {
-            throw new \InvalidArgumentException('invalid length for $minWeight when calling ShippingMethod., must be bigger than or equal to 5.');
+            throw new \InvalidArgumentException('invalid length for $minWeight when calling ShippingMethodsShippingMethod., must be bigger than or equal to 5.');
         }
 
         $this->container['minWeight'] = $minWeight;
@@ -548,7 +548,7 @@ class ShippingMethod implements ModelInterface, ArrayAccess, \JsonSerializable, 
         }
 
         if ((mb_strlen($maxWeight) < 5)) {
-            throw new \InvalidArgumentException('invalid length for $maxWeight when calling ShippingMethod., must be bigger than or equal to 5.');
+            throw new \InvalidArgumentException('invalid length for $maxWeight when calling ShippingMethodsShippingMethod., must be bigger than or equal to 5.');
         }
 
         $this->container['maxWeight'] = $maxWeight;
@@ -591,7 +591,7 @@ class ShippingMethod implements ModelInterface, ArrayAccess, \JsonSerializable, 
         }
 
         if ((mb_strlen($servicePointInput) < 1)) {
-            throw new \InvalidArgumentException('invalid length for $servicePointInput when calling ShippingMethod., must be bigger than or equal to 1.');
+            throw new \InvalidArgumentException('invalid length for $servicePointInput when calling ShippingMethodsShippingMethod., must be bigger than or equal to 1.');
         }
 
         $this->container['servicePointInput'] = $servicePointInput;
@@ -625,11 +625,11 @@ class ShippingMethod implements ModelInterface, ArrayAccess, \JsonSerializable, 
         }
 
         if (($price > 0)) {
-            throw new \InvalidArgumentException('invalid value for $price when calling ShippingMethod., must be smaller than or equal to 0.');
+            throw new \InvalidArgumentException('invalid value for $price when calling ShippingMethodsShippingMethod., must be smaller than or equal to 0.');
         }
 
         if (($price < 0)) {
-            throw new \InvalidArgumentException('invalid value for $price when calling ShippingMethod., must be bigger than or equal to 0.');
+            throw new \InvalidArgumentException('invalid value for $price when calling ShippingMethodsShippingMethod., must be bigger than or equal to 0.');
         }
 
         $this->container['price'] = $price;
@@ -640,7 +640,7 @@ class ShippingMethod implements ModelInterface, ArrayAccess, \JsonSerializable, 
     /**
      * Gets countries
      *
-     * @return \Toppy\Sendcloud\V2\Model\ShippingMethodCountriesInner[]|null
+     * @return \Toppy\Sendcloud\V2\Model\ShippingMethodsShippingMethodCountriesInner[]|null
      */
     public function getCountries()
     {
@@ -650,7 +650,7 @@ class ShippingMethod implements ModelInterface, ArrayAccess, \JsonSerializable, 
     /**
      * Sets countries
      *
-     * @param \Toppy\Sendcloud\V2\Model\ShippingMethodCountriesInner[]|null $countries A list of countries that you can ship to with the shipping method.
+     * @param \Toppy\Sendcloud\V2\Model\ShippingMethodsShippingMethodCountriesInner[]|null $countries A list of countries that you can ship to with the shipping method.
      *
      * @return self
      */

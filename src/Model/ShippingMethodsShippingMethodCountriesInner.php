@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 /**
- * ShippingMethodCountriesInner
+ * ShippingMethodsShippingMethodCountriesInner
  *
  * PHP version 8.1
  *
@@ -33,7 +33,7 @@ use \ArrayAccess;
 use \Toppy\Sendcloud\V2\ObjectSerializer;
 
 /**
- * ShippingMethodCountriesInner Class Doc Comment
+ * ShippingMethodsShippingMethodCountriesInner Class Doc Comment
  *
  * @category Class
  * @package  Toppy\Sendcloud\V2
@@ -41,7 +41,7 @@ use \Toppy\Sendcloud\V2\ObjectSerializer;
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class ShippingMethodCountriesInner implements ModelInterface, ArrayAccess, \JsonSerializable, \Stringable
+class ShippingMethodsShippingMethodCountriesInner implements ModelInterface, ArrayAccess, \JsonSerializable, \Stringable
 {
     public const DISCRIMINATOR = null;
 
@@ -50,7 +50,7 @@ class ShippingMethodCountriesInner implements ModelInterface, ArrayAccess, \Json
       *
       * @var string
       */
-    protected static $openAPIModelName = 'shipping_method_countries_inner';
+    protected static $openAPIModelName = 'shipping_methods_shipping_method_countries_inner';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -357,7 +357,7 @@ class ShippingMethodCountriesInner implements ModelInterface, ArrayAccess, \Json
         }
 
         if (($id < 1)) {
-            throw new \InvalidArgumentException('invalid value for $id when calling ShippingMethodCountriesInner., must be bigger than or equal to 1.');
+            throw new \InvalidArgumentException('invalid value for $id when calling ShippingMethodsShippingMethodCountriesInner., must be bigger than or equal to 1.');
         }
 
         $this->container['id'] = $id;
@@ -445,11 +445,11 @@ class ShippingMethodCountriesInner implements ModelInterface, ArrayAccess, \Json
         }
 
         if ((mb_strlen($iso2) > 2)) {
-            throw new \InvalidArgumentException('invalid length for $iso2 when calling ShippingMethodCountriesInner., must be smaller than or equal to 2.');
+            throw new \InvalidArgumentException('invalid length for $iso2 when calling ShippingMethodsShippingMethodCountriesInner., must be smaller than or equal to 2.');
         }
 
         if ((mb_strlen($iso2) < 2)) {
-            throw new \InvalidArgumentException('invalid length for $iso2 when calling ShippingMethodCountriesInner., must be bigger than or equal to 2.');
+            throw new \InvalidArgumentException('invalid length for $iso2 when calling ShippingMethodsShippingMethodCountriesInner., must be bigger than or equal to 2.');
         }
 
         $this->container['iso2'] = $iso2;
@@ -481,11 +481,11 @@ class ShippingMethodCountriesInner implements ModelInterface, ArrayAccess, \Json
         }
 
         if ((mb_strlen($iso3) > 3)) {
-            throw new \InvalidArgumentException('invalid length for $iso3 when calling ShippingMethodCountriesInner., must be smaller than or equal to 3.');
+            throw new \InvalidArgumentException('invalid length for $iso3 when calling ShippingMethodsShippingMethodCountriesInner., must be smaller than or equal to 3.');
         }
 
         if ((mb_strlen($iso3) < 3)) {
-            throw new \InvalidArgumentException('invalid length for $iso3 when calling ShippingMethodCountriesInner., must be bigger than or equal to 3.');
+            throw new \InvalidArgumentException('invalid length for $iso3 when calling ShippingMethodsShippingMethodCountriesInner., must be bigger than or equal to 3.');
         }
 
         $this->container['iso3'] = $iso3;

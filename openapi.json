@@ -15,7 +15,7 @@
     },
     "x-source": "https://sendcloud.dev/.openapi/v2/",
     "x-branch": "v2",
-    "x-generated": "2026-01-28T14:50:36Z"
+    "x-generated": "2026-01-28T18:32:57Z"
   },
   "servers": [
     {
@@ -4894,7 +4894,7 @@
                       "minItems": 1,
                       "description": "Array of available shipping methods.",
                       "items": {
-                        "$ref": "#/components/schemas/shipping-method"
+                        "$ref": "#/components/schemas/shipping-methods-shipping-method"
                       }
                     }
                   },
@@ -5093,7 +5093,7 @@
                   "type": "object",
                   "properties": {
                     "shipping_method": {
-                      "$ref": "#/components/schemas/shipping-method"
+                      "$ref": "#/components/schemas/shipping-methods-shipping-method"
                     }
                   }
                 },
@@ -9736,8 +9736,8 @@
           "distance"
         ]
       },
-      "ShippingMethod": {
-        "$ref": "#/components/schemas/shipping-method"
+      "shipping-methods-ShippingMethod": {
+        "$ref": "#/components/schemas/shipping-methods-shipping-method"
       },
       "shipping-price-breakdown": {
         "title": "Shipping Price Breakdown Object",
@@ -9765,7 +9765,7 @@
           }
         }
       },
-      "shipping-method": {
+      "shipping-methods-shipping-method": {
         "title": "Shipping Method Object",
         "description": "A Sendcloud shipping method",
         "type": "object",

@@ -137,8 +137,8 @@ docs/Model/ShipmentBlobOrderCreate.md
 docs/Model/ShipmentBlobStatus.md
 docs/Model/ShipmentCreateUpdateLog.md
 docs/Model/ShipmentErrorLog.md
-docs/Model/ShippingMethod.md
-docs/Model/ShippingMethodCountriesInner.md
+docs/Model/ShippingMethodsShippingMethod.md
+docs/Model/ShippingMethodsShippingMethodCountriesInner.md
 docs/Model/ShippingPriceBreakdownInner.md
 docs/Model/SingleParcelCreatedResponse.md
 docs/Model/Status.md
@@ -289,8 +289,8 @@ src/Model/ShipmentBlobOrderCreate.php
 src/Model/ShipmentBlobStatus.php
 src/Model/ShipmentCreateUpdateLog.php
 src/Model/ShipmentErrorLog.php
-src/Model/ShippingMethod.php
-src/Model/ShippingMethodCountriesInner.php
+src/Model/ShippingMethodsShippingMethod.php
+src/Model/ShippingMethodsShippingMethodCountriesInner.php
 src/Model/ShippingPriceBreakdownInner.php
 src/Model/SingleParcelCreatedResponse.php
 src/Model/Status.php
@@ -434,8 +434,8 @@ test/Model/ShipmentBlobStatusTest.php
 test/Model/ShipmentCreateUpdateLogTest.php
 test/Model/ShipmentErrorLogTest.php
 test/Model/ShipmentTest.php
-test/Model/ShippingMethodCountriesInnerTest.php
-test/Model/ShippingMethodTest.php
+test/Model/ShippingMethodsShippingMethodCountriesInnerTest.php
+test/Model/ShippingMethodsShippingMethodTest.php
 test/Model/ShippingPriceBreakdownInnerTest.php
 test/Model/SingleParcelCreatedResponseTest.php
 test/Model/StatusTest.php

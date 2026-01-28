@@ -58,7 +58,7 @@ class ScPublicV2ScpGetShippingMethodById200Response implements ModelInterface, A
       * @var string[]
       */
     protected static $openAPITypes = [
-        'shippingMethod' => \Toppy\Sendcloud\V2\Model\ShippingMethod::class
+        'shippingMethod' => \Toppy\Sendcloud\V2\Model\ShippingMethodsShippingMethod::class
     ];
 
     /**
@@ -262,7 +262,7 @@ class ScPublicV2ScpGetShippingMethodById200Response implements ModelInterface, A
     /**
      * Gets shippingMethod
      *
-     * @return \Toppy\Sendcloud\V2\Model\ShippingMethod|null
+     * @return \Toppy\Sendcloud\V2\Model\ShippingMethodsShippingMethod|null
      */
     public function getShippingMethod()
     {
@@ -272,7 +272,7 @@ class ScPublicV2ScpGetShippingMethodById200Response implements ModelInterface, A
     /**
      * Sets shippingMethod
      *
-     * @param \Toppy\Sendcloud\V2\Model\ShippingMethod|null $shippingMethod shippingMethod
+     * @param \Toppy\Sendcloud\V2\Model\ShippingMethodsShippingMethod|null $shippingMethod shippingMethod
      *
      * @return self
      */

@@ -1,6 +1,6 @@
 <?php
 /**
- * ShippingMethodTest
+ * ShippingMethodsShippingMethodTest
  *
  * PHP version 8.1
  *
@@ -32,7 +32,7 @@ namespace Toppy\Sendcloud\V2\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * ShippingMethodTest Class Doc Comment
+ * ShippingMethodsShippingMethodTest Class Doc Comment
  *
  * @category    Class
  * @description A Sendcloud shipping method
@@ -40,7 +40,7 @@ use PHPUnit\Framework\TestCase;
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class ShippingMethodTest extends TestCase
+class ShippingMethodsShippingMethodTest extends TestCase
 {
 
     /**
@@ -72,9 +72,9 @@ class ShippingMethodTest extends TestCase
     }
 
     /**
-     * Test "ShippingMethod"
+     * Test "ShippingMethodsShippingMethod"
      */
-    public function testShippingMethod()
+    public function testShippingMethodsShippingMethod()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

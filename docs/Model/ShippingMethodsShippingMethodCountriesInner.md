@@ -1,4 +1,4 @@
-# # ShippingMethodCountriesInner
+# # ShippingMethodsShippingMethodCountriesInner
 
 ## Properties
 
