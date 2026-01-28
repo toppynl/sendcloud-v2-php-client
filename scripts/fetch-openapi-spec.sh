@@ -229,10 +229,10 @@ for bundle_file in "$BUNDLE_DIR"/*.json; do
             # Remove redirected schemas
             .components.schemas = (.components.schemas | with_entries(select($redirect_map[.key] | not))) |
 
-            # Update all $ref references
+            # Update all $ref references (only schema refs, not parameter refs)
             walk(if type == "object" and .["$ref"]? then
                 .["$ref"] as $ref |
-                ($ref | capture("#/components/schemas/(?<name>.+)") | .name) as $schema_name |
+                (($ref | capture("#/components/schemas/(?<name>.+)")) // {}).name as $schema_name |
                 if $schema_name then
                     if $rename_map[$schema_name] then
                         .["$ref"] = "#/components/schemas/" + $rename_map[$schema_name]

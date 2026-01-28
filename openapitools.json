@@ -11,7 +11,7 @@
         "additionalProperties": {
           "packageName": "toppy/sendcloud-client",
           "artifactUrl": "https://sendcloud.dev/docs/getting-started/",
-          "artifactVersion": "0.4.0",
+          "artifactVersion": "0.4.1",
           "developerOrganization": "Toppy",
           "developerOrganizationUrl": "https://github.com/toppynl",
           "composerPackageName": "toppy/sendcloud-client",
