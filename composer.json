@@ -1,6 +1,6 @@
 {
     "name": "toppy/sendcloud-v2-client",
-    "version": "0.4.1",
+    "version": "0.4.2",
     "description": "Complete Sendcloud API v2 specification - merged from official sendcloud.dev documentation",
     "keywords": [
         "openapitools",

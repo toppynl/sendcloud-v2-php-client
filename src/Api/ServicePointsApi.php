@@ -445,6 +445,9 @@ class ServicePointsApi
      *
      * Retrieve availability of a service point
      *
+     * This operation contains host(s) defined in the OpenAP spec. Use 'hostIndex' to select the host.
+     * URL: https://servicepoints.sendcloud.sc/api/v2
+     *
      * @param  float $servicePointId ID of the service point (required)
      * @param  string $accessToken A JSON Web Token encoding either an “id” (user ID) or “iid” (integration ID) property. Alternatively, a public API key. (optional)
      *
@@ -462,6 +465,9 @@ class ServicePointsApi
      * Operation scPublicV2ServicepointsGetCheckAvailabilityWithHttpInfo
      *
      * Retrieve availability of a service point
+     *
+     * This operation contains host(s) defined in the OpenAP spec. Use 'hostIndex' to select the host.
+     * URL: https://servicepoints.sendcloud.sc/api/v2
      *
      * @param  float $servicePointId ID of the service point (required)
      * @param  string $accessToken A JSON Web Token encoding either an “id” (user ID) or “iid” (integration ID) property. Alternatively, a public API key. (optional)
@@ -565,6 +571,9 @@ class ServicePointsApi
      *
      * Retrieve availability of a service point
      *
+     * This operation contains host(s) defined in the OpenAP spec. Use 'hostIndex' to select the host.
+     * URL: https://servicepoints.sendcloud.sc/api/v2
+     *
      * @param  float $servicePointId ID of the service point (required)
      * @param  string $accessToken A JSON Web Token encoding either an “id” (user ID) or “iid” (integration ID) property. Alternatively, a public API key. (optional)
      *
@@ -585,6 +594,9 @@ class ServicePointsApi
      * Operation scPublicV2ServicepointsGetCheckAvailabilityAsyncWithHttpInfo
      *
      * Retrieve availability of a service point
+     *
+     * This operation contains host(s) defined in the OpenAP spec. Use 'hostIndex' to select the host.
+     * URL: https://servicepoints.sendcloud.sc/api/v2
      *
      * @param  float $servicePointId ID of the service point (required)
      * @param  string $accessToken A JSON Web Token encoding either an “id” (user ID) or “iid” (integration ID) property. Alternatively, a public API key. (optional)
@@ -631,6 +643,9 @@ class ServicePointsApi
 
     /**
      * Create request for operation 'scPublicV2ServicepointsGetCheckAvailability'
+     *
+     * This operation contains host(s) defined in the OpenAP spec. Use 'hostIndex' to select the host.
+     * URL: https://servicepoints.sendcloud.sc/api/v2
      *
      * @param  float $servicePointId ID of the service point (required)
      * @param  string $accessToken A JSON Web Token encoding either an “id” (user ID) or “iid” (integration ID) property. Alternatively, a public API key. (optional)
@@ -723,7 +738,12 @@ class ServicePointsApi
             $headers
         );
 
-        $operationHost = $this->config->getHost();
+        $operationHosts = ["https://servicepoints.sendcloud.sc/api/v2"];
+        if ($this->hostIndex < 0 || $this->hostIndex >= count($operationHosts)) {
+            throw new \InvalidArgumentException(sprintf('Invalid index %s when selecting the host. Must be less than ', $this->hostIndex).count($operationHosts));
+        }
+
+        $operationHost = $operationHosts[$this->hostIndex];
 
         $uri = $this->createUri($operationHost, $resourcePath, $queryParams);
 
@@ -734,6 +754,9 @@ class ServicePointsApi
      * Operation scPublicV2ServicepointsGetServicePointById
      *
      * Retrieve a service point
+     *
+     * This operation contains host(s) defined in the OpenAP spec. Use 'hostIndex' to select the host.
+     * URL: https://servicepoints.sendcloud.sc/api/v2
      *
      * @param  float $servicePointId ID of the service point (required)
      * @param  string $accessToken A JSON Web Token encoding either an “id” (user ID) or “iid” (integration ID) property. Alternatively, a public API key. (optional)
@@ -752,6 +775,9 @@ class ServicePointsApi
      * Operation scPublicV2ServicepointsGetServicePointByIdWithHttpInfo
      *
      * Retrieve a service point
+     *
+     * This operation contains host(s) defined in the OpenAP spec. Use 'hostIndex' to select the host.
+     * URL: https://servicepoints.sendcloud.sc/api/v2
      *
      * @param  float $servicePointId ID of the service point (required)
      * @param  string $accessToken A JSON Web Token encoding either an “id” (user ID) or “iid” (integration ID) property. Alternatively, a public API key. (optional)
@@ -855,6 +881,9 @@ class ServicePointsApi
      *
      * Retrieve a service point
      *
+     * This operation contains host(s) defined in the OpenAP spec. Use 'hostIndex' to select the host.
+     * URL: https://servicepoints.sendcloud.sc/api/v2
+     *
      * @param  float $servicePointId ID of the service point (required)
      * @param  string $accessToken A JSON Web Token encoding either an “id” (user ID) or “iid” (integration ID) property. Alternatively, a public API key. (optional)
      *
@@ -875,6 +904,9 @@ class ServicePointsApi
      * Operation scPublicV2ServicepointsGetServicePointByIdAsyncWithHttpInfo
      *
      * Retrieve a service point
+     *
+     * This operation contains host(s) defined in the OpenAP spec. Use 'hostIndex' to select the host.
+     * URL: https://servicepoints.sendcloud.sc/api/v2
      *
      * @param  float $servicePointId ID of the service point (required)
      * @param  string $accessToken A JSON Web Token encoding either an “id” (user ID) or “iid” (integration ID) property. Alternatively, a public API key. (optional)
@@ -921,6 +953,9 @@ class ServicePointsApi
 
     /**
      * Create request for operation 'scPublicV2ServicepointsGetServicePointById'
+     *
+     * This operation contains host(s) defined in the OpenAP spec. Use 'hostIndex' to select the host.
+     * URL: https://servicepoints.sendcloud.sc/api/v2
      *
      * @param  float $servicePointId ID of the service point (required)
      * @param  string $accessToken A JSON Web Token encoding either an “id” (user ID) or “iid” (integration ID) property. Alternatively, a public API key. (optional)
@@ -1013,7 +1048,12 @@ class ServicePointsApi
             $headers
         );
 
-        $operationHost = $this->config->getHost();
+        $operationHosts = ["https://servicepoints.sendcloud.sc/api/v2"];
+        if ($this->hostIndex < 0 || $this->hostIndex >= count($operationHosts)) {
+            throw new \InvalidArgumentException(sprintf('Invalid index %s when selecting the host. Must be less than ', $this->hostIndex).count($operationHosts));
+        }
+
+        $operationHost = $operationHosts[$this->hostIndex];
 
         $uri = $this->createUri($operationHost, $resourcePath, $queryParams);
 
@@ -1024,6 +1064,9 @@ class ServicePointsApi
      * Operation scPublicV2ServicepointsGetServicePoints
      *
      * Retrieve a list of service points
+     *
+     * This operation contains host(s) defined in the OpenAP spec. Use 'hostIndex' to select the host.
+     * URL: https://servicepoints.sendcloud.sc/api/v2
      *
      * @param  string $country A country ISO 2 code (required)
      * @param  string $xRequestedWith Identifies the request as one made using JavaScript (optional)
@@ -1059,6 +1102,9 @@ class ServicePointsApi
      * Operation scPublicV2ServicepointsGetServicePointsWithHttpInfo
      *
      * Retrieve a list of service points
+     *
+     * This operation contains host(s) defined in the OpenAP spec. Use 'hostIndex' to select the host.
+     * URL: https://servicepoints.sendcloud.sc/api/v2
      *
      * @param  string $country A country ISO 2 code (required)
      * @param  string $xRequestedWith Identifies the request as one made using JavaScript (optional)
@@ -1179,6 +1225,9 @@ class ServicePointsApi
      *
      * Retrieve a list of service points
      *
+     * This operation contains host(s) defined in the OpenAP spec. Use 'hostIndex' to select the host.
+     * URL: https://servicepoints.sendcloud.sc/api/v2
+     *
      * @param  string $country A country ISO 2 code (required)
      * @param  string $xRequestedWith Identifies the request as one made using JavaScript (optional)
      * @param  string $accessToken A JSON Web Token encoding either an “id” (user ID) or “iid” (integration ID) property. Alternatively, a public API key. (optional)
@@ -1216,6 +1265,9 @@ class ServicePointsApi
      * Operation scPublicV2ServicepointsGetServicePointsAsyncWithHttpInfo
      *
      * Retrieve a list of service points
+     *
+     * This operation contains host(s) defined in the OpenAP spec. Use 'hostIndex' to select the host.
+     * URL: https://servicepoints.sendcloud.sc/api/v2
      *
      * @param  string $country A country ISO 2 code (required)
      * @param  string $xRequestedWith Identifies the request as one made using JavaScript (optional)
@@ -1279,6 +1331,9 @@ class ServicePointsApi
 
     /**
      * Create request for operation 'scPublicV2ServicepointsGetServicePoints'
+     *
+     * This operation contains host(s) defined in the OpenAP spec. Use 'hostIndex' to select the host.
+     * URL: https://servicepoints.sendcloud.sc/api/v2
      *
      * @param  string $country A country ISO 2 code (required)
      * @param  string $xRequestedWith Identifies the request as one made using JavaScript (optional)
@@ -1601,7 +1656,12 @@ class ServicePointsApi
             $headers
         );
 
-        $operationHost = $this->config->getHost();
+        $operationHosts = ["https://servicepoints.sendcloud.sc/api/v2"];
+        if ($this->hostIndex < 0 || $this->hostIndex >= count($operationHosts)) {
+            throw new \InvalidArgumentException(sprintf('Invalid index %s when selecting the host. Must be less than ', $this->hostIndex).count($operationHosts));
+        }
+
+        $operationHost = $operationHosts[$this->hostIndex];
 
         $uri = $this->createUri($operationHost, $resourcePath, $queryParams);
 
@@ -2054,6 +2114,9 @@ class ServicePointsApi
      *
      * Create a selected servicepoint record after checking its availability
      *
+     * This operation contains host(s) defined in the OpenAP spec. Use 'hostIndex' to select the host.
+     * URL: https://servicepoints.sendcloud.sc/api/v2
+     *
      * @param  float $servicePoint servicePoint (required)
      * @param  string $accessToken2 accessToken2 (required)
      * @param  bool $checkAvailability checkAvailability (required)
@@ -2078,6 +2141,9 @@ class ServicePointsApi
      * Operation scPublicV2ServicepointsPostCheckAndStoreWithHttpInfo
      *
      * Create a selected servicepoint record after checking its availability
+     *
+     * This operation contains host(s) defined in the OpenAP spec. Use 'hostIndex' to select the host.
+     * URL: https://servicepoints.sendcloud.sc/api/v2
      *
      * @param  float $servicePoint (required)
      * @param  string $accessToken2 (required)
@@ -2202,6 +2268,9 @@ class ServicePointsApi
      *
      * Create a selected servicepoint record after checking its availability
      *
+     * This operation contains host(s) defined in the OpenAP spec. Use 'hostIndex' to select the host.
+     * URL: https://servicepoints.sendcloud.sc/api/v2
+     *
      * @param  float $servicePoint (required)
      * @param  string $accessToken2 (required)
      * @param  bool $checkAvailability (required)
@@ -2229,6 +2298,9 @@ class ServicePointsApi
      * Operation scPublicV2ServicepointsPostCheckAndStoreAsyncWithHttpInfo
      *
      * Create a selected servicepoint record after checking its availability
+     *
+     * This operation contains host(s) defined in the OpenAP spec. Use 'hostIndex' to select the host.
+     * URL: https://servicepoints.sendcloud.sc/api/v2
      *
      * @param  float $servicePoint (required)
      * @param  string $accessToken2 (required)
@@ -2282,6 +2354,9 @@ class ServicePointsApi
 
     /**
      * Create request for operation 'scPublicV2ServicepointsPostCheckAndStore'
+     *
+     * This operation contains host(s) defined in the OpenAP spec. Use 'hostIndex' to select the host.
+     * URL: https://servicepoints.sendcloud.sc/api/v2
      *
      * @param  float $servicePoint (required)
      * @param  string $accessToken2 (required)
@@ -2436,7 +2511,12 @@ class ServicePointsApi
             $headers
         );
 
-        $operationHost = $this->config->getHost();
+        $operationHosts = ["https://servicepoints.sendcloud.sc/api/v2"];
+        if ($this->hostIndex < 0 || $this->hostIndex >= count($operationHosts)) {
+            throw new \InvalidArgumentException(sprintf('Invalid index %s when selecting the host. Must be less than ', $this->hostIndex).count($operationHosts));
+        }
+
+        $operationHost = $operationHosts[$this->hostIndex];
 
         $uri = $this->createUri($operationHost, $resourcePath, $queryParams);
 
@@ -2447,6 +2527,9 @@ class ServicePointsApi
      * Operation scPublicV2ServicepointsPostItemsFitInShipment
      *
      * Service point carrier dimension check
+     *
+     * This operation contains host(s) defined in the OpenAP spec. Use 'hostIndex' to select the host.
+     * URL: https://servicepoints.sendcloud.sc/api/v2
      *
      * @param  string $accessToken A JSON Web Token encoding either an “id” (user ID) or “iid” (integration ID) property. Alternatively, a public API key. (optional)
      * @param  \Toppy\Sendcloud\V2\Model\ScPublicV2ServicepointsPostItemsFitInShipmentRequest $scPublicV2ServicepointsPostItemsFitInShipmentRequest  (optional)
@@ -2465,6 +2548,9 @@ class ServicePointsApi
      * Operation scPublicV2ServicepointsPostItemsFitInShipmentWithHttpInfo
      *
      * Service point carrier dimension check
+     *
+     * This operation contains host(s) defined in the OpenAP spec. Use 'hostIndex' to select the host.
+     * URL: https://servicepoints.sendcloud.sc/api/v2
      *
      * @param  string $accessToken A JSON Web Token encoding either an “id” (user ID) or “iid” (integration ID) property. Alternatively, a public API key. (optional)
      * @param  \Toppy\Sendcloud\V2\Model\ScPublicV2ServicepointsPostItemsFitInShipmentRequest $scPublicV2ServicepointsPostItemsFitInShipmentRequest  (optional)
@@ -2582,6 +2668,9 @@ class ServicePointsApi
      *
      * Service point carrier dimension check
      *
+     * This operation contains host(s) defined in the OpenAP spec. Use 'hostIndex' to select the host.
+     * URL: https://servicepoints.sendcloud.sc/api/v2
+     *
      * @param  string $accessToken A JSON Web Token encoding either an “id” (user ID) or “iid” (integration ID) property. Alternatively, a public API key. (optional)
      * @param  \Toppy\Sendcloud\V2\Model\ScPublicV2ServicepointsPostItemsFitInShipmentRequest $scPublicV2ServicepointsPostItemsFitInShipmentRequest  (optional)
      *
@@ -2602,6 +2691,9 @@ class ServicePointsApi
      * Operation scPublicV2ServicepointsPostItemsFitInShipmentAsyncWithHttpInfo
      *
      * Service point carrier dimension check
+     *
+     * This operation contains host(s) defined in the OpenAP spec. Use 'hostIndex' to select the host.
+     * URL: https://servicepoints.sendcloud.sc/api/v2
      *
      * @param  string $accessToken A JSON Web Token encoding either an “id” (user ID) or “iid” (integration ID) property. Alternatively, a public API key. (optional)
      * @param  \Toppy\Sendcloud\V2\Model\ScPublicV2ServicepointsPostItemsFitInShipmentRequest $scPublicV2ServicepointsPostItemsFitInShipmentRequest  (optional)
@@ -2648,6 +2740,9 @@ class ServicePointsApi
 
     /**
      * Create request for operation 'scPublicV2ServicepointsPostItemsFitInShipment'
+     *
+     * This operation contains host(s) defined in the OpenAP spec. Use 'hostIndex' to select the host.
+     * URL: https://servicepoints.sendcloud.sc/api/v2
      *
      * @param  string $accessToken A JSON Web Token encoding either an “id” (user ID) or “iid” (integration ID) property. Alternatively, a public API key. (optional)
      * @param  \Toppy\Sendcloud\V2\Model\ScPublicV2ServicepointsPostItemsFitInShipmentRequest $scPublicV2ServicepointsPostItemsFitInShipmentRequest  (optional)
@@ -2734,7 +2829,12 @@ class ServicePointsApi
             $headers
         );
 
-        $operationHost = $this->config->getHost();
+        $operationHosts = ["https://servicepoints.sendcloud.sc/api/v2"];
+        if ($this->hostIndex < 0 || $this->hostIndex >= count($operationHosts)) {
+            throw new \InvalidArgumentException(sprintf('Invalid index %s when selecting the host. Must be less than ', $this->hostIndex).count($operationHosts));
+        }
+
+        $operationHost = $operationHosts[$this->hostIndex];
 
         $uri = $this->createUri($operationHost, $resourcePath, $queryParams);
 

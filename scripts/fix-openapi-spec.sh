@@ -12,6 +12,7 @@
 # - Removes empty requestBody content
 # - Removes empty component sections
 # - Removes OpenAPI 3.1 specific schema attributes
+# - Adds server override for Service Points API (servicepoints.sendcloud.sc)
 #
 # Usage: ./scripts/fix-openapi-spec.sh
 #
@@ -111,6 +112,20 @@ jq '
   walk(
     if type == "object" and .requestBody? and (.requestBody.content? | type == "object") and (.requestBody.content | keys | length) == 0
     then del(.requestBody)
+    else .
+    end
+  ) |
+
+  # Add server override for Service Points API endpoints
+  # These endpoints use servicepoints.sendcloud.sc instead of panel.sendcloud.sc
+  .paths |= with_entries(
+    if (.key | startswith("/service-points")) and (.value.servers? | not) then
+      .value.servers = [
+        {
+          "url": "https://servicepoints.sendcloud.sc/api/v2",
+          "description": "Service Points API"
+        }
+      ]
     else .
     end
   )

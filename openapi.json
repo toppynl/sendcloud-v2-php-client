@@ -15,7 +15,7 @@
     },
     "x-source": "https://sendcloud.dev/.openapi/v2/",
     "x-branch": "v2",
-    "x-generated": "2026-01-28T19:09:56Z"
+    "x-generated": "2026-01-30T14:16:15Z"
   },
   "servers": [
     {
@@ -4116,7 +4116,13 @@
           "Service Points"
         ]
       },
-      "parameters": []
+      "parameters": [],
+      "servers": [
+        {
+          "url": "https://servicepoints.sendcloud.sc/api/v2",
+          "description": "Service Points API"
+        }
+      ]
     },
     "/service-points/{service_point_id}": {
       "get": {
@@ -4222,6 +4228,12 @@
           "required": true,
           "description": "ID of the service point"
         }
+      ],
+      "servers": [
+        {
+          "url": "https://servicepoints.sendcloud.sc/api/v2",
+          "description": "Service Points API"
+        }
       ]
     },
     "/service-points/{service_point_id}/check-availability": {
@@ -4284,6 +4296,12 @@
           "in": "path",
           "required": true,
           "description": "ID of the service point"
+        }
+      ],
+      "servers": [
+        {
+          "url": "https://servicepoints.sendcloud.sc/api/v2",
+          "description": "Service Points API"
         }
       ]
     },
@@ -4473,7 +4491,13 @@
           }
         }
       },
-      "parameters": []
+      "parameters": [],
+      "servers": [
+        {
+          "url": "https://servicepoints.sendcloud.sc/api/v2",
+          "description": "Service Points API"
+        }
+      ]
     },
     "/service-points/items_fit_in_shipment": {
       "x-skip-rule": "paths-should-be-kebab-case",
@@ -4624,7 +4648,13 @@
           "description": ""
         }
       },
-      "parameters": []
+      "parameters": [],
+      "servers": [
+        {
+          "url": "https://servicepoints.sendcloud.sc/api/v2",
+          "description": "Service Points API"
+        }
+      ]
     },
     "/service-points/{shop_type}/store": {
       "servers": [
